@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#dce7d8">
   <title>Bursa Hayvanat Bahçesi · 3B Atlas</title>
-  <link rel="stylesheet" href="style.css?v=20261014c">
+  <link rel="stylesheet" href="style.css?v=20261014d">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
 </head>
 <body>
@@ -19,16 +19,21 @@
         <span class="identity-copy"><strong>Bursa Hayvanat Bahçesi</strong><small id="view-hint" role="status">Genel plan</small></span>
       </div>
       <div class="top-actions">
-        <button id="layers-toggle" type="button" aria-expanded="false" aria-controls="layers-panel" aria-label="Katmanlar" title="Katmanlar"><span aria-hidden="true">☷</span><span class="action-label">Katmanlar</span></button>
+        <button id="layers-toggle" type="button" aria-expanded="false" aria-controls="layers-panel" aria-label="Görünüm ayarları" title="Görünüm ayarları"><span aria-hidden="true">☷</span><span class="action-label">Görünüm</span></button>
         <button id="fullscreen" type="button" aria-label="Tam ekran" title="Tam ekran" aria-pressed="false"><span aria-hidden="true">⛶</span><span class="action-label">Tam ekran</span></button>
       </div>
     </header>
 
-    <aside id="layers-panel" class="layers-panel" aria-label="Harita katmanları" hidden>
-      <div class="layers-head"><strong>Katmanlar</strong><button id="layers-close" type="button" aria-label="Katmanları kapat">×</button></div>
+    <aside id="layers-panel" class="layers-panel" aria-label="Görünüm ayarları" hidden>
+      <div class="layers-head"><strong>Görünüm</strong><button id="layers-close" type="button" aria-label="Görünüm ayarlarını kapat">×</button></div>
+      <div class="layers-section-title">Katmanlar</div>
       <button id="toggle-trees" type="button" aria-pressed="true">Ağaçlar</button>
       <button id="toggle-buildings" type="button" aria-pressed="true">Yapılar</button>
-      <button id="toggle-canopies" type="button" aria-pressed="true">Sundurmalar</button>
+      <div class="perspective-control">
+        <label for="perspective">Genel plan perspektifi <output id="perspective-value" for="perspective">45%</output></label>
+        <input id="perspective" type="range" min="0" max="100" step="1" value="45" aria-label="Genel plan perspektifi">
+        <div class="range-ends" aria-hidden="true"><span>Düz plan</span><span>Daha derin</span></div>
+      </div>
     </aside>
 
     <div id="markers" class="markers"></div>
@@ -50,6 +55,6 @@
       <button id="reset" type="button" aria-label="Genel plana dön" title="Genel plana dön">⌖</button>
     </div>
   </main>
-  <script type="module" src="app.js?v=20261014j"></script>
+  <script type="module" src="app.js?v=20261014o"></script>
 </body>
 </html>

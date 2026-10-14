@@ -1,0 +1,131 @@
+{
+  "schema": "bursa-zoo-current-plan-pixel-trace/v1",
+  "createdOn": "2026-10-14",
+  "purpose": "Current visitor-map control geometry for staged 3D reconstruction; these are image pixels, not surveyed coordinates.",
+  "coordinateSystem": {
+    "unit": "source-image-pixel",
+    "origin": "top-left",
+    "xDirection": "right",
+    "yDirection": "down",
+    "imageWidth": 1921,
+    "imageHeight": 1081,
+    "georeferenced": false,
+    "warning": "The official map is a perspective illustration. Do not infer metre distances or cadastral boundaries directly from its pixels."
+  },
+  "marchToSeptemberPixelTransform": {
+    "targetImageWidth": 1600,
+    "targetImageHeight": 864,
+    "equations": [
+      "xSep = 0.667668673*xMarch - 0.000165426*yMarch - 23.005735",
+      "ySep = 0.000165426*xMarch + 0.667668673*yMarch + 59.960453"
+    ],
+    "affineMatrix": [[0.667668673, -0.000165426, -23.005735], [0.000165426, 0.667668673, 59.960453]],
+    "method": "SIFT feature matching on map regions, similarity transform fitted by RANSAC",
+    "matchedPairs": 1224,
+    "ransacInliers": 1167,
+    "inlierRmsErrorPx": 0.4565,
+    "example": "The traced dome center [701,679] March becomes approximately [444.92,513.42] September."
+  },
+  "sources": {
+    "geometry": {
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "publishedDate": "2026-03-31",
+      "localPrivateFile": "reference-maps-private/2026-03-kroki.jpg",
+      "role": "Higher-resolution layout image; all coordinates below refer to this exact 1921 x 1081 local image."
+    },
+    "currentLegend": {
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "publishedDate": "2026-09-15",
+      "localPrivateFile": "reference-maps-private/2026-09-kroki.jpg",
+      "role": "Later official legend and broad arrangement check. Feature outlines are traced from the March image; September pixels anchor their registration to M5."
+    }
+  },
+  "features": [
+    {
+      "id": "illustrated_site_edge",
+      "name": "Bahçe görsel dış kenarı",
+      "kind": "approximate_closed_outline",
+      "pointsPx": [[342,79],[420,110],[508,158],[631,196],[748,214],[845,266],[952,319],[1074,371],[1200,402],[1310,448],[1405,539],[1495,600],[1524,683],[1493,719],[1355,759],[1196,801],[1018,843],[827,879],[654,913],[496,937],[343,943],[244,935],[204,906],[220,780],[248,620],[275,466],[300,296],[325,142],[342,79]],
+      "traceConfidence": "medium",
+      "realWorldConfidence": "low",
+      "sourceIds": ["geometry", "currentLegend"],
+      "notes": "Traces the planted exhibit area silhouette above the front parking/road illustration. Some edge segments are obscured by trees and perspective; this is not a legal or surveyed property boundary."
+    },
+    {
+      "id": "main_entrance",
+      "name": "Giriş–Çıkış",
+      "kind": "point",
+      "pointPx": [957, 792],
+      "traceConfidence": "high",
+      "realWorldConfidence": "medium",
+      "sourceIds": ["geometry", "currentLegend"],
+      "notes": "Center of the red entrance arrow on the front edge. The gate itself may be offset beneath the entrance building artwork."
+    },
+    {
+      "id": "waterbird_aviary_dome_candidate",
+      "name": "Büyük eliptik kuş kafesi kubbesi",
+      "kind": "illustrated_ellipse",
+      "centerPx": [701, 679],
+      "majorAxisEndpointsPx": [[625, 696], [773, 663]],
+      "minorAxisEndpointsPx": [[688, 629], [714, 729]],
+      "outlinePx": [[621,678],[633,652],[661,635],[697,628],[733,633],[761,651],[780,676],[768,703],[738,721],[705,729],[665,724],[637,705],[621,678]],
+      "traceConfidence": "high",
+      "realWorldConfidence": "medium",
+      "sourceIds": ["geometry", "currentLegend"],
+      "notes": "The lattice-covered ellipse is visually clear. The #31 Pelikan Göleti marker sits over this dome, whereas #32 Su Kuşları sits just south of it. Confirm the physical association before treating the whole ellipse as either pond or #32 exhibit. The separately documented 70 x 40 m aviary dimensions should govern model scale."
+    },
+    {
+      "id": "pelican_pond_31",
+      "name": "Pelikan Göleti (#31)",
+      "kind": "representative_point_only",
+      "pointPx": [704, 682],
+      "labelAnchorPx": [713, 659],
+      "traceConfidence": "high",
+      "realWorldConfidence": "low",
+      "sourceIds": ["geometry", "currentLegend"],
+      "notes": "The #31 marker is on the lattice-covered ellipse. The pond shoreline is not separately visible beneath the illustrated dome, so no pond polygon is inferred here."
+    },
+    {
+      "id": "entrance_pond_5",
+      "name": "Giriş Göleti (#5)",
+      "kind": "approximate_water_outline",
+      "pointsPx": [[907,663],[911,650],[928,641],[946,645],[964,637],[980,644],[993,658],[1010,666],[1025,660],[1041,670],[1055,677],[1060,690],[1053,698],[1038,692],[1017,685],[996,681],[979,675],[957,682],[937,682],[918,675],[907,663]],
+      "traceConfidence": "medium",
+      "realWorldConfidence": "medium",
+      "sourceIds": ["geometry", "currentLegend"],
+      "notes": "Visible blue water west and north of the entrance building. Animal icon and number obscure part of the upper shoreline; points there are interpolated."
+    },
+    {
+      "id": "northeast_pond_west",
+      "name": "Kuzeydoğu ikiz gölet — batı",
+      "kind": "approximate_water_extent",
+      "pointsPx": [[1127,495],[1151,502],[1176,519],[1195,533],[1207,553],[1204,574],[1195,592],[1203,611],[1191,625],[1169,629],[1149,622],[1130,608],[1115,586],[1098,577],[1087,559],[1089,540],[1102,515],[1127,495]],
+      "approximateIslandPx": [[1138,530],[1158,531],[1177,548],[1179,573],[1165,601],[1142,607],[1123,587],[1114,560],[1124,541],[1138,530]],
+      "traceConfidence": "medium",
+      "realWorldConfidence": "medium",
+      "sourceIds": ["geometry", "currentLegend"],
+      "notes": "Curving water around the #9 Habeş Maymunu island. Island ring is approximate because its shoreline is covered by trees and labels."
+    },
+    {
+      "id": "northeast_pond_east",
+      "name": "Kuzeydoğu ikiz gölet — doğu",
+      "kind": "approximate_water_extent",
+      "pointsPx": [[1286,526],[1305,517],[1329,523],[1355,540],[1371,558],[1376,579],[1368,598],[1352,616],[1331,623],[1309,619],[1288,610],[1272,595],[1261,576],[1264,552],[1271,537],[1286,526]],
+      "approximateIslandPx": [[1305,543],[1326,547],[1340,561],[1343,583],[1332,600],[1311,603],[1292,589],[1288,568],[1294,551],[1305,543]],
+      "traceConfidence": "medium",
+      "realWorldConfidence": "medium",
+      "sourceIds": ["geometry", "currentLegend"],
+      "notes": "Curving water around the #11 Lemur island. The #11 label and black animal icon obscure part of the inner shore."
+    },
+    {
+      "id": "savanna_visitor_circuit",
+      "name": "Ana ziyaretçi dolaşımı — savan çevresi",
+      "kind": "approximate_closed_centerline",
+      "pointsPx": [[719,321],[777,315],[844,322],[898,340],[935,378],[952,424],[983,459],[1018,466],[1052,452],[1095,426],[1132,406],[1161,419],[1157,465],[1120,505],[1087,544],[1059,574],[999,579],[941,577],[875,571],[818,549],[768,516],[724,477],[696,433],[690,389],[704,347],[719,321]],
+      "traceConfidence": "medium",
+      "realWorldConfidence": "low",
+      "sourceIds": ["geometry", "currentLegend"],
+      "notes": "A small, representative pedestrian circuit around the large central savanna. The north, west and south arcs follow visible pale path; east connection is partly hidden by landscape and should be checked against imagery or field photos before modeling exact edges or widths."
+    }
+  ]
+}

@@ -21,6 +21,7 @@ def main() -> None:
             shutil.copy2(VIEWER / name, target / name)
         shutil.copytree(VENDOR, target / "vendor", dirs_exist_ok=True)
         shutil.copy2(HERE / "site-data.json", target / "site-data.json")
+        shutil.copy2(HERE / "current-plan-data.json", target / "current-plan-data.json")
         for old_public_file in ("model-sources.json", "MODEL_STANDARD.md"):
             (target / old_public_file).unlink(missing_ok=True)
         (target / ".nojekyll").touch()

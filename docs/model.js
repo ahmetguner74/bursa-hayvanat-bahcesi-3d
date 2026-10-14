@@ -1,10 +1,37 @@
 import * as T from 'three';
 
-const CAGE = {x:-223,y:-126,angle:Math.PI/12,length:70,width:40,height:20};
+// The official plan locates the dome area; the M5 fence and builder dimensions anchor this provisional shell.
+const CAGE = {x:-30,y:-64,angle:9*Math.PI/180,length:70,width:40,height:20};
 const mat=(color,roughness=1,metalness=0)=>new T.MeshStandardMaterial({color,roughness,metalness,side:T.DoubleSide});
 const grass=mat('#8eaa78'),pathMat=mat('#d1c9b5'),waterMat=new T.MeshPhysicalMaterial({color:'#4d9da5',roughness:.32,metalness:.02,transparent:true,opacity:.92,side:T.DoubleSide});
-const buildingMat=mat('#a98770'),roofMat=mat('#b98765'),metalMat=mat('#e9eae2',.68,.14);
+const buildingMat=mat('#a98770'),metalMat=mat('#e9eae2',.68,.14);
 const stoneMat=mat('#c6c4ad'),hedgeMat=mat('#567c54'),reedMat=mat('#789462');
+const pavementSideMat=mat('#a69e8d');
+
+function pavementTexture(){
+  // Small, repeatable aggregate gives the broad provisional paths a material at eye level.
+  const size=128,pixels=new Uint8Array(size*size*4),coarse=[];let seed=1837;
+  const random=()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);
+  for(let i=0;i<64;i++)coarse.push(random()*2-1);
+  const lerp=(a,b,t)=>a+(b-a)*t;
+  const sample=(x,y)=>{
+    const gx=x/16,gy=y/16,ix=Math.floor(gx),iy=Math.floor(gy),tx=gx-ix,ty=gy-iy;
+    const at=(dx,dy)=>coarse[((iy+dy)&7)*8+((ix+dx)&7)];
+    return lerp(lerp(at(0,0),at(1,0),tx),lerp(at(0,1),at(1,1),tx),ty);
+  };
+  for(let y=0;y<size;y++)for(let x=0;x<size;x++){
+    const p=(y*size+x)*4,grain=sample(x,y)*5+(random()-.5)*6,chip=random()<.018?(random()-.5)*24:0;
+    pixels[p]=Math.max(0,Math.min(255,201+grain+chip));
+    pixels[p+1]=Math.max(0,Math.min(255,194+grain+chip));
+    pixels[p+2]=Math.max(0,Math.min(255,179+grain+chip));pixels[p+3]=255;
+  }
+  const texture=new T.DataTexture(pixels,size,size,T.RGBAFormat);
+  texture.colorSpace=T.SRGBColorSpace;texture.wrapS=texture.wrapT=T.RepeatWrapping;
+  texture.repeat.set(.22,.22);texture.magFilter=T.LinearFilter;texture.minFilter=T.LinearMipmapLinearFilter;
+  texture.generateMipmaps=true;texture.anisotropy=4;texture.needsUpdate=true;
+  return texture;
+}
+const pavementMat=new T.MeshStandardMaterial({map:pavementTexture(),roughness:1,side:T.DoubleSide});
 
 function cageLocal(x,y){
   const dx=x-CAGE.x,dy=y-CAGE.y,c=Math.cos(CAGE.angle),s=Math.sin(CAGE.angle);
@@ -34,12 +61,9 @@ function shape(points, holes=[]) {
 function flat(points,material,z,holes=[]){
   const o=new T.Mesh(new T.ShapeGeometry(shape(points,holes)),material);o.position.z=z;o.receiveShadow=true;return o;
 }
-function segments(items,color,z){
-  const verts=[];for(const f of items)for(const path of f.paths)for(let i=1;i<path.length;i++){
-    verts.push(path[i-1][0],path[i-1][1],z,path[i][0],path[i][1],z);
-  }
-  const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(verts,3));
-  return new T.LineSegments(g,new T.LineBasicMaterial({color,transparent:true,opacity:.85}));
+function ringArea(points){
+  let sum=0;for(let i=0;i<points.length;i++){const a=points[i],b=points[(i+1)%points.length];sum+=a[0]*b[1]-b[0]*a[1];}
+  return Math.abs(sum)/2;
 }
 function cylinderBetween(a,b,r,material,parent){
   const delta=b.clone().sub(a);const o=new T.Mesh(new T.CylinderGeometry(r,r,delta.length(),6),material);
@@ -117,6 +141,11 @@ function makeCage(){
 
 function decorateCage(root){
   const lightPath=mat('#d9d3bf'),wood=mat('#725341'),woodLight=mat('#977052'),tile=mat('#a75f46');
+  // The plan confirms water inside the dome but does not delineate its shore.
+  // Keep this lagoon an explicitly interpreted shape beneath the footbridge.
+  const lagoon=[[-21,-2],[-19,-7],[-13,-9],[-6,-8.8],[1,-9.1],[7,-6.2],[10,-1],[9.3,5],[5.5,8.3],[-2,9.4],[-10,8.4],[-17,5.7],[-21,-2]];
+  const pond=flat(lagoon,waterMat,-.045);pond.name='Su Kuşları iç göleti — 2026 krokisi/fotoğraf yorumu';pond.userData.sourceKey='pond';root.add(pond);
+  const shore=ribbon(lagoon.slice(0,-1),.55,stoneMat,-.035,true);shore.name='İç gölet kıyısı — görsel yorum';root.add(shore);
   const loop=[];for(let i=0;i<80;i++){
     const a=2*Math.PI*i/80;
     loop.push([23.8*Math.cos(a)+1.1*Math.sin(3*a),14.4*Math.sin(a)+1.1*Math.cos(2*a)]);
@@ -209,48 +238,57 @@ function decorateCage(root){
   }
 }
 
-export function createSite(data){
-  const site=new T.Group();site.name='Bursa Hayvanat Bahçesi — M5 kaynak çizgileri';
-  let cagePondMesh=null;
-  const ground=flat(data.outline,grass,-.24);ground.name='OSM bahçe sınırı içi — düz önizleme zemin';site.add(ground);
-  for(const p of data.walkSurfaces){const m=flat(p.outer,pathMat,-.17,p.holes);m.name='DGN yol kenarından türetilmiş yaklaşık yol yüzeyi';site.add(m);}
-  const water=data.features.filter(f=>f.role==='water');
-  for(const f of water)if(f.closed)for(const p of f.paths)if(p.length>=4){const m=flat(p,waterMat,-.095);m.name=f.id+' · M5 havuz';site.add(m);}
-  if(data.cagePond?.outer?.length>3){
-    const p=data.cagePond.outer,open=p[0][0]===p[p.length-1][0]&&p[0][1]===p[p.length-1][1]?p.slice(0,-1):p;
-    const pond=flat(p,waterMat,-.052);pond.name='Su Kuşları Kafesi göleti · birleşen M5 su kenarları';pond.userData.sourceKey='pond';site.add(pond);cagePondMesh=pond;
-    const bank=ribbon(open,.88,stoneMat,-.045,true);bank.name='Gölet taş kıyısı — görsel yorum';site.add(bank);
-    const shore=new T.Group();shore.name='Gölet kaya ve saz kümeleri — görsel yorum';site.add(shore);
-    const rockGeo=new T.IcosahedronGeometry(1,0),reedGeo=new T.ConeGeometry(1,1,4),rocks=[],reeds=[];
-    for(let i=0;i<open.length;i+=Math.max(1,Math.floor(open.length/23))){
-      const [x,y]=open[i],seed=(i*17)%11;
-      if(i%3!==0)rocks.push([x+((seed%3)-1)*.27,y+((seed%5)-2)*.19,.34,.46+seed*.035]);
-      if(i%2===0)reeds.push([x+((seed%4)-1)*.38,y+((seed%3)-1)*.3,.55,1.15+seed*.09]);
-    }
-    const d=new T.Object3D(),rm=new T.InstancedMesh(rockGeo,stoneMat,rocks.length),gm=new T.InstancedMesh(reedGeo,reedMat,reeds.length);
-    rocks.forEach(([x,y,z,r],i)=>{d.position.set(x,y,z);d.scale.set(r,r*.72,r*.55);d.rotation.set(0,0,i*.83);d.updateMatrix();rm.setMatrixAt(i,d.matrix);});
-    reeds.forEach(([x,y,z,h],i)=>{d.position.set(x,y,z);d.scale.set(.21,.21,h);d.rotation.set(0,0,i*.71);d.updateMatrix();gm.setMatrixAt(i,d.matrix);});
-    shore.add(rm,gm);
+export function createSite(data,currentPlan){
+  const anchor=currentPlan?.features?.find(f=>f.id==='waterbird_aviary_dome_candidate')?.modelAnchor;
+  const centre=anchor?.provisionalShellCentreXYMetres;
+  const dimensions=anchor?.independentMajorMinorDimensionsMetres;
+  if(centre?.length===2&&centre.every(Number.isFinite)&&Number.isFinite(anchor.provisionalShellAngleDegreesCounterclockwiseFromEast)&&dimensions?.length===2&&dimensions.every(n=>Number.isFinite(n)&&n>0)){
+    CAGE.x=centre[0];CAGE.y=centre[1];CAGE.angle=anchor.provisionalShellAngleDegreesCounterclockwiseFromEast*Math.PI/180;
+    CAGE.length=dimensions[0];CAGE.width=dimensions[1];
   }
-  site.add(segments(data.features.filter(f=>f.role==='road_edge'),'#7b7866',-.08));
-  site.add(segments(data.features.filter(f=>f.role==='curb'),'#e5d7b7',-.05));
-  site.add(segments(data.features.filter(f=>f.role==='fence'),'#576652',.05));
-  site.add(segments(data.features.filter(f=>f.role==='wall'),'#746d62',.055));
-  site.add(segments(data.features.filter(f=>f.role==='water'&&!f.closed),'#438fa8',-.07));
+  const site=new T.Group();site.name='Bursa Hayvanat Bahçesi — 2026 kroki ve M5 yerleşimi';
+  const ground=flat(data.outline,grass,-.24);ground.name='OSM bahçe sınırı içi — düz önizleme zemin';site.add(ground);
+  for(const p of data.walkSurfaces){
+    // The 3 m survey-line buffer is provisional. Tiny sliver holes are buffer artifacts.
+    const holes=p.holes.filter(h=>ringArea(h)>1);
+    const geometry=new T.ExtrudeGeometry(shape(p.outer,holes),{depth:.12,steps:1,bevelEnabled:false,curveSegments:1});
+    const m=new T.Mesh(geometry,[pavementMat,pavementSideMat]);
+    m.position.z=-.225;m.receiveShadow=true;
+    m.name='M5 yol çizgilerinden türetilmiş alçak kaplama · yaklaşık genişlik';site.add(m);
+  }
+  const water=data.features.filter(f=>f.role==='water');
+  const byId=new Map(water.map(f=>[f.id,f]));
+  // The two nested M5 rings are islands inside the matching 2026 plan ponds.
+  const waterIslands=new Map([
+    ['H22D01C2B:58','H22D01C2B:57'],
+    ['H22D01C2B:61','H22D01C2B:60'],
+  ]);
+  const islandIds=new Set(waterIslands.values());
+  for(const f of water)if(f.closed&&!islandIds.has(f.id))for(const p of f.paths)if(p.length>=4){
+    const island=byId.get(waterIslands.get(f.id));
+    const holes=island?.paths?.filter(r=>r.length>=4)||[];
+    const m=flat(p,waterMat,-.095,holes);m.name=f.id+' · M5 havuz'+(holes.length?' ve ada':'');site.add(m);
+  }
+  const entrancePond=currentPlan?.features?.find(f=>f.id==='entrance_pond_5');
+  if(entrancePond?.pointsXYMetres?.length>=4){
+    const pond=flat(entrancePond.pointsXYMetres,waterMat,-.09);
+    pond.name='Giriş Göleti (#5) · 2026 resmî kroki yorumu';
+    pond.userData.sourceKey='currentPlan';site.add(pond);
+  }
+  if(data.alligatorPond?.outer?.length>3){
+    const pond=flat(data.alligatorPond.outer,waterMat,-.095);
+    pond.name='Alligatör alanı göleti · birleşen M5 su kenarları';site.add(pond);
+  }
+  // DGN curb and other survey lines remain in site-data.json for later plan alignment.
   const footprints=new T.Group();footprints.name='Diğer yapı izleri — aşamalı modelleme';site.add(footprints);
   for(const f of data.features)if(f.role==='building'&&f.closed)for(const p of f.paths){
+    // This old footprint sits inside the dome; keep it in source data until
+    // its relation to the separately interpreted interior house is verified.
+    if(f.id==='H22D01C2B:301')continue;
     if(p.length<4)continue;
     const height=Math.max(2,Math.min(8,f.sourceH-93.5));
     const mesh=new T.Mesh(new T.ExtrudeGeometry(shape(p),{depth:height,bevelEnabled:false,curveSegments:3}),buildingMat);
     mesh.position.z=.02;mesh.castShadow=true;mesh.receiveShadow=true;mesh.name=f.id+' · aday kütle';footprints.add(mesh);
-  }
-  const canopy=new T.Group();canopy.name='DGN sundurma izleri';site.add(canopy);
-  for(const f of data.features)if(f.role==='canopy'&&f.closed)for(const p of f.paths){
-    if(p.length<4)continue;
-    const cx=p.reduce((a,v)=>a+v[0],0)/p.length,cy=p.reduce((a,v)=>a+v[1],0)/p.length;
-    if(insideCage(cx,cy))continue;
-    const m=flat(p,roofMat,Math.max(1.3,Math.min(6,f.sourceH-93.5)));
-    m.name=f.id+' · kaynak sundurma üst izi';canopy.add(m);
   }
   const trees=new T.Group();trees.name='M5 ağaç sembollerinden temsili bitki örtüsü';site.add(trees);
   const positions=(data.treeClusters||[]).map(c=>({p:c.xy,id:c.sourceIds[0]}));
@@ -279,7 +317,7 @@ export function createSite(data){
   trunks.instanceMatrix.needsUpdate=true;crowns.instanceMatrix.needsUpdate=true;crowns.instanceColor.needsUpdate=true;
   trunks.castShadow=true;crowns.castShadow=true;trees.add(trunks,crowns);
   const cage=makeCage();site.add(cage);
-  return {site,cage,trees,footprints,canopy,pond:cagePondMesh};
+  return {site,cage,trees,footprints};
 }
 
 export {CAGE};

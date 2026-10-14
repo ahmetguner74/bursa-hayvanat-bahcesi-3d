@@ -189,13 +189,13 @@ def main() -> None:
                       "sourceIds": [tree_features[i]["id"] for i in members]}
                      for members in groups.values()]
 
-    # Two measured M5 water-edge segments meet to form the cage pond outline.
+    # Two M5 water edges form the pond in the 2026 plan's Alligator area.
     pond_ids = ("H22D01C2A:3564", "H22D01C2B:4281")
     pond_parts = [next(item for item in selected if item["id"] == source_id)["paths"][0]
                   for source_id in pond_ids]
     pond_outline = pond_parts[0] + pond_parts[1][1:]
     if not Polygon(pond_outline).is_valid:
-        raise ValueError("Cage pond outline from M5 water edges is invalid")
+        raise ValueError("Alligator-area pond outline from M5 water edges is invalid")
     result = {
         "schema": "bursa-zoo-site-study/v1",
         "status": "DGN-derived clipped plan; ground surface and structure contacts not accepted",
@@ -207,7 +207,7 @@ def main() -> None:
         "walkSurfaceMethod": "3 m visual buffer around M5 Yol_Sose/Yol_Toprak edge lines; not surveyed pavement width",
         "treeClusters": tree_clusters,
         "treeClusterMethod": "M5 four-mark tree symbols merged within 2.5 m for visualization; source features preserved",
-        "cagePond": {"outer": pond_outline, "sourceFeatureIds": pond_ids},
+        "alligatorPond": {"outer": pond_outline, "sourceFeatureIds": pond_ids},
         "features": selected,
         "sourceLayerCounts": dict(sorted(counts.items())),
         "sourceSheets": SHEETS,

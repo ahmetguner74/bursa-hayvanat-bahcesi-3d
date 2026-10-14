@@ -1,0 +1,281 @@
+{
+  "schema": "bursa-zoo-current-plan-registration-v1",
+  "purpose": "Approximate visual crosswalk between the official visitor map and M5 local metric coordinates; not a survey or georeferenced plan.",
+  "officialSource": {
+    "imageUrl": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+    "mediaRecordUrl": "https://www.bursahayvanatbahcesi.com/wp-json/wp/v2/media/4039",
+    "privateLocalImage": "reference-maps-private/2026-09-kroki.jpg",
+    "imageSizePixels": [
+      1600,
+      864
+    ],
+    "pixelAxes": "u increases right; v increases down; origin at upper left",
+    "limitations": "Wayfinding illustration: perspective, stylization, no printed scale, and no surveyed control points."
+  },
+  "metricSource": {
+    "path": "site-data.json",
+    "coordinateFrame": "M5 source ED50/TM30 XY metres; orthometric source H",
+    "originEd50": [
+      418823,
+      4454491
+    ],
+    "axisConvention": "x increases east; y increases north"
+  },
+  "fit": {
+    "method": "Unweighted least-squares 2D affine fit to 12 manually matched controls",
+    "localMetresToImagePixels": {
+      "u": [
+        1.348680483,
+        -0.023124771,
+        479.417086
+      ],
+      "v": [
+        -0.065562153,
+        -1.411850395,
+        439.156908
+      ],
+      "formula": "u = u[0]*x + u[1]*y + u[2]; v = v[0]*x + v[1]*y + v[2]"
+    },
+    "imagePixelsToLocalMetres": {
+      "x": [
+        0.740875564,
+        -0.012134839,
+        -349.859305
+      ],
+      "y": [
+        -0.034404068,
+        -0.707726837,
+        327.297028
+      ],
+      "formula": "x = x[0]*u + x[1]*v + x[2]; y = y[0]*u + y[1]*v + y[2]"
+    },
+    "rmsPixelResidual": 14.94,
+    "rmsMetreResidual": 10.7,
+    "maxPixelResidual": 31.84,
+    "practicalUncertaintyMetres": "Approximately 10-25 m depending on location; verify each detailed object against a current orthophoto or site photos."
+  },
+  "controlPoints": [
+    {
+      "label": "NW outer corner",
+      "kind": "boundary",
+      "localXYMetres": [
+        -189.35,
+        236.52
+      ],
+      "imageUVPixels": [
+        206,
+        113
+      ],
+      "fitResidualPixels": 13.4,
+      "fitResidualMetres": 9.98
+    },
+    {
+      "label": "SW outer corner",
+      "kind": "boundary",
+      "localXYMetres": [
+        -275.69,
+        -150.91
+      ],
+      "imageUVPixels": [
+        91,
+        695
+      ],
+      "fitResidualPixels": 31.84,
+      "fitResidualMetres": 22.64
+    },
+    {
+      "label": "E outer tip",
+      "kind": "boundary",
+      "localXYMetres": [
+        383.5,
+        -81.28
+      ],
+      "imageUVPixels": [
+        995,
+        534
+      ],
+      "fitResidualPixels": 6.3,
+      "fitResidualMetres": 4.47
+    },
+    {
+      "label": "SW pond",
+      "kind": "water",
+      "localXYMetres": [
+        -229.3,
+        -130.4
+      ],
+      "imageUVPixels": [
+        190,
+        616
+      ],
+      "fitResidualPixels": 27.93,
+      "fitResidualMetres": 19.83
+    },
+    {
+      "label": "W narrow pond",
+      "kind": "water",
+      "localXYMetres": [
+        -97.4,
+        -21.1
+      ],
+      "imageUVPixels": [
+        355,
+        469
+      ],
+      "fitResidualPixels": 9.04,
+      "fitResidualMetres": 6.46
+    },
+    {
+      "label": "African river",
+      "kind": "water",
+      "localXYMetres": [
+        117.1,
+        52.9
+      ],
+      "imageUVPixels": [
+        632,
+        355
+      ],
+      "fitResidualPixels": 4.5,
+      "fitResidualMetres": 3.35
+    },
+    {
+      "label": "SE first pond",
+      "kind": "water",
+      "localXYMetres": [
+        197.5,
+        -9.7
+      ],
+      "imageUVPixels": [
+        744,
+        438
+      ],
+      "fitResidualPixels": 2.77,
+      "fitResidualMetres": 2.04
+    },
+    {
+      "label": "SE second pond",
+      "kind": "water",
+      "localXYMetres": [
+        270.5,
+        -15.0
+      ],
+      "imageUVPixels": [
+        847,
+        436
+      ],
+      "fitResidualPixels": 7.03,
+      "fitResidualMetres": 4.95
+    },
+    {
+      "label": "Village pond",
+      "kind": "water",
+      "localXYMetres": [
+        18.7,
+        -10.0
+      ],
+      "imageUVPixels": [
+        506,
+        449
+      ],
+      "fitResidualPixels": 3.25,
+      "fitResidualMetres": 2.29
+    },
+    {
+      "label": "Penguin pond W",
+      "kind": "water",
+      "localXYMetres": [
+        -15.9,
+        133.9
+      ],
+      "imageUVPixels": [
+        467,
+        262
+      ],
+      "fitResidualPixels": 16.27,
+      "fitResidualMetres": 11.99
+    },
+    {
+      "label": "Penguin pond E",
+      "kind": "water",
+      "localXYMetres": [
+        16.8,
+        132.2
+      ],
+      "imageUVPixels": [
+        493,
+        261
+      ],
+      "fitResidualPixels": 11.32,
+      "fitResidualMetres": 8.01
+    },
+    {
+      "label": "NW building",
+      "kind": "building",
+      "localXYMetres": [
+        -169.3,
+        149.8
+      ],
+      "imageUVPixels": [
+        257,
+        235
+      ],
+      "fitResidualPixels": 10.1,
+      "fitResidualMetres": 7.37
+    }
+  ],
+  "waterbirdDome": {
+    "currentSceneCageCentreMetres": [
+      -223,
+      -126
+    ],
+    "currentSceneCageImagePixel": [
+      181.58,
+      631.67
+    ],
+    "currentSceneCageIssue": "Projects into the southwest Alligator area, official visitor label 27, rather than the large mesh dome by Pelikan Goleti 31 and Su Kuslari 32.",
+    "officialIllustrationApproxDomeCentrePixel": [
+      443,
+      519
+    ],
+    "officialIllustrationApproxDomeCentreMetres": [
+      -27.95,
+      -55.25
+    ],
+    "matchingOldM5Feature": {
+      "id": "H22D01C2B:3908",
+      "role": "fence",
+      "bboxXYMetres": [
+        [
+          -64.079,
+          -84.873
+        ],
+        [
+          5.709,
+          -49.674
+        ]
+      ],
+      "ellipseFit": {
+        "assumedMajorMinorDimensionsMetres": [
+          70,
+          40
+        ],
+        "centreXYMetres": [
+          -29.64,
+          -63.97
+        ],
+        "angleDegreesCounterclockwiseFromEast": 8.63,
+        "normalisedRadialRms": 0.0145,
+        "limitations": "Only a partial lower arc is in this feature; dimensions are imposed from the independently documented built structure."
+      },
+      "mapComparison": "The old M5 fence arc overlays the official illustration's lower dome edge; the illustrated long axis is approximately +9 to +10 degrees in local coordinates."
+    },
+    "provisionalModelCentreXYMetres": [
+      -30,
+      -64
+    ],
+    "provisionalModelAngleDegreesCounterclockwiseFromEast": 9,
+    "confidence": "Medium for identity and approximate footprint, low for exact centre and current internal water layout.",
+    "waterCaveat": "The old M5 cagePond near [-223,-126] belongs to the southwest Alligator area in this crosswalk. No M5 water polygon was found inside the proposed dome footprint; do not translate that pond with the cage."
+  }
+}

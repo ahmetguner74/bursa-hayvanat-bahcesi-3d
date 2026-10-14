@@ -5,7 +5,8 @@
   "measuredOrSourceDerived": [
     {
       "part": "bahçe içi yol kenarları, havuzlar, yapı ve sundurma üst izleri, ağaç işaretleri",
-      "source": "source-dgn/H22D01C2A-D.dgn",
+      "source": "source-dgn/",
+      "sourceFiles": ["H22D01C2A.dgn", "H22D01C2B.dgn", "H22D01C2C.dgn", "H22D01C2D.dgn"],
       "sourceType": "Bursa M5 fotogrametrik hâlihazır paftaları; 2016 görüntü / 2018 bütünleme",
       "processing": "Global Mapper SIMPLE_ASCII ara dışa aktarımı; OSM way 26445905 sınırına kırpıldı",
       "limitation": "DGN özgün öğe kimlikleri aktarılmadı; çizgi kimlikleri ara dışa aktarım sırasıdır; kaynak saçak/üst izleri zemin oturumu diye kabul edilmez"
@@ -18,12 +19,22 @@
       "limitation": "3B örgü modülleri kaynak çiziminin bire bir mühendislik modeli değildir"
     },
     {
-      "part": "Su Kuşları Kafesi gölet dış çizgisi",
-      "source": "source-dgn/H22D01C2A-D.dgn",
+      "part": "Alligatör alanı gölet dış çizgisi",
+      "source": "source-dgn/",
+      "sourceFiles": ["H22D01C2A.dgn", "H22D01C2B.dgn"],
       "sourceFeatureIds": ["H22D01C2A:3564", "H22D01C2B:4281"],
       "sourceType": "iki birleşen M5 Hid_Havuz su kenarı",
       "processing": "uçları birleşen açık çizgiler kapalı yüzeye dönüştürüldü",
       "limitation": "su seviyesi, derinliği ve kıyı malzemesi ölçülü değildir"
+    },
+    {
+      "part": "kuzeydoğu ikiz gölet dış kıyıları ve iç adaları",
+      "source": "source-dgn/",
+      "sourceFiles": ["H22D01C2B.dgn"],
+      "sourceFeatureIds": ["H22D01C2B:58", "H22D01C2B:57", "H22D01C2B:61", "H22D01C2B:60"],
+      "sourceType": "M5 kapalı su kenarları; iki iç halka ada",
+      "crossCheck": "2026 resmi kroki kuzeydoğu ikiz göletlerle yaklaşık örtüşür",
+      "limitation": "M5 kıyıları eski durumu gösterir; güncel su seviyesi ve küçük kıyı değişimleri bilinmiyor"
     },
     {
       "part": "bahçe sınırı",
@@ -33,10 +44,14 @@
     }
   ],
   "visualInterpretation": [
-    {"part":"yol yüzeyi","method":"M5 yol kenarlarının iki yanında 3 m görsel tampon","limitation":"kaplama sınırı ve genişliği ölçülü değildir"},
+    {"part":"yol yüzeyi","method":"M5 yol kenarlarının iki yanında 3 m görsel tampon; 12 cm alçak hacim ve üretilmiş taş dokusu","limitation":"kaplama sınırı, genişliği, kalınlığı ve malzemesi ölçülü değildir"},
+    {"part":"yol kenarı","method":"kaplamanın 12 cm yan yüzüyle alçak kenar etkisi; M5 bordür çizgileri ham veride saklanır fakat sahnede ayrıca çizilmez","limitation":"gerçek kaldırım kotu, genişliği ve bordür malzemesi saha ölçüsü değildir"},
+    {"part":"Giriş Göleti (#5)","method":"Mart 2026 büyük çözünürlüklü resmi krokide yaklaşık izlenen kıyı, Eylül kroki ve M5 metre düzlemiyle eşlendi","sourceFeatureId":"entrance_pond_5","sources":["current-plan-data.json","https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg"],"limitation":"kroki kıyısı şematiktir; kontrol dönüşümünde yaklaşık 11 m RMS sapma ve yerel esneme vardır"},
     {"part":"diğer yapı kütleleri","method":"DGN üst/saçak çizgisi ve 93,5 m temsili yerel referans","limitation":"yapı yüksekliği ve cepheleri araştırılmadı; arka plan aday hacimleridir"},
+    {"part":"kafes içindeki M5 yapı izi","method":"H22D01C2B:301 ham veride saklanır; yorumlanan ahşap iç yapı ile ilişkisi doğrulanana kadar ikinci bir genel kütle olarak çizilmez","limitation":"M5 yapı izinin güncel yapıya ait olup olmadığı ve tam eşleşmesi bilinmiyor"},
     {"part":"ağaçlar","method":"yakın M5 ağaç çizgileri 2,5 m içinde birleştirildi; her küme için temsilî gövde ve parçalı taç. Giriş yolunun tam eksenindeki işaret alçak yeşil kütle olarak gösterildi; kaynak XY noktası korundu.","limitation":"ağaç türü, gerçek boyu ve tacı ölçülmedi; giriş eksenindeki boy görsel açıklık için yorumlandı; kaynak çizgiler korunur"},
-    {"part":"Su Kuşları Kafesi konumu","method":"DGN su, çit ve duvar çizgileriyle elle eşleştirme","localCentreM":[-223,-126],"angleDegrees":15,"limitation":"kesin oturum ve yön saha/ortofoto kontrolü bekliyor"},
+    {"part":"Su Kuşları Kafesi konumu","method":"Eylül 2026 resmî krokiyle eşlenen M5 eliptik tel çit yayı (H22D01C2B:3908); yaklaşık merkez ve yön","localCentreM":[-30,-64],"angleDegrees":9,"sources":["https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg","current-plan-data.json"],"limitation":"kroki kubbesi #31 Pelikan Göleti olarak, #32 Su Kuşları ayrı işaretli; iki adın kapsamı doğrulanmalı. Kroki-M5 merkezleri arasında yaklaşık 13 m var; güncel ortofoto/saha kontrolü bekliyor"},
+    {"part":"Su Kuşları iç göleti","method":"resmî krokide kubbe içindeki #31 su alanı ve yapımcı iç fotoğraflarına göre yorumlanan kıyı","sources":["https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg","https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/"],"limitation":"kroki kubbe altındaki gerçek kıyıyı göstermiyor; poligon ve su seviyesi ölçülü değil"},
     {"part":"iki uçtaki giriş portalları","method":"USKON yapım fotoğrafları ile GeziBilen giriş fotoğrafındaki beşik çatı ve koyu gri girişi yaklaşık kurma","sources":["https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/","https://gezibilen.com/de/travelpoint/bursa/bursa-hayvanat-bahcesi"],"limitation":"kapı ölçüleri ve mevcut renk tonu kesin değildir"},
     {"part":"iç gezi yolu, ahşap köprü ve kuş evi/değirmen","method":"USKON iç fotoğrafları ve Trend İnşaat havadan fotoğrafındaki düzeni kaynak planla uyumlu bir görsel dille yorumlama","sources":["https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/","https://www.trendinsaat.com.tr/tr/projeler/kent-parklari"],"limitation":"tekil konum, yol/köprü genişliği ve ahşap yapının biçimi saha ölçüsü değildir"},
     {"part":"gölet taşları, sazlar ve dış çalı halkası","method":"kaynak fotoğraflardaki yoğun bitkili çevre hissi için farklı yükseklik ve tonlarda düşük ayrıntılı kütleler","limitation":"bitki türleri, sayıları ve yerleri temsilîdir"},
