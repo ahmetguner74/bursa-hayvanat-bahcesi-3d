@@ -1,19 +1,11 @@
 import * as T from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
-import {createSite,CAGE} from './model.js?v=20261014h';
+import {createSite,CAGE} from './model.js?v=20261014i';
 
 const $=id=>document.getElementById(id);
 const hotspots={
   cage:{x:CAGE.x,y:CAGE.y,z:23,label:'Su Kuşları Kafesi',view:'entry',primary:true},
 };
-const evidence={
-  shell:{title:'70 × 40 × 20 m çelik kubbe',level:'ÖLÇÜLÜ KABUK',detail:'Ana ölçüler ve tek katmanlı eliptik yarım kubbe yapımcı planından gelir. Çubukların tek tek dizilimi yaklaşık 3B yorumdur.',links:[['USKON · plan ve yapı fotoğrafları','https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/']]},
-  entrance:{title:'İki uçtaki giriş',level:'FOTOĞRAF EŞLEŞTİRMESİ',detail:'Beşik çatı, koyu gri geçit ve açık renk yaklaşma yolu fotoğraflardan okunur. Geçit boyutları ve bankın yeri yaklaşık yorumdur.',links:[['GeziBilen · giriş fotoğrafı','https://gezibilen.com/de/travelpoint/bursa/bursa-hayvanat-bahcesi'],['USKON · yapım fotoğrafları','https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/']]},
-  pond:{title:'Kafes içi gölet',level:'M5 ÇİZGİSİ',detail:'Su sınırı iki birleşen M5 havuz kenarından oluşturuldu. Su kotu, taşlar ve saz kümeleri ölçülü değildir.',links:[['M5 kaynak çizgileri · alan verisi','site-data.json']]},
-  mill:{title:'Ahşap yapı',level:'FOTOĞRAF + YORUM',detail:'Ortadaki koyu ahşap kütle ve kırmızı çatı hava ve yapım fotoğraflarında görülür. Cephe, merdiven ve yükseklik görsel yorumdur.',links:[['USKON · iç mekân fotoğrafları','https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/'],['Trend İnşaat · havadan görünüm','https://www.trendinsaat.com.tr/tr/projeler/kent-parklari']]},
-  landscape:{title:'Yol, köprü ve bitkiler',level:'GÖRSEL YORUM',detail:'İçteki dolaşım, ahşap köprü ve yoğun yeşil çevre kaynak fotoğrafların ilişkisini izler. Tekil biçim ve yerleri saha ölçüsü değildir.',links:[['Trend İnşaat · havadan görünüm','https://www.trendinsaat.com.tr/tr/projeler/kent-parklari'],['USKON · iç fotoğraflar','https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/']]},
-};
-
 try{await start();}catch(error){console.error(error);$('loading').textContent='Görünüm açılamadı: '+error.message;}
 
 async function start(){
@@ -25,7 +17,7 @@ async function start(){
   let camera=mapCamera;
   const renderer=new T.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.38;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFShadowMap;canvas.append(renderer.domElement);
   scene.add(new T.HemisphereLight('#eff8e8','#76917a',2.0));const sun=new T.DirectionalLight('#fff1d5',2.4);sun.position.set(-230,160,350);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-420;sun.shadow.camera.right=420;sun.shadow.camera.top=300;sun.shadow.camera.bottom=-300;sun.shadow.camera.near=1;sun.shadow.camera.far=900;sun.shadow.bias=-.0003;scene.add(sun);
-  const {site,cage,trees,footprints,canopy,pond}=createSite(D);scene.add(site);
+  const {site,cage,trees,footprints,canopy}=createSite(D);scene.add(site);
   const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.09;controls.screenSpacePanning=true;controls.minZoom=.55;controls.maxZoom=18;controls.minDistance=2;controls.maxDistance=1200;controls.maxPolarAngle=Math.PI*.495;
   const c=Math.cos(CAGE.angle),s=Math.sin(CAGE.angle);
   const cagePoint=(u,v,z)=>[CAGE.x+u*c-v*s,CAGE.y+u*s+v*c,z];
@@ -60,7 +52,7 @@ async function start(){
       transition=null;camera.position.copy(next);controls.target.copy(target);camera.zoom=zoom;camera.updateProjectionMatrix();controls.update();dirty=true;
     }else transition={from:camera.position.clone(),to:next,fromTarget:controls.target.clone(),toTarget:target,z0:camera.zoom,z1:zoom,start:performance.now()};
     $('map-guide').hidden=name!=='site';
-    const hints={site:'Bahçe genel planı · M5 yol ve su çizgileri',cage:'Su Kuşları Kafesi · dış görünüm',entry:'Girişten · yaklaşık 1,7 m göz hizası',inside:'İçeriden · yaklaşık 1,7 m göz hizası','cage-top':'70 × 40 m · kubbe planı'};
+    const hints={site:'Genel plan',cage:'Su Kuşları Kafesi · dış görünüm',entry:'Su Kuşları Kafesi · giriş',inside:'Su Kuşları Kafesi · iç görünüm','cage-top':'Su Kuşları Kafesi · üstten'};
     $('view-hint').textContent=hints[name];
   }
   document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.view)));
@@ -76,19 +68,6 @@ async function start(){
     $('scale-rule').style.width=scaleMetres*pixelsPerMetre+'px';
     $('scale-label').textContent=scaleMetres+' m';
   }
-  function showEvidence(key='shell'){
-    const item=evidence[key]||evidence.shell;
-    $('evidence-level').textContent=item.level;$('evidence-title').textContent=item.title;$('evidence-detail').textContent=item.detail;
-    const links=$('evidence-links');links.replaceChildren();
-    for(const [label,url] of item.links){const a=document.createElement('a');a.textContent=label+' ↗';a.href=url;if(url.startsWith('http')){a.target='_blank';a.rel='noopener';}links.append(a);}
-    document.querySelectorAll('[data-evidence]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.evidence===key)));
-    $('evidence-card').hidden=false;$('evidence-toggle').setAttribute('aria-expanded','true');
-  }
-  function hideEvidence(){$('evidence-card').hidden=true;$('evidence-toggle').setAttribute('aria-expanded','false');}
-  $('evidence-toggle').onclick=()=>$('evidence-card').hidden?showEvidence('shell'):hideEvidence();
-  $('evidence-close').onclick=hideEvidence;
-  document.querySelectorAll('[data-evidence]').forEach(b=>b.onclick=()=>showEvidence(b.dataset.evidence));
-  $('evidence-all').onclick=()=>{hideEvidence();$('sources').showModal();};
   controls.addEventListener('change',()=>{dirty=true;});
   renderer.domElement.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];drag=false;});
   renderer.domElement.addEventListener('pointermove',e=>{if(down&&Math.hypot(e.clientX-down[0],e.clientY-down[1])>6)drag=true;});
@@ -96,16 +75,13 @@ async function start(){
     if(!down||drag){down=null;return;}down=null;
     const r=renderer.domElement.getBoundingClientRect(),p=new T.Vector2(2*(e.clientX-r.left)/r.width-1,-2*(e.clientY-r.top)/r.height+1);
     const ray=new T.Raycaster();ray.setFromCamera(p,camera);
-    const hits=ray.intersectObjects([cage,pond].filter(Boolean),true);
-    if(!hits.length)return;
-    if(active==='site'){go('entry');return;}
-    let part=hits[0].object;
-    while(part&&!part.userData.sourceKey)part=part.parent;
-    showEvidence(part?.userData.sourceKey||'shell');
+    if(active==='site'&&ray.intersectObject(cage,true).length)go('entry');
   });
   for(const [id,group] of [['toggle-trees',trees],['toggle-buildings',footprints],['toggle-canopies',canopy]])$(id).onclick=()=>{group.visible=!group.visible;$(id).setAttribute('aria-pressed',String(group.visible));dirty=true;};
-  $('open-sources').onclick=()=>$('sources').showModal();$('close-sources').onclick=()=>$('sources').close();$('sources').addEventListener('click',e=>{if(e.target===$('sources'))$('sources').close();});
-  function syncFull(on){$('fullscreen').setAttribute('aria-pressed',String(on));$('fullscreen').innerHTML=on?'⛶ <span>Çık</span>':'⛶ <span>Tam ekran</span>';dirty=true;}
+  function showLayers(on){$('layers-panel').hidden=!on;$('layers-toggle').setAttribute('aria-expanded',String(on));}
+  $('layers-toggle').onclick=()=>showLayers($('layers-panel').hidden);
+  $('layers-close').onclick=()=>showLayers(false);
+  function syncFull(on){$('fullscreen').setAttribute('aria-pressed',String(on));$('fullscreen').setAttribute('aria-label',on?'Tam ekrandan çık':'Tam ekran');$('fullscreen').title=on?'Tam ekrandan çık':'Tam ekran';$('fullscreen').querySelector('.action-label').textContent=on?'Çık':'Tam ekran';dirty=true;}
   $('fullscreen').onclick=async()=>{
     if(document.fullscreenElement===host){await document.exitFullscreen();return;}
     if(fullscreenFallback){host.classList.remove('fallback-fullscreen');fullscreenFallback=false;syncFull(false);return;}

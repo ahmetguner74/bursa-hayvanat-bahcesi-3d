@@ -1,27 +1,55 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#183c32"><title>Bursa Hayvanat Bahçesi · 3B Atlas</title>
-  <link rel="stylesheet" href="style.css?v=20261014b">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#dce7d8">
+  <title>Bursa Hayvanat Bahçesi · 3B Atlas</title>
+  <link rel="stylesheet" href="style.css?v=20261014c">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
 </head>
 <body>
-  <header><a class="brand" href="./"><span class="monogram">B·A</span><span>BURSA<br>HAYVANAT BAHÇESİ</span></a><span class="edition">ALAN ÇALIŞMASI / 01</span><a class="back" href="./">Genel plan ↗</a></header>
-  <main>
-    <section class="heading"><div><p class="eyebrow">SOĞANLI · OSMANGAZİ · BURSA</p><h1>Bir alanın<br><em>yaşayan atlası.</em></h1></div><div class="lede"><p>Hayvanat bahçesini yolları, suyu, ağaçları ve yapılarıyla tek bir sahnede kuruyoruz. İlk ayrıntılı nesne, gerçek ölçüleri belgelenmiş Su Kuşları Kafesi.</p><button id="open-sources" class="text-button">Kaynaklar ve doğruluk sınırı <span>↗</span></button></div></section>
-    <section id="stage" class="stage" aria-label="Bursa Hayvanat Bahçesi etkileşimli üç boyutlu alan modeli"><div id="canvas"></div><div id="loading" role="status">Alan hazırlanıyor…</div>
-      <div class="stage-top"><span class="live"><span class="dot"></span> KAYNAKLI İLK DENEME</span><div class="stage-actions"><button id="evidence-toggle" aria-expanded="false" aria-controls="evidence-card">Kaynak</button><button id="fullscreen" title="Tam ekran" aria-label="Tam ekran" aria-pressed="false">⛶ <span>Tam ekran</span></button></div></div>
-      <div id="markers" class="markers"></div>
-      <div id="map-guide" class="map-guide" aria-label="Harita yönü ve ölçeği"><span class="north"><span id="north-arrow" aria-hidden="true">↑</span> K</span><span class="scale"><i id="scale-rule"></i><span id="scale-label">100 m</span></span><span>Diğer yapılar taslak kütle</span></div>
-      <div class="viewbar" role="group" aria-label="Görünüm seçimi"><button data-view="site" class="active" aria-pressed="true"><span class="full">Genel plan</span><span class="short">Alan</span></button><button data-view="cage" aria-pressed="false"><span class="full">Kafes dışı</span><span class="short">Dış</span></button><button data-view="entry" aria-pressed="false"><span class="full">Girişten</span><span class="short">Giriş</span></button><button data-view="inside" aria-pressed="false"><span class="full">İçeriden</span><span class="short">İç</span></button><button data-view="cage-top" aria-pressed="false"><span class="full">Kubbe planı</span><span class="short">Plan</span></button></div>
-      <div class="stage-bottom"><span id="view-hint" role="status">Sürükle: döndür · Tekerlek: yakınlaş</span><div class="zoom"><button id="zoom-in" aria-label="Yakınlaştır">+</button><button id="zoom-out" aria-label="Uzaklaştır">−</button><button id="reset" aria-label="Görünümü sıfırla">⌖</button></div></div>
-      <aside id="evidence-card" class="evidence-card" aria-labelledby="evidence-title" hidden><div class="evidence-head"><span id="evidence-level">ÖLÇÜLÜ</span><button id="evidence-close" aria-label="Kaynak kartını kapat">×</button></div><h3 id="evidence-title">Kubbe</h3><p id="evidence-detail"></p><div class="evidence-parts" role="group" aria-label="Model parçalarının kaynakları"><button data-evidence="shell">Kubbe</button><button data-evidence="entrance">Giriş</button><button data-evidence="pond">Gölet</button><button data-evidence="mill">Ahşap yapı</button><button data-evidence="landscape">Çevre</button></div><div id="evidence-links" class="evidence-links"></div><button id="evidence-all" class="evidence-all">Tüm kaynaklar ve doğruluk sınırı</button></aside>
-    </section>
-    <section class="below"><div class="chapter"><span>01 / ORTAK ZEMİN</span><h2>Önce bütün alan.</h2><p>Dört özgün M5 paftasındaki yol kenarları, havuzlar, yapı izleri ve ağaç işaretleri aynı metre koordinatlarında birleşiyor. Yol yüzeyleri, çizgilerden görsel önizleme için türetildi; genişlikleri henüz ölçülü kabul edilmiyor.</p><div class="toggles"><button id="toggle-trees" aria-pressed="true">◉ Ağaçlar</button><button id="toggle-buildings" aria-pressed="true">▥ Yapı kütleleri</button><button id="toggle-canopies" aria-pressed="true">⌂ Sundurmalar</button></div></div><div class="chapter feature"><span>02 / İLK YAPI</span><h2>Su Kuşları Kafesi</h2><p>Yapımcı planındaki <strong>70 × 40 × 20 m</strong> ana kabuk korunur. Açık renkli çelik örgü ve iki uçtaki beşik çatılı giriş fotoğraflarla eşleştirilmiştir. DGN su kenarlarıyla kurulan göletin çevresindeki yol, köprü, ahşap yapı, taş ve bitkiler görsel yorumdur; kesin ölçüleri henüz doğrulanmadı.</p><div class="metrics"><div><b>70 × 40 m</b><small>yapımcı planı</small></div><div><b>20 m</b><small>tepe yüksekliği</small></div><div><b>1998</b><small>açılış dönemi</small></div></div></div></section>
-    <section class="timeline"><p class="eyebrow">MODELLEME ROTASI</p><div class="steps"><div class="current"><span>01</span><strong>Alan + su kuşları kafesi</strong><small>İlk deneme</small></div><div><span>02</span><strong>Türk Köyü</strong><small>Cephe fotoğraflarıyla</small></div><div><span>03</span><strong>Giriş ve Afrika Kafe</strong><small>Yapı bazlı</small></div><div><span>→</span><strong>Diğer yaşam alanları</strong><small>Aynı ölçü ve kaynak standardında</small></div></div></section>
+  <main id="stage" class="stage" aria-label="Bursa Hayvanat Bahçesi etkileşimli üç boyutlu alan modeli">
+    <div id="canvas"></div>
+    <div id="loading" role="status">Bahçe hazırlanıyor…</div>
+
+    <header class="topbar">
+      <div class="identity" aria-label="Bursa Hayvanat Bahçesi 3B Atlası">
+        <span class="identity-mark" aria-hidden="true">B·H</span>
+        <span class="identity-copy"><strong>Bursa Hayvanat Bahçesi</strong><small id="view-hint" role="status">Genel plan</small></span>
+      </div>
+      <div class="top-actions">
+        <button id="layers-toggle" type="button" aria-expanded="false" aria-controls="layers-panel" aria-label="Katmanlar" title="Katmanlar"><span aria-hidden="true">☷</span><span class="action-label">Katmanlar</span></button>
+        <button id="fullscreen" type="button" aria-label="Tam ekran" title="Tam ekran" aria-pressed="false"><span aria-hidden="true">⛶</span><span class="action-label">Tam ekran</span></button>
+      </div>
+    </header>
+
+    <aside id="layers-panel" class="layers-panel" aria-label="Harita katmanları" hidden>
+      <div class="layers-head"><strong>Katmanlar</strong><button id="layers-close" type="button" aria-label="Katmanları kapat">×</button></div>
+      <button id="toggle-trees" type="button" aria-pressed="true">Ağaçlar</button>
+      <button id="toggle-buildings" type="button" aria-pressed="true">Yapılar</button>
+      <button id="toggle-canopies" type="button" aria-pressed="true">Sundurmalar</button>
+    </aside>
+
+    <div id="markers" class="markers"></div>
+    <div id="map-guide" class="map-guide" aria-label="Harita yönü ve ölçeği">
+      <span class="north"><span id="north-arrow" aria-hidden="true">↑</span> K</span>
+      <span class="scale"><i id="scale-rule"></i><span id="scale-label">100 m</span></span>
+    </div>
+
+    <nav class="viewbar" aria-label="Görünüm seçimi">
+      <button data-view="site" class="active" aria-pressed="true"><span class="full">Genel plan</span><span class="short">Alan</span></button>
+      <button data-view="cage" aria-pressed="false"><span class="full">Kafes dışı</span><span class="short">Dış</span></button>
+      <button data-view="entry" aria-pressed="false"><span class="full">Girişten</span><span class="short">Giriş</span></button>
+      <button data-view="inside" aria-pressed="false"><span class="full">İçeriden</span><span class="short">İç</span></button>
+      <button data-view="cage-top" aria-pressed="false"><span class="full">Üstten</span><span class="short">Üst</span></button>
+    </nav>
+    <div class="zoom" role="group" aria-label="Harita denetimleri">
+      <button id="zoom-in" type="button" aria-label="Yakınlaştır" title="Yakınlaştır">+</button>
+      <button id="zoom-out" type="button" aria-label="Uzaklaştır" title="Uzaklaştır">−</button>
+      <button id="reset" type="button" aria-label="Genel plana dön" title="Genel plana dön">⌖</button>
+    </div>
   </main>
-  <dialog id="sources"><button id="close-sources" class="close" aria-label="Kapat">×</button><p class="eyebrow">KAYNAKLAR / KANIT DÜZEYİ</p><h2>Neyi biliyoruz?</h2><div class="source-block"><b>Alan ve yol ağı</b><p>Dört H22D01C2A–D DGN paftası özgün dosyalardan okunmuştur. Yol kenarı, havuz ve yapı çizgilerinin XY konumu M5 kaynağıdır. Açık pafta ihracı görselleştirme verisidir; özgün DGN kimlikleri henüz aktarılmadı. Zemin, yol kaplaması genişliği ve diğer yapı yükseklikleri kabul edilmiş ölçü değildir.</p></div><div class="source-block"><b>Su Kuşları Kafesi</b><p>70 × 40 × 20 m ana kabuk yapımcı USKON'un planından gelir. Gölet sınırı M5 su kenarlarından kurulmuştur. Giriş biçimleri, açık metal rengi, bitkili çevre ve ahşap yapı fotoğraf eşleştirmesidir. Köprü, iç yol, kıyı taşları ve bitkilerin tekil yeri görsel yorumdur. Merkez ve yön geçici yerleştirmedir.</p></div><div class="source-links"><a href="https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/" target="_blank" rel="noopener">USKON · yapımcı ölçüsü ve fotoğraflar ↗</a><a href="https://gezibilen.com/de/travelpoint/bursa/bursa-hayvanat-bahcesi" target="_blank" rel="noopener">GeziBilen · kafes girişi fotoğrafı ↗</a><a href="https://www.trendinsaat.com.tr/tr/projeler/kent-parklari" target="_blank" rel="noopener">Trend İnşaat · havadan çevre ve iç peyzaj fotoğrafı ↗</a><a href="https://www.openstreetmap.org/way/26445905" target="_blank" rel="noopener">OpenStreetMap · bahçe sınırı ↗</a><a href="https://okuldisiogrenme.eba.gov.tr/mekan-detay/bursa-hayvanat-bahcesi-720" target="_blank" rel="noopener">MEB · yapı grupları ↗</a><a href="site-data.json" download>Alan çizgileri ve kaynak katmanları (.json) ↓</a><a href="model-sources.json" download>İlk modelin kaynak kaydı (.json) ↓</a><a href="MODEL_STANDARD.md" download>Ortak model standardı (.md) ↓</a></div><p class="fine">Fotoğraf pikselleri model dokusu olarak kullanılmadı. Bu sürüm görsel ve konumsal denemedir.</p></dialog>
-  <script type="module" src="app.js?v=20261014i"></script>
+  <script type="module" src="app.js?v=20261014j"></script>
 </body>
 </html>

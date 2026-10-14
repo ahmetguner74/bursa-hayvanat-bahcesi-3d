@@ -42,3 +42,5 @@ Proje klasöründe `python publish_local.py` çalıştırın. Ardından `python 
 [Canlı 3B atlası aç](https://ahmetguner74.github.io/bursa-hayvanat-bahcesi-3d/?focus=cage).
 
 `python publish_local.py` aynı yayın paketini yerel `dist/` ve GitHub Pages için `docs/` klasörlerine üretir. `main` dalındaki `docs/` klasörü canlı sitenin yayın kaynağıdır. Sonraki değişikliklerde komutu yeniden çalıştırıp kaynak dosyaları ile `docs/` çıktısını birlikte kaydedin. Özgün DGN paftaları, ara ASCII dosyaları, özel referans fotoğrafları ve denetim görselleri yalnızca yerel klasörde kalır; GitHub deposuna dahil edilmez.
+
+Canlı arayüz tek bir tam ekran sahnedir. Kaynak açıklamaları ve model standardı geliştirme dosyalarında tutulur; `docs/` yayın paketine veya sahne denetimlerine eklenmez.

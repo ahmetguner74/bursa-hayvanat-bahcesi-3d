@@ -126,10 +126,10 @@ function decorateCage(root){
   const entry=curvePoints([[-33.9,0],[-29.2,-1.5],[-25.1,-5.2],[-22,-8.3]],26);
   root.add(ribbon(entry,2.35,lightPath,.025));
   const exit=curvePoints([[23,-3.4],[27.8,-1.8],[33.9,0]],24);root.add(ribbon(exit,2.35,lightPath,.025));
-  // The deck reads as a narrow timber crossing over the measured pond; its exact alignment is a visual interpretation.
+  // Both ends of the crossing extend onto dry ground beyond the pond shore.
   const bridge=new T.Group();bridge.name='Gölet üzerindeki ahşap köprü — görsel yorum';root.add(bridge);
   bridge.userData.sourceKey='landscape';
-  const x0=-12,x1=8.6,by=2.2,bw=2.35,n=18;
+  const x0=-18.8,x1=8.6,by=2.2,bw=2.35,n=24;
   for(let i=0;i<n;i++){
     const x=x0+(x1-x0)*(i+.5)/n,raise=.23+.43*Math.sin(Math.PI*(i+.5)/n);
     box(bridge,(x1-x0)/n-.03,bw,.14,x,by,raise,woodLight);
@@ -142,7 +142,7 @@ function decorateCage(root){
     }
     for(let i=1;i<rail.length;i++)cylinderBetween(rail[i-1],rail[i],.055,wood,bridge);
   }
-  const bridgeLead=curvePoints([[-23,-7],[-17,-2],[-12,2.2]],22);root.add(ribbon(bridgeLead,2.2,lightPath,.03));
+  const bridgeLead=curvePoints([[-23,-7],[-21,-2.7],[-18.8,2.2]],22);root.add(ribbon(bridgeLead,2.2,lightPath,.03));
   const millLead=curvePoints([[8.7,2.2],[11.4,4.5],[16,6.5],[22,6]],22);root.add(ribbon(millLead,2.0,lightPath,.03));
 
   const mill=new T.Group();mill.name='Ahşap kuş evi / değirmen silueti — fotoğraf eşleştirmesi';mill.position.set(13,5,0);root.add(mill);mill.userData.sourceKey='mill';
@@ -265,7 +265,8 @@ export function createSite(data){
     const entranceClearing=u>38&&u<50&&Math.abs(v)<4;
     const h=entranceClearing?1.8:within?Math.min(11.4,Math.max(2.6,dome-2.2),8.7+(seed%36)/10):4.6+(seed%43)/10;
     const r=entranceClearing?.65:within?1.7+(seed%19)/12:1.4+(seed%19)/10;
-    d.position.set(p[0],p[1],h/3);d.quaternion.identity();d.scale.set(.23,.23,h/1.5);d.updateMatrix();trunks.setMatrixAt(i,d.matrix);
+    // CylinderGeometry runs along local Y; stand it upright in this Z-up scene.
+    d.position.set(p[0],p[1],h*.33);d.rotation.set(Math.PI/2,0,0);d.scale.set(1.12,h*.66,1.12);d.updateMatrix();trunks.setMatrixAt(i,d.matrix);
     for(let l=0;l<3;l++){
       const a=((seed%360)*Math.PI/180)+l*2.09,offset=l===0?0:r*.42;
       d.position.set(p[0]+Math.cos(a)*offset,p[1]+Math.sin(a)*offset,h*(l===0?.77:.84));
@@ -275,6 +276,7 @@ export function createSite(data){
     }
     i++;
   }
+  trunks.instanceMatrix.needsUpdate=true;crowns.instanceMatrix.needsUpdate=true;crowns.instanceColor.needsUpdate=true;
   trunks.castShadow=true;crowns.castShadow=true;trees.add(trunks,crowns);
   const cage=makeCage();site.add(cage);
   return {site,cage,trees,footprints,canopy,pond:cagePondMesh};
