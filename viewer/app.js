@@ -1,26 +1,29 @@
 import * as T from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
-import {createSite,CAGE} from './model.js?v=20261014k';
+import {createSite,CAGE} from './model.js?v=20261014m';
 
 const $=id=>document.getElementById(id);
 try{await start();}catch(error){console.error(error);$('loading').textContent='Görünüm açılamadı: '+error.message;}
 
 async function start(){
-  const [siteResponse,planResponse]=await Promise.all([
+  const [siteResponse,planResponse,surfaceResponse,buildingResponse]=await Promise.all([
     fetch('./site-data.json',{cache:'no-store'}),
     fetch('./current-plan-data.json',{cache:'no-store'}),
+    fetch('./surface-layers.json',{cache:'no-store'}),
+    fetch('./building-shell.json',{cache:'no-store'}),
   ]);
-  if(!siteResponse.ok||!planResponse.ok)throw Error('Alan ve güncel plan verisi yüklenemedi');
-  const [D,P]=await Promise.all([siteResponse.json(),planResponse.json()]);
+  if(!siteResponse.ok||!planResponse.ok||!surfaceResponse.ok||!buildingResponse.ok)throw Error('Alan ve güncel plan verisi yüklenemedi');
+  const [D,P,S,B]=await Promise.all([siteResponse.json(),planResponse.json(),surfaceResponse.json(),buildingResponse.json()]);
   const host=$('stage'),canvas=$('canvas');
   const scene=new T.Scene();scene.background=new T.Color('#d8e3d7');
   const mapCamera=new T.OrthographicCamera(-420,420,300,-300,.1,3000);mapCamera.up.set(0,0,1);
-  const siteCamera=new T.PerspectiveCamera(30,1,.1,30000);siteCamera.up.set(0,0,1);
-  const eyeCamera=new T.PerspectiveCamera(56,1,.1,3000);eyeCamera.up.set(0,0,1);
+  // Keep the depth range near the actual site scale to avoid distant surface flicker.
+  const siteCamera=new T.PerspectiveCamera(30,1,.5,2500);siteCamera.up.set(0,0,1);
+  const eyeCamera=new T.PerspectiveCamera(56,1,.2,1200);eyeCamera.up.set(0,0,1);
   let camera=mapCamera;
   const renderer=new T.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.38;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFShadowMap;canvas.append(renderer.domElement);
   scene.add(new T.HemisphereLight('#eff8e8','#76917a',2.0));const sun=new T.DirectionalLight('#fff1d5',2.4);sun.position.set(-230,160,350);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-420;sun.shadow.camera.right=420;sun.shadow.camera.top=300;sun.shadow.camera.bottom=-300;sun.shadow.camera.near=1;sun.shadow.camera.far=900;sun.shadow.bias=-.0003;scene.add(sun);
-  const {site,cage,trees,footprints}=createSite(D,P);scene.add(site);
+  const {site,cage,trees,footprints}=createSite(D,P,S,B);scene.add(site);
   const hotspots={cage:{x:CAGE.x,y:CAGE.y,z:23,label:'Su Kuşları Kafesi',view:'entry',primary:true}};
   const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.09;controls.screenSpacePanning=true;controls.minZoom=.55;controls.maxZoom=18;controls.minDistance=2;controls.maxDistance=30000;controls.maxPolarAngle=Math.PI*.495;
   const c=Math.cos(CAGE.angle),s=Math.sin(CAGE.angle);
@@ -28,8 +31,8 @@ async function start(){
   const viewDefs={
     site:{projection:'site',position:[360,-440,540],target:[18,-6,0],mobilePosition:[-166,0,800],mobileTarget:[6.5,50.7,0],zoom:.82},
     cage:{projection:'map',position:[CAGE.x+91,CAGE.y-89,46],target:[CAGE.x,CAGE.y,9],zoom:4.45},
-    entry:{projection:'eye',position:cagePoint(56,-2,1.7),mobilePosition:cagePoint(60,2,1.7),target:cagePoint(12,0,7.1),zoom:1},
-    inside:{projection:'eye',position:cagePoint(23,-9,1.65),mobilePosition:cagePoint(25,-10,1.65),target:cagePoint(-4,1,3.2),zoom:1},
+    entry:{projection:'eye',position:cagePoint(56,-2,1.7),mobilePosition:cagePoint(57,2,1.7),target:cagePoint(12,0,5.6),mobileTarget:cagePoint(12,0,4),zoom:1},
+    inside:{projection:'eye',position:cagePoint(13,-8,1.7),mobilePosition:cagePoint(6,-16,3.5),target:cagePoint(0,4,2.7),mobileTarget:cagePoint(7,2,.6),mobileFov:74,zoom:1},
     'cage-top':{projection:'map',position:[CAGE.x-8,CAGE.y-4,130],target:[CAGE.x,CAGE.y,2],zoom:5.1},
   };
   let active='site',transition=null,dirty=true,drag=false,down=null,fullscreenFallback=false,initialized=false;
@@ -37,16 +40,38 @@ async function start(){
   try{const stored=localStorage.getItem('bursa-zoo-site-perspective');if(stored!==null){const saved=Number(stored);if(Number.isFinite(saved)&&saved>=0&&saved<=100)perspective=saved;}}catch{}
   $('perspective').value=String(perspective);
   $('perspective-value').value=perspective+'%';
-  const siteFov=()=>8+perspective*.48;
+  const overviewFov=36;
+  const overviewTilt=(name,narrow)=>T.MathUtils.degToRad((name==='cage-top'?28:name==='site'?(narrow?38:60):68)*Math.sqrt(perspective/100));
+  const overviewFrame=(name,narrow,value)=>name==='site'&&!narrow?1+.3*Math.max(0,1-value/45):1;
+  const overviewHeading=(name,narrow)=>{
+    const v=viewDefs[name],position=narrow&&v.mobilePosition?v.mobilePosition:v.position,target=narrow&&v.mobileTarget?v.mobileTarget:v.target;
+    return new T.Vector3(position[0]-target[0],position[1]-target[1],0).normalize();
+  };
+  const overviewUp=(name,narrow,heading)=>{
+    if(name==='site'&&narrow){
+      const tilt=overviewTilt(name,narrow);
+      return new T.Vector3(heading.x*Math.cos(tilt),heading.y*Math.cos(tilt),-Math.sin(tilt));
+    }
+    return perspective===0?heading.clone().negate():new T.Vector3(0,0,1);
+  };
+  const overviewDirection=(name,narrow,heading)=>{
+    const tilt=overviewTilt(name,narrow);
+    return new T.Vector3(heading.x*Math.sin(tilt),heading.y*Math.sin(tilt),Math.cos(tilt));
+  };
   const viewSpan=(subject)=>subject.isOrthographicCamera?(subject.top-subject.bottom)/subject.zoom:2*subject.position.distanceTo(controls.target)*Math.tan(T.MathUtils.degToRad(subject.fov)/2)/subject.zoom;
-  function setSiteProjection(){
-    if(active!=='site')return;
+  function setOverviewPerspective(previousPerspective){
+    if(viewDefs[active].projection==='eye')return;
     transition=null;
-    const target=controls.target.clone(),direction=camera.position.clone().sub(target).normalize();
-    const span=viewSpan(camera),next=perspective===0?mapCamera:siteCamera;
-    next.up.copy(camera.up);
-    if(next===mapCamera){next.zoom=(next.top-next.bottom)/span;next.position.copy(target).addScaledVector(direction,Math.max(500,span));}
-    else{next.fov=siteFov();next.zoom=1;next.position.copy(target).addScaledVector(direction,span/(2*Math.tan(T.MathUtils.degToRad(next.fov)/2)));}
+    const narrow=host.clientWidth<760,target=controls.target.clone(),offset=camera.position.clone().sub(target);
+    const heading=new T.Vector3(offset.x,offset.y,0);
+    if(previousPerspective===0||heading.lengthSq()<Math.pow(offset.length()*1e-4,2))heading.copy(overviewHeading(active,narrow));
+    else heading.normalize();
+    const direction=overviewDirection(active,narrow,heading);
+    const span=viewSpan(camera)*overviewFrame(active,narrow,perspective)/overviewFrame(active,narrow,previousPerspective),next=perspective===0?mapCamera:siteCamera;
+    next.up.copy(overviewUp(active,narrow,heading));
+    controls.maxPolarAngle=active==='site'&&narrow?Math.PI*.95:perspective===0?Math.PI*.5:Math.PI*.475;
+    if(next===mapCamera){next.zoom=(next.top-next.bottom)/span;next.position.copy(target).addScaledVector(direction,Math.max(800,span));}
+    else{next.fov=overviewFov;next.zoom=1;next.position.copy(target).addScaledVector(direction,span/(2*Math.tan(T.MathUtils.degToRad(next.fov)/2)));}
     next.updateProjectionMatrix();camera=next;controls.object=camera;controls.update();dirty=true;
   }
   function resize(){
@@ -58,21 +83,26 @@ async function start(){
   new ResizeObserver(resize).observe(host);resize();
   function go(name,animate=true){
     const v=viewDefs[name];if(!v)return;
-    const previous=camera;active=name;camera=v.projection==='eye'?eyeCamera:v.projection==='site'&&perspective>0?siteCamera:mapCamera;
+    const previous=camera;active=name;camera=v.projection==='eye'?eyeCamera:perspective>0?siteCamera:mapCamera;
     const narrow=host.clientWidth<760;
-    const siteUp=new T.Vector3(name==='site'&&narrow?-.95845:0,name==='site'&&narrow?-.28527:0,name==='site'&&narrow?0:1);
-    mapCamera.up.copy(siteUp);siteCamera.up.copy(siteUp);
+    const heading=v.projection==='eye'?null:overviewHeading(name,narrow);
+    if(heading){const up=overviewUp(name,narrow,heading);mapCamera.up.copy(up);siteCamera.up.copy(up);}
     controls.object=camera;controls.enableRotate=!(name==='site'&&narrow);
-    controls.maxPolarAngle=name==='site'&&narrow?Math.PI*.95:v.projection==='eye'?Math.PI*.78:Math.PI*.475;
+    controls.maxPolarAngle=name==='site'&&narrow?Math.PI*.95:v.projection==='eye'?Math.PI*.78:perspective===0?Math.PI*.5:Math.PI*.475;
     document.querySelectorAll('[data-view]').forEach(b=>{const on=b.dataset.view===name;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
+    $('perspective').disabled=v.projection==='eye';
+    $('perspective-hint').textContent=v.projection==='eye'?'Giriş ve İç görünümlerinde göz hizası sabittir.':'Alan, Dış ve Üst görünümlerinde uygulanır.';
     const position=narrow&&v.mobilePosition?v.mobilePosition:v.position;
     const next=new T.Vector3(...position),target=new T.Vector3(...(narrow&&v.mobileTarget?v.mobileTarget:v.target));
-    const factor=narrow?(name==='site'?2:name==='cage'||name==='cage-top'?2.35:1):1;
-    const zoom=camera===siteCamera?1:v.zoom*factor;
-    if(camera===siteCamera){
-      camera.fov=siteFov();camera.updateProjectionMatrix();
-      const span=(mapCamera.top-mapCamera.bottom)/(v.zoom*factor);
-      next.sub(target).normalize().multiplyScalar(span/(2*Math.tan(T.MathUtils.degToRad(camera.fov)/2))).add(target);
+    if(camera===eyeCamera){camera.fov=narrow&&v.mobileFov?v.mobileFov:56;camera.updateProjectionMatrix();}
+    const factor=narrow?(name==='site'?2:name==='cage'||name==='cage-top'?2.2:1):1;
+    const frameScale=heading?overviewFrame(name,narrow,perspective):1;
+    const zoom=camera===siteCamera?1:v.zoom*factor/frameScale;
+    if(heading){
+      const span=(mapCamera.top-mapCamera.bottom)/(v.zoom*factor)*frameScale;
+      const direction=overviewDirection(name,narrow,heading);
+      if(camera===siteCamera){camera.fov=overviewFov;camera.updateProjectionMatrix();next.copy(target).addScaledVector(direction,span/(2*Math.tan(T.MathUtils.degToRad(camera.fov)/2)));}
+      else next.copy(target).addScaledVector(direction,Math.max(800,span));
     }
     if(!animate||previous!==camera||v.projection==='eye'||matchMedia('(prefers-reduced-motion: reduce)').matches){
       transition=null;camera.position.copy(next);controls.target.copy(target);camera.zoom=zoom;camera.updateProjectionMatrix();controls.update();dirty=true;
@@ -84,9 +114,10 @@ async function start(){
   document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.view)));
   $('reset').onclick=()=>go('site');$('zoom-in').onclick=()=>{camera.zoom=Math.min(18,camera.zoom*1.25);camera.updateProjectionMatrix();dirty=true;};$('zoom-out').onclick=()=>{camera.zoom=Math.max(.55,camera.zoom/1.25);camera.updateProjectionMatrix();dirty=true;};
   $('perspective').addEventListener('input',e=>{
+    const previousPerspective=perspective;
     perspective=Number(e.target.value);$('perspective-value').value=perspective+'%';
     try{localStorage.setItem('bursa-zoo-site-perspective',String(perspective));}catch{}
-    setSiteProjection();
+    setOverviewPerspective(previousPerspective);
   });
   const markers=[];for(const [key,h] of Object.entries(hotspots)){const b=document.createElement('button');b.className='marker'+(h.primary?' primary':'');b.textContent=h.label;b.onclick=()=>go(h.view);$('markers').append(b);markers.push({button:b,point:new T.Vector3(h.x,h.y,h.z)});}
   function updateMarkers(){const w=host.clientWidth,h=host.clientHeight;for(const m of markers){const p=m.point.clone().project(camera);m.button.style.left=((p.x+1)*w/2)+'px';m.button.style.top=((-p.y+1)*h/2)+'px';m.button.hidden=active!=='site'||p.z>1||p.z< -1||p.x>1.1||p.x< -1.1||p.y>1.1||p.y< -1.1;}}

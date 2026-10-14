@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#dce7d8">
   <title>Bursa Hayvanat Bahçesi · 3B Atlas</title>
-  <link rel="stylesheet" href="style.css?v=20261014d">
+  <link rel="stylesheet" href="style.css?v=20261014e">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
 </head>
 <body>
@@ -30,9 +30,10 @@
       <button id="toggle-trees" type="button" aria-pressed="true">Ağaçlar</button>
       <button id="toggle-buildings" type="button" aria-pressed="true">Yapılar</button>
       <div class="perspective-control">
-        <label for="perspective">Genel plan perspektifi <output id="perspective-value" for="perspective">45%</output></label>
-        <input id="perspective" type="range" min="0" max="100" step="1" value="45" aria-label="Genel plan perspektifi">
-        <div class="range-ends" aria-hidden="true"><span>Düz plan</span><span>Daha derin</span></div>
+        <label for="perspective">Plan bakış açısı <output id="perspective-value" for="perspective">45%</output></label>
+        <input id="perspective" type="range" min="0" max="100" step="1" value="45" aria-label="Plan bakış açısı" aria-describedby="perspective-hint">
+        <div class="range-ends" aria-hidden="true"><span>Düz (üstten)</span><span>Eğik (3B)</span></div>
+        <small id="perspective-hint">Alan, Dış ve Üst görünümlerinde uygulanır.</small>
       </div>
     </aside>
 
@@ -55,6 +56,6 @@
       <button id="reset" type="button" aria-label="Genel plana dön" title="Genel plana dön">⌖</button>
     </div>
   </main>
-  <script type="module" src="app.js?v=20261014o"></script>
+  <script type="module" src="app.js?v=20261014s"></script>
 </body>
 </html>

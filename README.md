@@ -4,6 +4,10 @@
 
 **Güncel yerleşim dayanağı:** Belediye bağlantısıyla doğrulanan 2026 Bursa Zoo krokisi ve M5/DGN'nin birlikte kullanımı [CURRENT_PLAN.md](CURRENT_PLAN.md) içinde kayıtlıdır. Krokiden seçilen sekiz referans öğesi `current-plan-data.json` metre katmanına eşlendi; sahne bu katmanı M5 ile birlikte okur. Bundan sonraki yol, su ve yapı yerleşimi çalışmaları krokideki mevcut düzeni önceleyerek aşama aşama yürütülür; DGN metre ölçeği ve eski durum kanıtı olarak korunur.
 
+**Model kalitesi:** [MODEL_QUALITY.md](MODEL_QUALITY.md), yapımcı ölçülerini ve Three.js/glTF kaynaklı geometri ilkelerini kaydeder. `build_surface_layers.py`, eski M5 yol halkasındaki geçersiz geometriyi onarır; su, bina, yol ve çim için çakışmasız üst yüz bölgelerini `surface-layers.json` dosyasına üretir. `build_building_shell.py`, iç içe geçen eski bina izlerini tekil çatı ve dış duvar yüzeylerine dönüştürür. `publish_local.py` iki üreticiyi ve doğrulamaları her yayında çalıştırır.
+
+**Seçilen görsel yön:** [Orman içindeki kafes mockup'ı](design-reference/woodland-aviary-concept.png) kullanıcı tarafından beğenilen tasarım hedefidir. Yapay zekâ ile üretilmiş kavramsal görseldir; çalışan 3B atlasın ekran görüntüsü veya güncel yerleşimin ölçülü kanıtı değildir. [Referans notu](design-reference/README.md), sahneye aşama aşama aktarılacak özellikleri açıklar.
+
 ## Yer ve kapsam
 
 - [Bursa Büyükşehir Belediyesi'nin Mayıs 2026 açıklaması](https://www.bursa.bel.tr/haber/bursa-hayvanat-bahcesine-bayramda-ziyaretci-akini-37224), Soğanlı'daki tesisin yaklaşık **206.000 m²** olduğunu ve 1998'den beri hizmet verdiğini bildirir.
@@ -37,7 +41,7 @@ Yapımcı çizimleri ve haber/ziyaretçi görselleri **geometriyi incelemek içi
 
 ## Bağımsız yerel önizleme
 
-Proje klasöründe `python publish_local.py` çalıştırın. Ardından `python -m http.server 8768 --bind 0.0.0.0 --directory dist` komutuyla önizlemeyi açın. Aynı işi Windows'ta `BASLAT.cmd` başlatır. Bilgisayarda `http://127.0.0.1:8768/?focus=cage`; aynı yerel ağdaki telefonda bilgisayarın IP adresiyle `http://<bilgisayar-IP>:8768/?focus=cage` kullanılır. `reference-photos-private/`, `reference-maps-private/`, `source-ascii/` ve `source-dgn/` kamuya açık `dist/` veya `docs/` klasörüne kopyalanmaz.
+Yerel üretim için Python, `requirements.txt` içindeki Shapely ve bina geometrisi doğrulamasında kullanılan Node.js gerekir. Proje klasöründe önce `python -m pip install -r requirements.txt`, sonra `python publish_local.py` çalıştırın. Ardından `python -m http.server 8768 --bind 0.0.0.0 --directory dist` komutuyla önizlemeyi açın. Aynı işi Windows'ta `BASLAT.cmd` başlatır. Bilgisayarda `http://127.0.0.1:8768/?focus=cage`; aynı yerel ağdaki telefonda bilgisayarın IP adresiyle `http://<bilgisayar-IP>:8768/?focus=cage` kullanılır. `reference-photos-private/`, `reference-maps-private/`, `source-ascii/` ve `source-dgn/` kamuya açık `dist/` veya `docs/` klasörüne kopyalanmaz.
 
 ## GitHub Pages yayını
 
