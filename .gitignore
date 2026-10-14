@@ -1,0 +1,16 @@
+# Local build; docs/ is the public GitHub Pages build.
+/dist/
+
+# Private source material and research images are never published.
+/reference-photos-private/
+/source-dgn/
+/source-ascii/
+/audit-2026-10-14/
+/cage-source-qa.png
+/site-source-qa.png
+/fetch_reference_photos.py
+
+# Local environment and temporary files.
+/.env*
+/__pycache__/
+*.pyc
