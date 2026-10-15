@@ -10,4 +10,4 @@ Hedef: mobilde sahneye daha fazla yer açmak, hayvana dokunmayı sezgisel kılma
 
 Panel varsayımı: üçte bir, mevcut panelin kapladığı toplam alandır. Mobilde aynı sağ konumda kısa bir bilgi kartı kullanılır; tür/gerçek hareket bilgisi okunabilir yazıyla korunur. Çalışma boyunca M5 koordinatları ve yollar korunur. Canlı yayın kullanıcı tarafından bu aşama için açıkça istendi.
 
-Durum: 1–4 tamamlandı. 5. adım: doğrulanan paket GitHub Pages için hazırlanıyor; canlı sürüm doğrulaması bekleniyor.
+Durum: 1–5 tamamlandı. AU sürümü GitHub Pages'te yayımlandı. Dört alanın canlı yüklenmesi, mobil penguen gövde seçimi ve flamingoya doğrudan geçiş tarayıcıda doğrulandı.15 kritik canlı dosyanın hashleri yayın manifestiyle eşleşti. [Yayın kaydı](live-release-au.json) ve [canlı mobil ekran](screens/24-canli-mobil.png).

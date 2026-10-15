@@ -1,0 +1,85 @@
+{
+  "revision": "20261016au",
+  "releaseCommit": "655ba1d1aee5641b6740f7abf962bd3ee1dfab8a",
+  "manifestFiles": 153,
+  "runtimeMiB": 180.78,
+  "criticalLiveFiles": [
+    {
+      "path": "index.html",
+      "bytes": 3406,
+      "hashMatches": true
+    },
+    {
+      "path": "app.js",
+      "bytes": 18616,
+      "hashMatches": true
+    },
+    {
+      "path": "style.css",
+      "bytes": 8789,
+      "hashMatches": true
+    },
+    {
+      "path": "animal-info.js",
+      "bytes": 2213,
+      "hashMatches": true
+    },
+    {
+      "path": "animal-profiles.js",
+      "bytes": 5018,
+      "hashMatches": true
+    },
+    {
+      "path": "animal-views.js",
+      "bytes": 2943,
+      "hashMatches": true
+    },
+    {
+      "path": "penguin-views.js",
+      "bytes": 717,
+      "hashMatches": true
+    },
+    {
+      "path": "explorer-camera.js",
+      "bytes": 2306,
+      "hashMatches": true
+    },
+    {
+      "path": "touch-cue.js",
+      "bytes": 1522,
+      "hashMatches": true
+    },
+    {
+      "path": "aviary-birds.js",
+      "bytes": 2291,
+      "hashMatches": true
+    },
+    {
+      "path": "tap-colony.js",
+      "bytes": 11379,
+      "hashMatches": true
+    },
+    {
+      "path": "assets/loader.svg",
+      "bytes": 530,
+      "hashMatches": true
+    },
+    {
+      "path": "assets/arrow-left.svg",
+      "bytes": 261,
+      "hashMatches": true
+    },
+    {
+      "path": "assets/maximize.svg",
+      "bytes": 292,
+      "hashMatches": true
+    },
+    {
+      "path": "assets/touch-pointer.svg",
+      "bytes": 519,
+      "hashMatches": true
+    }
+  ],
+  "normalization": "Public text uses LF; every staged Git blob was checked against its manifest hash. Binary assets unchanged.",
+  "physicalPhoneFpsMeasured": false
+}

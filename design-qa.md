@@ -30,6 +30,10 @@ P1 geniş mobil kart, uzak penguen odağı ve belirsiz flamingo tepkisi giderild
 
 ## Sınırlar ve sonuç
 
-Fiziksel telefon FPS/GPU/pil, tüm ekran okuyucular ve büyütülmüş metin kontrolü yapılmadı; tam WCAG uygunluğu iddia edilmez. Flamingonun mevcut modeli uçuş/yürüyüş klibi içermez; mevcut baş-boyun/duruş hareketleri kullanılır. Bütün43 bölgenin modelleme hedefi bu mobil yayın denetiminin kapsamı değildir. Yayın paketi ve canlı kontrol sonuçları ayrı yayın kaydına eklenecektir.
+Fiziksel telefon FPS/GPU/pil, tüm ekran okuyucular ve büyütülmüş metin kontrolü yapılmadı; tam WCAG uygunluğu iddia edilmez. Flamingonun mevcut modeli uçuş/yürüyüş klibi içermez; mevcut baş-boyun/duruş hareketleri kullanılır. Bütün43 bölgenin modelleme hedefi bu mobil yayın denetiminin kapsamı değildir.
+
+## Yayın sonucu
+
+AU GitHub Pages'te yayımlandı; dört alan canlı tarayıcıda yüklenir. [Canlı mobil ekran](design/2026-10-16-mobil-denetim/screens/24-canli-mobil.png), gövde seçimi, geri dönüş ve doğrudan flamingo geçişi doğrulandı. Konsol hata/uyarı yok. Yayın metinlerinde LF standardı ve Git öznitelikleriyle153 staged dosyanın hashleri manifestle,15 kritik canlı dosyanın hashleri HTTP üzerinden eşleşti. [Yayın kaydı](design/2026-10-16-mobil-denetim/live-release-au.json). Paket180,78MiB; özgün/özel kaynak arşivleri dahil değil.
 
 final result: passed

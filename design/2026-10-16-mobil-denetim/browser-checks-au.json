@@ -13,6 +13,10 @@
     "desktop": [
       1280,
       720
+    ],
+    "tablet": [
+      820,
+      1180
     ]
   },
   "checks": {
@@ -28,7 +32,8 @@
     "oneTimeCueShownAndExpired": true,
     "networkFailureRetryRecovered": true,
     "loadingIndicatorCaptured": true,
-    "reducedMotionInstantFlight": true
+    "reducedMotionInstantFlight": true,
+    "tabletNoOverflow": true
   },
   "longMobileCard": {
     "announcement": "Kıyı 2: Uykuya hazırlanıyor.",
@@ -52,5 +57,15 @@
     "desktop": [],
     "mobile": []
   },
-  "limits": "Viewport emulation and runtime tests; not physical iPhone GPU/FPS or a complete screen-reader audit."
+  "limits": "Viewport emulation and runtime tests; not physical iPhone GPU/FPS or a complete screen-reader audit.",
+  "live": {
+    "url": "https://ahmetguner74.github.io/bursa-hayvanat-bahcesi-3d/?revision=20261016au",
+    "fourHabitatsLoaded": true,
+    "penguinBodySelection": true,
+    "directFlamingoEntry": true,
+    "mobileFullCanvas": 390,
+    "selectedCardClient": 151,
+    "selectedCardScroll": 151,
+    "console": []
+  }
 }

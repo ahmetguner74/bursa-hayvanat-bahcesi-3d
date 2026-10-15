@@ -35,7 +35,16 @@
     "areaRatio": 0.287644477739726,
     "flamingoSkinTravelMetres": 0.12310819255751952,
     "extraMeshes": 0,
-    "extraBones": 0
+    "extraBones": 0,
+    "mobileNewLongTitlePanelPx": [
+      128,
+      171.4375
+    ],
+    "longTitleAreaRatio": 0.2935573630136986,
+    "mobileLiveSelectedPanelPx": [
+      128,
+      153.4375
+    ]
   },
   "limits": "Araştırma ve CPU/viewport doğrulaması; gerçek telefon FPS/GPU/pil ölçümü değildir."
 }

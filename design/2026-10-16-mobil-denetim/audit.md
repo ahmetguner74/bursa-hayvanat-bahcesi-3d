@@ -37,4 +37,10 @@ Araştırma: NN/G kısa, ölçülü ve işlevi anlatan hareketi öneriyor; W3C h
 
 Akış tek sahne ve iki seviyeli geri dönüşle tutarlıdır. Seçilen bireyin hareketi kartla eşleşir; mobil kart gereksiz tür ayrıntılarıyla sahneyi daraltmaz. Kısa ipucu, NNG/W3C araştırmasından türetilmiş tasarım kararıdır; kullanıcı testiyle keşfedilebilirlik oranı ölçülmedi. Fiziksel iPhone GPU/FPS/pil, tam ekran okuyucu ve büyütülmüş metin denetimi yapılmadı. Flamingo modelinde uçuş/yürüyüş klibi yoktur; mevcut duruş/baş-boyun tepkileri kullanılır. İlk model yüklemeleri asenkrondur; bölge hazırlanıyor durumu gösterilir.
 
-Kapsam içinde açık P0/P1/P2 kalmadı. [Araştırma](research.json), [tarayıcı kaydı](browser-checks-au.json), [görsel karşılaştırma](reference-comparison-au.jpg), [yerel QA](../../design-qa.md) ve `verification/` üretim modeli kontrolleri tamamlandı. Son adım, yayın paketinin ve gerçek GitHub Pages sürümünün doğrulanmasıdır.
+Kapsam içinde açık P0/P1/P2 kalmadı. [Araştırma](research.json), [tarayıcı kaydı](browser-checks-au.json), [görsel karşılaştırma](reference-comparison-au.jpg), [QA](../../design-qa.md) ve `verification/` üretim modeli kontrolleri tamamlandı.
+
+## Canlı yayın kontrolü
+
+AU sürümü [GitHub Pages'te](https://ahmetguner74.github.io/bursa-hayvanat-bahcesi-3d/?revision=20261016au) yayımlandı. [Genel plan](screens/23-canli-genel.png), [telefon penguen odağı](screens/24-canli-mobil.png), [doğrudan flamingo](screens/25-canli-flamingo.png), [gergedan](screens/26-canli-gergedan.png) ve [zürafa](screens/27-canli-zurafa.png) bu çalışmada gerçek canlı adresten yakalandı. Normal canlı konsolda hata/uyarı yok. Telefon seçili kartında151px client/scroll eşitliği ve390px canvas doğrulandı.
+
+Yayın bütünlüğü kontrolünde Windows/Git satır sonu dönüşümü CSS ve el SVG'sinin manifest hashini değiştiriyordu. `build_public.py` public metinleri LF olarak üretir; `docs/` Git özniteliği LF'yi korur.153 dosyanın tamamında staged Git blobu/manifest,15 kritik dosyada gerçek HTTP/manifest hash eşliği doğrulandı. [Yayın kaydı](live-release-au.json):153 dosya,180,78MiB; özel/orijinal kaynak girişi yok. Bu düzeltme sahne geometrisini veya animasyon davranışını değiştirmez.
