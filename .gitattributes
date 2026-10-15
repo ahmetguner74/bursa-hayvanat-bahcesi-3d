@@ -1,0 +1,2 @@
+# Public runtime hashes must match the bytes served from GitHub Pages.
+/docs/** text=auto eol=lf

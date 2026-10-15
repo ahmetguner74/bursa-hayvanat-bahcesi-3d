@@ -32,8 +32,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 18838,
-      "sha256": "793bc9407d34a739d842589526a46167c8753add2d884c42aa9d9e41bd130596"
+      "bytes": 18616,
+      "sha256": "ceb46169664db6bc46f5656c7db79538f438bf95b4e6d025797af9c69b01214a"
     },
     {
       "path": "assets/afrika-koyu-roof-shingles-v1.png",
@@ -47,8 +47,8 @@
     },
     {
       "path": "assets/asset-manifest.json",
-      "bytes": 24892,
-      "sha256": "7a2a263649cea8cd41f0b2c29c5c5cb171c29570ae71c613f8fe08ff09144d2a"
+      "bytes": 24575,
+      "sha256": "430a765073ea306307a68073239c3b61fdff85c3e6d7e3e84379dd1197486e5b"
     },
     {
       "path": "assets/feather-LICENSE.txt",
@@ -82,8 +82,8 @@
     },
     {
       "path": "assets/forest-impostor-metadata.json",
-      "bytes": 9277,
-      "sha256": "07eb8ae8184ea975182ce19385588622094bf55faec0395cad03ddeef0e1fbb2"
+      "bytes": 9039,
+      "sha256": "53150f281f6b95d70bf0076c3caaa8de9977befa62072fc6585560cd939f482d"
     },
     {
       "path": "assets/loader-SOURCE.txt",
@@ -132,8 +132,8 @@
     },
     {
       "path": "assets/touch-pointer.svg",
-      "bytes": 536,
-      "sha256": "f4504a220a715b10b948f06733f2aaa4739fe6ed3056d77edcf3b4e31d46531b"
+      "bytes": 519,
+      "sha256": "d810bca5760e66ee7899003a9539261c0ce6affa688b29fc3eac39d5b694237f"
     },
     {
       "path": "assets/turk-koyu-roof-tiles-v1.png",
@@ -172,8 +172,8 @@
     },
     {
       "path": "assets/woodland-foliage-derivatives.json",
-      "bytes": 2759,
-      "sha256": "7645de5371d4886ea60309cdb7549b58e3ce56c9f9b03305ee1b32482aeabac9"
+      "bytes": 2679,
+      "sha256": "bf7c3c21819efb222291259bda7323fc46406d907ab2c642e937a75a072f6096"
     },
     {
       "path": "assets/woodland-grass-tussock-v1.png",
@@ -247,8 +247,8 @@
     },
     {
       "path": "assets/woodland-wildflower-derivative.json",
-      "bytes": 459,
-      "sha256": "74d302856273872ee593257c57043464ae290bfd4bd221b5fce27a007b114b3b"
+      "bytes": 446,
+      "sha256": "0c1bf91287c9140f095245b923e20c5d87c52023323d61f7edb380d65104ec86"
     },
     {
       "path": "atlas-orbit.js",
@@ -262,18 +262,18 @@
     },
     {
       "path": "building-shell.json",
-      "bytes": 62908,
-      "sha256": "a88bd82370bb2c0b1cf2de9fd7cfa7aaaeadd7369d829c7c8d28cc3d2f6dfbe0"
+      "bytes": 62907,
+      "sha256": "149fce73b0b0ae269b396e01883161aec70797a48388d048edd86b219fcf0dfc"
     },
     {
       "path": "current-plan-data.json",
-      "bytes": 15762,
-      "sha256": "b83a36f17f276f085fe6d957d211d32111eefa0068847414c3af0003813246d2"
+      "bytes": 14978,
+      "sha256": "56b901cad303f5383e5f3fff81c65688de56eacbfa61a6beb94250ea5e44be18"
     },
     {
       "path": "design-reference/compare-local.html",
-      "bytes": 2795,
-      "sha256": "fd99fd218f1a4e6466cb343a9649d7eb298b9422841ebd3101daac41f853c392"
+      "bytes": 2766,
+      "sha256": "317bf52922db395b41af0d5d8275369af68e3ed54f3d968764b1d332463b440b"
     },
     {
       "path": "design-reference/woodland-aviary-concept.png",
@@ -292,18 +292,18 @@
     },
     {
       "path": "forest-impostors.js",
-      "bytes": 4334,
-      "sha256": "21652a276d5b212a3b5d8c1c069943b0bc351437d014a234b595982d1a7a87ab"
+      "bytes": 4278,
+      "sha256": "1694488f8f942b2bd86c80ebdb0bdc6a15673a783f0ef5c837f7cefecebfbf7a"
     },
     {
       "path": "forest.js",
-      "bytes": 6352,
-      "sha256": "c926e8201df0757a62c4e1bbaaad23036bb666ee81968707b5b17ee255d95c63"
+      "bytes": 6260,
+      "sha256": "fc354e289bf9f03cd166528cd7c742f97aa4c46a49fabacd0ae3b991be8ffd17"
     },
     {
       "path": "giraffe-motion.js",
-      "bytes": 166,
-      "sha256": "7d4db203668d2050b3e11c905f04a0a2a632eacc883ec9abb56eac3825df2832"
+      "bytes": 165,
+      "sha256": "e4add6c5d928c0c886e21c5bbb37a94cba3f2db2517e99dc0bb509ea18a01be0"
     },
     {
       "path": "giraffes.js",
@@ -312,28 +312,28 @@
     },
     {
       "path": "ground-material-layout.json",
-      "bytes": 2487,
-      "sha256": "a369678f9981afdcc8e4314cdf83c30a1c28a9ad38563bb2d5e47778099a3158"
+      "bytes": 2417,
+      "sha256": "5820d8d4b055158c473dcc3100cb80e6007d7e67f68bb99f79b7589b7ab0a496"
     },
     {
       "path": "ground-material.js",
-      "bytes": 2594,
-      "sha256": "3555b517a3693570e8809ace76fbe64bec90ee7ffe48dca3b7f7719aac16ba3a"
+      "bytes": 2554,
+      "sha256": "244d39ed757a4ca2f72ced75f5b8ed8f516bd8281e318fdcb9ac1e7bc49851e6"
     },
     {
       "path": "index.html",
-      "bytes": 3459,
-      "sha256": "4d3f95c7f51c761fa2b27977c125dcb5ae79748e748b43030c15ecbc717cdd6e"
+      "bytes": 3406,
+      "sha256": "4540ac6e9e8749053998503f03348514b94530471baf34d982d0827bcba5242e"
     },
     {
       "path": "landscape-layout.json",
-      "bytes": 259940,
-      "sha256": "1db64c856f899ac5df3ddc6bfe5ad645676b1292f3be7fa140d7167aacc1cb32"
+      "bytes": 259939,
+      "sha256": "5b87312cc1c67bf40cb7a0bcbb5caceba9c49a6a961b275f284a8dd3fdfa8137"
     },
     {
       "path": "lighting.js",
-      "bytes": 356,
-      "sha256": "d0e75225a4f43aa67377321c50b25541a04472dbf570d17bb92e2fb055622850"
+      "bytes": 349,
+      "sha256": "62868870b75b37a18ae875b4d61d0e159221ee252a38a47432f6fe83ce96fc60"
     },
     {
       "path": "model-review/afrika-kafe.glb",
@@ -367,8 +367,8 @@
     },
     {
       "path": "model-review/index.html",
-      "bytes": 24255,
-      "sha256": "a5fc4ef82406dedb519cd03d43f9726ffbf2f327e6eb6f0736cc45e038c4cc21"
+      "bytes": 24069,
+      "sha256": "59a931e7758349d7f918224c543bed1c635c4880658a78af0f8bdc3ff485ad31"
     },
     {
       "path": "model-review/lemur-adasi.glb",
@@ -382,13 +382,13 @@
     },
     {
       "path": "model-review/rhino/index.html",
-      "bytes": 3182,
-      "sha256": "5fc5e4e9cfeab2fc2594cff19a23b10c08c1f8d6c95e51b7176dc961ce04c326"
+      "bytes": 3162,
+      "sha256": "61f31defaf8976697dbbd5b5d7101f9fe410797c0e0b193e4fe76c0767e41cae"
     },
     {
       "path": "model-review/rhino/rhino-study.js",
-      "bytes": 5778,
-      "sha256": "482b1e56a67dfd90dd2af10acfcef611e8863fff84ef7b3a1746097df052129e"
+      "bytes": 5725,
+      "sha256": "e1182cccb44c1717b2dcc6afb9f51fd145fae831b0d1607b4a4f66384201ecbf"
     },
     {
       "path": "model-review/savanna-ahsap-platform.glb",
@@ -407,8 +407,8 @@
     },
     {
       "path": "model-review/tree-atlas-baker.js",
-      "bytes": 7323,
-      "sha256": "a74922e0c10edea3d6189a18d9c495defea9a529889c2880f469c8ba0137ded0"
+      "bytes": 7241,
+      "sha256": "d7a1ad90708855a2bf1f88a8f99bad832e08d2c1837274f3be7d0df36859b0ad"
     },
     {
       "path": "model-review/turk-koyu.glb",
@@ -417,8 +417,8 @@
     },
     {
       "path": "model.js",
-      "bytes": 62470,
-      "sha256": "be4c4da5b638af901467b0574b5f601fcc2fa6d183ab02915d2a8a9de27274ed"
+      "bytes": 61443,
+      "sha256": "4d981b7459b62affce2ac4de8451d732e53aa9eaf605ce182d152a565efd896a"
     },
     {
       "path": "models/african-penguin.glb",
@@ -437,8 +437,8 @@
     },
     {
       "path": "models/ATTRIBUTION.txt",
-      "bytes": 3472,
-      "sha256": "93165f14e4398408357368f1615ddc4c81c92a94d125b014ee7190929d8d3dc7"
+      "bytes": 3436,
+      "sha256": "81d0ea91428f825e254f5431f28f02fdcc9ce3663d9142406e6adea986874792"
     },
     {
       "path": "models/aviary-ATTRIBUTION.txt",
@@ -447,8 +447,8 @@
     },
     {
       "path": "models/aviary-birds-layout.json",
-      "bytes": 5664,
-      "sha256": "11ddb1a4ceb4e53ba25edb0cfd68e7fe95d9dbab9b54681979c03ce15c2db345"
+      "bytes": 5493,
+      "sha256": "d6645386140955f60c141f3475b377ae81079c33a9a979d77c57824b6300008a"
     },
     {
       "path": "models/baringo-giraffe.glb",
@@ -477,18 +477,18 @@
     },
     {
       "path": "models/giraffe-ATTRIBUTION.txt",
-      "bytes": 1508,
-      "sha256": "bb3030d6bd5bb1338c6332af14f554f59382a2dd8bda17d97d678f4d809d7bb6"
+      "bytes": 1507,
+      "sha256": "2d92c3661769066a8c2e2562b0f82a94cd3ddc8f0c17bd4f7acc09f3c3eed98a"
     },
     {
       "path": "models/giraffe-colony.json",
-      "bytes": 198699,
-      "sha256": "6a0fb03f81bfee3bb7ab60a46aaa319975b771eadb0053b8269828c7556a55f2"
+      "bytes": 191280,
+      "sha256": "98b12913c8e4529fba91b0c9b50406be4497834bf0703eb0bf2869241e939b7f"
     },
     {
       "path": "models/giraffe-habitat.json",
-      "bytes": 30778,
-      "sha256": "f15160bab3e4eb4a76ac9388bd3d572c37cb77dc81f2f75a41c018b3db3fd587"
+      "bytes": 29156,
+      "sha256": "619789a6d4573e3171be0f567f84587073e16c144c3cd91ba05bd3d75a04c96c"
     },
     {
       "path": "models/greater-flamingo.glb",
@@ -512,13 +512,13 @@
     },
     {
       "path": "models/penguin-ATTRIBUTION.txt",
-      "bytes": 601,
-      "sha256": "1137b1de739e3939976ec279ed0bc64219500536babe9a0db311d0ad0e38b005"
+      "bytes": 597,
+      "sha256": "73d29bad2c4a31112a495a716ce8d6fa4513e002e7133b311507313505c54762"
     },
     {
       "path": "models/penguin-colony.json",
-      "bytes": 31092,
-      "sha256": "c93ac9827dcd1bbacf32e4429b4cc160819ac68f425abccdbb06a4283338c3f0"
+      "bytes": 29711,
+      "sha256": "b007faefe0e0e06bc614efb863afbecc91322baa42195e819c522f6ebe36e66e"
     },
     {
       "path": "models/penguin-transitions.json",
@@ -527,23 +527,23 @@
     },
     {
       "path": "models/rhino-asset.json",
-      "bytes": 18775,
-      "sha256": "a99620d27ee2dfb7a63c0959780e06eb75767b1c0620a4863106aefe57a03bbd"
+      "bytes": 18177,
+      "sha256": "00ba8ef734cea58ffaecce97e6a7591347fb55839d94b3223e9d28b5c01c358b"
     },
     {
       "path": "models/rhino-ATTRIBUTION.txt",
-      "bytes": 501,
-      "sha256": "98b01caf88fb6e12542110c5042b53e9e8ee437a4042a741602b622e7b8e5ef0"
+      "bytes": 497,
+      "sha256": "943d14ab794e52002613fb6b7443d2305f10c69f6d8612800d1b5740b4d79beb"
     },
     {
       "path": "models/rhino-colony.json",
-      "bytes": 348634,
-      "sha256": "895a3c1ea26dabfa54022fc46957025cd825be6e421ac1a1ae6e6304b2195b0d"
+      "bytes": 336060,
+      "sha256": "16abdca548985c6af1f59e72063f0d9f6f8444a99dd3612f1dfe6bbf40a2435f"
     },
     {
       "path": "models/rhino-habitat.json",
-      "bytes": 4237,
-      "sha256": "dc68e944021236bf752f819da6afcfe3cbb45bc8f2b32f37fb80a7f56e9c4cbf"
+      "bytes": 4134,
+      "sha256": "5e313458c5f861a1f764d400f43689ff00ae67c3d29d0631d26d1b5c33eb42de"
     },
     {
       "path": "models/savanna-ahsap-platform.glb",
@@ -552,8 +552,8 @@
     },
     {
       "path": "models/tree-model-metadata.json",
-      "bytes": 3507,
-      "sha256": "4d255250a3d0e97691cc8d7f23a51261f701d5b77a6d3c529380ab67eb66ae2c"
+      "bytes": 3370,
+      "sha256": "ec3890c87190225caffb262fe120ca18e0d98a9fbf877869151d9812edda89d4"
     },
     {
       "path": "models/turk-koyu.glb",
@@ -597,13 +597,13 @@
     },
     {
       "path": "region-locations.json",
-      "bytes": 39433,
-      "sha256": "9b08071ebd22837223a531c3185c7c3c95236338401980d0c321d9795e6ccc63"
+      "bytes": 37892,
+      "sha256": "77bf4580f40facb06a628b8affca76f364c60f76903775b2f591994faddaea73"
     },
     {
       "path": "region-models.js",
-      "bytes": 5918,
-      "sha256": "da326a5cf3573b9bb958a34ee8ec90d599bd8643508dad70fdda48ca52ff3004"
+      "bytes": 5813,
+      "sha256": "647512e5dcff5292916730cc43017d41e9f3eb3667c94eee3d8fa74b98b1d2db"
     },
     {
       "path": "rhino-motion.js",
@@ -612,18 +612,18 @@
     },
     {
       "path": "rhinos.js",
-      "bytes": 2248,
-      "sha256": "6a28f7247ed562f83e9b49c5535ac5b526c0b5940fff8e464878d5ed9b996866"
+      "bytes": 2209,
+      "sha256": "9e04c3d667a5c4ad6d3b007642d4310229cb955717b6fb16df54d211ef6b9e94"
     },
     {
       "path": "scene-effects.js",
-      "bytes": 2764,
-      "sha256": "8dda84b6b42db73a9619cdeffe6c5fa4f434650d2563383c07f00340f050c157"
+      "bytes": 2716,
+      "sha256": "22a37928ae9d5dfc14fd827d9d4c728f34594e5e92fa23de72e61a574ce3f912"
     },
     {
       "path": "scene-model-catalog.json",
-      "bytes": 27959,
-      "sha256": "1c2a1cf263bd806a89f7db9599ff414e9a024da5d40a2929d040aedb9d0d35e1"
+      "bytes": 27958,
+      "sha256": "60b0068dfd5fe8c3f7818381042d8d47226238b9780e9cc4d2d8dde9d4dd0b00"
     },
     {
       "path": "site-data.json",
@@ -632,13 +632,13 @@
     },
     {
       "path": "style.css",
-      "bytes": 8877,
-      "sha256": "2d5005c83a16ab7b396defffb937abd6920d1252be27dc48e3498f6e0a3fe3b9"
+      "bytes": 8789,
+      "sha256": "ad88f57ddc1a9b85d2a86bb60df436c553d0e334cf89cb2c5f4d9d38aed178d5"
     },
     {
       "path": "surface-layers.json",
-      "bytes": 1080476,
-      "sha256": "f4e3793aa116fb3e75d073ad19c2fe149b111978697352209103e404c5972843"
+      "bytes": 1080475,
+      "sha256": "df4f7366dc3344b5f02c1d28e627777d91140146373b54e27c7c5ba7638ae1bf"
     },
     {
       "path": "tap-colony.js",
@@ -667,13 +667,13 @@
     },
     {
       "path": "v2/official-map.json",
-      "bytes": 296,
-      "sha256": "b7579871c6bde12144afd46b1c9d31aabace0e4628cdc0524bbd5217c1a16fd9"
+      "bytes": 288,
+      "sha256": "dbcb3b0b9d950a9e1898eb36f68d42b95f7b6f4dba3b6e558468b822482ac2db"
     },
     {
       "path": "v2/rectification.json",
-      "bytes": 2256,
-      "sha256": "434ff0ecca1ce910a9e4573fd13bc9ddf657c268dcc23ade320cba43f9146b2a"
+      "bytes": 2184,
+      "sha256": "1931fd395824d50a1474d38f3b8f1756a3216b2c61b9a1ec711adcf82e6fcf61"
     },
     {
       "path": "v2/roads-metric.json",
@@ -727,8 +727,8 @@
     },
     {
       "path": "vendor/scene-effects-sources.json",
-      "bytes": 2921,
-      "sha256": "cfb0df794d67bb3333427846b73a924ff0d27fde7b7e38a41155c4b0e8ac2681"
+      "bytes": 2859,
+      "sha256": "47fd507439411ff491dacd35b683b43e49e31c99666d566112f04a2908c0a822"
     },
     {
       "path": "vendor/shaders/CopyShader.js",

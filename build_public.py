@@ -10,7 +10,6 @@ import argparse
 import hashlib
 import json
 import re
-import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -28,6 +27,7 @@ FILES = (
 )
 DIRECTORIES = ("vendor", "assets", "models", "model-review", "v2", "reference-maps", "design-reference")
 EXTENSIONS = {".js", ".html", ".css", ".json", ".glb", ".png", ".jpg", ".svg", ".txt"}
+TEXT_EXTENSIONS = {".js", ".html", ".css", ".json", ".svg", ".txt"}
 
 
 def main() -> None:
@@ -59,9 +59,12 @@ def main() -> None:
         relative = file.relative_to(DIST)
         destination = PUBLIC / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(file, destination)
-        records.append({"path": relative.as_posix(), "bytes": file.stat().st_size,
-                        "sha256": hashlib.sha256(file.read_bytes()).hexdigest()})
+        content = file.read_bytes()
+        if file.suffix in TEXT_EXTENSIONS or file.name == "LICENSE":
+            content = content.replace(b"\r\n", b"\n")
+        destination.write_bytes(content)
+        records.append({"path": relative.as_posix(), "bytes": len(content),
+                        "sha256": hashlib.sha256(content).hexdigest()})
     revision = re.search(r"app\.js\?v=([\w-]+)", (DIST / "index.html").read_text(encoding="utf-8")).group(1)
     report = {
         "schema": "bursa-zoo-public-release/v1", "revision": revision,
