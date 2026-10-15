@@ -1,0 +1,58 @@
+{
+  "region": 16,
+  "scope": "Photo-based component study, not whole exhibit or measured reconstruction",
+  "interpretation": "14x10m presentation patch; wall, rail, boulder, trunk and mud positions/dimensions are illustrative. Not added to M5 atlas.",
+  "sources": [
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2020/09/gergedan2.jpg",
+      "local": "../kaynaklar/fotograflar/resmi-site-2826.jpg",
+      "sha256": "4de39fcd56efaed842b71d32b0b4ee2b943d24180b96f168496b6e14cf7e04c1",
+      "date": "Upload 2020-09-29; capture date unverified",
+      "observed": "Sandy ground, pale boulders around tree, dark horizontal timber barrier, red/cream retaining edge"
+    },
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2022/09/kolaj-gergedan.jpg",
+      "observed": "Rhinos in shallow muddy area; does not establish its present boundary/location"
+    }
+  ],
+  "groundPartition": {
+    "totalM2": 140.0,
+    "dryM2": 123.06802369289538,
+    "mudM2": 7.945037827095531,
+    "bankM2": 7.002938480009094,
+    "wallM2": 1.9839999999999962,
+    "overlapM2": 0.0,
+    "uncoveredM2": 0.0
+  },
+  "unit": "metre",
+  "coordinates": "Local prototype XYZ Z-up, exported glTF Y-up; no claimed M5 placement",
+  "textures": [
+    {
+      "file": "soil.jpg",
+      "source": "viewer/assets/penguin-pale-gravel-v1.png",
+      "sourceSha256": "2e07401434c95bd476c46b9a383907efdd10119efd67ac64d3e5571c3fce44b3",
+      "sha256": "a9d61541a981957266a295934dd29f644e88ff53c2397f4671bfcd3bf659e00f",
+      "method": "512px RGB JPEG derivative of existing generated material; no zoo reference photo used as texture"
+    },
+    {
+      "file": "rock.jpg",
+      "source": "viewer/assets/penguin-artificial-rock-v1.png",
+      "sourceSha256": "c03ce4d501bd5c0f9846cf494efe9ff6cb9a5e2b810546601789872e816ac837",
+      "sha256": "80a5f1febe421aa88fe843e918a621e321396e5ea5b81da164641d883d3319c1",
+      "method": "512px RGB JPEG derivative of existing generated material; no zoo reference photo used as texture"
+    },
+    {
+      "file": "bark.jpg",
+      "source": "viewer/assets/woodland-tree-bark-v1.png",
+      "sourceSha256": "2e7083719718374c820e18338ddda7e1a92a647e063ccc40b95c43b466dc5203",
+      "sha256": "6d1e632d3e2e131f7b5d729b3a02402bde2edd67ab77914429b2bb33e8d628ea",
+      "method": "512px RGB JPEG derivative of existing generated material; no zoo reference photo used as texture"
+    }
+  ],
+  "triangles": 2458,
+  "meshes": 9,
+  "status": "First local habitat component; current entire boundary, stable and mud position remain unverified",
+  "file": "rhino-habitat-study.glb",
+  "bytes": 271440,
+  "sha256": "de65dfc363104b540c9567e1794bcd4e349284b5c4f4c88112d71dfda5a5faff"
+}

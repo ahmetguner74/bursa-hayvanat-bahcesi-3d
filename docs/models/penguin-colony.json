@@ -1,10 +1,10 @@
 {
-  "schema": "bursa-zoo-penguin-colony/v1",
+  "schema": "bursa-zoo-penguin-colony/v2",
   "sourceUrl": "https://sketchfab.com/3d-models/african-penguin-spheniscus-demersus-low-poly-9e59070815fe451d93398e2ebdb9bb92",
   "author": "Major",
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "asset": "models/african-penguin.glb",
+  "asset": "african-penguin.glb",
   "assetSha256": "a13268217ab09dcb582ae3b1adde6ee4ab4f68f9037ca6141eece2ada6fbee47",
   "sourceSha256": "ecee6a9f7293e058061898e6726b7f83ba42c6e4b4c50e7becaf0ddc447437b7",
   "unit": "metre",
@@ -1344,12 +1344,38 @@
       ]
     }
   },
-  "walkSpeedMetresPerSecond": 0.21,
+  "waterRoutes": [
+    {
+      "centre": [
+        -13,
+        134.6
+      ],
+      "radii": [
+        2,
+        1.4
+      ],
+      "startAngle": -1.5707963267948966,
+      "direction": 1
+    },
+    {
+      "centre": [
+        -17.3,
+        132.9
+      ],
+      "radii": [
+        1.1,
+        1.2
+      ],
+      "startAngle": 1.5707963267948966,
+      "direction": -1
+    }
+  ],
   "swimSpeedMetresPerSecond": 0.5,
-  "swimAnchorOffsetMetres": -0.29,
-  "interpretation": "Five illustrative adults, not the zoo census. Dry and swimming individuals remain separate; no invented crossing of the vertical coping. Safe domains exclude rocks, cliff, deck and shoreline. Heights/speeds/positions are editable illustrative settings.",
+  "swimAnchorOffsetMetres": -0.23,
+  "floatAnchorOffsetMetres": -0.4,
+  "interpretation": "Five illustrative adults, not the zoo census. Touch-driven short behaviors replace autonomous roaming. Dry and swimming individuals remain separate; no invented crossing of the vertical coping. Safe domains exclude rocks, cliff, deck and shoreline. Heights/speeds/positions are editable illustrative settings.",
   "inputs": {
     "poolInputsSha256": "3437185af76203118a25126252a9f14b1626ea84efe465c3ab1608a4181e8611",
-    "surfaceSha256": "2c2b9d7c4e0cb6240b55d1e57dd5eccf61f0f5b157da283e64046d3b24ae01ac"
+    "surfaceSha256": "f4e3793aa116fb3e75d073ad19c2fe149b111978697352209103e404c5972843"
   }
 }

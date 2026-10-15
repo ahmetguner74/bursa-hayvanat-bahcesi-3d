@@ -1,0 +1,53 @@
+{
+  "assetSha256": "847f741fd7cb7eeee330f44815a975fdda87b5f233dc2ba743fd9bb4c7a842e5",
+  "animals": 4,
+  "triangles": 48160,
+  "jointsPerAnimal": 5,
+  "sharedGeometry": true,
+  "sharedMaterialsAndTextures": true,
+  "independentSkeletons": true,
+  "groundMinM": 0,
+  "groundMaxM": 0,
+  "maxFootDriftM": 0,
+  "clips": {
+    "Rest": 0.0030224346636072564,
+    "LookAround": 0.03892318932798568,
+    "Settle": 0.024384288123484223
+  },
+  "loopSeamM": {
+    "Rest": 1.8864819311116107e-8,
+    "LookAround": 1.8864819311116107e-8,
+    "Settle": 1.8864819311116107e-8
+  },
+  "groundByClip": {
+    "Rest": [
+      0,
+      0
+    ],
+    "LookAround": [
+      0,
+      0
+    ],
+    "Settle": [
+      0,
+      0
+    ]
+  },
+  "runtimeSeconds": 120,
+  "runtimeStateChecks": [
+    "hidden",
+    "paused",
+    "disabled",
+    "parent-hidden",
+    "out-of-frame"
+  ],
+  "runtimeNoGroundDrift": true,
+  "behaviorChanges": [
+    3,
+    3,
+    2,
+    3
+  ],
+  "gpuPerformanceMeasured": false,
+  "scope": "CPU actual skinned geometry and runtime behavior; not physical phone FPS or veterinary behavioral validation"
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-15",
+  "species": "Ceratotherium simum",
+  "scope": "Local atlas integration 20261015al; two illustrative adults and reference-informed habitat. Publication withheld at user request.",
+  "evidence": [
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/beyaz-gergedan-white-rhinoceros/",
+      "role": "Official Bursa species identification",
+      "finding": "Confirms Ceratotherium simum; not a measured anatomical model"
+    },
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/dunya-gergedan-gunu/",
+      "date": "2026-09-22",
+      "finding": "Mentions Amadou and Tayo; no claim that downloaded generic model reproduces either individual"
+    },
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-zoonun-yeni-konuklari-gergedanlar/",
+      "date": "2018-06-30",
+      "finding": "1057m2 indoor and 3621m2 outdoor describe shared rhino-zebra complex, not exhibit16 alone"
+    },
+    {
+      "url": "https://strapi.eaza.net/uploads/2018_EAZA_Best_Practice_Guidelines_White_rhinoceros_NV_feefd99e0e.pdf",
+      "citation": "Lars Versteege, July2018, DOI10.61024/BPG2018WhiteRhinocerosEN",
+      "pages": [
+        11,
+        12,
+        15,
+        17,
+        23,
+        24,
+        37,
+        38
+      ],
+      "finding": "Modelling reference: wide lip, low head carriage, neck hump and three toes distinguish white rhino. Soft varied substrate, shallow muddy resting space and shade inform the visual scene. Behaviour should include grazing and resting. These guidelines do not establish the real Bursa enclosure layout. Original document linked, not redistributed."
+    },
+    {
+      "url": "https://sketchfab.com/3d-models/white-rhinoceros-939baeb6d62a4824b8edb3c7f7ef54c7",
+      "author": "absol",
+      "license": "CC BY4.0",
+      "finding": "Official downloaded GLB and Blender ZIP. One 9310 triangle skinned mesh,46 joints,one walk clip,2x1024 textures verified in actual files."
+    },
+    {
+      "url": "https://threejs.org/docs/pages/LOD.html",
+      "finding": "Level switching and hysteresis support future distance detail management; a separate animal geometry LOD is not yet implemented"
+    },
+    {
+      "url": "https://threejs.org/docs/pages/AnimationMixer.html",
+      "finding": "Use existing animation mixer and delta seconds; bone animation preserved"
+    },
+    {
+      "url": "https://threejs.org/manual/pages/cleanup.html",
+      "finding": "Explicit geometry,texture and material disposal is required when future atlas loading/eviction is added"
+    },
+    {
+      "url": "https://github.com/KhronosGroup/glTF-Validator",
+      "finding": "Both derived GLBs validated with the installed2.0.0-dev.3.10 validator:0errors/0warnings"
+    },
+    {
+      "url": "https://www.sanbi.org/animal-of-the-week/square-lipped-rhinoceros/",
+      "finding": "Natural colour pale yellowish-brown to slate grey; white is species name, not white skin."
+    },
+    {
+      "url": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "finding": "2018 curved organic stable, green roof and internal divisions; reported areas shared with zebras."
+    },
+    {
+      "url": "https://www.bursa.bel.tr/sehir-kameralari/gergedanlar-23324",
+      "finding": "Acquired daylight frame inspected: soil yard, concrete boundary, tree/boulders, pale facade and metal doors. Independent capture time unknown."
+    },
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "finding": "Region16 compound and curved building traced through existing approximate M5 registration, without changing source coordinates."
+    },
+    {
+      "url": "https://polyhaven.com/a/gravelly_sand",
+      "author": "Dario Barresi",
+      "license": "CC0",
+      "finding": "Official 1K albedo downloaded; 512px RGB JPEG derivative for the habitat."
+    }
+  ],
+  "performanceDecisions": {
+    "firstPopulation": 2,
+    "animalTriangleBudget": 12000,
+    "actualAnimalTriangles": 9310,
+    "habitatTriangles": 14787,
+    "animalPrimaryDraws": 2,
+    "habitatPrimaryDraws": 21,
+    "textures": "Two shared1K animal maps; 512px ground/rock/wood derivatives and shared CC0 tree maps. Nominal animal RGBA mip estimate10.67MiB is not total GPU memory.",
+    "animation": "Near target60Hz desktop/30Hz small viewport,far12Hz; offscreen skeletons and hidden documents freeze; dt capped80ms",
+    "runtimeGeometry": "Offline513x17 walk/idle contact table; bilinear scalar lookup at runtime, no CPU skinned vertex loop",
+    "rendering": "No physics engine,new reflection pass,fur particles,high-density grass or extra full-screen effects",
+    "acceptance": "Target smooth30Hz phone and60Hz desktop with existing atlas overhead measured before integration; browser viewport simulation is not a phone benchmark",
+    "targetsAre": "Engineering targets for this project,not numerical mandates in the cited documentation"
+  },
+  "nextSteps": [
+    "Validate and refine dimensions with current site photos or measurements",
+    "Physical phone frame-time/thermal test",
+    "Obtain suitable grazing/resting clips before adding more behaviours"
+  ],
+  "remainingUncertainty": [
+    "Illustrated placement registration10-25m",
+    "Exact current door/fence/mud positions and heights",
+    "Current complete animal census and individual size/horn condition",
+    "Natural stride/foot-slip acceptance and physical phone frame rate"
+  ],
+  "prototypePerformance": {
+    "revision": "20261015aj",
+    "desktop": {
+      "viewport": [
+        1280,
+        720
+      ],
+      "samples": 180,
+      "updateHz": 57.54169108636579,
+      "animationCpuMeanMs": 0.0672222222511967,
+      "animationCpuP95Ms": 0.19999999925494194
+    },
+    "phoneSizeOnSameComputer": {
+      "viewport": [
+        390,
+        844
+      ],
+      "samples": 180,
+      "updateHz": 29.868247840083164,
+      "animationCpuMeanMs": 0.07944444436579942,
+      "animationCpuP95Ms": 0.19999999925494194
+    },
+    "scope": "IAB console measurement of actual AnimationMixer and grounding; not GPU time or physical phone benchmark",
+    "visualChecks": [
+      "Desktop near and component view",
+      "390x844 viewport, no horizontal overflow observed",
+      "Pause control changed to resume state"
+    ],
+    "errorsAndWarnings": 0
+  }
+}

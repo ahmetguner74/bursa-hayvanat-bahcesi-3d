@@ -1,0 +1,39 @@
+{
+  "assetSha256": "744afc85a6764389a7df754d7697524500bf9cac2186814a31674337640b0e1c",
+  "triangles": 15236,
+  "joints": 49,
+  "sourceIdleRetained": true,
+  "walkAuthored": true,
+  "sole": {
+    "019": {
+      "vertices": 143,
+      "groundedStanceMin": 0,
+      "groundedStanceMax": 0.00009094579316984907,
+      "medianStanceFootForwardAxisSpeed": 0.4772772494936177
+    },
+    "022": {
+      "vertices": 132,
+      "groundedStanceMin": 0,
+      "groundedStanceMax": 0.0000901948764587537,
+      "medianStanceFootForwardAxisSpeed": 0.47722035466811263
+    },
+    "025": {
+      "vertices": 209,
+      "groundedStanceMin": 0,
+      "groundedStanceMax": 0.000016452952941900002,
+      "medianStanceFootForwardAxisSpeed": 0.4757175509956255
+    },
+    "028": {
+      "vertices": 205,
+      "groundedStanceMin": 0,
+      "groundedStanceMax": 0.00001865218190130139,
+      "medianStanceFootForwardAxisSpeed": 0.47582474969004807
+    }
+  },
+  "blendLookupWorstGroundErrorMetres": 0.0005008682101578467,
+  "validator": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "geometryScope": "Actual delivered GLB skin. Grounding corrects minimum sole height, not a physical friction simulation. Stance foot forward-axis speed should counter the0.48m/s path speed."
+}

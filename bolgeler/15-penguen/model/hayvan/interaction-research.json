@@ -1,0 +1,26 @@
+{
+  "revision": "20261016aq",
+  "reviewedAt": "2026-10-16",
+  "scope": "Touch-driven local atlas interaction. Source animal clips and geometry inspected; no current Bursa census or measured live-animal motion claimed.",
+  "sources": [
+    {"url":"https://threejs.org/docs/pages/AnimationAction.html","role":"Paused pose sampling, action weights, stopping unused actions and bounded clip playback."},
+    {"url":"https://threejs.org/docs/pages/Raycaster.html","role":"Actual animated mesh picking; small screen-space fallback for touch targets."},
+    {"url":"https://threejs.org/docs/pages/OrbitControls.html","role":"Keep Z-up, move camera and orbit target together for a watched swimmer, update controls after manual camera changes, and allow user input to interrupt tracking."},
+    {"url":"https://threejs.org/manual/pages/rendering-on-demand.html","role":"Avoid redraws when camera and poses are unchanged; camera damping still needs updates."},
+    {"url":"https://animals.sandiegozoo.org/animals/african-penguin","role":"Species appearance, colony life and swimming; not a source for Bursa enclosure geometry."},
+    {"url":"https://adminzoonooz.sandiegozoo.org/story-hub/zoonooz/penguin-care","role":"Individual differences and beach/swimming/rest behavior. No zoo care advice is presented as a visitor interaction."},
+    {"url":"https://sketchfab.com/3d-models/african-penguin-spheniscus-demersus-low-poly-9e59070815fe451d93398e2ebdb9bb92","role":"Major CC BY4.0 source. Actual GLB contains Idle,Shake,Preen,Sit1,Sleep,Penguin swim,Walk,Bray."}
+  ],
+  "decisions": [
+    "Keep three land and two water individuals in separate validated M5 domains; do not teleport across the vertical coping.",
+    "Only in the close penguin colony view, schedule short randomized species-appropriate sequences with quiet intervals. Sample at most two visible rigs, including manual reactions; disable autonomy when leaving. Other species keep explicit tap behavior.",
+    "Open the colony/pool reference view directly from the map. A body tap moves closer to that individual; the selected swimmer is followed. A text-free ring identifies the observed animal and other automatic reactions settle. No default individual is implied at colony entry.",
+    "Retapping a watched swimmer extends swimming without resetting position or clip phase. Keep source water domains and the existing shared reflection pass; improve body readability with a 6 cm presentation offset rather than extra water effects.",
+    "Respect reduced-motion preference by suppressing autonomous scheduling while keeping explicit user-requested actions available.",
+    "Use source Sit1 and Sleep poses for a gradual sleep/wake sequence, not an invented source transition clip.",
+    "Sample only active rigs; preserve independent skeletons and shared geometry/materials/textures.",
+    "Bake blended skin grounding offline. Do not scan mesh vertices in the animation frame loop.",
+    "Render dirtiness and idle CPU/GPU behavior are different; verify actual frame count rather than infer savings from animation update CPU alone.",
+    "Keep physical-phone FPS and energy savings unclaimed until measured on that device."
+  ]
+}

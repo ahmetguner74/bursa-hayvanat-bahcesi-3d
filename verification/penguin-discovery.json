@@ -1,0 +1,36 @@
+{
+  "revision": "20261016aq",
+  "scope": "Actual production runtime and HTTP GLB on CPU; no GPU/FPS claim",
+  "phoneViewport": [
+    390,
+    844
+  ],
+  "renderViewport": [
+    246,
+    844
+  ],
+  "allFiveFitCamera": true,
+  "autonomousAnimals": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "behaviors": [
+    "look",
+    "notice",
+    "preen",
+    "rest",
+    "sleep",
+    "swim"
+  ],
+  "maximumVisibleActiveStates": 2,
+  "maximumSampledRigs": 2,
+  "rapidDirectTaps": 25,
+  "hiddenAndOffscreenFrozen": true,
+  "offscreenSwimmersDoNotBlockLand": true,
+  "leavingColonyStopsUpdates": true,
+  "swimmersInsidePool": true,
+  "reducedMotionNoAutonomyExplicitTapWorks": true
+}

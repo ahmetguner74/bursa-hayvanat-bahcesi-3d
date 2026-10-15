@@ -12,9 +12,9 @@
 
 ## Geometri ve yüzey sahipliği
 
-Modelde 15.425 üçgen var. Havuz gövdesi, yapay kaya duvar, çakıl tabanı ve drenaj halkası kaynak üretiminde kapalı, tutarlı yönlenmiş ve pozitif hacimli olarak sınanır. Su yüzeyi ayrı tek yüzdür; şeffaf su gölge haritasına opak yüz gibi yazılmaz.
+Modelde 14.413 üçgen var. Havuz gövdesi, yapay kaya duvar, çakıl tabanı ve drenaj halkası kaynak üretiminde kapalı, tutarlı yönlenmiş ve pozitif hacimli olarak sınanır. Su yüzeyi ayrı tek yüzdür; şeffaf su gölge haritasına opak yüz gibi yazılmaz.
 
-Ana atlas `pool_water` ve `gravel_ground` düğümlerini gizler. Su, mevcut düzlemsel bölümden bir kez çizilir. Çakıl alanı çimden geometrik olarak bölünerek **212,15 m²** ayrı malzeme bölgesi olur; üstüne ikinci çakıl kapak konmaz. Modelden yalnız bordür, kaya ve yükseltilmiş platform gibi gerçek hacimli parçalar eklenir. Bağımsız incelemede bu iki düğüm de görünür.
+Ana atlas `pool_water` ve `gravel_ground` düğümlerini gizler. Su, mevcut düzlemsel bölümden bir kez çizilir. Çakıl alanı çimden geometrik olarak bölünerek **183,13 m²** ayrı malzeme bölgesi olur; üstüne ikinci çakıl kapak konmaz. Modelden yalnız bordür, kaya ve yükseltilmiş platform gibi gerçek hacimli parçalar eklenir. Bağımsız incelemede bu iki düğüm de görünür.
 
 Kaya ve çakıl taban renk görüntüleri AI ile üretildi; gerçek fotoğraf pikselleri doku olarak kullanılmadı. Kayıtları `viewer/assets/asset-manifest.json` içinde. Aynı görüntü ve doku kaynakları farklı renkli parçalarda ortak kullanılır.
 
@@ -29,3 +29,11 @@ python bolgeler/verify_inventory.py
 ```
 
 `build_penguin.py`, `model-inputs.json` ve `model-report.json` düzenlenebilir kaynak/sonuç kayıtlarıdır. `docs/` veya uzak yayın kullanılmaz. [Hareketli Afrika pengueni ilk modeli](hayvan/README.md) eklendi: üç kıyı ve iki yüzücü birey; kaynaklı GLB/Blender, gerçek iskelet animasyonları ve güvenli dolaşım alanları. Ayrıntılı drenaj ızgarası ve güncel saha fotoğrafı ile son doğrulama bekler.
+
+## Yerel havuz düzeltmesi · 20261015al
+
+Bordür ve drenajın 57 cm'lik izi ortak yol/çim bölümünden çıkarıldı. Yol dere taşları yalnız gerçek yol–kara sınırında üretilir; su ve modele ait kenarlarda boşluk bırakılır. `verify_pool_fixes.py`: kenar–yol/çim çakışması sıfır, havuz kenarının 65 cm yakınında yol taşı sıfır. İki iç kayanın görünen tepesi korunup su altı gövdesi −1,49 m'ye, yorum taban kotu −1,45 m'nin altına uzatıldı.
+
+Yapay kaya duvar tek kapalı gövde olarak, tekrarlanan sinüs tepesi yerine kırık üst çizgi ve farklı eğimli yüzlerle düzenlendi. Kaynak 2017 fotoğrafındaki yapay kaya panelleri referanstır; birebir güncel rölöve değildir. Penguen su yansıması mevcut tek su mesh'i üzerinde azaltıldı; yeni yansıma geçişi eklenmedi. Kamera başlığındaki sabit “yakından” ifadesi kaldırıldı, alan/yakın düğmeleri eklendi ve mobil yükseklik değişiminde kamera konumu korunur. Fiziksel iPhone doğrulaması henüz yapılmadı. Bu değişiklikler yalnız `dist/` içindedir; canlıya yayınlanmadı.
+
+Yakın penguen kamerası çalı içinde kalan eski noktadan açık çakıl kıyısına taşındı. Yerel son görünüm `pool-webgl-20261015al.png` gerçek atlas/WebGL çıktısıdır.

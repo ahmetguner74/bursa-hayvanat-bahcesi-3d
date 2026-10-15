@@ -1,0 +1,14 @@
+{
+  "habitatValidatorErrors": 0,
+  "habitatValidatorWarnings": 0,
+  "loops": [
+    {
+      "clip": "Idle_Source_BlueMesh",
+      "endToStartWorstVertexDifferenceMetres": 0.0010884830418353747
+    },
+    {
+      "clip": "Walk_Authored_LateralSequence",
+      "endToStartWorstVertexDifferenceMetres": 0.0010887571270370797
+    }
+  ]
+}

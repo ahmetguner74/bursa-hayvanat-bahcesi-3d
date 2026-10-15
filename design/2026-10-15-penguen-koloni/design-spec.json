@@ -1,0 +1,50 @@
+{
+  "revision": "20261015ap",
+  "date": "2026-10-15",
+  "scope": "Penguenlerde yerel koloni deneyimi. Diğer türlere otomatik uygulanmaz.",
+  "sourceImages": [
+    "C:/Users/Scanl/.codex/codex-remote-attachments/01a139c1-0c8e-7992-baef-b9bde8e3103c/DFB76ADA-5267-456B-AA38-42819209300A/1-Fotoğraf-1.jpg",
+    "C:/Users/Scanl/.codex/codex-remote-attachments/01a139c1-0c8e-7992-baef-b9bde8e3103c/DFB76ADA-5267-456B-AA38-42819209300A/2-Fotoğraf-2.jpg"
+  ],
+  "flow": [
+    "Tek alan etiketi",
+    "Koloni ve havuzu gösteren sabit kıyı açısı",
+    "Etiketsiz gövdeye dokunarak farklı kısa davranış"
+  ],
+  "camera": {
+    "positionM5": [
+      0.2,
+      115.5,
+      6.7
+    ],
+    "targetM5": [
+      -7.9,
+      124.5,
+      0.2
+    ],
+    "fovMobile": 56,
+    "fovDesktop": 44,
+    "followIndividual": false
+  },
+  "panel": {
+    "position": "Sağ, mobil dahil",
+    "widthDesktop": 240,
+    "widthMobile": 128,
+    "content": [
+      "Ortak tür adı",
+      "Latince ad",
+      "Kısa habitat/beslenme bilgisi",
+      "Boy ve yaşam",
+      "Şu anda: gözlenen bireyin gerçek durumu ve açıklaması",
+      "Tür bilgi kaynağı"
+    ],
+    "behaviorCommands": false
+  },
+  "visibleAnimalLabels": false,
+  "behaviorButtons": false,
+  "autonomy": "Yalnız yakın koloni görünümünde, molalı, en fazla iki görünür iskelet örnekleme; azaltılmış hareket tercihinde otomatik hareket yok.",
+  "factsSource": "https://animals.sandiegozoo.org/animals/african-penguin",
+  "publication": "Yalnız yerel dist; docs/ ve canlı sürüm değişmedi.",
+  "supersededBy": "../2026-10-16-penguen-odak/design-spec.json",
+  "status": "Historical AP design; latest local flow is 20261016aq."
+}

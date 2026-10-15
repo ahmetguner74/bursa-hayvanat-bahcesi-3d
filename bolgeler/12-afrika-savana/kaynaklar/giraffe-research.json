@@ -1,0 +1,65 @@
+{
+  "schema": "bursa-zoo-giraffe-research/v1",
+  "date": "2026-10-15",
+  "species": {
+    "url": "https://www.bursahayvanatbahcesi.com/hayvan/baringo-zurafasi/",
+    "officialName": "Baringo Giraffe / Giraffa camelopardalis rothschildi",
+    "finding": "Official page says dark patches separated by broad lines and no spotting below knees. The page historical population estimate is not reused."
+  },
+  "photo": {
+    "file": "../fotograflar/baringo-resmi-2012.jpg",
+    "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2013/11/ZURAFA-MAYIS-2012-6-682x1024.jpg",
+    "sha256": "18473b5e53e032e45615779978393cd6fcc4deb9a98461d0ecf461ac49b2ef51",
+    "observation": "Large irregular dark brown neck patches,cream separators,ossicone tufts,pale ears and muzzle. Research only;not a public model texture."
+  },
+  "habitatSources": [
+    {
+      "url": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "date": "2018-06-30",
+      "photoFiles": [
+        "26077_IMG_8891_201806301148.jpg",
+        "26077_IMG_8908_201806301148.jpg",
+        "26077_IMG_8913_201806301149.jpg"
+      ],
+      "observations": "Giraffes in broad dry soil area; green horizontal visitor rails with timber posts; scattered mature trees; rocks and wood fence; branch feeding. Positions/heights not surveyed."
+    },
+    {
+      "photoFile": "23247_YHG_8895_201702021252.jpg",
+      "date": "2017-02-02",
+      "observation": "Dark timber raised observation/feeding structure,stairs,pitched roof. Existing separate platform asset retained;not relocated from this one photograph."
+    },
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/zurafalara-uludagdan-ozel-diyet/",
+      "date": "2012-05-28",
+      "finding": "Official source describes separate paddocks and oak,beech,willow branch browse. Used for high leafy browse props,not exact current positions or census."
+    },
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesinde-kis-uygulamasi-kaynak-bursa-hayvanat-bahcesinde-kis-uygulamasi/",
+      "date": "2018-03-01",
+      "finding": "Tall heated indoor stable and glazed visitor viewing confirmed. Exact exterior facade/location insufficient,so no invented tall stable is claimed."
+    }
+  ],
+  "locomotion": {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6376938/",
+    "finding": "Primary research distinguishes lateral-sequence slow walk from gallop. New gait has hind then fore on same side,0.12cycle delay and opposite side0.5cycle. Chosen offsets/speed/stance duration are illustrative animation parameters,not extracted individual measurements."
+  },
+  "sourceMotion": "Downloaded BlueMesh animation has static leg channels;properly classified as idle. New walk authored for this project.",
+  "alternativesReviewed": [
+    {
+      "url": "https://sketchfab.com/3d-models/giraffe-ec89c7d2a1f1442d983746300793aec3",
+      "publishedDescription": "68.2ktri whole asset including muscles,bones,organs;main giraffe animated",
+      "decision": "Not downloaded;larger anatomy bundle and walking clip unverified"
+    },
+    {
+      "url": "https://sketchfab.com/3d-models/giraffe-fbc2566f648d46a8b28624c9cf9fb218",
+      "publishedDescription": "16.5ktri animated",
+      "decision": "Not downloaded;no verified actual walk/subspecies;focused detail fetch403,so no stronger suitability claim"
+    }
+  ],
+  "limitations": [
+    "No exact current zoo census used",
+    "No measured stable reconstruction",
+    "No physical phone benchmark",
+    "Small turning arcs are speed/heading capped;there is no realtime physics/friction simulation or runtime whole-leg foot-lock IK"
+  ]
+}

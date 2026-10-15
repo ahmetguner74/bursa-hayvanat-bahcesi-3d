@@ -259,7 +259,28 @@ def main():
     bear_pool=Polygon(bear['poolOutlineM5XY'])
     bear_bank=clean(unary_union([Polygon(p['outer'],p['holes']) for p in bear['interpretedBankMaskM5XY']]))
     building_source_ids.append(bear['poolSourceId']+':interpreted-bank')
-    building = difference(clean(unary_union([m5_building, mill_building, village_floors, cafe_floors, habes_coping, bear_bank]).intersection(boundary)), water)
+    rhino_input_path=HERE/'bolgeler/16-gergedan/model/habitat-inputs.json'
+    rhino_floor=GeometryCollection()
+    if rhino_input_path.is_file():
+        rhino_inputs=json.loads(rhino_input_path.read_text(encoding='utf-8'))
+        if rhino_inputs['siteDataSha256']!=source_hash(site_path):
+            raise ValueError('Rhino source frame changed')
+        rhino_floor=Polygon(rhino_inputs['compoundOutlineM5XY'])
+        building_source_ids.append('official-map:rhino16-model-owned-compound-floor')
+    giraffe_input_path=HERE/'bolgeler/12-afrika-savana/model/giraffe/habitat-inputs.json'
+    giraffe_floor=GeometryCollection()
+    if giraffe_input_path.is_file():
+        giraffe_inputs=json.loads(giraffe_input_path.read_text(encoding='utf-8'))
+        if giraffe_inputs['siteDataSha256']!=source_hash(site_path):
+            raise ValueError('Giraffe source frame changed')
+        giraffe_floor=clean(unary_union([Polygon(p['outer'],p.get('holes',[])) for p in giraffe_inputs['floorOwnershipMasks']]))
+        building_source_ids.append('official-map:savanna12-model-owned-open-section-floor')
+    penguin_input_path=HERE/'bolgeler/15-penguen/model/model-inputs.json'
+    penguin=json.loads(penguin_input_path.read_text(encoding='utf-8'))
+    penguin_pool=Polygon(penguin['waterOutline']['outer'],penguin['waterOutline']['holes'])
+    penguin_rim=clean(penguin_pool.buffer(.57,quad_segs=6).difference(penguin_pool))
+    building_source_ids.append(penguin['sourceWaterFeatureId']+':model-owned-coping-and-drain')
+    building = difference(clean(unary_union([m5_building, mill_building, village_floors, cafe_floors, habes_coping, bear_bank,rhino_floor,giraffe_floor,penguin_rim]).intersection(boundary)), water)
 
     # The manually drawn QGIS surfaces replace the old M5 buffer preview.
     # Both are already in the same local metre grid; surface priority removes
@@ -307,6 +328,8 @@ def main():
     for part in output_layers['water']:
         if Polygon(part['outer'],part['holes']).intersection(bear_pool).area>.1:
             part['waterPresentationColor']=bear['waterPresentationColor']
+        if Polygon(part['outer'],part['holes']).intersection(penguin_pool).area>.1:
+            part['waterReflectionStrength']=.55
     # Material regions split the terrain; no second gravel cap is stacked
     # above grass. The original water/building/path ownership stays intact.
     penguin_input_path = HERE / "bolgeler/15-penguen/model/model-inputs.json"
@@ -349,6 +372,17 @@ def main():
     if boundary.symmetric_difference(serialized_union).area > 0.000001:
         raise ValueError("Serialized layers do not cover the boundary")
 
+    # Decorative stones belong only to road-to-land edges, with space for their
+    # physical radius. Pool rims, water and separately modelled walls own theirs.
+    curb_geometry=path.boundary.intersection(terrain.boundary).difference(water.buffer(.40)).difference(building.buffer(.35))
+    def curb_lines(g):
+        if g.is_empty:return []
+        if g.geom_type=='LineString':return [[list(p) for p in g.coords]] if g.length>.4 else []
+        return [line for child in getattr(g,'geoms',[]) for line in curb_lines(child)]
+    road_curb_lines=curb_lines(curb_geometry)
+    checks['penguinRimPathOverlapM2']=round(penguin_rim.intersection(path).area,9)
+    checks['penguinRimTerrainOverlapM2']=round(penguin_rim.intersection(terrain).area,9)
+    checks['roadCurbLengthM']=round(sum(LineString(line).length for line in road_curb_lines),3)
     result = {
         "schema": "bursa-zoo-planar-surface-partition/v1",
         "coordinateFrame": site["coordinateFrame"],
@@ -358,6 +392,7 @@ def main():
         "priority": ["water", "building", "path", "terrain"],
         "renderLevels": {"terrainZ": -.24, "pathBottomZ": -.24, "pathTopZ": -.105, "waterZ": -.32},
         "renderLevelsAreSurveyed": False,
+        "roadCurbLines":road_curb_lines,
         "source": {
             "siteDataSha256": source_hash(site_path),
             "currentPlanDataSha256": source_hash(plan_path),

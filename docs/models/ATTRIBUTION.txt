@@ -1,0 +1,36 @@
+African penguin (Spheniscus demersus) Low poly by Major
+https://sketchfab.com/3d-models/african-penguin-spheniscus-demersus-low-poly-9e59070815fe451d93398e2ebdb9bb92
+Licensed under Creative Commons Attribution 4.0: https://creativecommons.org/licenses/by/4.0/
+Metric 0.62m standing height, ground origin, nonmetallic feather material and 0.55 normal-map intensity. Removed redundant tightly-packed animation byteStride and unused duplicate UV references; cleared zero-weight joint indices; skinned nodes moved to scene root per glTF. Shape, active skin weights, keyframes and PNG bytes preserved.
+
+
+White rhinoceros by absol
+https://sketchfab.com/3d-models/white-rhinoceros-939baeb6d62a4824b8edb3c7f7ef54c7
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Uniform 0.97 metric interpretation, grounded and centred origin, rough nonmetallic hide and 0.7 normal intensity. Removed redundant animation byteStride and unused UV references, cleared only zero-weight joint indices, moved skinned node to scene root. Shape, active weights, walk keyframes and original 1K texture pixels preserved.
+
+
+Giraffe — BlueMesh (VapTor)
+https://sketchfab.com/3d-models/giraffe-522c042aad9f4348a74c2985ec3f99f9
+Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+
+Changes: metric5m interpretation, coincident geometric vertices at UV seams welded before one subdivision and0.70body collapse; original loop UVs retained. Highest four normalized skin influences exported. Plain lower-leg technical texture derivative and8px atlas margin. New slow lateral-sequence walk authored in this project with offline IK and sole projection; original BlueMesh clip is retained as idle neck/tail motion,not described as source walking. Skinned mesh nodes moved to scene root for glTF compliance. The animal is a Baringo-style visual interpretation,not an exact Bursa individual or a complete subspecies reconstruction.
+
+Open Savanna section: authored reference-informed approximate geometry. Source Bursa photographs are research only,not model textures. Existing M5 coordinate sources and existing wooden-platform asset preserved.
+Gravelly Sand — Dario Barresi, Poly Haven, CC0
+https://polyhaven.com/a/gravelly_sand
+Jacaranda — Rico Cilliers / Rob Tuytel, Poly Haven, CC0
+https://polyhaven.com/a/jacaranda_tree
+Only shared LOD1 branches/leaves used in habitat; indicative tree species. Normal map omitted where exported tangent data is absent.
+Other wood/rock materials: technical derivatives of existing project-generated assets,source hashes recorded in habitat materials manifest.
+
+
+Greater Flamingo – Resting Rigged Bird by Pigcraft
+https://sketchfab.com/3d-models/greater-flamingo-resting-rigged-bird-1c54310c3877422497d37512f0ba33dc
+Author: https://sketchfab.com/s8819296
+CC BY4.0: https://creativecommons.org/licenses/by/4.0/
+
+The source author discloses AI-assisted3D generation. Original GLB had no skeleton or animation, despite its title. It is not a scan of an animal at Bursa Zoo.
+Derivative: welded chunk edges,12k metric collapse, masked neck smoothing, interdigital membranes between original toes,1K pale-plumage material bake, five-bone original resting rig, Rest/LookAround/Settle clips, glTF root skin hierarchy correction.
+Four individuals, placement and adult scale are illustrative. Species is documented at Bursa Zoo; current dome enclosure census and precise placement are not confirmed.

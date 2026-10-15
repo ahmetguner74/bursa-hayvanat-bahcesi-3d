@@ -1,0 +1,36 @@
+{
+  "revision": "20261015al",
+  "desktopReview": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "samples": 180,
+    "animationMeanCpuMs": 0.12888888869848517,
+    "animationMaxCpuMs": 0.3999999985098839,
+    "observedUpdateHz": 59.371786792265084,
+    "p95IntervalMs": 16.799999999999955,
+    "animals": 2
+  },
+  "atlasPenguinOverview": {
+    "frames": 48,
+    "p95CpuSubmissionMs": 3.9000000059604645,
+    "meanDrawCalls": 232,
+    "meanTriangles": 872761,
+    "textures": 52
+  },
+  "scope": "Actual IAB AnimationMixer/controller CPU and atlas CPU submission. No GPU timer or physical phone measurement. Concurrent IAB tabs may remain document-visible. Far animal cadence is intentionally12Hz.",
+  "smallViewportOnSameComputer": {
+    "viewport": [
+      390,
+      844
+    ],
+    "samples": 180,
+    "animationMeanCpuMs": 0.12722222229672803,
+    "animationMaxCpuMs": 1,
+    "observedUpdateHz": 30.017943687008437,
+    "p95IntervalMs": 33.400000000000546,
+    "horizontalOverflow": false,
+    "physicalPhone": false
+  }
+}

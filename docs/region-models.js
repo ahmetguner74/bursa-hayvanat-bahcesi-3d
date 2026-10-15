@@ -54,7 +54,7 @@ export function createRegionalModels(catalog,parent,onChange){
       const hidden=new Set(entry.meta.hiddenNodes);
       root.traverse(node=>{
         if(hidden.has(node.name))node.visible=false;
-        if(node.isMesh){node.castShadow=true;node.receiveShadow=true;}
+        if(node.isMesh){node.castShadow=!(entry.meta.noShadowNodes||[]).includes(node.name);node.receiveShadow=true;}
       });
       entry.scene=root;entry.status='ready';entry.gpuBytes=resources(root).bytes;
       root.visible=entry.wanted;parent.add(root);
@@ -80,10 +80,26 @@ export function createRegionalModels(catalog,parent,onChange){
     }
     trim();pump();
   }
-  function statusFor(region){const entry=entries.find(entry=>entry.meta.regions.includes(region));return entry?{status:entry.status,name:entry.meta.name}:null;}
-  function retry(region){
-    const entry=entries.find(entry=>entry.meta.regions.includes(region));
-    if(parent.visible&&entry?.status==='error'){entry.status='idle';entry.wanted=true;entry.forced=true;pump();onChange();}
+  function statusFor(region){
+    const matching=entries.filter(entry=>entry.meta.regions.includes(region));if(!matching.length)return null;
+    const states=matching.map(entry=>entry.status);
+    const status=states.includes('error')?'error':states.includes('loading')?'loading':states.includes('idle')?'idle':'ready';
+    return {status,name:matching.map(entry=>entry.meta.name).join(' + '),parts:matching.length};
   }
-  return {update,statusFor,retry};
+  function statusForKey(key){const entry=entries.find(entry=>entry.meta.key===key);return entry?{status:entry.status,name:entry.meta.name}:null;}
+  function retry(region){
+    if(!parent.visible)return;
+    let changed=false;
+    for(const entry of entries.filter(entry=>entry.meta.regions.includes(region)&&entry.status==='error')){entry.status='idle';entry.wanted=true;entry.forced=true;changed=true;}
+    if(changed){pump();onChange();}
+  }
+  function pick(raycaster){
+    let nearest=null;
+    for(const entry of entries){
+      if(!entry.scene?.visible)continue;
+      for(const hit of raycaster.intersectObject(entry.scene,true))if(!nearest||hit.distance<nearest.distance)nearest={key:entry.meta.key,distance:hit.distance};
+    }
+    return nearest?.key||null;
+  }
+  return {update,statusFor,statusForKey,retry,pick};
 }

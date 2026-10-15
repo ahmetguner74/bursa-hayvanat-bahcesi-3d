@@ -410,7 +410,7 @@
         126.390766106
       ],
       "status": "illustrated-label-anchor",
-      "modelStatus": "ahşap yapı bileşeni v1; aday konum teyitsiz",
+      "modelStatus": "iki temsili zürafa ve yorum açık yaşam alanı v1; ahşap yapı bileşeni korunur",
       "isModelStarted": true,
       "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
     },
@@ -512,7 +512,7 @@
         164.46551214599998
       ],
       "status": "illustrated-label-anchor",
-      "modelStatus": "Penguen havuzu v1 · M5 izi ve tarihî fotoğraf yorumu · glTF",
+      "modelStatus": "havuz ve kıyı modeli; beş temsili penguende dokunarak etkileşim v2",
       "isModelStarted": true,
       "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
     },
@@ -546,8 +546,8 @@
         134.957281105
       ],
       "status": "illustrated-label-anchor",
-      "modelStatus": "bekliyor",
-      "isModelStarted": false,
+      "modelStatus": "Gergedan yaşam alanı v2 — kroki izi; kavisli yeşil çatılı yapı, avlu, kapı, çit ve iki hareketli yetişkin; ölçüler yaklaşık",
+      "isModelStarted": true,
       "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
     },
     {
@@ -1100,8 +1100,8 @@
         -61.61387235500001
       ],
       "status": "illustrated-label-anchor",
-      "modelStatus": "bekliyor",
-      "isModelStarted": false,
+      "modelStatus": "dört temsili flamingo v1; güncel kubbe içi tür yerleşimi teyitsiz",
+      "isModelStarted": true,
       "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
     },
     {

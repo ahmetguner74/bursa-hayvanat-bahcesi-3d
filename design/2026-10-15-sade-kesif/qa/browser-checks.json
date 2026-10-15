@@ -1,0 +1,35 @@
+{
+  "revision": "20261015ao",
+  "idleProfiles": [
+    {
+      "level": "info",
+      "message": "Local explorer profile {\"mode\":\"overview\",\"renderedFrames\":0,\"poseUpdates\":0,\"activeAnimals\":0,\"intervalMs\":5013.600000000006,\"gpuTimingMeasured\":false}",
+      "timestamp": "2026-10-15T19:58:04.358Z",
+      "url": "http://127.0.0.1:8768/app.js?v=20261015ao"
+    },
+    {
+      "level": "info",
+      "message": "Local explorer profile {\"mode\":\"overview\",\"renderedFrames\":0,\"poseUpdates\":0,\"activeAnimals\":0,\"intervalMs\":5013.5,\"gpuTimingMeasured\":false}",
+      "timestamp": "2026-10-15T19:58:09.372Z",
+      "url": "http://127.0.0.1:8768/app.js?v=20261015ao"
+    },
+    {
+      "level": "info",
+      "message": "Local explorer profile {\"mode\":\"overview\",\"renderedFrames\":0,\"poseUpdates\":0,\"activeAnimals\":0,\"intervalMs\":5013.700000000012,\"gpuTimingMeasured\":false}",
+      "timestamp": "2026-10-15T19:58:14.386Z",
+      "url": "http://127.0.0.1:8768/app.js?v=20261015ao"
+    }
+  ],
+  "warningsAndErrors": [],
+  "tests": [
+    "actual body tap: penguin and flamingo",
+    "Enter selection and Escape return",
+    "back through habitat to overview",
+    "canvas drag does not emit an animal reaction",
+    "fullscreen enter/exit",
+    "390x844 portrait",
+    "844x390 landscape",
+    "1280x720 desktop"
+  ],
+  "physicalPhoneGpuTest": false
+}

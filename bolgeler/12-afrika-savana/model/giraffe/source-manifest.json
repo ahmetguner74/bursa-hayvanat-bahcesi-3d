@@ -1,0 +1,69 @@
+{
+  "schema": "bursa-zoo-giraffe-source-manifest/v1",
+  "retrievedAt": "2026-10-15",
+  "author": "BlueMesh",
+  "sourceUrl": "https://sketchfab.com/3d-models/giraffe-522c042aad9f4348a74c2985ec3f99f9",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "method": "Official authenticated Sketchfab Download controls: converted1K GLB and original Blender ZIP. No source scripts executed; factory-startup/disable-autoexec imports.",
+  "originals": [
+    {
+      "file": "source/bluemesh-giraffe-1k-original.glb",
+      "bytes": 1679420,
+      "sha256": "67ab7005ba6828b32ca900ebc97b01699c030a11b68c1c66f7442f2c8be87bee"
+    },
+    {
+      "file": "source/bluemesh-giraffe-original.zip",
+      "bytes": 10309384,
+      "sha256": "a45a990c447a6d6bb30849b58f6819ccd6c5128c529a75d4994e8fc6257fa7ff"
+    },
+    {
+      "file": "source/native/Giraffe..blend",
+      "bytes": 1123916,
+      "sha256": "7d59d2c925d096d586701d38ef347b00cfbe3b68fbd4ba2490a7ec0d015ce0f0"
+    },
+    {
+      "file": "source/native/Texture giraffe.png",
+      "bytes": 2927669,
+      "sha256": "46ea7f4e0fcb10ff85ef74b6e7aadad94ea8f59065fa154054ad1807c451c482"
+    },
+    {
+      "file": "source/native/Texture giraffeBUMP.png",
+      "bytes": 1666796,
+      "sha256": "6944db612ec392514c22e3179544173ba4ecc386586edebe9d4a50bac64084d7"
+    },
+    {
+      "file": "source/source/Giraffe_.zip",
+      "bytes": 5718791,
+      "sha256": "d36d8ebbd1616af4110b062a32abc599cb9ffd32a1abcf4be90195cb6dfb92c5"
+    },
+    {
+      "file": "source/textures/Texture giraffe.png",
+      "bytes": 2923397,
+      "sha256": "37710c497bc76eb777b4f090ec1ccd947c027b2fafa8a43309b99859afbc85ed"
+    },
+    {
+      "file": "source/textures/Texture_giraffe.png",
+      "bytes": 1666796,
+      "sha256": "6944db612ec392514c22e3179544173ba4ecc386586edebe9d4a50bac64084d7"
+    }
+  ],
+  "delivery": {
+    "file": "baringo-giraffe.glb",
+    "bytes": 2010284,
+    "sha256": "744afc85a6764389a7df754d7697524500bf9cac2186814a31674337640b0e1c",
+    "triangles": 15236,
+    "skinnedMeshDraws": 2,
+    "joints": 49
+  },
+  "technicalTextureDerivative": {
+    "file": "baringo-basecolor.png",
+    "source": "source-texture.png",
+    "sourceSha256": "37dec97cb952cff05cee48712263f726b2bfbbb69943e0bb9518320cc40b4e02",
+    "sha256": "aec67395973df2d0a9e7113704e1690b31db4d8e866f69006af81bd95b4ab801",
+    "method": "Lower leg UV-area recolour to plain pale tan using existing model UV/height; eight-pixel colour padding around atlas islands. Bursa photograph pixels not copied."
+  },
+  "geometryDerivative": "Coincident UV-seam vertices welded2152→1780 before Catmull-Clark1;0.70body reduction,loopUV retained,largest4 normalized active skin influences exported. Eyes preserve original360tri mesh. Delivered15236tri total.",
+  "motionDerivative": "Original4s clip retained as idle; new4s slow lateral-sequence gait authored with offline two-segment IK and actual skin sole projection. Not motion capture. Runtime small independent ear flicks authored in JS.",
+  "speciesLimitation": "Generic reticulated-style source adapted to Baringo references with plain lower legs. The remaining coat layout and skull are a visual approximation,not exact subspecies anatomy or a Bursa individual portrait."
+}

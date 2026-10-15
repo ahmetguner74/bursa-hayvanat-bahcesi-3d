@@ -1,0 +1,17 @@
+{
+  "file": "savanna-giraffes-editable.blend",
+  "independentRigs": 2,
+  "bones": 98,
+  "metric": true,
+  "habitatOriginM5XY": [
+    60,
+    48
+  ],
+  "imagesPacked": true,
+  "sourcePhotoPixelsUsedAsTextures": false,
+  "runtimeRoutes": "giraffe-colony.json",
+  "surveyed": false,
+  "reopenedFromSavedFile": true,
+  "independentArmatureData": true,
+  "packedImagesReopened": 13
+}

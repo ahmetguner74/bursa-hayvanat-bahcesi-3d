@@ -116,6 +116,35 @@ def beam(output, centre, extent, angle=0):
     output.solid(mesh)
 
 
+def cliff_volume(output,footprint,centreline):
+    """One closed rock wall with broken planes rather than a wavy extrusion."""
+    heights=[2.85,2.85,3.15,2.72,2.72,3.3,3.02,3.02,2.68,2.92,3.18,3.18,2.8]
+    distances=np.linspace(0,centreline.length,len(heights))
+    def top(x,y):return float(np.interp(centreline.project(Point(x,y)),distances,heights))
+    def point(p,level):
+        centre=centreline.interpolate(centreline.project(Point(p)))
+        shift=[0,.045,.015,.19][level]
+        # Keep trimmed land edges in place; only the wall's rock face tapers.
+        if not footprint.buffer(1e-7).covers(centre):shift=0
+        x=p[0]+(centre.x-p[0])*shift;y=p[1]+(centre.y-p[1])*shift
+        z=BASE+(top(x,y)-BASE)*[0,.32,.72,1][level]
+        return [x,y,z]
+    for part in parts(footprint):
+        part=orient(part,1);rings=[list(r.coords) for r in [part.exterior,*part.interiors]]
+        upper=[[point(p,3)[:2] for p in r] for r in rings]
+        top_polygon=Polygon(upper[0],upper[1:])
+        if not top_polygon.is_valid:raise ValueError('Invalid tapered cliff outline')
+        cap(output,part,BASE,reverse=True);cap(output,top_polygon,top)
+        for ring in rings:
+            distance=0
+            for a,b in zip(ring,ring[1:]):
+                length=math.dist(a,b)
+                for level in range(3):
+                    xyz=[point(a,level),point(b,level),point(b,level+1),point(a,level+1)]
+                    output.quad(*xyz,uv=[[distance/2.2,xyz[0][2]/2.2],[(distance+length)/2.2,xyz[1][2]/2.2],[(distance+length)/2.2,xyz[2][2]/2.2],[distance/2.2,xyz[3][2]/2.2]])
+                distance+=length
+
+
 def material(name, color, texture=None, roughness=1, alpha=False):
     return trimesh.visual.material.PBRMaterial(name=name,
         baseColorFactor=np.asarray(color,dtype=float),
@@ -174,17 +203,21 @@ def main():
     if len(arc)<4:
         raise ValueError('Missing northern-bank reference arc')
     cliff = LineString(arc).buffer(.72,join_style=2).intersection(land)
-    def cliff_top(x,y):
-        return 2.8+.35*math.sin(x*1.5)+.18*math.sin(y*2.1)
-    extrude(builders['artificial_cliff'],cliff,BASE,cliff_top)
+    cliff_volume(builders['artificial_cliff'],cliff,LineString(arc))
 
-    # Low rocks emerge from water; their volume touches the water naturally.
+    # Preserve the visible crown while extending the submerged body to the
+    # basin floor. A floating cap must not be hidden by opaque water.
     rng = random.Random(151017)
+    rock_supports=[]
     for x,y,sx,sy,height in [(-18.2,136.5,2.2,1.1,.42),(-21.8,132.7,1.7,.9,.33)]:
         rock=trimesh.creation.icosphere(subdivisions=2,radius=1)
         for vertex in rock.vertices:
             vertex *= 1+.06*math.sin(vertex[0]*9+vertex[1]*11)
         rock.apply_scale([sx,sy,height]);rock.apply_translation([x,y,-.10])
+        old_bottom=rock.vertices[:,2].min();water_z=surfaces['renderLevels']['waterZ'];support_bottom=-1.49
+        submerged=rock.vertices[:,2]<water_z
+        rock.vertices[submerged,2]=water_z+(rock.vertices[submerged,2]-water_z)*(water_z-support_bottom)/(water_z-old_bottom)
+        rock_supports.append({'bottomZ':float(rock.vertices[:,2].min()),'basinFloorZ':-1.45,'meetsFloor':bool(rock.vertices[:,2].min()<=-1.45)})
         builders['emergent_rocks'].solid(rock)
     for i in range(int(pool.exterior.length/.47)):
         p=pool.exterior.interpolate(i*.47)
@@ -249,6 +282,7 @@ def main():
         'cliffFootprintAreaM2':cliff.area,'triangles':sum(len(m.faces) for m in scene.geometry.values()),
         'atlasHiddenNodes':['pool_water','gravel_ground'],
         'solidChecks':solid_checks,
+        'rockSupports':rock_supports,
         'surfaceOwnership':'Atlas planar partition supplies water and gravel once; only physical coping, rock and deck solids are added.',
         'historicalAreasM2':inputs['historicalDocumentAreasM2'],'areaDiscrepancy':inputs['areaDiscrepancy'],
         'interpretation':inputs['interpretation'],'sourcePage':inputs['sourcePage']}

@@ -1,0 +1,14 @@
+{
+  "simulationSeconds": 1200,
+  "updates": 144000,
+  "minimumDistanceMetres": 14.860840729120811,
+  "maximumStepMetres": 0.008004525460447637,
+  "maximumHeadingStepRadians": 6.28243196232441,
+  "travelMetres": 390.88097498035046,
+  "walkSamples": 69120,
+  "idleSamples": 74880,
+  "pauseAndHiddenFreeze": true,
+  "resumeJumpMetres": 0,
+  "independentRigsSharedGeometry": true,
+  "scope": "Actual production controller and local GLB loader. No GPU or physical-phone benchmark."
+}

@@ -1,0 +1,56 @@
+{
+  "revision": "20261016au",
+  "date": "2026-10-16",
+  "viewports": {
+    "portrait": [
+      390,
+      666
+    ],
+    "landscape": [
+      844,
+      390
+    ],
+    "desktop": [
+      1280,
+      720
+    ]
+  },
+  "checks": {
+    "onlyFourAnimalLabels": true,
+    "allFourHabitatFlows": true,
+    "directFlamingoFlightMs": 1892,
+    "meshSelection": true,
+    "penguinOrbitDisablesFollow": "off",
+    "penguinRetapRestoresFollow": "penguin",
+    "fullscreenEntered": true,
+    "fullscreenExited": true,
+    "keyboardEnterEscape": true,
+    "oneTimeCueShownAndExpired": true,
+    "networkFailureRetryRecovered": true,
+    "loadingIndicatorCaptured": true,
+    "reducedMotionInstantFlight": true
+  },
+  "longMobileCard": {
+    "announcement": "Kıyı 2: Uykuya hazırlanıyor.",
+    "behavior": "Uykuya hazırlanıyor",
+    "client": 169,
+    "height": 171.4375,
+    "scroll": 169
+  },
+  "finalRhinoCard": {
+    "canvas": 390,
+    "client": 169,
+    "height": 171.4375,
+    "scroll": 169,
+    "width": 128
+  },
+  "landscapeCard": {
+    "clientHeight": 128,
+    "scrollHeight": 128
+  },
+  "console": {
+    "desktop": [],
+    "mobile": []
+  },
+  "limits": "Viewport emulation and runtime tests; not physical iPhone GPU/FPS or a complete screen-reader audit."
+}

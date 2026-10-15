@@ -1,0 +1,18 @@
+{
+  "samples": 241,
+  "triangles": 9310,
+  "joints": 46,
+  "groundMinMetres": -0.0001229118138774618,
+  "groundMaxMetres": 0.0008790553489887928,
+  "loopSeamMaxMetres": 0,
+  "groundPartition": {
+    "totalM2": 140,
+    "dryM2": 123.06802369289538,
+    "mudM2": 7.945037827095531,
+    "bankM2": 7.002938480009094,
+    "wallM2": 1.9839999999999962,
+    "overlapM2": 0,
+    "uncoveredM2": 0
+  },
+  "scope": "Actual skinned geometry and loop seam; not a natural locomotion/foot-slip certification or GPU benchmark"
+}

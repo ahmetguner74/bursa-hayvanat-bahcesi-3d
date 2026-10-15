@@ -6,6 +6,8 @@ import trimesh
 
 ROOT=Path(__file__).resolve().parent
 specs=[
+    ('giraffeHabitat',[12],'Zürafa açık yaşam alanı','12-afrika-savana/model/giraffe/zurafa-acik-yasam-alani.glb',json.loads((ROOT/'bolgeler/12-afrika-savana/model/giraffe/habitat-inputs.json').read_text(encoding='utf-8'))['originM5LocalXY']+[0],[]),
+    ('rhinoHabitat',[16],'Gergedan yaşam alanı','16-gergedan/model/gergedan-yasam-alani.glb',json.loads((ROOT/'bolgeler/16-gergedan/model/habitat-inputs.json').read_text(encoding='utf-8'))['originM5LocalXY']+[0],[]),
     ('bearPool',[29],'Boz Ayı havuzu ve kaya kıyısı','29-boz-ayi/model/boz-ayi-havuz-kiyisi.glb',json.loads((ROOT/'bolgeler/29-boz-ayi/model/model-inputs.json').read_text(encoding='utf-8'))['originM5LocalXY']+[0],json.loads((ROOT/'bolgeler/29-boz-ayi/model/model-report.json').read_text(encoding='utf-8'))['atlasHiddenNodes']),
     ('habesIsland',[9],'Habeş Maymunu Adası','09-habes-maymunu/model/habes-maymunu-adasi.glb',json.loads((ROOT/'bolgeler/09-habes-maymunu/model/model-inputs.json').read_text(encoding='utf-8'))['originM5LocalXY']+[0],['island_ground','moat_bed','moat_water']),
     ('turkishVillage',[30],'Türk Köyü','30-turk-koyu/model/turk-koyu.glb',[-68,8,0],[]),
@@ -30,7 +32,8 @@ for key,regions,name,relative,origin,hidden in specs:
     records.append({'key':key,'regions':regions,'name':name,'file':'models/'+path.name,
         'sha256':hashlib.sha256(blob).hexdigest(),'bytes':len(blob),'originXYZMetres':origin,'hiddenNodes':hidden,
         'boundsXYZMetres':[points.min(axis=0).tolist(),points.max(axis=0).tolist()],
-        'fitPointsXYZMetres':np.round(points,6).tolist() if key in ['africanVillage','africanCafe','habesIsland','bearPool'] else [],
+        'noShadowNodes':['yard_soil','stable_floor','mud_floor','mud_bank','tree_bed'] if key=='rhinoHabitat' else ['savanna_owned_sand'] if key=='giraffeHabitat' else [],
+        'fitPointsXYZMetres':np.round(points,6).tolist() if key in ['africanVillage','africanCafe','habesIsland','bearPool','rhinoHabitat','giraffeHabitat'] else [],
         'source':'Actual local GLB bounds; M5 placement unchanged. Bounds are for camera/loading, not survey.'})
 output={'schema':'bursa-zoo-scene-models/v1','models':records}
 (ROOT/'scene-model-catalog.json').write_text(json.dumps(output,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')

@@ -1,0 +1,19 @@
+{
+  "revision": "20261016au",
+  "scope": "Production GLB, motion, ExplorerCamera and OrbitControls on CPU with an event-only canvas. Browser screenshots verify rendered UI; no GPU/FPS measurement.",
+  "colonyHasNoDefaultSelection": true,
+  "onlyObservedAnimalContinues": true,
+  "waterRetapExtendsSwimming": true,
+  "waterRetapNoTeleport": true,
+  "swimmerTravelMetres": 1.4635290021579637,
+  "maximumCameraStepMetres": 0.009269321186445953,
+  "maximumCentreErrorPixels": 13.282412951009354,
+  "maximumSampledRigs": 2,
+  "swimmingSkinSample": {
+    "bodyVertices": 2334,
+    "bodyAboveWater": 997,
+    "highestPointAboveWaterMetres": 0.149230217969185
+  },
+  "waterInsidePool": true,
+  "leavingStopsUpdates": true
+}

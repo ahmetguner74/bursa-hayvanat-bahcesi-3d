@@ -56,7 +56,8 @@ def main() -> None:
     bear_pool=Polygon(next(f for f in site['features'] if f['id']=='H22D01C2B:278')['paths'][0])
     bear_inputs=json.loads((ROOT/'bolgeler/29-boz-ayi/model/model-inputs.json').read_text(encoding='utf-8'))
     bear_rocks=unary_union([Point(r['xyM5']).buffer(r['size'][0]*1.35+.35) for r in bear_inputs['interpretedRocks']])
-    open_habitats=unary_union([open_savanna,lemur_island.buffer(.8),habes_island.buffer(.8),bear_rocks])
+    rhino=Polygon(json.loads((ROOT/'bolgeler/16-gergedan/model/habitat-inputs.json').read_text(encoding='utf-8'))['compoundOutlineM5XY'])
+    open_habitats=unary_union([open_savanna,lemur_island.buffer(.8),habes_island.buffer(.8),bear_rocks,rhino.buffer(.5)])
     terrain = unary_union([Polygon(item["outer"], item["holes"])
                            for item in partition["layers"]["terrain"]
                            if item.get("surfaceStyle") != "penguin-gravel"])

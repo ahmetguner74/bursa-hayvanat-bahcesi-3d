@@ -1,0 +1,4 @@
+Lucide Icons — pointer
+Source: https://github.com/lucide-icons/lucide/blob/main/icons/pointer.svg
+License: ISC; see lucide-LICENSE.txt.
+Local adaptation: stroke/fill use the viewer's cream and green palette.

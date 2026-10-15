@@ -1,0 +1,41 @@
+{
+  "revision": "20261016au",
+  "date": "2026-10-16",
+  "decisions": [
+    {
+      "source": "https://www.nngroup.com/articles/animation-purpose-ux/",
+      "finding": "Kısa, ölçülü hareket işlevi ve etkileşimi anlatabilir; gereksiz tekrar dikkat dağıtır.",
+      "application": "Bir kez görünen, dört saniye içinde sönen el/Dokun ipucu; halka ve ek düğme yok. Bu uygulama tasarım çıkarımıdır."
+    },
+    {
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "finding": "Hedef boyutları, etrafındaki boşluk ve istisnalarla birlikte değerlendirilir.",
+      "application": "Mevcut44px klavye/gövde hedefleri korunur, mobil kaynak bağlantısında24px minimum hedef."
+    },
+    {
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions",
+      "finding": "Gereksiz etkileşim animasyonlarının azaltılabilmesi gerekir.",
+      "application": "Azaltılmış harekette uçuş anlık, otomatik hayvan davranışı kapalı, ipucu statik."
+    },
+    {
+      "source": "https://www.wwt.org.uk/about-us/news/why-are-flamingos-pink-and-other-flamingo-questions",
+      "finding": "Flamingolarda baş-boyun gösterileri gözlenir.",
+      "application": "Mevcut yerel baş-boyun kliplerinin açısal hareketi yüklemede okunur düzeye getirilir; yeni uçuş/yürüyüş hareketi iddiası yok. Ayaklar sabittir."
+    }
+  ],
+  "measurements": {
+    "mobileOldPanelPx": [
+      128,
+      584
+    ],
+    "mobileNewRestPanelPx": [
+      128,
+      167.984375
+    ],
+    "areaRatio": 0.287644477739726,
+    "flamingoSkinTravelMetres": 0.12310819255751952,
+    "extraMeshes": 0,
+    "extraBones": 0
+  },
+  "limits": "Araştırma ve CPU/viewport doğrulaması; gerçek telefon FPS/GPU/pil ölçümü değildir."
+}

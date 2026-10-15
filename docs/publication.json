@@ -1,6 +1,6 @@
 {
   "schema": "bursa-zoo-public-release/v1",
-  "revision": "20261015ai",
+  "revision": "20261016au",
   "source": "Verified local dist build; explicit --publish command",
   "officialMapSource": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
   "officialMapCredit": "Bursa Hayvanat Bahçesi; overlay alignment is approximate, not surveyed",
@@ -11,9 +11,29 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "animal-info.js",
+      "bytes": 2213,
+      "sha256": "36f12d24060bbff4035b484410f69778fada30269532a6c3fbfba655e769e97b"
+    },
+    {
+      "path": "animal-interaction.js",
+      "bytes": 6752,
+      "sha256": "e25ebd04696a78cb65c20685013e15cb40ad07ee11c31dbda6b7d9e1f073cc97"
+    },
+    {
+      "path": "animal-profiles.js",
+      "bytes": 5018,
+      "sha256": "706a94adefe598371bfe6d33de5357d22c06c77f527ff91157e7418513311dae"
+    },
+    {
+      "path": "animal-views.js",
+      "bytes": 2943,
+      "sha256": "764ca0301fe29471fa97ab53727652b54b66c657a2cc755c3ba0450fa1c0fe77"
+    },
+    {
       "path": "app.js",
-      "bytes": 29141,
-      "sha256": "a282d2d41c3b920436dedc7f1a4801a74738b015b5ef04836d89bc8c8e2bbeb9"
+      "bytes": 18838,
+      "sha256": "793bc9407d34a739d842589526a46167c8753add2d884c42aa9d9e41bd130596"
     },
     {
       "path": "assets/afrika-koyu-roof-shingles-v1.png",
@@ -21,9 +41,19 @@
       "sha256": "670ecad82deed8e5317b179f2d7dd0d668ba3e06d485a8e5cdbf18e5354e11fb"
     },
     {
+      "path": "assets/arrow-left.svg",
+      "bytes": 261,
+      "sha256": "a71d26dae8d7bd2c172a502258e13793ecf3fa80935d42f7fa692b8d182d0794"
+    },
+    {
       "path": "assets/asset-manifest.json",
       "bytes": 24892,
       "sha256": "7a2a263649cea8cd41f0b2c29c5c5cb171c29570ae71c613f8fe08ff09144d2a"
+    },
+    {
+      "path": "assets/feather-LICENSE.txt",
+      "bytes": 1082,
+      "sha256": "308028e93fcf84972523cdf6e616f73168546b4953895f516d01287f16fe7bee"
     },
     {
       "path": "assets/foliage-cluster-dark-v1.png",
@@ -56,6 +86,26 @@
       "sha256": "07eb8ae8184ea975182ce19385588622094bf55faec0395cad03ddeef0e1fbb2"
     },
     {
+      "path": "assets/loader-SOURCE.txt",
+      "bytes": 209,
+      "sha256": "6e96225808199e49f39deacfa2b867d9d9e239abf274b5045ba41e55a0a42336"
+    },
+    {
+      "path": "assets/loader.svg",
+      "bytes": 530,
+      "sha256": "b52320f373be4f131de1fdd7304cdace21e660d869c00727fd363dc75a884cfb"
+    },
+    {
+      "path": "assets/lucide-LICENSE.txt",
+      "bytes": 3208,
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "path": "assets/maximize.svg",
+      "bytes": 292,
+      "sha256": "965509978e1ddddb2508616c6b84f98e72b6afec0d9be8ea267c9e90059d986f"
+    },
+    {
       "path": "assets/penguin-artificial-rock-v1.png",
       "bytes": 4180575,
       "sha256": "c03ce4d501bd5c0f9846cf494efe9ff6cb9a5e2b810546601789872e816ac837"
@@ -74,6 +124,16 @@
       "path": "assets/three-water-normals-r186.jpg",
       "bytes": 248813,
       "sha256": "add9912b158a4fe9c12421745babe68c44c8af75631ac4837236cb2a03bc373f"
+    },
+    {
+      "path": "assets/touch-pointer-SOURCE.txt",
+      "bytes": 210,
+      "sha256": "6c9eeed841f6c1aeb52c2a9204cf03411913d414f98a9f18ee230238a0cf8787"
+    },
+    {
+      "path": "assets/touch-pointer.svg",
+      "bytes": 536,
+      "sha256": "f4504a220a715b10b948f06733f2aaa4739fe6ed3056d77edcf3b4e31d46531b"
     },
     {
       "path": "assets/turk-koyu-roof-tiles-v1.png",
@@ -127,8 +187,8 @@
     },
     {
       "path": "assets/woodland-ground-weights-v1.png",
-      "bytes": 330033,
-      "sha256": "7cd6b7d3870280cf0f9b3cbdc597b25ea768a8330c846cd0eba113c702f3f7ed"
+      "bytes": 325264,
+      "sha256": "83f322adab790dfa93e43f4b3447b036e0f99a2393ff0f2e14a0eb2e947cdb6a"
     },
     {
       "path": "assets/woodland-leaf-litter-v1.jpg",
@@ -196,9 +256,14 @@
       "sha256": "682fc36c01b7696e2d0d9ab7aaae7cf640a6f38c109c868a761666e632f78ca9"
     },
     {
+      "path": "aviary-birds.js",
+      "bytes": 2291,
+      "sha256": "1373048a3fbc449aa2346feb9f24532b7835fe31ff9d9a9ba168276181773393"
+    },
+    {
       "path": "building-shell.json",
       "bytes": 62908,
-      "sha256": "7f65685bd73dfc4c3f528934679b9d8a69c02fddc9fa18d44474d1b7ab968d02"
+      "sha256": "a88bd82370bb2c0b1cf2de9fd7cfa7aaaeadd7369d829c7c8d28cc3d2f6dfbe0"
     },
     {
       "path": "current-plan-data.json",
@@ -216,6 +281,16 @@
       "sha256": "ef7a4c427f6493e88ebb6f7865b0baf5aebf84414c1eda3ebac5f5a352cc11fe"
     },
     {
+      "path": "explorer-camera.js",
+      "bytes": 2306,
+      "sha256": "a4b3b2fec78b61ed8edb83b63d28f2a74a09de9e59d198433f850d2ebf6ee87b"
+    },
+    {
+      "path": "explorer-labels.js",
+      "bytes": 3863,
+      "sha256": "9b3f3784a8656e14df91a103b1920750491a58b4de0a19f367bc5c3dd23ec610"
+    },
+    {
       "path": "forest-impostors.js",
       "bytes": 4334,
       "sha256": "21652a276d5b212a3b5d8c1c069943b0bc351437d014a234b595982d1a7a87ab"
@@ -226,9 +301,19 @@
       "sha256": "c926e8201df0757a62c4e1bbaaad23036bb666ee81968707b5b17ee255d95c63"
     },
     {
+      "path": "giraffe-motion.js",
+      "bytes": 166,
+      "sha256": "7d4db203668d2050b3e11c905f04a0a2a632eacc883ec9abb56eac3825df2832"
+    },
+    {
+      "path": "giraffes.js",
+      "bytes": 717,
+      "sha256": "7ff55bf4d17b054d032188a0c1e4c1744d506a74f75211f9b6a1c05c6f15e4ed"
+    },
+    {
       "path": "ground-material-layout.json",
-      "bytes": 2488,
-      "sha256": "a487c764bd9af36a07c49733457f8b4a1e3c9156f480614ae1b5270bfccc535c"
+      "bytes": 2487,
+      "sha256": "a369678f9981afdcc8e4314cdf83c30a1c28a9ad38563bb2d5e47778099a3158"
     },
     {
       "path": "ground-material.js",
@@ -237,13 +322,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 6489,
-      "sha256": "e0fcda7ccd4b934149d45d7241726ac586ec62984470019864b8d41491975d3a"
+      "bytes": 3459,
+      "sha256": "4d3f95c7f51c761fa2b27977c125dcb5ae79748e748b43030c15ecbc717cdd6e"
     },
     {
       "path": "landscape-layout.json",
-      "bytes": 260314,
-      "sha256": "e50b78ae865d1c5f4943c076907768c124f8fe33577a0c82216aec73298964aa"
+      "bytes": 259940,
+      "sha256": "1db64c856f899ac5df3ddc6bfe5ad645676b1292f3be7fa140d7167aacc1cb32"
     },
     {
       "path": "lighting.js",
@@ -266,6 +351,16 @@
       "sha256": "d43631b0e122edae2d2748141be3c41565ec783bcf240e1ff3385296019bf512"
     },
     {
+      "path": "model-review/giraffe/giraffe-study.js",
+      "bytes": 5349,
+      "sha256": "6b211774437a7ec7a8ac15d0e2abaf7c9f09a5bd7afa0cb5203da28d3a72666c"
+    },
+    {
+      "path": "model-review/giraffe/index.html",
+      "bytes": 2839,
+      "sha256": "1a9080a107c03cb3ea6cd9eb42f5da2c64e396d7a06a1c7f8d164fe43d5a520e"
+    },
+    {
       "path": "model-review/habes-maymunu-adasi.glb",
       "bytes": 754020,
       "sha256": "675e592423d81ef2280f7297edb9a388cf045e494b9d8c32b639695647d5262f"
@@ -273,7 +368,7 @@
     {
       "path": "model-review/index.html",
       "bytes": 24255,
-      "sha256": "f7812a91c62dfa2b62ceeea538b7f706458aad5accab5b5c5f560e3dc7af3369"
+      "sha256": "a5fc4ef82406dedb519cd03d43f9726ffbf2f327e6eb6f0736cc45e038c4cc21"
     },
     {
       "path": "model-review/lemur-adasi.glb",
@@ -282,8 +377,18 @@
     },
     {
       "path": "model-review/penguen-havuzu.glb",
-      "bytes": 8626260,
-      "sha256": "3464e98eb4f4a5abb5c7b99739cdd3fddf3d3a7df7114a0ed351dd4486312cd2"
+      "bytes": 8516948,
+      "sha256": "073ccc346821e491fe5303b4c1f69601964b3c996de5077696e1e30c9e9031b8"
+    },
+    {
+      "path": "model-review/rhino/index.html",
+      "bytes": 3182,
+      "sha256": "5fc5e4e9cfeab2fc2594cff19a23b10c08c1f8d6c95e51b7176dc961ce04c326"
+    },
+    {
+      "path": "model-review/rhino/rhino-study.js",
+      "bytes": 5778,
+      "sha256": "482b1e56a67dfd90dd2af10acfcef611e8863fff84ef7b3a1746097df052129e"
     },
     {
       "path": "model-review/savanna-ahsap-platform.glb",
@@ -312,8 +417,8 @@
     },
     {
       "path": "model.js",
-      "bytes": 62077,
-      "sha256": "398922e2b310e8fb2af012e69fb0280ebd4039d11a98d28e791db4a5ce82c42e"
+      "bytes": 62470,
+      "sha256": "be4c4da5b638af901467b0574b5f601fcc2fa6d183ab02915d2a8a9de27274ed"
     },
     {
       "path": "models/african-penguin.glb",
@@ -331,6 +436,26 @@
       "sha256": "ac86988b54a7e34880b91a9534c9a71f93f443c9db0b2dc13a79810f055761db"
     },
     {
+      "path": "models/ATTRIBUTION.txt",
+      "bytes": 3472,
+      "sha256": "93165f14e4398408357368f1615ddc4c81c92a94d125b014ee7190929d8d3dc7"
+    },
+    {
+      "path": "models/aviary-ATTRIBUTION.txt",
+      "bytes": 829,
+      "sha256": "44f5f2602b01fa6701a3465ce7d3f5e148482c0278a4094c4002283ae1af4dcd"
+    },
+    {
+      "path": "models/aviary-birds-layout.json",
+      "bytes": 5664,
+      "sha256": "11ddb1a4ceb4e53ba25edb0cfd68e7fe95d9dbab9b54681979c03ce15c2db345"
+    },
+    {
+      "path": "models/baringo-giraffe.glb",
+      "bytes": 2010284,
+      "sha256": "744afc85a6764389a7df754d7697524500bf9cac2186814a31674337640b0e1c"
+    },
+    {
       "path": "models/boz-ayi-havuz-kiyisi.glb",
       "bytes": 1513188,
       "sha256": "d43631b0e122edae2d2748141be3c41565ec783bcf240e1ff3385296019bf512"
@@ -339,6 +464,36 @@
       "path": "models/generic-broadleaf-tree.glb",
       "bytes": 12206208,
       "sha256": "23b7e31890926a4b9f2946524618f97e493ecf33bc10fc503f41bf96dc62235e"
+    },
+    {
+      "path": "models/gergedan-yasam-alani.glb",
+      "bytes": 5112516,
+      "sha256": "47759f17d7e387216199fe69d71528679762aa69c459829496eb6dff955ff570"
+    },
+    {
+      "path": "models/giraffe-asset.json",
+      "bytes": 35121,
+      "sha256": "26d2d8d583e3259c05ab1bc1bb792217fce000d415c79e51752da805510e37d0"
+    },
+    {
+      "path": "models/giraffe-ATTRIBUTION.txt",
+      "bytes": 1508,
+      "sha256": "bb3030d6bd5bb1338c6332af14f554f59382a2dd8bda17d97d678f4d809d7bb6"
+    },
+    {
+      "path": "models/giraffe-colony.json",
+      "bytes": 198699,
+      "sha256": "6a0fb03f81bfee3bb7ab60a46aaa319975b771eadb0053b8269828c7556a55f2"
+    },
+    {
+      "path": "models/giraffe-habitat.json",
+      "bytes": 30778,
+      "sha256": "f15160bab3e4eb4a76ac9388bd3d572c37cb77dc81f2f75a41c018b3db3fd587"
+    },
+    {
+      "path": "models/greater-flamingo.glb",
+      "bytes": 3627596,
+      "sha256": "847f741fd7cb7eeee330f44815a975fdda87b5f233dc2ba743fd9bb4c7a842e5"
     },
     {
       "path": "models/habes-maymunu-adasi.glb",
@@ -352,8 +507,8 @@
     },
     {
       "path": "models/penguen-havuzu.glb",
-      "bytes": 8626260,
-      "sha256": "3464e98eb4f4a5abb5c7b99739cdd3fddf3d3a7df7114a0ed351dd4486312cd2"
+      "bytes": 8516948,
+      "sha256": "073ccc346821e491fe5303b4c1f69601964b3c996de5077696e1e30c9e9031b8"
     },
     {
       "path": "models/penguin-ATTRIBUTION.txt",
@@ -362,8 +517,33 @@
     },
     {
       "path": "models/penguin-colony.json",
-      "bytes": 30634,
-      "sha256": "58d7c86d422e97b9343d98b12f90c30d626bff040cbe0a532c09fc019b9fddf4"
+      "bytes": 31092,
+      "sha256": "c93ac9827dcd1bbacf32e4429b4cc160819ac68f425abccdbb06a4283338c3f0"
+    },
+    {
+      "path": "models/penguin-transitions.json",
+      "bytes": 176928,
+      "sha256": "6d600653288337343cb128cc648455648ea33fed34f457b4428d8e37b5f970de"
+    },
+    {
+      "path": "models/rhino-asset.json",
+      "bytes": 18775,
+      "sha256": "a99620d27ee2dfb7a63c0959780e06eb75767b1c0620a4863106aefe57a03bbd"
+    },
+    {
+      "path": "models/rhino-ATTRIBUTION.txt",
+      "bytes": 501,
+      "sha256": "98b01caf88fb6e12542110c5042b53e9e8ee437a4042a741602b622e7b8e5ef0"
+    },
+    {
+      "path": "models/rhino-colony.json",
+      "bytes": 348634,
+      "sha256": "895a3c1ea26dabfa54022fc46957025cd825be6e421ac1a1ae6e6304b2195b0d"
+    },
+    {
+      "path": "models/rhino-habitat.json",
+      "bytes": 4237,
+      "sha256": "dc68e944021236bf752f819da6afcfe3cbb45bc8f2b32f37fb80a7f56e9c4cbf"
     },
     {
       "path": "models/savanna-ahsap-platform.glb",
@@ -381,14 +561,29 @@
       "sha256": "5f43896a39bff5d7f4f24328fb4989a92ca9b321b223346fae29f93fa60a922c"
     },
     {
+      "path": "models/white-rhinoceros.glb",
+      "bytes": 3701844,
+      "sha256": "7b4b9cd609275453e0098a85ca4396ec488d1e145d11226f59a2a691cb763c17"
+    },
+    {
+      "path": "models/zurafa-acik-yasam-alani.glb",
+      "bytes": 5075884,
+      "sha256": "be8bc92eb10a86b3bea7e95b729d120442bbe40378f8ab50c1a8b78fec7b750a"
+    },
+    {
       "path": "penguin-motion.js",
-      "bytes": 4715,
-      "sha256": "bd97ab487dce555d1d08ea9121acfb998cd8c889ed851525431904c4579ea962"
+      "bytes": 6766,
+      "sha256": "e3736fc46a5a9727a8bd9deee51f8b1386dd9bc693ec16c63ba64d4beba23ea9"
+    },
+    {
+      "path": "penguin-views.js",
+      "bytes": 717,
+      "sha256": "fe344cfc1b5ec8f851749622b44a8c9ccd1dd7f38ec90f403228bcf732267ae6"
     },
     {
       "path": "penguins.js",
-      "bytes": 6068,
-      "sha256": "99e96ef99b50408bb5fe6243bc1f7d4341535e4dd5b1a9cf58f7bd807d183f52"
+      "bytes": 15150,
+      "sha256": "d7d784614068a469a8b6a73793a6ef0e8c1e4abf738baf2398e3b2c71f39f708"
     },
     {
       "path": "plant-cards.js",
@@ -402,13 +597,23 @@
     },
     {
       "path": "region-locations.json",
-      "bytes": 39196,
-      "sha256": "80b7aed766bf8c2667ac3cfdbcebd04fedae054edc64b476148ac67330c0a725"
+      "bytes": 39433,
+      "sha256": "9b08071ebd22837223a531c3185c7c3c95236338401980d0c321d9795e6ccc63"
     },
     {
       "path": "region-models.js",
-      "bytes": 5034,
-      "sha256": "e832648865bd7b7d623f54ad11fb9708601b554b06fa729337e42306fad156d7"
+      "bytes": 5918,
+      "sha256": "da326a5cf3573b9bb958a34ee8ec90d599bd8643508dad70fdda48ca52ff3004"
+    },
+    {
+      "path": "rhino-motion.js",
+      "bytes": 159,
+      "sha256": "4e644b5cdba9d08b7fe8a4366d64fa0b01b6161a1e9e8bd04be11c8ebae154d7"
+    },
+    {
+      "path": "rhinos.js",
+      "bytes": 2248,
+      "sha256": "6a28f7247ed562f83e9b49c5535ac5b526c0b5940fff8e464878d5ed9b996866"
     },
     {
       "path": "scene-effects.js",
@@ -417,8 +622,8 @@
     },
     {
       "path": "scene-model-catalog.json",
-      "bytes": 19162,
-      "sha256": "fea5b987a9a5a23166d083ed379f179a010e67a13a63b5d03612b829fa37376b"
+      "bytes": 27959,
+      "sha256": "1c2a1cf263bd806a89f7db9599ff414e9a024da5d40a2929d040aedb9d0d35e1"
     },
     {
       "path": "site-data.json",
@@ -427,13 +632,23 @@
     },
     {
       "path": "style.css",
-      "bytes": 9608,
-      "sha256": "19e07688f099ad50d591b2397f0dcf9d24680b403d3d720d446a47eae6e06aea"
+      "bytes": 8877,
+      "sha256": "2d5005c83a16ab7b396defffb937abd6920d1252be27dc48e3498f6e0a3fe3b9"
     },
     {
       "path": "surface-layers.json",
-      "bytes": 814465,
-      "sha256": "2c2b9d7c4e0cb6240b55d1e57dd5eccf61f0f5b157da283e64046d3b24ae01ac"
+      "bytes": 1080476,
+      "sha256": "f4e3793aa116fb3e75d073ad19c2fe149b111978697352209103e404c5972843"
+    },
+    {
+      "path": "tap-colony.js",
+      "bytes": 11379,
+      "sha256": "cff1acbc96feb416e129df4fcff7cb53894cc966d1ab75dba0019c0c92907e05"
+    },
+    {
+      "path": "touch-cue.js",
+      "bytes": 1522,
+      "sha256": "c376df500faf838ce45b1331781cff08436a927ffe0cdfc709f3a7d6ac3618c9"
     },
     {
       "path": "v2/app.js",

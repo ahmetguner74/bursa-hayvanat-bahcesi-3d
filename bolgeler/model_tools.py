@@ -125,9 +125,10 @@ def postprocess_gltf(tree, extras):
         texture_remap[i] = lookup[key]
     tree['textures'] = textures
     for item in tree.get('materials', []):
-        texture = item.get('pbrMetallicRoughness', {}).get('baseColorTexture')
-        if texture:
-            texture['index'] = texture_remap[texture['index']]
+        for container in (item,item.get('pbrMetallicRoughness',{})):
+            for key,value in container.items():
+                if key.endswith('Texture') and isinstance(value,dict) and 'index' in value:
+                    value['index']=texture_remap[value['index']]
     for mesh in tree['meshes']:
         for primitive in mesh['primitives']:
             for index in primitive['attributes'].values():

@@ -1,0 +1,19 @@
+{
+  "clip": "Walk_Authored_LateralSequence",
+  "method": "Offline two-segment IK targets baked onto the original49-joint rig; sibling limb joints explicitly solved. Actual skin sole support projected offline with3 iterations.",
+  "durationSeconds": 4.0,
+  "travelSpeedMetresPerSecondAtRate1": 0.48,
+  "stanceFraction": 0.7,
+  "phaseOffsets": {
+    "fore_right": 0.12,
+    "fore_left": 0.62,
+    "hind_right": 0,
+    "hind_left": 0.5
+  },
+  "maxSwingLiftMetres": 0.16,
+  "bodyDropMetres": 0.18,
+  "maxSoleCorrectionPerIterationMetres": 0.02614963095299396,
+  "motionCapture": false,
+  "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6376938/",
+  "sourceClipRole": "Source BlueMesh clip is idle neck/tail motion, NOT a walking clip."
+}

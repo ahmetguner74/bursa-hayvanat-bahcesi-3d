@@ -1,8 +1,8 @@
 {
-  "uri": "penguen-havuzu.glb",
+  "uri": "/C:/_work/yazilim/Halihazir_3boyut/Bursa-Hayvanat-Bahcesi/bolgeler/15-penguen/model/penguen-havuzu.glb",
   "mimeType": "model/gltf-binary",
   "validatorVersion": "2.0.0-dev.3.10",
-  "validatedAt": "2026-10-15T09:02:35.320Z",
+  "validatedAt": "2026-10-15T15:55:22.876Z",
   "issues": {
     "numErrors": 0,
     "numWarnings": 0,
@@ -218,7 +218,7 @@
         "pointer": "/buffers/0",
         "mimeType": "application/gltf-buffer",
         "storage": "glb",
-        "byteLength": 8614756
+        "byteLength": 8505460
       },
       {
         "pointer": "/images/0",
@@ -254,15 +254,10 @@
     "hasTextures": true,
     "hasDefaultScene": true,
     "drawCallCount": 9,
-    "totalVertexCount": 46275,
-    "totalTriangleCount": 15425,
+    "totalVertexCount": 43239,
+    "totalTriangleCount": 14413,
     "maxUVs": 1,
     "maxInfluences": 0,
     "maxAttributes": 3
-  },
-  "localEvidence": {
-    "assetSha256": "3464e98eb4f4a5abb5c7b99739cdd3fddf3d3a7df7114a0ed351dd4486312cd2",
-    "validatorPackage": "gltf-validator@2.0.0-dev.3.10",
-    "specification": "https://github.com/KhronosGroup/glTF-Validator"
   }
 }

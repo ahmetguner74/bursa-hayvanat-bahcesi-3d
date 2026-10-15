@@ -1,0 +1,4 @@
+White rhinoceros by absol
+https://sketchfab.com/3d-models/white-rhinoceros-939baeb6d62a4824b8edb3c7f7ef54c7
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Uniform 0.97 metric interpretation, grounded and centred origin, rough nonmetallic hide and 0.7 normal intensity. Removed redundant animation byteStride and unused UV references, cleared only zero-weight joint indices, moved skinned node to scene root. Shape, active weights, walk keyframes and original 1K texture pixels preserved.

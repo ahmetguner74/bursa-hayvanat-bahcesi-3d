@@ -1,0 +1,72 @@
+{
+  "revision": "20261016aq",
+  "testedViewports": [
+    [
+      1920,
+      888
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "overviewNames": [
+    "Penguenler",
+    "Gergedanlar",
+    "Zürafalar",
+    "Su Kuşları Kafesi"
+  ],
+  "directColonyFromMap": true,
+  "colonyHasNoDefaultIndividual": true,
+  "bodyTapLandMovesCloser": true,
+  "bodyTapWaterStartsSwimming": true,
+  "visibleIndividualNames": false,
+  "selectedRingVisible": true,
+  "observedAnimalInPanel": true,
+  "retapSwimmerKeepsSwimming": true,
+  "followSnapshot": {
+    "behavior": "Yüzüyor",
+    "canvas": {
+      "bottom": 888,
+      "height": 888,
+      "left": 0,
+      "right": 1644,
+      "top": 0,
+      "width": 1644,
+      "x": 0,
+      "y": 0
+    },
+    "ring": {
+      "bottom": 487.046875,
+      "height": 96,
+      "left": 757.4375,
+      "right": 853.4375,
+      "top": 391.046875,
+      "width": 96,
+      "x": 757.4375,
+      "y": 391.046875
+    },
+    "tracking": "penguin"
+  },
+  "manualOrbitStopsTracking": true,
+  "keyboardEnterAndEscape": true,
+  "backRestoresCanvasWidth": 390,
+  "phoneOverviewFourNamesVisible": true,
+  "desktopWarningsAndErrors": [],
+  "mobileWarningsAndErrors": [],
+  "afterReturningToMap": [
+    {
+      "level": "info",
+      "message": "Local explorer profile {\"mode\":\"overview\",\"renderedFrames\":0,\"poseUpdates\":0,\"activeAnimals\":0,\"intervalMs\":5014,\"gpuTimingMeasured\":false}",
+      "timestamp": "2026-10-15T21:41:15.075Z",
+      "url": "http://127.0.0.1:8768/app.js?v=20261016aq"
+    },
+    {
+      "level": "info",
+      "message": "Local explorer profile {\"mode\":\"overview\",\"renderedFrames\":0,\"poseUpdates\":0,\"activeAnimals\":0,\"intervalMs\":5013.399999999907,\"gpuTimingMeasured\":false}",
+      "timestamp": "2026-10-15T21:41:20.099Z",
+      "url": "http://127.0.0.1:8768/app.js?v=20261016aq"
+    }
+  ],
+  "physicalPhoneGpuFpsMeasured": false
+}

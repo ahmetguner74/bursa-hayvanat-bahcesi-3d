@@ -1,0 +1,8 @@
+Greater Flamingo – Resting Rigged Bird by Pigcraft
+https://sketchfab.com/3d-models/greater-flamingo-resting-rigged-bird-1c54310c3877422497d37512f0ba33dc
+Author: https://sketchfab.com/s8819296
+CC BY4.0: https://creativecommons.org/licenses/by/4.0/
+
+The source author discloses AI-assisted3D generation. Original GLB had no skeleton or animation, despite its title. It is not a scan of an animal at Bursa Zoo.
+Derivative: welded chunk edges,12k metric collapse, masked neck smoothing, interdigital membranes between original toes,1K pale-plumage material bake, five-bone original resting rig, Rest/LookAround/Settle clips, glTF root skin hierarchy correction.
+Four individuals, placement and adult scale are illustrative. Species is documented at Bursa Zoo; current dome enclosure census and precise placement are not confirmed.

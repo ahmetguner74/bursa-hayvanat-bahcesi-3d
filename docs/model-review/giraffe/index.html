@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Zürafalar · Savanna</title>
+  <script type="importmap">{"imports":{"three":"../../vendor/three.module.js"}}</script>
+  <style>
+    *{box-sizing:border-box}body{margin:0;color:#294539;background:#dbe5d6;font:14px/1.5 system-ui}#scene{position:fixed;inset:0}canvas{display:block}
+    header,footer,aside{position:fixed;background:#fafbf1ee;box-shadow:0 8px 25px #20372322;border-radius:18px;padding:13px 17px}header{top:16px;left:16px;width:min(390px,calc(100% - 32px))}h1{font-size:19px;margin:0}p{font-size:12px;margin:5px 0}small{font-size:11px}a{color:#205746}aside{top:16px;right:16px;max-width:240px;font-size:12px}footer{bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:6px;width:max-content;max-width:calc(100% - 20px);flex-wrap:wrap;justify-content:center}button{font:600 13px system-ui;border:0;border-radius:12px;background:#e7eddc;color:#294539;padding:11px 14px;cursor:pointer}button[aria-pressed=true]{background:#205746;color:#fff}button:focus-visible{outline:3px solid #bd824b;outline-offset:2px}
+    @media(max-width:700px){header{top:10px;left:10px;width:calc(100% - 20px);padding:10px 14px}h1{font-size:17px}aside{top:auto;bottom:75px;right:10px;max-width:185px;padding:9px 12px}footer{bottom:10px;gap:4px;padding:6px}button{font-size:12px;padding:10px}}
+  </style>
+</head>
+<body>
+  <main id="scene" aria-label="İki temsili zürafa ve açık yaşam alanının etkileşimli 3B incelemesi"></main>
+  <header><h1>12 · Baringo zürafaları</h1><p>İki temsili yetişkin · yavaş yürüyüş, dinlenme ve çevreye bakma.</p><p>Bursa fotoğraflarından yorumlanan açık alan: kumlu zemin, alçak taş sınır, yeşil korkuluklar ve dal yemlikleri. Konum ve ölçüler yaklaşık.</p><small>Hayvan: <a href="https://sketchfab.com/3d-models/giraffe-522c042aad9f4348a74c2985ec3f99f9" target="_blank" rel="noopener">BlueMesh</a> · CC BY 4.0. Genel zürafa modelinin alt bacak deseni ve geometrisi düzenlendi; yürüyüş burada hazırlandı. <a href="../../models/giraffe-ATTRIBUTION.txt" target="_blank" rel="noopener">Kaynaklar ve lisanslar</a>.</small></header>
+  <aside><strong id="status" role="status">Modeller yükleniyor…</strong><p>Yakın görünüm ilk zürafayı takip eder. Kamerayı sürükleyerek serbestçe inceleyebilirsiniz.</p></aside>
+  <footer aria-label="İnceleme denetimleri"><button id="animal" aria-pressed="false" disabled>Yakından</button><button id="habitat" aria-pressed="true" disabled>Yaşam alanı</button><button id="pause" aria-pressed="false" disabled>Duraklat</button><button id="capture" hidden>PNG indir</button></footer>
+  <script type="module" src="giraffe-study.js?v=20261015am"></script>
+</body></html>

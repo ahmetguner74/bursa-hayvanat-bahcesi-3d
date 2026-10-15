@@ -5,81 +5,49 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#dce7d8">
   <title>Bursa Hayvanat Bahçesi · 3B Atlas</title>
-  <link rel="stylesheet" href="style.css?v=20261015ai">
+  <link rel="stylesheet" href="style.css?v=20261016au">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
 </head>
 <body>
   <main id="stage" class="stage" aria-label="Bursa Hayvanat Bahçesi etkileşimli üç boyutlu alan modeli">
     <div id="canvas"></div>
-    <div id="plan-overlay" class="plan-overlay" aria-hidden="true" hidden>
-      <img id="plan-overlay-image" src="./reference-maps/2026-09-resmi-kroki.jpg" alt="" width="1600" height="864" decoding="async">
-    </div>
-    <div id="loading" role="status">Bahçe hazırlanıyor…</div>
-
+    <div id="loading" role="status"><span class="loading-content"><img class="loading-spinner" src="./assets/loader.svg" alt="" width="22" height="22"><span>Hayvanat bahçesi yükleniyor…</span></span></div>
     <header class="topbar">
-      <div class="identity" aria-label="Bursa Hayvanat Bahçesi 3B Atlası">
-        <span class="identity-mark" aria-hidden="true">B·H</span>
-        <span class="identity-copy"><strong>Bursa Hayvanat Bahçesi</strong><small id="view-hint" role="status">Genel plan</small></span>
+      <div class="top-context">
+        <div class="identity">
+          <a class="identity-mark" href="./models/ATTRIBUTION.txt" target="_blank" rel="noopener" aria-label="3B model kaynakları ve lisanslar" title="Model kaynakları">B·H</a>
+          <span class="identity-copy"><strong>Bursa Hayvanat Bahçesi</strong><small id="view-hint" role="status">Genel plan</small></span>
+        </div>
+        <button id="back" class="back" type="button" hidden><img src="./assets/arrow-left.svg" alt="" width="18" height="18"><span id="back-label">Genel plana dön</span></button>
       </div>
       <div class="top-actions">
-        <button id="layers-toggle" type="button" aria-expanded="false" aria-controls="layers-panel" aria-label="Görünüm ayarları" title="Görünüm ayarları"><span aria-hidden="true">☷</span><span class="action-label">Görünüm</span></button>
-        <button id="fullscreen" type="button" aria-label="Tam ekran" title="Tam ekran" aria-pressed="false"><span aria-hidden="true">⛶</span><span class="action-label">Tam ekran</span></button>
+        <button id="fullscreen" type="button" aria-label="Tam ekran" aria-pressed="false" title="Tam ekran"><img src="./assets/maximize.svg" alt="" width="20" height="20"></button>
         <button id="capture-scene" type="button" hidden>3B görüntüyü indir</button>
       </div>
     </header>
-
-    <aside id="layers-panel" class="layers-panel" aria-label="Görünüm ayarları" hidden>
-      <div class="layers-head"><strong>Görünüm</strong><button id="layers-close" type="button" aria-label="Görünüm ayarlarını kapat">×</button></div>
-      <div class="region-control">
-        <label for="region-select">Bölgeye git</label>
-        <select id="region-select" aria-describedby="region-note"><option value="site">Genel plan</option></select>
-        <p id="region-note" role="status">Resmî krokideki alanlardan birini seçin.</p>
-        <p id="region-load-status" role="status" aria-live="polite" hidden></p>
-        <button id="region-load-retry" type="button" hidden>3B ayrıntısını tekrar yükle</button>
-        <a id="region-model-link" href="./model-review/" target="_blank" rel="noopener" hidden>3B modeli yakından incele</a>
-        <button id="penguin-close" type="button" hidden>Penguenleri yakından izle</button>
-        <p id="penguin-status" role="status" aria-live="polite" hidden></p>
-        <button id="penguin-retry" type="button" hidden>Penguenleri tekrar yükle</button>
-        <small id="penguin-credit" hidden>Penguen modeli: <a href="https://sketchfab.com/majorgalah" target="_blank" rel="noopener">Major</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Ölçek ve malzeme düzenlendi.</small>
+    <p id="interaction-hint" class="interaction-hint">Bir yaşam alanına dokun.</p>
+    <button id="load-retry" class="load-retry" type="button" hidden>Tekrar yükle</button>
+    <div id="scene-labels" class="scene-labels" aria-label="Keşfedilebilir yaşam alanları ve hayvanlar"></div>
+    <div id="touch-cue" class="touch-cue" aria-hidden="true" hidden><img src="./assets/touch-pointer.svg" alt="" width="24" height="24"><span>Dokun</span></div>
+    <aside id="animal-info" class="animal-info" aria-labelledby="animal-title" hidden>
+      <div class="animal-species">
+        <span class="info-eyebrow">Tanışalım</span>
+        <h1 id="animal-title" data-species></h1>
+        <p class="scientific-name" data-scientific></p>
+        <p data-intro></p>
+        <p class="compact-copy species-summary" data-summary></p>
+        <dl class="species-facts" data-facts></dl>
       </div>
-      <div class="layers-section-title">Katmanlar</div>
-      <button id="toggle-trees" type="button" aria-pressed="true">Ağaçlar</button>
-      <button id="toggle-buildings" type="button" aria-pressed="true">Yapılar</button>
-      <button id="toggle-animals" type="button" aria-pressed="true">Hayvanlar</button>
-      <button id="toggle-plan-overlay" type="button" aria-pressed="false">Ziyaretçi krokisi</button>
-      <div class="perspective-control plan-overlay-control">
-        <label for="plan-overlay-opacity">Kroki opaklığı <output id="plan-overlay-opacity-value" for="plan-overlay-opacity">55%</output></label>
-        <input id="plan-overlay-opacity" type="range" min="0" max="100" step="1" value="55" aria-label="Kroki opaklığı" aria-describedby="plan-overlay-hint">
-        <div class="range-ends" aria-hidden="true"><span>Saydam</span><span>Belirgin</span></div>
-        <small id="plan-overlay-hint">Kroki, 3B plan üzerine yaklaşık olarak hizalanmıştır. <a href="https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg" target="_blank" rel="noopener noreferrer">Tam kroki ve lejant</a></small>
-      </div>
-      <div class="perspective-control">
-        <label for="perspective">Plan bakış açısı <output id="perspective-value" for="perspective">45%</output></label>
-        <input id="perspective" type="range" min="0" max="100" step="1" value="45" aria-label="Plan bakış açısı" aria-describedby="perspective-hint">
-        <div class="range-ends" aria-hidden="true"><span>Düz (üstten)</span><span>Eğik (3B)</span></div>
-        <small id="perspective-hint">Alan, Dış ve Üst görünümlerinde uygulanır.</small>
-      </div>
+      <section class="animal-behavior" aria-labelledby="behavior-title" hidden>
+        <div class="behavior-caption"><span class="info-eyebrow">Şu anda</span><span class="behavior-place" data-place></span></div>
+        <h2 id="behavior-title" data-behavior></h2>
+        <p data-behavior-description></p>
+        <p class="compact-copy" data-short-description></p>
+      </section>
+      <a class="species-source" data-source target="_blank" rel="noopener" aria-label="Tür bilgisi · San Diego Zoo"><span class="source-desktop">Tür bilgisi · San Diego Zoo ↗</span><span class="source-mobile">Tür bilgisi ↗</span></a>
     </aside>
-
-    <div id="markers" class="markers"></div>
-    <div id="map-guide" class="map-guide" aria-label="Harita yönü ve ölçeği">
-      <span class="north"><span id="north-arrow" aria-hidden="true">↑</span> K</span>
-      <span class="scale"><i id="scale-rule"></i><span id="scale-label">100 m</span></span>
-    </div>
-
-    <nav class="viewbar" aria-label="Görünüm seçimi">
-      <button data-view="site" class="active" aria-pressed="true"><span class="full">Genel plan</span><span class="short">Alan</span></button>
-      <button data-view="cage" aria-pressed="false"><span class="full">Kafes dışı</span><span class="short">Dış</span></button>
-      <button data-view="entry" aria-pressed="false"><span class="full">Girişten</span><span class="short">Giriş</span></button>
-      <button data-view="inside" aria-pressed="false"><span class="full">İçeriden</span><span class="short">İç</span></button>
-      <button data-view="cage-top" aria-pressed="false"><span class="full">Üstten</span><span class="short">Üst</span></button>
-    </nav>
-    <div class="zoom" role="group" aria-label="Harita denetimleri">
-      <button id="zoom-in" type="button" aria-label="Yakınlaştır" title="Yakınlaştır">+</button>
-      <button id="zoom-out" type="button" aria-label="Uzaklaştır" title="Uzaklaştır">−</button>
-      <button id="reset" type="button" aria-label="Genel plana dön" title="Genel plana dön">⌖</button>
-    </div>
+    <p id="animal-announcement" class="sr-only" role="status" aria-live="polite"></p>
   </main>
-  <script type="module" src="app.js?v=20261015ai"></script>
+  <script type="module" src="app.js?v=20261016au"></script>
 </body>
 </html>

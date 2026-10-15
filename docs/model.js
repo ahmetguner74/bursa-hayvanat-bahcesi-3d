@@ -102,6 +102,7 @@ function pondSurface(polygons,height){
     for(let i=0;i<colors.length;i+=3){colors[i]=tint.r;colors[i+1]=tint.g;colors[i+2]=tint.b;}
     const attribute=new T.BufferAttribute(colors,3);
     result.setAttribute('pondTint',attribute);result.setAttribute('color',attribute);
+    result.setAttribute('pondReflection',new T.BufferAttribute(new Float32Array(result.getAttribute('position').count).fill(p.waterReflectionStrength??1),1));
     return result;
   });
   const geometry=mergeGeometries(geometries);
@@ -121,14 +122,15 @@ function pondSurface(polygons,height){
     sunDirection:new T.Vector3(...WOODLAND_LIGHT.direction).normalize(),sunColor:WOODLAND_LIGHT.sun,waterColor:'#358f86',
     distortionScale:1.2,clipBias:.003,side:T.FrontSide});
   const shader=surface.material;
-  shader.vertexShader='attribute vec3 pondTint;\nvarying vec3 waterColor;\n'+shader.vertexShader.replace('void main() {','void main() {\nwaterColor = pondTint;');
+  shader.vertexShader='attribute vec3 pondTint;\nattribute float pondReflection;\nvarying float reflectionStrength;\nvarying vec3 waterColor;\n'+shader.vertexShader.replace('void main() {','void main() {\nwaterColor = pondTint;\nreflectionStrength = pondReflection;');
   // The official addon shades XZ water; this atlas uses XY water with Z up.
   shader.fragmentShader=shader.fragmentShader
-    .replace('uniform vec3 waterColor;','varying vec3 waterColor;')
+    .replace('uniform vec3 waterColor;','varying vec3 waterColor;\nvarying float reflectionStrength;')
     .replace('worldPosition.xz * size','worldPosition.xy * size')
     .replace('noise.xzy * vec3( 1.5, 1.0, 1.5 )','noise.xyz * vec3( 0.4, 0.4, 1.0 )')
     .replace('surfaceNormal.xz *','surfaceNormal.xy *')
-    .replace('float rf0 = 0.3;','float rf0 = 0.025;')
+    .replace('float rf0 = 0.02;','float rf0 = 0.025;')
+    .replace('vec3 scatter =','reflectance *= reflectionStrength;\nvec3 scatter =')
     .replace('( sunColor * diffuseLight * 0.3 + scatter )','( scatter * 1.4 + waterColor * diffuseLight * 0.18 )');
   shader.uniforms.size.value=12;
   surface.position.z=height;surface.receiveShadow=true;
@@ -382,8 +384,8 @@ function riverStoneCurbs(rings){
   };
   for(let ri=0;ri<rings.length;ri++){
     const ring=rings[ri];let walked=0,next=.65+(ri%4)*.17;
-    for(let i=0;i<ring.length;i++){
-      const a=ring[i],b=ring[(i+1)%ring.length],dx=b[0]-a[0],dy=b[1]-a[1],length=Math.hypot(dx,dy);
+    for(let i=0;i<ring.length-1;i++){
+      const a=ring[i],b=ring[i+1],dx=b[0]-a[0],dy=b[1]-a[1],length=Math.hypot(dx,dy);
       if(length<.001)continue;
       while(next<=walked+length){
         const t=(next-walked)/length,x=a[0]+dx*t,y=a[1]+dy*t;
@@ -423,7 +425,7 @@ function riverStoneCurbs(rings){
   console.info('Curb LOD audit',JSON.stringify({stones:samples.length,batches:chunks.size,nearFacesPerStone:80,farFacesPerStone:20}));
   return group;
 }
-function woodlandEdgePlanting(roadRings,pathSurfaces,data,currentPlan){
+function woodlandEdgePlanting(roadRings,pathSurfaces,data,currentPlan,onTerrain){
   // Roadside planting is a single set of instanced low models on terrain.
   // Candidates must stay beyond the paved edge and outside mapped features.
   const containsRing=(ring,x,y)=>{
@@ -455,7 +457,7 @@ function woodlandEdgePlanting(roadRings,pathSurfaces,data,currentPlan){
     occupied.get(key).push([x,y]);return true;
   };
   const suitable=(x,y)=>{
-    if(!containsRing(data.outline,x,y)||insideCage(x,y,1.2))return false;
+    if(!onTerrain([x,y])||insideCage(x,y,1.2))return false;
     const [u,v]=cageLocal(x,y);
     if(Math.abs(v)<6.5&&Math.abs(u)>27&&Math.abs(u)<65)return false;
     if(pathSurfaces.some(s=>containsSurface(s,x,y)))return false;
@@ -952,14 +954,14 @@ export function createSite(data,currentPlan,surfaceData,buildingShellData,visual
   }
   const roadBoundaryRings=[];
   for(const p of surfaceLayers.path){
-    // The provisional path caps own their XY regions; no water or building cap is below them.
     roadBoundaryRings.push(p.outer,...p.holes);
+    // The provisional path caps own their XY regions; no water or building cap is below them.
     const geometry=new T.ExtrudeGeometry(shape(p.outer,p.holes),{depth:.135,steps:1,bevelEnabled:false,curveSegments:1});
     const m=new T.Mesh(geometry,[pavementMat,pavementSideMat]);
     m.position.z=-.24;m.receiveShadow=true;
     m.name='Manuel QGIS yollarından alçak kaplama · yaklaşık genişlik';site.add(m);
   }
-  site.add(riverStoneCurbs(roadBoundaryRings));
+  site.add(riverStoneCurbs(surfaceData.roadCurbLines||[]));
   if(!(surfaceData.renderLevels.waterZ<surfaceData.renderLevels.terrainZ))throw Error('Sunum su kotu arazi altında olmalı');
   const water=pondSurface(surfaceLayers.water,surfaceData.renderLevels.waterZ);site.add(water.surface);
   // DGN curb and other survey lines remain in site-data.json for later plan alignment.
@@ -1016,7 +1018,7 @@ export function createSite(data,currentPlan,surfaceData,buildingShellData,visual
     canopySpecs.push({x:p[0],y:p[1],h,r,seed});
   }
   replaceableTreeGroups(canopySpecs,trees,forestCandidates,true);
-  trees.add(woodlandEdgePlanting(roadBoundaryRings,surfaceLayers.path,data,currentPlan));
+  trees.add(woodlandEdgePlanting(roadBoundaryRings,surfaceLayers.path,data,currentPlan,onTerrain));
   trees.add(woodlandInteriorPlanting(visualLandscape,forestCandidates));
   const cage=makeCage(surfaceData.cageLocal,onTerrain);site.add(cage);
   return {site,cage,trees,footprints,forestCandidates,prepareWater:water.prepare};

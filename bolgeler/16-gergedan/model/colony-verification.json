@@ -1,0 +1,14 @@
+{
+  "simulationSeconds": 1200,
+  "updates": 144000,
+  "minDistanceMetres": 7.766945822417754,
+  "maxStepMetres": 0.006468543054735655,
+  "totalTravelMetres": 326.8560014222194,
+  "walkSamples": 69120,
+  "idleSamples": 74880,
+  "blendGroundMinMetres": -0.0001895929872780533,
+  "blendGroundMaxMetres": 0.0013914727576430576,
+  "pauseHiddenAndResumePassed": true,
+  "resumeJumpMetres": 0,
+  "scope": "Actual source skin,controller and runtime loading; no GPU or physical phone benchmark"
+}

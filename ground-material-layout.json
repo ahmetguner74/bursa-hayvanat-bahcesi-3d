@@ -16,7 +16,7 @@
     0.6453734733463294,
     0.41253418493629457
   ],
-  "sha256": "7cd6b7d3870280cf0f9b3cbdc597b25ea768a8330c846cd0eba113c702f3f7ed",
+  "sha256": "83f322adab790dfa93e43f4b3447b036e0f99a2393ff0f2e14a0eb2e947cdb6a",
   "litterTexture": {
     "file": "assets/woodland-leaf-litter-v1.jpg",
     "sha256": "285be7c55975af518dcc9967f3e3eb4404e79f0982544386b6bbc46d98731f77",
@@ -46,11 +46,11 @@
     "g": "Illustrative dampness falloff from existing water boundaries",
     "b": "Illustrative verge falloff from existing path boundaries"
   },
-  "treePatches": 701,
+  "treePatches": 678,
   "sources": {
     "site-data.json": "022a88053df75b9d755e082079ed31f6b922e79bb8bca03016890c52cc828358",
-    "surface-layers.json": "2c2b9d7c4e0cb6240b55d1e57dd5eccf61f0f5b157da283e64046d3b24ae01ac",
-    "landscape-layout.json": "e50b78ae865d1c5f4943c076907768c124f8fe33577a0c82216aec73298964aa",
+    "surface-layers.json": "f4e3793aa116fb3e75d073ad19c2fe149b111978697352209103e404c5972843",
+    "landscape-layout.json": "1db64c856f899ac5df3ddc6bfe5ad645676b1292f3be7fa140d7167aacc1cb32",
     "v2/manual-roads-metric.json": "d5038924b6356022b273fff88bc12ba6f3091c8df2294ca6fd64decf1a5fad56"
   },
   "interpretation": "Material presentation only. No surface, road, water or tree coordinates are changed; not a current soil survey.",
@@ -62,9 +62,9 @@
       166
     ],
     "channelMeans": [
-      11.4257,
+      11.1852,
       6.3659,
-      16.7735
+      16.774
     ]
   }
 }

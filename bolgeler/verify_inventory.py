@@ -84,6 +84,9 @@ for item in animal_manifest['originals']:
     path=animal/item['file'];assert path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest()==item['sha256'],path
 assert hashlib.sha256((animal/'african-penguin.glb').read_bytes()).hexdigest()==animal_manifest['delivery']['sha256']
 animal_layout=json.loads((animal/'colony-layout.json').read_text(encoding='utf-8'))
+assert animal_layout['schema']=='bursa-zoo-penguin-colony/v2' and len(animal_layout['waterRoutes'])==2
+transition_ground=json.loads((animal/'penguin-transitions.json').read_text(encoding='utf-8'))
+assert transition_ground['assetSha256']==animal_layout['assetSha256'] and len(transition_ground['tables'])==10
 assert len(animal_layout['landStarts'])==3 and len(animal_layout['waterStarts'])==2
 assert animal_layout['trianglesPerBird']==4124 and animal_layout['jointsPerBird']==64
 assert animal_layout['inputs']['poolInputsSha256']==hashlib.sha256((penguin/'model-inputs.json').read_bytes()).hexdigest()
@@ -243,10 +246,43 @@ effects_sources=json.loads((vendor/'scene-effects-sources.json').read_text(encod
 for item in effects_sources['files']:
     assert hashlib.sha256((vendor/item['file']).read_bytes()).hexdigest()==item['sha256'],item['file']
 
+rhino=ROOT/'16-gergedan/model'
+rhino_report=json.loads((rhino/'habitat-report.json').read_text(encoding='utf-8'))
+assert hashlib.sha256((rhino/rhino_report['file']).read_bytes()).hexdigest()==rhino_report['sha256']
+assert rhino_report['floorCheck']['overlapM2']<1e-6 and rhino_report['floorCheck']['gapM2']<1e-6
+rhino_asset=json.loads((rhino/'hayvan/source-manifest.json').read_text(encoding='utf-8'))
+assert hashlib.sha256((rhino/'hayvan/white-rhinoceros.glb').read_bytes()).hexdigest()==rhino_asset['delivery']['sha256']
+rhino_colony=json.loads((rhino/'colony-layout.json').read_text(encoding='utf-8'))
+assert len(rhino_colony['routes'])==2 and rhino_colony['blendGround']['assetSha256']==rhino_asset['delivery']['sha256']
+rhino_inputs=json.loads((rhino/'habitat-inputs.json').read_text(encoding='utf-8'))
+rhino_floor=Polygon(rhino_inputs['compoundOutlineM5XY'])
+for key in ['terrain','path','water']:
+    assert rhino_floor.intersection(unary_union([Polygon(p['outer'],p['holes']) for p in surfaces['layers'][key]])).area<1e-6
+giraffe=ROOT/'12-afrika-savana/model/giraffe'
+giraffe_asset=json.loads((giraffe/'giraffe-asset.json').read_text(encoding='utf-8'))
+giraffe_report=json.loads((giraffe/'habitat-report.json').read_text(encoding='utf-8'))
+giraffe_colony=json.loads((giraffe/'giraffe-colony.json').read_text(encoding='utf-8'))
+assert hashlib.sha256((giraffe/'baringo-giraffe.glb').read_bytes()).hexdigest()==giraffe_asset['delivery']['sha256']==giraffe_colony['assetSha256']==giraffe_colony['blendGround']['assetSha256']
+assert hashlib.sha256((giraffe/giraffe_report['file']).read_bytes()).hexdigest()==giraffe_report['sha256']
+assert len(giraffe_colony['routes'])==2
+assert max(giraffe_report['floorCheck'].values())<1e-6
+giraffe_floor=unary_union([Polygon(p['outer'],p.get('holes',[])) for p in giraffe_report['floorOwnershipMasks']])
+for key in ['terrain','path','water']:
+    assert giraffe_floor.intersection(unary_union([Polygon(p['outer'],p['holes']) for p in surfaces['layers'][key]])).area<1e-6
+birds=ROOT/'32-su-kuslari/model'
+bird_layout=json.loads((birds/'aviary-birds-layout.json').read_text(encoding='utf-8'))
+bird_asset=json.loads((birds/'hayvan/asset-manifest.json').read_text(encoding='utf-8'))
+assert hashlib.sha256((birds/'hayvan/greater-flamingo.glb').read_bytes()).hexdigest()==bird_asset['deliverySha256']==bird_layout['assetSha256']
+assert len(bird_layout['animals'])==4 and all(a['clearance']['dryGround'] for a in bird_layout['animals'])
+subprocess.run([sys.executable,str(ROOT/'15-penguen/model/verify_pool_fixes.py')],check=True)
+
 print(json.dumps({"regions": len(areas), "officialPhotos": photos,
                   "verifiedAreaContexts":contexts,
                   "localMaps": len(areas) * 2, "habitatGltfVariants": len(list(ROOT.glob('[0-9][0-9]-*/model/*.glb'))),
-                  "animalGltfVariants":1,"penguinColonyTriangles":animal_layout['trianglesPerBird']*5,
+                  "animalGltfVariants":4,"penguinColonyTriangles":animal_layout['trianglesPerBird']*5,
+                  "giraffeColonyTriangles":giraffe_asset['delivery']['triangles']*2,"giraffeHabitatTriangles":giraffe_report['triangles'],
+                  "flamingoColonyTriangles":bird_asset['triangles']*4,
+                  "rhinoColonyTriangles":rhino_asset['delivery']['triangles']*2,"rhinoHabitatTriangles":rhino_report['triangles'],
                   "villageTriangles": report["triangles"],
                   "penguinTriangles":penguin_report['triangles'],
                   "savannaPlatformTriangles":platform_report['triangles'],

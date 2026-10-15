@@ -1,0 +1,4 @@
+Feather Icons — loader
+Source: https://github.com/feathericons/feather/blob/master/icons/loader.svg
+License: MIT; see feather-LICENSE.txt.
+Local adaptation: stroke color #2d5643 to match the viewer palette.

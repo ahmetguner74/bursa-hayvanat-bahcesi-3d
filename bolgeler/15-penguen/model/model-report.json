@@ -7,11 +7,11 @@
   "unit": "metre",
   "upAxis": "glTF Y-up",
   "waterMaskAreaM2": 204.74293900000015,
-  "gravelTerrainAreaM2": 212.1520299581243,
+  "gravelTerrainAreaM2": 183.13302656453183,
   "renderWaterZMetres": -0.32,
   "renderWaterHeightSurveyed": false,
-  "cliffFootprintAreaM2": 31.183185203531313,
-  "triangles": 15425,
+  "cliffFootprintAreaM2": 30.22180150561218,
+  "triangles": 14413,
   "atlasHiddenNodes": [
     "pool_water",
     "gravel_ground"
@@ -25,12 +25,12 @@
     "artificial_cliff": {
       "watertight": true,
       "consistentWinding": true,
-      "volumeM3": 94.91155070519432
+      "volumeM3": 92.06152223158546
     },
     "gravel_ground": {
       "watertight": true,
       "consistentWinding": true,
-      "volumeM3": 267.3115577472366
+      "volumeM3": 230.74761347131005
     },
     "drain_band": {
       "watertight": true,
@@ -38,6 +38,18 @@
       "volumeM3": 8.054766899278869
     }
   },
+  "rockSupports": [
+    {
+      "bottomZ": -1.49,
+      "basinFloorZ": -1.45,
+      "meetsFloor": true
+    },
+    {
+      "bottomZ": -1.49,
+      "basinFloorZ": -1.45,
+      "meetsFloor": true
+    }
+  ],
   "surfaceOwnership": "Atlas planar partition supplies water and gravel once; only physical coping, rock and deck solids are added.",
   "historicalAreasM2": {
     "penguinPool": 300,

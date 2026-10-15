@@ -1,0 +1,188 @@
+{
+  "firstSelection": {
+    "stylesheet": "style.css?v=20261016ar",
+    "targets": [
+      {
+        "aria": "Afrika pengueni 1 · yakından izle",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "focusVisible": false,
+        "hovered": false,
+        "outline": "none",
+        "radius": "0px",
+        "rect": {
+          "height": 89.84375,
+          "width": 89.84375,
+          "x": 589.515625,
+          "y": 350.484375
+        },
+        "selected": false,
+        "shadow": "none"
+      },
+      {
+        "aria": "Afrika pengueni 2 · davranışını değiştir",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "focusVisible": false,
+        "hovered": false,
+        "outline": "none",
+        "radius": "0px",
+        "rect": {
+          "height": 96,
+          "width": 96,
+          "x": 774,
+          "y": 420.875
+        },
+        "selected": true,
+        "shadow": "none"
+      },
+      {
+        "aria": "Afrika pengueni 3 · yakından izle",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "focusVisible": false,
+        "hovered": false,
+        "outline": "none",
+        "radius": "0px",
+        "rect": {
+          "height": 96,
+          "width": 96,
+          "x": 1017.03125,
+          "y": 468.203125
+        },
+        "selected": false,
+        "shadow": "none"
+      },
+      {
+        "aria": "Afrika pengueni 4 · yakından izle",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "focusVisible": false,
+        "hovered": false,
+        "outline": "none",
+        "radius": "0px",
+        "rect": {
+          "height": 47.234375,
+          "width": 47.234375,
+          "x": 925.8671875,
+          "y": 86.7109375
+        },
+        "selected": false,
+        "shadow": "none"
+      },
+      {
+        "aria": "Afrika pengueni 5 · yakından izle",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "focusVisible": false,
+        "hovered": false,
+        "outline": "none",
+        "radius": "0px",
+        "rect": {
+          "height": 44,
+          "width": 44,
+          "x": 606.171875,
+          "y": 68.25
+        },
+        "selected": false,
+        "shadow": "none"
+      }
+    ],
+    "viewport": [
+      1920,
+      888
+    ]
+  },
+  "keyboard": {
+    "focusVisible": true,
+    "outline": "none",
+    "shadow": "none",
+    "borderBottom": "2px",
+    "radius": "0px"
+  },
+  "afterSelection": {
+    "targets": [
+      {
+        "aria": "Afrika pengueni 1 · yakından izle",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "focusVisible": false,
+        "outline": "none",
+        "rect": {
+          "height": 83.203125,
+          "width": 83.203125,
+          "x": 427.2109375,
+          "y": 305.8515625
+        },
+        "selected": false,
+        "shadow": "none"
+      },
+      {
+        "aria": "Afrika pengueni 2 · yakından izle",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "focusVisible": false,
+        "outline": "none",
+        "rect": {
+          "height": 92.71875,
+          "width": 92.71875,
+          "x": 577.78125,
+          "y": 343.015625
+        },
+        "selected": false,
+        "shadow": "none"
+      },
+      {
+        "aria": "Afrika pengueni 3 · davranışını değiştir",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "focusVisible": false,
+        "outline": "none",
+        "rect": {
+          "height": 96,
+          "width": 96,
+          "x": 774,
+          "y": 398.234375
+        },
+        "selected": true,
+        "shadow": "none"
+      },
+      {
+        "aria": "Afrika pengueni 4 · yakından izle",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "focusVisible": false,
+        "outline": "none",
+        "rect": {
+          "height": 45.84375,
+          "width": 45.84375,
+          "x": 837.765625,
+          "y": 76.5
+        },
+        "selected": false,
+        "shadow": "none"
+      },
+      {
+        "aria": "Afrika pengueni 5 · yakından izle",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "focusVisible": false,
+        "outline": "none",
+        "rect": {
+          "height": 44,
+          "width": 44,
+          "x": 535.859375,
+          "y": 58.921875
+        },
+        "selected": false,
+        "shadow": "none"
+      }
+    ],
+    "tracking": "off",
+    "viewport": [
+      1920,
+      888
+    ]
+  },
+  "logs": []
+}

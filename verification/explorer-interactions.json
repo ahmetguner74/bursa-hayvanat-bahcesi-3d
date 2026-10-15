@@ -1,0 +1,70 @@
+{
+  "revision": "20261016au",
+  "scope": "Actual production runtimes + local GLB bytes on CPU. No GPU/physical-phone benchmark.",
+  "species": {
+    "penguin": {
+      "animals": 5,
+      "idlePoseUpdates": 0,
+      "actualMeshPicking": true,
+      "touchUpdatesInTwoSeconds": 60,
+      "travelMetres": 0,
+      "actualSkinGrounding": {
+        "reference": "Body mesh lowest point; transparent feather fringe is excluded so it cannot leave feet hovering.",
+        "minimumMetres": -0.00004795506126406557,
+        "maximumMetres": 2.5723892671525306e-7
+      },
+      "hiddenFrozen": true,
+      "rapidTapsSettle": true,
+      "settledPoseUpdates": 0,
+      "independentRigsSharedGeometry": true
+    },
+    "rhino": {
+      "animals": 2,
+      "idlePoseUpdates": 0,
+      "actualMeshPicking": true,
+      "touchUpdatesInTwoSeconds": 60,
+      "travelMetres": 0.20042038273296298,
+      "actualSkinGrounding": {
+        "reference": "Lowest skinned vertex",
+        "minimumMetres": -0.0000807809373816748,
+        "maximumMetres": 0.00002764824151291201
+      },
+      "hiddenFrozen": true,
+      "rapidTapsSettle": true,
+      "settledPoseUpdates": 0,
+      "independentRigsSharedGeometry": true
+    },
+    "giraffe": {
+      "animals": 2,
+      "idlePoseUpdates": 0,
+      "actualMeshPicking": true,
+      "touchUpdatesInTwoSeconds": 60,
+      "travelMetres": 0.2004082107259876,
+      "actualSkinGrounding": {
+        "reference": "Lowest skinned vertex",
+        "minimumMetres": -0.00005316284314824116,
+        "maximumMetres": 9.582763954574247e-8
+      },
+      "hiddenFrozen": true,
+      "rapidTapsSettle": true,
+      "settledPoseUpdates": 0,
+      "independentRigsSharedGeometry": true
+    },
+    "aviary": {
+      "animals": 4,
+      "idlePoseUpdates": 0,
+      "actualMeshPicking": true,
+      "touchUpdatesInTwoSeconds": 60,
+      "travelMetres": 0,
+      "actualSkinGrounding": {
+        "reference": "Lowest skinned vertex",
+        "minimumMetres": 2.7755575615628914e-17,
+        "maximumMetres": 2.7755575615628914e-17
+      },
+      "hiddenFrozen": true,
+      "rapidTapsSettle": true,
+      "settledPoseUpdates": 0,
+      "independentRigsSharedGeometry": true
+    }
+  }
+}

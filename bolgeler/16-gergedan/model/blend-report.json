@@ -1,0 +1,19 @@
+{
+  "unit": "metre",
+  "originM5LocalXY": [
+    -51.99980666900001,
+    98.853340713
+  ],
+  "bones": 92,
+  "rigs": 2,
+  "actions": [
+    "walk",
+    "walk.001"
+  ],
+  "packedImages": 14,
+  "habitatObjects": 21,
+  "animalObjects": 16,
+  "sceneFile": "gergedan-yasam-alani-editable.blend",
+  "autoexec": false,
+  "scope": "Editable full habitat and two source walk rigs. Runtime travel, idle and contact controller in JS; route guides retained."
+}

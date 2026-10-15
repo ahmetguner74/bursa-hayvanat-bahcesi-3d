@@ -5,6 +5,9 @@ let validator;
 try{validator=require('./_qa/gltf-check/node_modules/gltf-validator');}
 catch(error){console.error('Install the pinned local verifier: npm install --prefix bolgeler/_qa/gltf-check --ignore-scripts --no-audit --no-fund gltf-validator@2.0.0-dev.3.10');process.exit(1);}
 const targets=[
+  ['12-afrika-savana/model/giraffe/baringo-giraffe.glb','gltf-validation.json'],
+  ['12-afrika-savana/model/giraffe/zurafa-acik-yasam-alani.glb','habitat-gltf-validation.json'],
+  ['32-su-kuslari/model/hayvan/greater-flamingo.glb','gltf-validation.json'],
   ['15-penguen/model/hayvan/african-penguin.glb','gltf-validation.json'],
   ['29-boz-ayi/model/boz-ayi-havuz-kiyisi.glb','gltf-validation.json'],
   ['09-habes-maymunu/model/habes-maymunu-adasi.glb','gltf-validation.json'],

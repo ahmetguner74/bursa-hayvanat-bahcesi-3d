@@ -1,0 +1,46 @@
+{
+  "birdUiCheck": {
+    "behavior": "Rahatlıyor",
+    "labels": [
+      {
+        "aria": "Flamingo 1 · davranışını değiştir",
+        "outline": "none",
+        "shadow": "none",
+        "text": ""
+      },
+      {
+        "aria": "Flamingo 2 · yakından izle",
+        "outline": "none",
+        "shadow": "none",
+        "text": ""
+      },
+      {
+        "aria": "Flamingo 3 · yakından izle",
+        "outline": "none",
+        "shadow": "none",
+        "text": ""
+      },
+      {
+        "aria": "Flamingo 4 · yakından izle",
+        "outline": "none",
+        "shadow": "none",
+        "text": ""
+      }
+    ],
+    "overflow": false,
+    "place": "Flamingo 1",
+    "species": "aviary",
+    "tracking": "off",
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  "keyboardEnterAndEscape": true,
+  "desktopErrors": [],
+  "mobileErrors": [],
+  "mapToAviaryDoorwayCompletes": true,
+  "mobileGiraffeAndRhinoBodyPicking": true,
+  "aviaryBackStaysInsideColony": true,
+  "finalDesktopErrors": []
+}

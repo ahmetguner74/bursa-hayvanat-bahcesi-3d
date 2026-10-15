@@ -1,0 +1,103 @@
+{
+  "schema": "bursa-zoo-rhino-habitat-model/v2",
+  "originM5LocalXY": [
+    -51.99980666900001,
+    98.853340713
+  ],
+  "triangles": 14787,
+  "meshCount": 21,
+  "areasM2": {
+    "compound": 2945.7122337392207,
+    "building": 1072.8212467499925,
+    "openYard": 1872.890986989228
+  },
+  "surveyed": false,
+  "source": [
+    {
+      "url": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "date": "2018-06-30",
+      "finding": "Organic curved form and green roof; shared rhino,zebra,common and visitor spaces.1057/3621m2 are the shared historical complex,not used as a forced scale."
+    },
+    {
+      "url": "https://www.bursa.bel.tr/sehir-kameralari/gergedanlar-23324",
+      "reference": "../kaynaklar/daylight-camera-reference.json",
+      "finding": "Retrieved daylight frame: soil yard,concrete perimeter,tree/rocks and pale facade with steel doors. Capture time not independently verified."
+    },
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2020/09/gergedan2.jpg",
+      "finding": "Pale dusty grey animals,light boulders,tree and horizontal timber barrier"
+    },
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2022/09/kolaj-gergedan.jpg",
+      "finding": "Muddy shallow area; exact current position unverified"
+    },
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/dunya-gergedan-gunu/",
+      "date": "2026-09-22",
+      "finding": "Amadou and Tayo mentioned. Two illustrative adults chosen; not a complete census or individual likeness."
+    }
+  ],
+  "uncertainty": "Illustrated footprint with existing10-25m registration uncertainty. Door positions,heights,interior partitions,mud,tree and fence details are editable visual interpretation,not as-built plans.",
+  "atlasHiddenNodes": [],
+  "floorOwnership": "Entire registered compound owns one floor,stable and mud surfaces. Atlas terrain/path caps excluded by compound mask. Roof,wall and door junctions meet without coplanar overlay.",
+  "treeCredit": "Jacaranda tree by Rico Cilliers/Rob Tuytel,Poly Haven,CC0; only 6942 triangle LOD1 used,scaled to 8.5m; illustrative species; normal map omitted because the exported mesh has no tangents",
+  "soilCredit": "Gravelly Sand by Dario Barresi,Poly Haven,CC0; 1K source reduced to 512px JPEG,2.5m tiling",
+  "floorCheck": {
+    "overlapM2": 9.389682798544146e-15,
+    "gapM2": 1.2573275753879898e-14
+  },
+  "textureDerivatives": [
+    {
+      "file": "soil.jpg",
+      "source": "gravelly_sand_diff_1k.jpg",
+      "sourceSha256": "bc1624594ce807f04eaa023f6f9df93ffefd20904570cd46ca302b954ef80eec",
+      "sha256": "be15e1b16eac9586de0f82ef256402a0ae81e0daaa2819145059469f787f413e"
+    },
+    {
+      "file": "rock.jpg",
+      "source": "penguin-artificial-rock-v1.png",
+      "sourceSha256": "c03ce4d501bd5c0f9846cf494efe9ff6cb9a5e2b810546601789872e816ac837",
+      "sha256": "80a5f1febe421aa88fe843e918a621e321396e5ea5b81da164641d883d3319c1"
+    },
+    {
+      "file": "wood.jpg",
+      "source": "savanna-platform-wood-v1.png",
+      "sourceSha256": "b7d6f0c2708033a21a714b72528fbf7b1186dca2b2968dd44b14844fd4d23674",
+      "sha256": "c7c3c2bab83f66384518bdd994cc212dd8e053fc0b5010ed91b6bee9c68447a2"
+    },
+    {
+      "file": "green.jpg",
+      "source": "woodland-meadow-v1.png",
+      "sourceSha256": "915e283abac23fc1d38889fbff080b0dcd67122e1dc7201b0d317682b339fce4",
+      "sha256": "0185354e1dc7d781270242158d9f73c4a919e11bf19016d6bb438127e6564546"
+    }
+  ],
+  "parts": [
+    "yard_soil",
+    "stable_floor",
+    "mud_floor",
+    "mud_bank",
+    "tree_bed",
+    "stable_outer_walls",
+    "door_lintels",
+    "stable_ochre_base",
+    "steel_door_leaves",
+    "steel_door_frames",
+    "green_roof",
+    "roof_parapet",
+    "interior_partition_sills",
+    "interior_steel_partitions",
+    "perimeter_concrete",
+    "boundary_timber",
+    "separate_service_gate",
+    "tree_boulders"
+  ],
+  "roofNodes": [
+    "green_roof",
+    "roof_parapet"
+  ],
+  "routeCount": 2,
+  "file": "gergedan-yasam-alani.glb",
+  "bytes": 5112516,
+  "sha256": "47759f17d7e387216199fe69d71528679762aa69c459829496eb6dff955ff570"
+}

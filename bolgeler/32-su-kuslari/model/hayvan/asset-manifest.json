@@ -1,0 +1,66 @@
+{
+  "schema": "bursa-zoo-flamingo-derivative/v1",
+  "sourceSha256": "1f84fc62873c83cc148dc15befd304f4efb0d87b01c9f026a9470972ecd2f899",
+  "sourceBytes": 120532604,
+  "sourceTriangleCount": 1954986,
+  "deliveryBytes": 3627596,
+  "deliverySha256": "847f741fd7cb7eeee330f44815a975fdda87b5f233dc2ba743fd9bb4c7a842e5",
+  "triangles": 12040,
+  "joints": 5,
+  "heightM": 1.3,
+  "heightEvidence": "Illustrative adult size within San Diego Zoo greater flamingo120–145cm range",
+  "sourceHadSkeleton": false,
+  "sourceHadAnimation": false,
+  "clips": [
+    "Rest",
+    "LookAround",
+    "Settle"
+  ],
+  "clipOrigin": "Locally authored limited rest and looking; no source walk/swim/fly/preen",
+  "forwardAxis": "Canonical Blender +Y; glTF Y-up",
+  "modifications": [
+    "weld duplicate chunk boundaries",
+    "12k collapse derivative, smooth normals",
+    "source neck bumps smoothed in masked six-iteration pass",
+    "missing interdigital webbing added between original toes",
+    "1024px pale plumage material bake: saturation.35/light mix.28, mask preserves legs and dark beak/eyes",
+    "metric grounding/1.30m illustrative adult",
+    "five-bone rest rig and three restrained clips",
+    "normal strength.12/roughness.87"
+  ],
+  "sourceUrl": "https://sketchfab.com/3d-models/greater-flamingo-resting-rigged-bird-1c54310c3877422497d37512f0ba33dc",
+  "author": "Pigcraft",
+  "authorUrl": "https://sketchfab.com/s8819296",
+  "license": "CC BY4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "provenance": "Source author discloses AI-assisted3D generation; not a scan of Bursa Zoo.",
+  "images": [
+    {
+      "width": 1024,
+      "height": 1024,
+      "mimeType": "image/png",
+      "bytes": 576645,
+      "sha256": "36da63fbe63e182224681b258610b403d8d90a7fb50eb6e02a4a1648593ff973"
+    },
+    {
+      "width": 1024,
+      "height": 1024,
+      "mimeType": "image/png",
+      "bytes": 1446551,
+      "sha256": "9686e05b48d1b2e2269785b465be7c17451d5a57d8474cd4bdf7967fd9be64af"
+    },
+    {
+      "width": 1024,
+      "height": 1024,
+      "mimeType": "image/png",
+      "bytes": 659403,
+      "sha256": "897db49eca8c4b68af1e0e60051256d1dbc75d96ddfd0d1a1e8756e7369958bc"
+    }
+  ],
+  "nominalTextureRgbaWithMipsMiB": 16.0,
+  "nominalTextureScope": "Texture set only; not complete GPU memory",
+  "editableSha256": "86a1710823c9dbca34bb8b35643c54d10645b393e5ee233e29ff3d95b5ae6caf",
+  "primaryDrawsPerAnimal": 2,
+  "independentRuntimeMaterials": false,
+  "footGeometryAudit": "foot-geometry-verification.json; two locally added membranes are closed/outward after welding normal splits. Original feather/body topology is not a watertight fabrication mesh."
+}

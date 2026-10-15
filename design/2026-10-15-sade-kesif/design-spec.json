@@ -1,0 +1,190 @@
+{
+  "title": "Bursa Hayvanat Bahçesi — Tek sahnede keşif",
+  "date": "2026-10-15",
+  "status": "20261015ao ile yerel uygulamaya geçirildi. Penguen yakın deneyimi kullanıcının iki yeni telefon referansıyla 20261015ap sürümünde ../2026-10-15-penguen-koloni/design-spec.json tarafından güncellendi; diğer türlerin akışı sürer. Canlıya yayınlanmadı. Tasarım panosu mockup, qa/ altındakiler gerçek tarayıcı görüntüleridir.",
+  "conceptCount": 1,
+  "visual": "sade-kesif-mockup.png",
+  "scope": "Modeli hazır tüm hayvanlar ve yaşam alanları; gelecekteki modeller aynı etkileşim sözleşmesini kullanır.",
+  "visualSources": [
+    "C:/Users/Scanl/AppData/Local/Temp/codex-clipboard-002da0c9-59ce-4b1e-ab24-819bc995b194.png",
+    "C:/Users/Scanl/AppData/Local/Temp/codex-clipboard-0fc0c67d-b7e7-4325-bb38-2521610053b6.png",
+    "C:/Users/Scanl/AppData/Local/Temp/codex-clipboard-548edd4a-1e4d-42c4-97b8-f133db06b30b.png"
+  ],
+  "principle": "Gezinme ve hayvan etkileşimi doğrudan 3B sahne üzerinde gerçekleşir.",
+  "chrome": {
+    "identity": "Mevcut B·H kimliği ve bulunduğun alanın kısa adı.",
+    "back": "Genel planda gizli. Yaşam alanında Genel plana dön; hayvan yakınında Alana dön. Tek kontrol.",
+    "fullscreen": "Sağ üstte tek kontrol.",
+    "instructions": "Duruma uygun tek satır; ilk başarılı etkileşimden sonra kaybolur. Hayvan hareketlerini seçtirmez.",
+    "absent": [
+      "Alt açı çubuğu",
+      "Penguen veya kuş seçim paneli",
+      "Davranış düğmeleri",
+      "Görünüm/kategori/katman menüleri",
+      "Alt yakınlaştırma düğmeleri",
+      "Sürekli yanıp sönen işaretler"
+    ]
+  },
+  "states": [
+    {
+      "id": "overview",
+      "caption": "Keşfet",
+      "visibleLabels": [
+        "Penguenler",
+        "Gergedanlar",
+        "Zürafalar",
+        "Su Kuşları Kafesi"
+      ],
+      "target": "Yaşam alanının adı veya modellenmiş barınağı",
+      "result": "İkinci referanstaki gibi alanı bütünüyle gösteren yumuşak kamera yaklaşımı."
+    },
+    {
+      "id": "habitat",
+      "caption": "Yaşam alanına yaklaş",
+      "visibleLabels": "O alandaki modellenmiş hayvanların tür adları; aynı türde üst üste gelen etiketler tek grup etiketi olur.",
+      "target": "Hayvanın gövdesi veya isim etiketi",
+      "result": "Üçüncü referanstaki gibi hayvan seviyesine yaklaşım. Modelin tüm gövdesi ve ayakları kadrajda; yaşam alanı arka planda kalır."
+    },
+    {
+      "id": "animal",
+      "caption": "Dokun ve keşfet",
+      "visibleLabels": "Seçilen hayvanın adı ve gerekli komşu hedeflerin kısa etiketleri",
+      "target": "Hayvanın gövdesi veya etiketi",
+      "result": "O hayvana ve bulunduğu ortama uygun kısa bir davranış. Ayrı hareket butonu yok."
+    }
+  ],
+  "camera": {
+    "habitatFlightSeconds": [
+      1.6,
+      2.4
+    ],
+    "animalFlightSeconds": [
+      1.4,
+      2
+    ],
+    "timingStatus": "İlk uygulama için tasarım değerleri; cihazda kontrol edilerek ayarlanır.",
+    "easing": "Yavaş başlar ve yavaş biter; kamera konumu ve baktığı hedef birlikte ilerler.",
+    "framing": "Hayvanın boyu, genişliği, başı ve ayakları ile ekranın kullanılabilir alanından türetilir. Zürafa ve penguen aynı kamera yüksekliğini kullanmaz.",
+    "constraints": [
+      "Z ekseni yukarı kalır; eğrilme/roll olmaz.",
+      "Zeminin altına, duvarın içine veya kafes teline kamera sokulmaz.",
+      "Kafes içine yaklaşım için giriş/koridor üzerinden ara noktalar kullanılır.",
+      "Kullanıcı sürükler veya yakınlaştırırsa uçuş durur; kontrol kullanıcıya geçer.",
+      "Yeni seçim mevcut geçişi son seçilen hedefe yönlendirir; uçuş kuyruğu oluşmaz."
+    ],
+    "reducedMotion": "Sistem hareket azaltma tercihini bildirirse uzun uçuş kısa, doğrudan geçişe dönüşür."
+  },
+  "affordance": {
+    "mouse": "Tıklanabilir hayvanda el imleci; etiket koyu yeşile döner. Gövdede hafif vurgu yalnızca hedef üzerindeyken.",
+    "touch": "İsim etiketi görünür; ilk kullanımda kısa dokunma ipucu. Hover gerektirmez.",
+    "keyboard": "Etiketler gerçek odaklanabilir düğmeler; Enter/Space seçim veya davranış. Escape bir seviye geri.",
+    "targetSize": "Etiket ve geri/tam ekran kontrollerinde en az 44 CSS px tasarım hedefi; komşu hayvan hit hedefleri çakışmaz.",
+    "labelDensity": "Etiketler uzaklığa göre açılır; çakışan etiketler gruplanır veya önceliğe göre gizlenir. Hazır olmayan alanlar etkileşimli gösterilmez."
+  },
+  "behavior": {
+    "randomization": "Tür ve güncel durum için izinli hareketlerden ağırlıklı seçim; art arda aynı hareket seçilmez.",
+    "firstTap": "Hayvan seviyesine yaklaşır ve kısa fark etme tepkisi verir. Sonraki dokunuşlar davranışı değiştirir.",
+    "tapDuringAction": "Sonsuz animasyon kuyruğu yok. Geçiş için güvenli an geldiğinde en son dokunuşun isteği uygulanır; ara dokunuşlar birikmez.",
+    "landWater": "Karadaki penguene yüzme verilmez; havuzdaki penguen karaya ışınlanmaz.",
+    "rest": "Kısa hareketten sonra doğal duruşa döner. Başka hayvana geçildiğinde önceki hayvan kısa yumuşak geçişle dinlenir.",
+    "species": [
+      {
+        "name": "Penguen",
+        "proposed": [
+          "Bakınma",
+          "Tüy bakımı",
+          "Silkinme",
+          "Uyuma/uyanma"
+        ],
+        "water": [
+          "Kısa yüzme",
+          "Suda dinlenme"
+        ],
+        "availability": "Mevcut penguen klipleri ve etkileşim denetleyicisinde karşılığı var."
+      },
+      {
+        "name": "Flamingo",
+        "proposed": [
+          "Başını kaldırma/bakınma",
+          "Tüy düzeltme",
+          "Tek ayak üzerinde dinlenme"
+        ],
+        "availability": "Mevcut rig ve klipler uygulama öncesinde kontrol edilir; olmayan hareket üretilmeden menüye veya rastgele havuza girmez."
+      },
+      {
+        "name": "Zürafa",
+        "proposed": [
+          "Baş/boyunla bakınma",
+          "Kısa, zemine basan yürüyüş",
+          "Dinlenme"
+        ],
+        "availability": "Mevcut Idle ve authored Walk kullanılabilir. Beslenme/uzanma ayrı klip ve uygun dal referansı olmadan vaat edilmez."
+      },
+      {
+        "name": "Beyaz gergedan",
+        "proposed": [
+          "Baş/kulakla kısa tepki",
+          "Kısa, ağırlık hissi veren yürüyüş",
+          "Dinlenme"
+        ],
+        "availability": "Mevcut yürüme ve idle temel alınır. Yeni hareketler tür anatomisi, ayak basışı ve klip desteğiyle doğrulanır."
+      }
+    ]
+  },
+  "performance": {
+    "principle": "Etkileşim maliyeti sahnedeki toplam hayvan sayısıyla sürekli büyümez.",
+    "idle": "Dinlenen hayvanların iskelet güncellemeleri ve ihtiyaçsız sahne çizimleri durur.",
+    "active": "Seçilen hayvanda kısa hareket; diğer hayvanlar dinlenir. Yumuşak geçiş sırasında kısa süreli iki aktör çakışabilir.",
+    "limits": "Dokunmatik cihazlarda hayvan animasyonu en fazla 30 Hz; kamera geçişi ekran yenilemesine uygun akıcı örneklenir.",
+    "picking": "Raycast yalnızca tıklama veya sınırlanmış hover güncellemesinde. İşaretçide her kare tüm sahne taranmaz.",
+    "highlight": "Sürekli tam ekran outline/bloom geçişi eklenmez; hafif malzeme/etiket vurgusu tercih edilir.",
+    "measurements": "Bu çalışma tasarımdır. Yeni arayüz ve tüm hayvanlar için mobil FPS/enerji ölçümü yapılmış sayılmaz."
+  },
+  "implementation": {
+    "pattern": "Ortak keşif/seçim/kamera katmanı + türe özgü davranış denetleyicileri.",
+    "cleanup": [
+      "Eski penguen seçim ve hareket panelini ve ilgili DOM kodunu kaldır.",
+      "Alt açı/zoom çubuğu ve artık kullanılmayan olay bağlayıcılarını kaldır.",
+      "Eski otomatik hareketleri yeni etkileşimlerin yanında ikinci akış olarak çalıştırma.",
+      "Hayvan meshleri, M5 koordinatları, havuz ve yaşam alanı geometri düzeltmelerini koru."
+    ],
+    "doneWhen": [
+      "Dört mevcut türde isim → yaşam alanı → hayvan → davranış → geri dönüş çalışır.",
+      "Fare/touch/klavye ile erişim mümkündür; sürükleme seçim başlatmaz.",
+      "Etiketler mobilde üst üste binmez; seçilen hayvan kadraj dışına çıkmaz.",
+      "Kamera kafes, duvar veya zemin içine girmez.",
+      "Eski paneller/kod yolları kalmaz.",
+      "Boşta animasyon/çizim sayaçları ve gerçek telefon performansı kontrol edilir."
+    ],
+    "deployment": "Yalnızca yerel; canlıya yayınlama kullanıcı yeniden açıkça istemedikçe yapılmaz."
+  },
+  "research": [
+    {
+      "source": "W3C WCAG 2.2 SC 2.5.8",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "appliesTo": "Yakın hedeflerin boyutu ve aralığı. 44 px burada projenin tasarım hedefi; AA asgari değeri diye sunulmaz."
+    },
+    {
+      "source": "MDN hover",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/hover",
+      "appliesTo": "Dokunmatik deneyimi hover desteğine bağlamama."
+    },
+    {
+      "source": "MDN prefers-reduced-motion",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+      "appliesTo": "Uzun kamera uçuşunda sistemin hareket azaltma tercihine uyma."
+    }
+  ],
+  "mockupReview": {
+    "result": "Tek tasarım yönü istenen üç durumu gösteriyor.",
+    "caveats": [
+      "Görsel üretim hayvan sayısı, ufak geometri ayrıntıları ve etiket yerlerini birebir veri olarak korumaz; kaynak modeller/koordinatlar esas alınır.",
+      "Panodaki iki alt kare sunum için küçültülmüştür; gerçek arayüzde yazı ve hedefler bu ölçekte uygulanmaz.",
+      "Bu bir çalışan prototip veya uygulama QA raporu değildir."
+    ]
+  },
+  "generation": {
+    "tool": "Built-in ImageGen",
+    "promptFile": "imagegen-prompt.txt"
+  }
+}

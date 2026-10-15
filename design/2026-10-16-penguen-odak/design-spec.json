@@ -1,0 +1,23 @@
+{
+  "revision": "20261016ar",
+  "date": "2026-10-16",
+  "source": "C:/Users/Scanl/AppData/Local/Temp/codex-clipboard-5394cc8e-c387-44f1-a837-dd5aa517ab7b.png",
+  "sourcePixels": [1928,1088],
+  "sourceAppCropXYXY": [4,148,1924,1036],
+  "desktopVerificationViewport": [1920,888],
+  "mobileVerificationViewport": [390,844],
+  "overviewLabels": ["Penguenler","Gergedanlar","Zürafalar","Su Kuşları Kafesi"],
+  "overviewLabelMeaning": "Hayvan modeli ve etkileşim çalışma zamanı bulunan yaşam alanları. Salt yapı/barınak etiketleri gösterilmez.",
+  "flow": ["Genel plan", "Doğrudan yakın koloni ve havuz", "Gövdeye dokununca bireye daha yakın bakış"],
+  "cameraSource": "viewer/penguin-views.js",
+  "colonyDefaultIndividual": null,
+  "individualIndicator": "Görsel halka yok; kamera odağı ve gerçek davranış paneli. En az44px erişilebilir gövde hedefi; yalnız klavyede alt odak çizgisi",
+  "animalNamesAboveBodies": false,
+  "behaviorButtons": false,
+  "observation": "Seçimden sonra panel yalnız işaretli bireyin gerçek hareket durumunu Kıyı/Havuz numarasıyla anlatır. Diğer otomatik davranışlar sakinleşir.",
+  "swimmerTap": "Yüzmeyi başlatır/uzatır; klip fazı ve XY sıfırlanmaz. Kamera takip eder; elle sürükleme takibi bırakır.",
+  "back": ["Koloniye dön", "Genel plana dön"],
+  "swimPresentationOffsetDeltaMetres": 0.06,
+  "performance": "En fazla iki görünür iskelet örnekleme, dokunmatik30Hz, gizli/offscreen durma; ek model/efekt/render geçişi yok. Fiziksel telefon FPS ölçümü yok.",
+  "publication": "Yalnız yerel dist. docs/, commit ve push kullanılmadı."
+}

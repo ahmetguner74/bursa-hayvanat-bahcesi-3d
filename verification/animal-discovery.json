@@ -1,0 +1,51 @@
+{
+  "revision": "20261016au",
+  "scope": "Actual production GLB/rigs, scheduling and OrbitControls on CPU. Not a physical device FPS/GPU benchmark.",
+  "species": {
+    "rhino": {
+      "individuals": 2,
+      "everyVisibleAnimalGetsTurn": true,
+      "noDefaultSelection": true,
+      "onlyObservedAnimalContinues": true,
+      "maxSampledRigs": 2,
+      "desktopAndPortraitFraming": true,
+      "walkTravelMetres": 0.5690857033104522,
+      "maxCameraStepMetres": 0.007110690557080143,
+      "maxCentreErrorPixels": 4.219434026276846,
+      "hiddenAndOffscreenFreeze": true,
+      "rapidSwitchesSettle": true,
+      "leavingStopsPoseUpdates": true,
+      "reducedMotion": true
+    },
+    "giraffe": {
+      "individuals": 2,
+      "everyVisibleAnimalGetsTurn": true,
+      "noDefaultSelection": true,
+      "onlyObservedAnimalContinues": true,
+      "maxSampledRigs": 2,
+      "desktopAndPortraitFraming": true,
+      "walkTravelMetres": 0.6041344405224192,
+      "maxCameraStepMetres": 0.00875200922319073,
+      "maxCentreErrorPixels": 2.513315383206908,
+      "hiddenAndOffscreenFreeze": true,
+      "rapidSwitchesSettle": true,
+      "leavingStopsPoseUpdates": true,
+      "reducedMotion": true
+    },
+    "aviary": {
+      "individuals": 4,
+      "everyVisibleAnimalGetsTurn": true,
+      "noDefaultSelection": true,
+      "onlyObservedAnimalContinues": true,
+      "maxSampledRigs": 2,
+      "desktopAndPortraitFraming": true,
+      "walkTravelMetres": 0,
+      "maxCameraStepMetres": 0,
+      "maxCentreErrorPixels": 0,
+      "hiddenAndOffscreenFreeze": true,
+      "rapidSwitchesSettle": true,
+      "leavingStopsPoseUpdates": true,
+      "reducedMotion": true
+    }
+  }
+}

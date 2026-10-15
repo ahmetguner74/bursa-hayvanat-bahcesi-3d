@@ -1,0 +1,16 @@
+{
+  "revision": "20261015al",
+  "rimPathOverlapM2": 2.5594131899844536e-16,
+  "rimTerrainOverlapM2": 0.0,
+  "curbStoneCentresWithin65cmOfPool": 0,
+  "roadStoneCount": 5517,
+  "rockBottomZMetres": [
+    -1.490000009536743,
+    -1.4900000095367432
+  ],
+  "basinFloorZMetres": -1.45,
+  "waterMeshesInAtlas": 1,
+  "waterMaskM2": 204.74293900000015,
+  "originalM5CoordinatesChanged": false,
+  "scope": "Actual serialized surface masks, exact JS curb sampling and GLB components; visual review is separate."
+}

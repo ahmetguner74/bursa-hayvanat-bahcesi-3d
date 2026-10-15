@@ -1,6 +1,6 @@
 """Create the metric runtime asset and safe domains from unchanged sources."""
 from pathlib import Path
-import hashlib,json,struct,zipfile
+import hashlib,json,math,struct,zipfile
 from shapely.geometry import Polygon,Point,LineString,box
 from shapely.ops import unary_union
 
@@ -81,13 +81,24 @@ def main():
         if not beach.contains(Point(point)):raise ValueError('Beach start outside safe land: '+str(point))
     for point in swimmers:
         if not water.contains(Point(point)):raise ValueError('Swimmer start outside safe pool: '+str(point))
+    water_routes=[{'centre':[-13,134.6],'radii':[2,1.4],'startAngle':-math.pi/2,'direction':1},
+                  {'centre':[-17.3,132.9],'radii':[1.1,1.2],'startAngle':math.pi/2,'direction':-1}]
+    route_lines=[]
+    for route,start in zip(water_routes,swimmers):
+        cx,cy=route['centre'];rx,ry=route['radii'];angle=route['startAngle']
+        if math.dist([cx+rx*math.cos(angle),cy+ry*math.sin(angle)],start)>1e-6:
+            raise ValueError('Swim route does not start at its existing M5 placement')
+        line=LineString([(cx+rx*math.cos(i*math.tau/256),cy+ry*math.sin(i*math.tau/256)) for i in range(257)])
+        if not water.covers(line.buffer(.18)):raise ValueError('Swim route reaches an obstacle')
+        route_lines.append(line)
+    if route_lines[0].distance(route_lines[1])<.8:raise ValueError('Swim routes are too close')
     clips={c['name']:{'duration':c['duration'],'groundOffsetMetres':[(body_low-s['bodyGround'])*scale for s in c['samples']]} for c in rig['clips']}
-    meta={'schema':'bursa-zoo-penguin-colony/v1','sourceUrl':tree['asset']['extras']['source'],'author':'Major','license':'CC BY 4.0','licenseUrl':'https://creativecommons.org/licenses/by/4.0/',
-        'asset':'models/african-penguin.glb','assetSha256':sha(HERE/'african-penguin.glb'),'sourceSha256':sha(original),'unit':'metre','standingHeightMetres':height,'heightIsSurveyed':False,
+    meta={'schema':'bursa-zoo-penguin-colony/v2','sourceUrl':tree['asset']['extras']['source'],'author':'Major','license':'CC BY 4.0','licenseUrl':'https://creativecommons.org/licenses/by/4.0/',
+        'asset':'african-penguin.glb','assetSha256':sha(HERE/'african-penguin.glb'),'sourceSha256':sha(original),'unit':'metre','standingHeightMetres':height,'heightIsSurveyed':False,
         'forwardAxis':'glTF +Z; atlas wrapper maps to -Y before heading','trianglesPerBird':sum(m['triangles'] for m in rig['meshes']),'jointsPerBird':64,'meshDrawsPerBird':2,
         'groundZ':surface['renderLevels']['terrainZ'],'waterZ':surface['renderLevels']['waterZ'],'groundingReference':'Body mesh lowest point; transparent feather fringe is excluded so it cannot leave feet hovering.','groundDomain':rings(beach),'waterDomain':rings(water),'landStarts':starts,'waterStarts':swimmers,
-        'clips':clips,'walkSpeedMetresPerSecond':.21,'swimSpeedMetresPerSecond':.50,'swimAnchorOffsetMetres':-.29,
-        'interpretation':'Five illustrative adults, not the zoo census. Dry and swimming individuals remain separate; no invented crossing of the vertical coping. Safe domains exclude rocks, cliff, deck and shoreline. Heights/speeds/positions are editable illustrative settings.',
+        'clips':clips,'waterRoutes':water_routes,'swimSpeedMetresPerSecond':.50,'swimAnchorOffsetMetres':-.23,'floatAnchorOffsetMetres':-.40,
+        'interpretation':'Five illustrative adults, not the zoo census. Touch-driven short behaviors replace autonomous roaming. Dry and swimming individuals remain separate; no invented crossing of the vertical coping. Safe domains exclude rocks, cliff, deck and shoreline. Heights/speeds/positions are editable illustrative settings.',
         'inputs':{'poolInputsSha256':sha(pool_inputs),'surfaceSha256':sha(surface_file)}}
     (HERE/'colony-layout.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     source_dir=HERE/'source'

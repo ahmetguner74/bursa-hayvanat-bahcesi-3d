@@ -1,0 +1,43 @@
+{
+  "revision": "20261016at",
+  "checkedAt": "2026-10-16",
+  "scope": "Penguen deneyimini mevcut üç türe aktarma; yeni hayvan mesh veya habitat geometrisi yok.",
+  "sources": [
+    {
+      "url": "https://animals.sandiegozoo.org/animals/rhinoceros",
+      "usedFor": "Beyaz gergedan adı/renk ayrımı, otlak ve ot beslenmesi; kulak hareketleri."
+    },
+    {
+      "url": "https://animals.sandiegozoo.org/animals/giraffe",
+      "usedFor": "Ağaçlı savanna, yaprak beslenmesi ve ayakta dinlenme."
+    },
+    {
+      "url": "https://animals.sandiegozoo.org/animals/flamingo",
+      "usedFor": "Koloni, sığ göl/lagün ve süzerek beslenme."
+    }
+  ],
+  "modelLimits": {
+    "rhino": [
+      "Look",
+      "Ears",
+      "walk"
+    ],
+    "giraffe": [
+      "Idle_Source_BlueMesh",
+      "walk"
+    ],
+    "aviary": [
+      "LookAround",
+      "Settle",
+      "Rest"
+    ]
+  },
+  "unsupportedAviaryActions": [
+    "flight",
+    "walking",
+    "swimming",
+    "feeding",
+    "true feather preening"
+  ],
+  "performance": "Her kolonide en fazla iki görünür iskelet örnekleme; dokunmatik yakın görünüm30Hz; dinlenmede örnekleme yok, gizli/görünmeyenlerde durma. Fiziksel telefon FPS/GPU testi değildir."
+}

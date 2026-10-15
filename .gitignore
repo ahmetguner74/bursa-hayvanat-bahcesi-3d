@@ -18,6 +18,15 @@
 /bolgeler/*/kaynaklar/belgeler/*.pdf
 /bolgeler/*/kaynaklar/harita-verisi/
 
+# Original downloads and editable working scenes stay local; derived runtime
+# models, preparation scripts and attribution records are versioned.
+/bolgeler/*/model/**/source/
+/bolgeler/**/*.blend
+/bolgeler/**/reference-contact-sheet.*
+/bolgeler/**/source-texture.png
+/bolgeler/**/source-*.png
+/bolgeler/**/flamingo-source-*.png
+
 # Local environment and temporary files.
 /.env*
 /__pycache__/

@@ -1,0 +1,17 @@
+{
+  "revision": "20261016au",
+  "scope": "Production GLB/runtime CPU skin samples and cue lifecycle. Browser evidence verifies presentation.",
+  "flamingoMaximumSkinTravelMetres": 0.12310819255751952,
+  "groundErrorMetres": [
+    2.7755575615628914e-17,
+    2.7755575615628914e-17
+  ],
+  "touchNeverChoosesSubtleRest": true,
+  "oneTimeCue": {
+    "visibleAnimal": true,
+    "fourSecondLifetime": true,
+    "noSessionRepeat": true
+  },
+  "extraMeshes": 0,
+  "extraBones": 0
+}

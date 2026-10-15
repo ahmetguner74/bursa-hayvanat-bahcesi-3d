@@ -1,0 +1,46 @@
+{
+  "revision": "20261015ap",
+  "testedViewports": [
+    [
+      390,
+      844
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "individualVisibleNames": false,
+  "bodyTapChangesBehavior": true,
+  "bodyTapCameraState": "resting",
+  "keyboardEnterWorks": true,
+  "backHidesPanelAndRestoresWidth": 390,
+  "panelTopAfterHeader": 74,
+  "landscapeBehaviorVisibleWithoutScroll": true,
+  "phoneWarningsAndErrors": [],
+  "afterLeavingCloseProfiles": [
+    {
+      "level": "info",
+      "message": "Local explorer profile {\"mode\":\"habitat\",\"habitat\":\"penguinPool\",\"renderedFrames\":0,\"poseUpdates\":0,\"activeAnimals\":0,\"intervalMs\":5013.600000000093,\"gpuTimingMeasured\":false}",
+      "timestamp": "2026-10-15T20:30:39.378Z",
+      "url": "http://127.0.0.1:8768/app.js?v=20261015ap"
+    },
+    {
+      "level": "info",
+      "message": "Local explorer profile {\"mode\":\"habitat\",\"habitat\":\"penguinPool\",\"renderedFrames\":0,\"poseUpdates\":0,\"activeAnimals\":0,\"intervalMs\":5013.599999999977,\"gpuTimingMeasured\":false}",
+      "timestamp": "2026-10-15T20:30:44.392Z",
+      "url": "http://127.0.0.1:8768/app.js?v=20261015ap"
+    },
+    {
+      "level": "info",
+      "message": "Local explorer profile {\"mode\":\"habitat\",\"habitat\":\"penguinPool\",\"renderedFrames\":0,\"poseUpdates\":0,\"activeAnimals\":0,\"intervalMs\":5013.699999999953,\"gpuTimingMeasured\":false}",
+      "timestamp": "2026-10-15T20:30:49.406Z",
+      "url": "http://127.0.0.1:8768/app.js?v=20261015ap"
+    }
+  ],
+  "physicalPhoneBenchmark": false
+}

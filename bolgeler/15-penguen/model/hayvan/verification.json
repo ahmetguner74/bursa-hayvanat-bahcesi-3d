@@ -1,16 +1,18 @@
 {
-  "revision": "20261015ai",
-  "simulationSeconds": 600,
-  "samples": 90000,
+  "revision": "20261015an",
+  "simulationSeconds": 1200,
+  "samples": 180000,
+  "idleColonyFrozen": true,
   "states": [
     "Idle",
-    "Preen",
     "Penguin swim",
     "Shake",
-    "Walk"
+    "Preen",
+    "Sit1",
+    "Sleep"
   ],
-  "maximumMovementPer30HzStepMetres": 0.017090161965863535,
-  "minimumSameDomainSeparationMetres": 0.6400225483852198,
+  "maximumMovementPer30HzStepMetres": 0.01686557403804055,
+  "minimumSameDomainSeparationMetres": 1.593789525557702,
   "grounding": {
     "minimumGround": -0.0008344581680702623,
     "maximumGround": 0.0024736321713870195,

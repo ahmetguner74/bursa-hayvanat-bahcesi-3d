@@ -1,0 +1,29 @@
+{
+  "schema": "bursa-zoo-giraffe-habitat-materials/v1",
+  "textures": [
+    {
+      "file": "soil.jpg",
+      "sha256": "134a12d313eeb00b8d5b84dd67b0c8572b5f9733a3a75c73d59d3c5c0c00e569",
+      "source": "bolgeler\\16-gergedan\\model\\material-source\\gravelly_sand_diff_1k.jpg",
+      "sourceSha256": "bc1624594ce807f04eaa023f6f9df93ffefd20904570cd46ca302b954ef80eec",
+      "license": "Poly Haven CC0",
+      "transformation": "512px JPEG technical resize/encoding;no photograph copied"
+    },
+    {
+      "file": "wood.jpg",
+      "sha256": "6a41aff8899fbd4d8e77d65cd6333fbf11af810965dfdcc239caeb39d2469a38",
+      "source": "viewer\\assets\\savanna-platform-wood-v1.png",
+      "sourceSha256": "b7d6f0c2708033a21a714b72528fbf7b1186dca2b2968dd44b14844fd4d23674",
+      "license": "Existing project generated asset",
+      "transformation": "512px JPEG technical resize/encoding;no photograph copied"
+    },
+    {
+      "file": "rock.jpg",
+      "sha256": "587e5cc250d63202c5df010ccbfb781692738d66cce765fbd512bd176f3117a4",
+      "source": "viewer\\assets\\penguin-artificial-rock-v1.png",
+      "sourceSha256": "c03ce4d501bd5c0f9846cf494efe9ff6cb9a5e2b810546601789872e816ac837",
+      "license": "Existing project generated asset",
+      "transformation": "512px JPEG technical resize/encoding;no photograph copied"
+    }
+  ]
+}

@@ -1,5 +1,86 @@
 # Bursa Hayvanat Bahçesi — 3B modelleme ön araştırması
 
+## Mobil keşif ve doğrulanmış yayın · `20261016au`
+
+[Canlı atlas](https://ahmetguner74.github.io/bursa-hayvanat-bahcesi-3d/?revision=20261016au) · [Yerel atlas](http://127.0.0.1:8768/?revision=20261016au) · [Aynı Wi-Fi'deki telefon](http://192.168.0.11:8768/?revision=20261016au).
+
+Mobil sağ kart kısa ve içerik boyundadır; sahne tam genişlik kullanır.390×666 denetiminde uzun hareket adıyla128×171px kart, önceki128×584px alanın%29,4'üdür. Tür ve gözlenen bireyin hareketi korunur; uzun tanıtım ve ölçüler masaüstünde kalır. İlk yakın ziyarette hayvana bitişik el/“Dokun” ipucu dört saniye içinde söner ve aynı oturumda tekrarlanmaz. Hayvan üstünde kalıcı yazı, halka veya hareket düğmesi yoktur.
+
+Penguen birey odağı yakınlaştırıldı; yüzücü kamera takibi, orbit ile serbest kalma ve tekrar dokunuşla takip korunur. Flamingo alanına giriş/çıkış kapı turu yapmadan doğrudandır. Mevcut beş kemikli modelin baş-boyun tepkisi okunur hale getirildi; ayaklar sabit, yeni mesh/kemik/render pass yoktur. Dokunuş belirsiz Rest klibini seçmez. Yükleme hatasında çalışan “Tekrar yükle” yolu ve panelle eşleşen erişilebilir hareket duyurusu vardır.
+
+[Product Design denetimi](design/2026-10-16-mobil-denetim/audit.md), [görsel QA](design-qa.md), [tarayıcı kanıtı](design/2026-10-16-mobil-denetim/browser-checks-au.json) ve dört üretim GLB/runtime testi geçti. Fiziksel telefon FPS/GPU/pil ölçümü yapılmadı; tam WCAG uygunluğu iddiası yoktur. M5 kaynak ve yol verileri değişmedi. Kullanıcının açık yayın isteğiyle `python build_public.py --publish`, doğrulanmış `dist/` paketini GitHub Pages'in `main:/docs` kaynağına hazırlar. Özgün indirmeler, özel araştırma fotoğrafları ve düzenlenebilir çalışma sahneleri yerelde kalır; türetilmiş modeller, üretim kodu ve lisans kayıtları sürümlenir. Aşağıdaki notlar önceki sürümlerin tarihçesidir.
+
+## Dört türde ortak keşif · `20261016at`
+
+[Yerel harita](http://127.0.0.1:8768/?revision=20261016at) · [Telefon](http://192.168.0.11:8768/?revision=20261016at) · [Gergedan](http://127.0.0.1:8768/?focus=rhino-close&revision=20261016at) · [Zürafa](http://127.0.0.1:8768/?focus=giraffe-close&revision=20261016at) · [Flamingolar](http://127.0.0.1:8768/?focus=aviary-close&revision=20261016at).
+
+Penguenin yakın alan → gövdeye dokunma → birey odağı akışı diğer üç türe aktarıldı. Birey seçilene kadar sağ panel yalnız türü tanıtır; sonra gerçek gözlenen bireyin hareketini anlatır. Hayvan üstünde yazı, hover/seçim halkası ve hareket düğmesi yoktur. Gergedan/zürafa yürüyüşünde kamera izler; sürükleme takibi bırakır. Seçimde diğerleri sakinleşir; sürü/koloniye dönüş otomatik sıralamayı yeniden açar. Genel haritada yalnız dört hayvan deneyimi adlandırılır.
+
+Gergedan bakınma/kulak/yürüyüş; zürafa mevcut baş-boyun klibi/yürüyüş; flamingo mevcut baş-boyun/dinlenme kliplerini kullanır. Flamingo modeli uçuş/yürüyüş desteklemez. Yeni hayvan mesh'i, bağımlılık veya GPU efekti yoktur. Her kolonide en fazla iki görünür iskelet örneklenir; dokunmatik yakın örnekleme30Hz, gizli/görünmeyen/dinlenenlerde durma vardır. Gerçek gergedan/zürafa GLB ölçüleri yakın kadrajda kullanılır.
+
+`animal-info.js`, `animal-profiles.js`, `animal-views.js` ortak deneyimi; `tap-colony.js` üç türün sınırlı zamanlamasını yönetir. Eski `penguin-info.js` ve grup/uzak hayvan ekranı dalları kaldırıldı. [Üç tür doğrulaması](verification/animal-discovery.json), [dört tür regresyonu](verification/explorer-interactions.json), [penguen takibi](verification/penguin-focus.json) ve [görsel kontrol](design-qa.md) geçti. Fiziksel telefon FPS/GPU/pil ölçümü yapılmadı. Yalnız `dist/` yenilendi; `docs/`, M5/yollar, canlı yayın, commit/push kullanılmadı. Aşağıdaki notlar önceki sürümlerdir.
+
+## Minimal yükleme göstergesi · `20261016as`
+
+[Yerelde aç](http://127.0.0.1:8768/?revision=20261016as) · [Aynı Wi-Fi'deki telefon](http://192.168.0.11:8768/?revision=20261016as).
+
+Başlangıçta “Hayvanat bahçesi yükleniyor…” ve22px Feather yükleme simgesi görünür. Sahne hazır olduğunda mevcut akış ikisini kaldırır; yapay bekleme/yüzde, yeni bağımlılık veya JavaScript zamanlayıcısı yoktur. Simge CSS transform ile döner; azaltılmış hareket tercihinde sabittir. Yavaş bağlantıda gerçek yükleme görünümü ve ardından kapanması doğrulandı; konsol hata/uyarı yok. [Görünüm](design/2026-10-16-penguen-odak/qa/17-minimal-yukleme-as.png). Yalnız yerel paket güncellendi.
+
+## Doğrudan koloni ve bireye odak · `20261016ar`
+
+[Haritayı aç](http://127.0.0.1:8768/?revision=20261016ar) · [Penguenlere doğrudan gir](http://127.0.0.1:8768/?focus=penguin&revision=20261016ar) · [Aynı Wi-Fi'deki telefon](http://192.168.0.11:8768/?revision=20261016ar).
+
+Genel planda yalnız hayvan modeli bulunan **Penguenler, Gergedanlar, Zürafalar ve Su Kuşları Kafesi** adlandırılır. Yalnız barınak/yapı düzeyindeki diğer etiketler kaldırıldı; sahne geometrileri korunur. Penguen etiketi doğrudan kullanıcının yakın koloni/havuz kadrajını açar; uzak alan ekranı ve ikinci grup etiketi aradan çıkarıldı.
+
+Kolonide birey seçili değildir; panel türü tanıtır ve henüz bir hayvana ait hareket göstermeye çalışmaz. Gövdeye dokunmak o bireye yumuşakça yaklaşır. Kamera odağı ve paneldeki **Şu anda / Kıyı2 veya Havuz1** gözleneni anlatır; hover ve seçim halkaları kaldırıldı. Yalnız klavyeyle gezinirken hedefin altında ince bir odak çizgisi görünür. Gözlem sırasında diğer bireylerin hareketleri yumuşakça sakinleşir. Yüzücüye dokunmak yüzmeyi başlatır/uzatır; kamera onu takip eder. Sürükleme takibi bırakır, tekrar hayvana dokunmak geri açar. **Koloniye dön → Genel plana dön** geri akışıdır.
+
+Yüzme duruşu suya göre6cm yükseltildi; sırt/gövde yakın takipte daha okunur, su yüzeyi ve XY rotaları değişmez. Kaynak klipler/GLB değiştirilmedi. `penguin-views.js` koloni/odak/izleme hedeflerini tek yerde tutar; eski penguen koloniye yaklaşma dalı kaldırıldı. En fazla iki görünür iskelet örneklenir, dokunmatik yakın hareket30Hz ile sınırlıdır; değişmeyen sahne çizilmez.
+
+[Gerçek modül, GLB ve OrbitControls ile odak/takip doğrulaması](verification/penguin-focus.json) · [Kullanım incelemesi](design/2026-10-16-penguen-odak/audit.md) · [Son görsel kontrol](design-qa.md). Mobil ve masaüstü düzeni incelendi; fiziksel telefon FPS/GPU/pil ölçümü yapılmadı. Yerel `dist/` yenilendi; `docs/`, canlı yayın ve GitHub'a gönderim yapılmadı. Aşağıdaki notlar önceki aşamalardır.
+
+## Penguen kolonisinde keşif · `20261015ap`
+
+[Alanı aç](http://127.0.0.1:8768/?focus=penguin&revision=20261015ap) · [Aynı Wi-Fi'deki telefon](http://192.168.0.11:8768/?focus=penguin&revision=20261015ap) · [Doğrudan koloniye yaklaş](http://127.0.0.1:8768/?focus=penguin-close&revision=20261015ap).
+
+Son iki telefon referansına göre yalnız penguen deneyimi değiştirildi. Alan görünümündeki **Penguenler** etiketi koloniyi/havuzu birlikte gösteren sabit kıyı kadrajına yaklaşır. Yakında hayvanların üstünde yazı veya hareket düğmesi bulunmaz. Görünür penguenler aralıklı bakınma, silkelenme, tüy bakımı, uyku/uyanma ve güvenli yüzme hareketleri yapar; gövdeye dokunmak farklı davranış ister. Kamera sonraki dokunuşlarda bireyin peşine gitmez.
+
+Sağdaki dar krem panel türü tanıtır; **Şu anda** bölümünde izlenen penguenin gerçek denetleyici durumu ve kısa açıklaması gösterilir. Panel davranış seçmez. Telefonda da sağdadır; sahne genişliği buna göre hesaplanır. Klavye kullanıcıları gövde üstündeki görünmez, odakta halkası beliren hedefleri kullanır. Geri dönüş paneli kapatıp sahneyi tam genişliğe getirir.
+
+Otomatik davranış yalnız yakın penguen görünümünde açıktır; görünmeyen/gizli sekmedeki iskeletler donar. Karede en fazla iki görünür iskelet örneklenir; dokunmatik yakın görünüm30Hz ile sınırlıdır. Arada dinlenen iskeletler güncellenmez. Azaltılmış hareket tercihinde otomatik davranış kapalı, açık dokunuş kullanılabilir. Fiziksel telefon FPS/pil ölçümü yapılmadı.
+
+Kod: `viewer/penguins.js` sınırlı koloni zamanlaması; `penguin-motion.js` sonlu hareket/geçişler; `penguin-info.js` salt bilgi paneli; `app.js` sabit kamera ve geri dönüş. `node verification/penguin-discovery.mjs` gerçek üretim GLB'siyle beş bireyin davranışını,25 hızlı dokunuşu, iki iskelet sınırını, kıyı/su güvenliğini, görünmeyen yüzücünün kıyıyı durdurmamasını ve çıkışta durmayı doğrular. [Ekranlar ve tasarım](design/2026-10-15-penguen-koloni/) · [Görsel kontrol](design-qa.md).
+
+Yalnız yerel `dist/` yenilendi; canlı yayın/commit/push yapılmadı, `docs/` ve M5 yol/kroki verileri korunur. Diğer türlerin `20261015ao` etkileşimi sürer. Aşağıdaki notlar önceki sürümlerin kaydıdır.
+
+## Sade sahne üzerinde keşif · `20261015ao`
+
+[Bilgisayarda aç](http://127.0.0.1:8768/?revision=20261015ao) · [Aynı Wi-Fi'deki telefon](http://192.168.0.11:8768/?revision=20261015ao).
+
+İsim etiketi → yaşam alanı → hayvan seviyesine yaklaşım → hayvana dokunarak kısa davranış. Penguen, flamingo, zürafa ve beyaz gergedanda aynı akış kullanılır. Tepkiler tür ve ortama göre, art arda tekrarı azaltılarak seçilir. Alt açı/zoom çubukları, kategori/katman menüsü ve penguen seçim/davranış paneli ile eski DOM modülü kaldırıldı. Orbit/zoom fare ve dokunma hareketleriyle, geri dönüş tek üst kontrolle yapılır. Kroki/yol çalışma aracı `v2/` altında korunur.
+
+Katalogdaki hazır barınak/yapılar ve kuş kafesi isimlendirilir. Uzakta çakışan ikincil etiketler sadeleşir, yaklaşınca açılır. Alan görünümünde aynı tür tek etikette, yakında bireyler ayrı hedeflerdedir. Kamera tek perspektif sistemi kullanır; kafese giriş/çıkışta kapıdan geçen ara noktalar vardır. Ekran yönü değişince otomatik kadraj hesaplanır; sürükleme uçuşu keser.
+
+Kod: `explorer-camera.js` kamera; `explorer-labels.js` erişilebilir isimler; `tap-colony.js` ortak hayvan yaşam döngüsü; `animal-interaction.js` kısa tepkiler ve sınırlı yürüyüş. Tür dosyaları kaynak klip, malzeme ve yerleşimi tanımlar. Penguenin uyku/yüzme denetleyicisi korunur; kendiliğinden hareket başlatan zamanlayıcı kaldırıldı. Dinlenmede iskelet güncellemesi yoktur; sahne değişmedikçe GPU çizimi istenmez.
+
+Kontroller: `node verification/explorer-interactions.mjs` dört gerçek üretim modülü/GLB ile dokunma, yürüyüş, zemin teması, gizli sekmede durma, kesintilerin sonlanması, ortak geometri/ayrı iskelet ve dokunmatik30Hz sınırını doğrular. Fiziksel telefon FPS/GPU/pil ölçümü değildir. [Tasarım/ekran kanıtları](design/2026-10-15-sade-kesif/) · [Görsel kontrol](design-qa.md).
+
+Arayüzü mevcut yerel pakete geçirmek: `python publish_local.py --local-only --runtime-only`. Tüm geometrileri yeniden üretmek: `python publish_local.py --local-only`. Canlıya yayınlanmadı; `docs/`, commit ve push kullanılmadı. Aşağıdaki sürüm notları önceki aşamaların tarihsel kaydıdır.
+
+## Penguenlerde dokunarak etkileşim · `20261015an`
+
+[Yerelde dene](http://127.0.0.1:8768/?focus=penguin-close&revision=20261015an) · [Aynı Wi-Fi'deki telefon](http://192.168.0.11:8768/?focus=penguin-close&revision=20261015an). Kıyıdaki penguenlerde bakınma, tüy bakımı ve uyuma/uyanma; havuzdakilerde kısa yüzme ve bekleme. Penguene dokunmak ve erişilebilir seçim düğmeleri aynı akışı kullanır. Rastgele dolaşan eski penguen denetleyicisi kaldırıldı; [davranış, görünüm ve DOM denetimleri ayrıldı](bolgeler/15-penguen/model/hayvan/README.md).
+
+Sakin/uyku duruşunda iskelet ve sahne çizimi güncellenmez; seçilmiş uyanık kıyı bireyinde aralıklı kısa bakınma olabilir. Penguen görünümünde diğer hayvan animasyonları geçici durur. Gerçek GLB geçişlerindeki zemin teması çevrimdışı tabloyla düzeltilir; kare başına vertex döngüsü yoktur. Kara/su geçişi veya besleme sahnesi eklenmedi. Fiziksel telefon GPU/FPS ve enerji tüketimi henüz ölçülmedi. Çalışma yalnız yereldir; `docs/` ve canlı sürüm değişmedi.
+
+## Güncel yerel çalışma · `20261015am`
+
+Kullanıcının son talimatı gereği geliştirmeler yalnız yerelde yapılır; yeni bir açık yayın talebi olmadan GitHub'a gönderilmez ve `docs/` değiştirilmez. Aşağıdaki eski yayın ve IP notları tarihsel kayıttır. Güncel Wi-Fi adresi **192.168.0.11**; bilgisayar ve yerel sunucu açık olmalıdır.
+
+- [Kafes içindeki dört temsili flamingo](http://127.0.0.1:8768/?focus=aviary-close&revision=20261015am): ayrı sakin duruş, çevreye bakma ve duruş değiştirme klipleri. Tür Bursa'da doğrulanır; bu dört bireyin güncel kubbe içi yerleşimi doğrulanmadı. [Kaynak, düzenlenebilir model ve kontroller](bolgeler/32-su-kuslari/model/README.md).
+- [İki temsili Baringo zürafası](http://127.0.0.1:8768/?focus=giraffe-close&revision=20261015am): özgün yavaş yürüyüş, kaynak dinlenme klibi; fotoğraflara göre yorumlanan kumlu açık bölüm, taş sınır, yeşil korkuluk ve dal yemlikleri. Tam Savanna veya teyitsiz ahır cephesi tamamlanmış sayılmaz. [Ayrı model incelemesi](http://127.0.0.1:8768/model-review/giraffe/?view=animal).
+
+Zürafa modelinin kendi zemini atlasın çim/yol katmanından ayrılır. Hayvanlar ayrı iskeletler, paylaşılan geometri ve dokular kullanır; görünmeyen hareketler durur, uzak görünümde güncelleme azalır. Gerçek telefon GPU/FPS ölçümü ayrıca yapılmalıdır. Penguen ve gergedanın önceki yerel düzeltmeleri korunur.
+
 ## Canlı sürüm · 15 Ekim 2026
 
 Kullanıcının GitHub'a yükleme ve ardından canlıya alma talebiyle `20261015ai` sürümü GitHub Pages için hazırlandı. [3B atlas](https://ahmetguner74.github.io/bursa-hayvanat-bahcesi-3d/) · [Hareketli penguenler](https://ahmetguner74.github.io/bursa-hayvanat-bahcesi-3d/?focus=penguin-close&revision=20261015ai) · [V2 yollar ve kroki](https://ahmetguner74.github.io/bursa-hayvanat-bahcesi-3d/v2/).
@@ -11,6 +92,8 @@ Aşağıdaki yerel çalışma notları önceki aşamaların kaydıdır; bu açı
 **15 Ekim 2026 yerel çalışma:** Resmî krokinin 1–43 numaralı alanı [bölge kaynak envanterinde](bolgeler/README.md) ayrı klasörlere ayrıldı. #31/#32 kubbesi için yapımcı kaynaklarına dayanan ilk düzenlenebilir [glTF kabuk modeli](bolgeler/31-pelikan-goleti/model/README.md) üretildi. [Türk Köyü](bolgeler/30-turk-koyu/model/README.md), [Penguen havuzu](bolgeler/15-penguen/model/README.md) ve [Savanna ahşap yapı bileşeni](bolgeler/12-afrika-savana/model/README.md) ilk modelleri de eklendi. Görünüm menüsünde 43 alan listelenir; 42 alanın yaklaşık kroki konumuna gidilir, 40 numaralı alanın konumu teyitsizdir. Mockup hedefiyle karşılaştırılan 3B sahne ve [model incelemesi](http://127.0.0.1:8768/model-review/) yalnız `dist/` altında yerel olarak açılır. 3B sahnenin yol yüzeyleri, Dot'un manuel QGIS paketinden alınan `v2/manual-roads-metric.json` verisine geçti; 2016/2018 M5 çizgileri kaynak olarak saklanır. Aşağıdaki ilk araştırma ve eski M5 yol açıklamaları tarihsel aşama notlarıdır. `docs/` ve canlı yayın bu çalışma kapsamında değiştirilmez.
 
 ## Güncel ilerleme · 15 Ekim 2026
+
+**Yerel geliştirme `20261015al`:** İki hareketli beyaz gergedan, kaynaklı kavisli barınak/yeşil çatı, kapılar, iç bölmeler, çevre duvarı/çit, toprak avlu ve çamur alanı eklendi. Penguen havuzu kenar/yol yüzey çakışması, yanlış kıyı yol taşları ve su altı kaya destekleri düzeltildi. [Gergedan](http://127.0.0.1:8768/?focus=rhino-close&revision=20261015al) · [Penguen havuzu](http://127.0.0.1:8768/?focus=penguin&perspective=65&revision=20261015al). Kullanıcı yeni açık talep gelmeden yayınlamamayı istedi; **`docs/` ve canlı Pages sürümü 20261015ai olarak kaldı.**
 
 **Hareketli Afrika penguenleri, `20261015ai`:** 15 numaralı havuz/kıyıya üç kara ve iki yüzücü yorum bireyi eklendi. Gerçek iskelet animasyonları, farklı bekleme/tüy bakımı/yürüyüş/yüzme zamanları, sınır ve mesafe kontrolü vardır. Beş hayvan 20.620 üçgen; geometri/dokular ortaktır, görünmeyen iskeletler durur. Kaynak Major · CC BY4.0; özgün FBX/GLB, düzenlenebilir Blender ve doğrulama kayıtları [hayvan klasöründe](bolgeler/15-penguen/model/hayvan/README.md). [Yerelde izle](http://127.0.0.1:8768/?focus=penguin-close&revision=20261015ai) · [Animasyonları incele](http://127.0.0.1:8768/model-review/?model=penguin-animal&revision=20261015ai) · [Aynı Wi-Fi](http://192.168.0.192:8768/?focus=penguin-close&revision=20261015ai). İlk tarayıcı ölçümleri masaüstü60 Hz/mobil genişlikte30 Hz güncelleme; fiziksel telefon FPS ölçümü değildir.
 
@@ -91,9 +174,9 @@ Yerel üretim için Python, `requirements.txt` içindeki kütüphaneler ve bina 
 
 [Canlı 3B atlası aç](https://ahmetguner74.github.io/bursa-hayvanat-bahcesi-3d/?focus=cage).
 
-`python publish_local.py` ve eski `--local-only` seçeneği yalnız yerel `dist/` paketini üretir. Bu çalışma için üreticinin `docs/` çıktısı kapatıldı. `main` dalındaki mevcut `docs/` klasörü eski canlı sitenin kaynağı olarak durur; yerel modelleme onu değiştirmez. Özgün DGN paftaları, ara ASCII dosyaları, özel referans fotoğrafları ve denetim görselleri yalnızca yerel klasörde kalır; GitHub deposuna dahil edilmez.
+`python publish_local.py` ve `--local-only` seçeneği yalnız yerel `dist/` paketini üretir. Açık yayın isteği sonrasında `python build_public.py --publish`, izin listesiyle `docs/` paketini hazırlar; commit/push yapmaz. GitHub Pages kaynağı `main:/docs` klasörüdür. Özgün DGN paftaları, ara ASCII dosyaları ve özel referans fotoğrafları GitHub deposuna dahil edilmez. Uygulama ekranlarından oluşan tasarım denetim kanıtları geliştirme dosyaları arasındadır.
 
-Canlı arayüz tek bir tam ekran sahnedir. Görünüm menüsündeki genel plan perspektifi düz plan ile daha derin görünüm arasında ayarlanabilir. Kaynak açıklamaları ve model standardı geliştirme dosyalarında tutulur; `docs/` yayın paketine veya sahne denetimlerine eklenmez.
+Canlı arayüz tek bir sahnedir: yaşam alanı etiketine ve ardından hayvanın gövdesine dokunulur. Bireye tekrar dokunmak türe uygun davranış ister. Geri dönüş ve tam ekran dışında hareket düğmesi veya iç içe menü yoktur. V2 yol/kroki çalışma aracı ayrı `v2/` adresinde korunur. Model kaynakları ve lisanslar kimlik işaretinden açılır.
 
 ## Su ve yol görünümü — yerel ara sürüm
 

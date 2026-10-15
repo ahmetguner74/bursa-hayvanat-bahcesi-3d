@@ -1,9 +1,51 @@
 {
+  "revision": "20261016aq",
   "actualRuntimeModule": true,
   "birds": 5,
+  "idlePoseUpdates": 0,
+  "sleepPoseUpdates": 0,
+  "actualMeshPicking": true,
+  "waterTravel": true,
   "offscreenFrozen": true,
   "hiddenDocumentFrozen": true,
   "toggleWorks": true,
-  "resumeDistanceMetres": 0.008545080982925352,
+  "interruptedCommandsSettle": true,
+  "reducedMotionRespected": true,
+  "coarsePointer30Hz": true,
+  "resumeDistanceMetres": 0.007287875006244268,
+  "grounding": {
+    "minimum": -0.00010255040504411617,
+    "maximum": 0.0020158924523115684,
+    "worstPose": {
+      "index": 0,
+      "water": false,
+      "x": -8.4,
+      "y": 123,
+      "heading": -1.35,
+      "speed": 0,
+      "active": true,
+      "activity": "sleep",
+      "phase": "blend",
+      "pose": {
+        "clip": "Sit1",
+        "time": 0
+      },
+      "samples": [
+        {
+          "clip": "Sit1",
+          "time": 0,
+          "weight": 0.019675925925895843
+        },
+        {
+          "clip": "Sleep",
+          "time": 0,
+          "weight": 0.9803240740741042
+        }
+      ],
+      "visible": true
+    }
+  },
+  "independentSkeletons": true,
+  "sharedGeometry": true,
   "physicalGpuOrPhoneTest": false
 }

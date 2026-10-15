@@ -20,12 +20,14 @@ FILES = (
     ".nojekyll", "index.html", "style.css", "app.js", "model.js",
     "scene-effects.js", "forest.js", "forest-impostors.js", "region-models.js",
     "ground-material.js", "lighting.js", "plant-cards.js", "atlas-orbit.js",
-    "penguins.js", "penguin-motion.js", "site-data.json", "current-plan-data.json",
+    "penguins.js", "penguin-motion.js", "rhinos.js", "rhino-motion.js",
+    "animal-interaction.js", "tap-colony.js", "explorer-camera.js", "explorer-labels.js", "animal-info.js", "animal-profiles.js", "animal-views.js", "penguin-views.js", "touch-cue.js",
+    "giraffes.js", "giraffe-motion.js", "aviary-birds.js", "site-data.json", "current-plan-data.json",
     "surface-layers.json", "building-shell.json", "landscape-layout.json",
     "ground-material-layout.json", "region-locations.json", "scene-model-catalog.json",
 )
 DIRECTORIES = ("vendor", "assets", "models", "model-review", "v2", "reference-maps", "design-reference")
-EXTENSIONS = {".js", ".html", ".css", ".json", ".glb", ".png", ".jpg", ".txt"}
+EXTENSIONS = {".js", ".html", ".css", ".json", ".glb", ".png", ".jpg", ".svg", ".txt"}
 
 
 def main() -> None:
@@ -50,6 +52,8 @@ def main() -> None:
         if file.stat().st_size >= 95 * 1024 * 1024:
             raise ValueError(f"Runtime file is too large for regular Git: {file.name}")
     PUBLIC.mkdir(exist_ok=True)
+    for old_module in ("penguin-interaction-ui.js", "penguin-info.js"):
+        (PUBLIC / old_module).unlink(missing_ok=True)
     records = []
     for file in sorted(sources):
         relative = file.relative_to(DIST)

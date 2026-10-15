@@ -1,0 +1,171 @@
+{
+  "schema": "bursa-zoo-aviary-bird-colony/v1",
+  "species": "Greater flamingo / Phoenicopterus roseus",
+  "label": "Flamingolar · temsili kıyı kolonisi",
+  "asset": "greater-flamingo.glb",
+  "assetSha256": "847f741fd7cb7eeee330f44815a975fdda87b5f233dc2ba743fd9bb4c7a842e5",
+  "heightM": 1.3,
+  "geometryTrianglesPerAnimal": 12040,
+  "jointsPerAnimal": 5,
+  "groundZ": -0.24,
+  "coordinateFrame": "Cage-local XY, transformed only by the existing current-plan modelAnchor; M5 inputs untouched",
+  "anchor": {
+    "x": -30,
+    "y": -64,
+    "angle": 0.15707963267948966
+  },
+  "layoutStatus": "Yorum",
+  "evidenceLabel": "Tür Bursa Zoo’da doğrulanır; bu dört bireyin güncel kubbe içi konumu ve sayısı doğrulanmadı. Yerleşim görsel yorumdur.",
+  "sourceAnimation": false,
+  "behaviors": [
+    "Rest",
+    "LookAround",
+    "Settle"
+  ],
+  "unsupportedBehaviors": [
+    "walking",
+    "swimming",
+    "flying",
+    "feeding",
+    "true feather preening"
+  ],
+  "animals": [
+    {
+      "id": "illustrative-flamingo-1",
+      "localXY": [
+        -10.4,
+        -11.4
+      ],
+      "worldXY": [
+        -38.4886058407308,
+        -76.88656551920297
+      ],
+      "scale": 1,
+      "heading": 2.75,
+      "initialClip": "LookAround",
+      "phase": 0,
+      "behaviorSeed": 42,
+      "clearance": {
+        "dryGround": true,
+        "waterClearanceM": 2.4732764196427497,
+        "pathClearanceM": 0.9036308469966005,
+        "buildingClearanceM": 24.23130758669683,
+        "plantClearanceM": 0.8169560153681623,
+        "treeClearanceM": 22.70946939054279
+      }
+    },
+    {
+      "id": "illustrative-flamingo-2",
+      "localXY": [
+        -8.3,
+        -10.9
+      ],
+      "worldXY": [
+        -36.49267755800113,
+        -76.06420897232093
+      ],
+      "scale": 0.97,
+      "heading": 1.25,
+      "initialClip": "Rest",
+      "phase": 1.8,
+      "behaviorSeed": 155,
+      "clearance": {
+        "dryGround": true,
+        "waterClearanceM": 2.033455901600048,
+        "pathClearanceM": 2.0282038436721344,
+        "buildingClearanceM": 22.227882655824676,
+        "plantClearanceM": 0.7771737286463063,
+        "treeClearanceM": 23.041267326256165
+      }
+    },
+    {
+      "id": "illustrative-flamingo-3",
+      "localXY": [
+        -5.8999999999999995,
+        -11.700000000000001
+      ],
+      "worldXY": [
+        -33.99707796854061,
+        -76.47891692870047
+      ],
+      "scale": 1.025,
+      "heading": -2.2,
+      "initialClip": "Rest",
+      "phase": 3.2,
+      "behaviorSeed": 268,
+      "clearance": {
+        "dryGround": true,
+        "waterClearanceM": 2.8930586140320167,
+        "pathClearanceM": 1.8625096066702507,
+        "buildingClearanceM": 20.868607221401025,
+        "plantClearanceM": 0.7485041498156544,
+        "treeClearanceM": 22.963013739489856
+      }
+    },
+    {
+      "id": "illustrative-flamingo-4",
+      "localXY": [
+        -1.6,
+        -11.1
+      ],
+      "worldXY": [
+        -29.84387878300566,
+        -75.2136357246704
+      ],
+      "scale": 0.99,
+      "heading": 0.9,
+      "initialClip": "Settle",
+      "phase": 0.9,
+      "behaviorSeed": 381,
+      "clearance": {
+        "dryGround": true,
+        "waterClearanceM": 2.109492171455017,
+        "pathClearanceM": 3.1288136849233044,
+        "buildingClearanceM": 17.439311932941752,
+        "plantClearanceM": 0.7201577319639454,
+        "treeClearanceM": 18.632498490540662
+      }
+    }
+  ],
+  "credits": {
+    "title": "https://sketchfab.com/3d-models/greater-flamingo-resting-rigged-bird-1c54310c3877422497d37512f0ba33dc",
+    "author": "Pigcraft",
+    "authorUrl": "https://sketchfab.com/s8819296",
+    "license": "CC BY4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": [
+      "weld duplicate chunk boundaries",
+      "12k collapse derivative, smooth normals",
+      "source neck bumps smoothed in masked six-iteration pass",
+      "missing interdigital webbing added between original toes",
+      "1024px pale plumage material bake: saturation.35/light mix.28, mask preserves legs and dark beak/eyes",
+      "metric grounding/1.30m illustrative adult",
+      "five-bone rest rig and three restrained clips",
+      "normal strength.12/roughness.87"
+    ],
+    "provenance": "Source author discloses AI-assisted3D generation; not a scan of Bursa Zoo."
+  },
+  "sources": [
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/flamingo-greater-flamingo/",
+      "role": "Species present in zoo; exact current enclosure not stated"
+    },
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/sulari-temiz-tut-ekosistemi-yasat/",
+      "imageUrl": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/04/su-kuslari.png",
+      "role": "Official educational image shows pale pink waterbird plumage; capture location and date unverified"
+    },
+    {
+      "url": "https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/",
+      "role": "Historical interior confirms waterbirds in dome; photographs show stork/egret forms, does not establish current flamingo census"
+    },
+    {
+      "url": "https://www.wwt.org.uk/wetland-centres/slimbridge/flamingo-diary/hot-pink-flamingos-flamingo-care-in-warm-weather",
+      "role": "Rest and feather care can occupy a large part of the day; quiet shore group plausible"
+    },
+    {
+      "url": "https://animals.sandiegozoo.org/animals/flamingo",
+      "role": "Greater flamingo adult height120–145cm; social/rest behavior"
+    }
+  ]
+}
