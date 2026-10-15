@@ -1,0 +1,77 @@
+{
+  "schema": "bursa-zoo-turkish-village-model/v1",
+  "sourceIds": [
+    "H22D01C2B:229",
+    "H22D01C2B:230",
+    "H22D01C2B:231",
+    "H22D01C2B:232",
+    "H22D01C2B:233",
+    "H22D01C2B:234",
+    "H22D01C2B:235",
+    "H22D01C2B:236",
+    "H22D01C2B:244"
+  ],
+  "originM5LocalXY": [
+    -68.0,
+    8.0
+  ],
+  "unit": "metre",
+  "upAxis": "glTF Y-up",
+  "footprintAreaM2": 735.12690115,
+  "roofProjectedOverlapM2": 0,
+  "buildingCount": 9,
+  "hipFacetCount": 76,
+  "exteriorWallSegments": 70,
+  "internalHeightSteps": 5,
+  "facadeOpenings": 18,
+  "triangles": 3857,
+  "interpretation": "M5 footprint partition retained; hip roofs, eaves, material and facade details interpreted from historical aerial photo; windows are not a measured facade survey",
+  "architecturalSource": "https://www.trendinsaat.com.tr/tr/projeler/kent-parklari",
+  "roofHeights": [
+    {
+      "sourceId": "H22D01C2B:229",
+      "ridgeZ": 7.798899999999993,
+      "eavesZ": 5.798899999999993
+    },
+    {
+      "sourceId": "H22D01C2B:230",
+      "ridgeZ": 6.273900000000001,
+      "eavesZ": 4.696818290000001
+    },
+    {
+      "sourceId": "H22D01C2B:231",
+      "ridgeZ": 6.198899999999998,
+      "eavesZ": 4.344471289999999
+    },
+    {
+      "sourceId": "H22D01C2B:232",
+      "ridgeZ": 5.898900000000001,
+      "eavesZ": 3.898900000000001
+    },
+    {
+      "sourceId": "H22D01C2B:233",
+      "ridgeZ": 5.898900000000001,
+      "eavesZ": 4.530898730000001
+    },
+    {
+      "sourceId": "H22D01C2B:234",
+      "ridgeZ": 5.898900000000001,
+      "eavesZ": 4.215223230000001
+    },
+    {
+      "sourceId": "H22D01C2B:235",
+      "ridgeZ": 2.890599999999996,
+      "eavesZ": 1.614213479999996
+    },
+    {
+      "sourceId": "H22D01C2B:244",
+      "ridgeZ": 2.7239000000000044,
+      "eavesZ": 1.1113549100000044
+    },
+    {
+      "sourceId": "H22D01C2B:236",
+      "ridgeZ": 2.048899999999993,
+      "eavesZ": 0.5593266499999932
+    }
+  ]
+}

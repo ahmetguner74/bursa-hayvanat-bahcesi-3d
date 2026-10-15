@@ -1,0 +1,86 @@
+{
+  "source": "https://polyhaven.com/a/jacaranda_tree",
+  "license": "CC0",
+  "files": [
+    {
+      "file": "jacaranda_tree_branches_diff_1k.jpg",
+      "source": "textures/jacaranda_tree_branches_diff_1k.png",
+      "sourceSha256": "fe671f7fae88e269e4a517b6ff7be74ae3c2d1fdedfea206ebfa9941af0d9e20",
+      "sha256": "e9b3eddced63b80a73fa08d8ab57251b12befc3651d38408e3ba12f41c2a9969",
+      "size": 255471,
+      "conversion": "Runtime 8-bit; diffuse wood JPEG quality90; normal maps512px and renormalized; roughness256px; leaf color/alpha1024px. No repainting."
+    },
+    {
+      "file": "jacaranda_tree_branches_nor_gl_1k.png",
+      "source": "textures/jacaranda_tree_branches_nor_gl_1k.png",
+      "sourceSha256": "e72c3bf652d998d75ef98fc51fb7a10de3b7efd072c191a8eb9c92b6f93340f0",
+      "sha256": "9d99184b3569da788064a3af86727ce9a1665ba458c455798c8e0683b5d9ee94",
+      "size": 498997,
+      "conversion": "Runtime 8-bit; diffuse wood JPEG quality90; normal maps512px and renormalized; roughness256px; leaf color/alpha1024px. No repainting."
+    },
+    {
+      "file": "jacaranda_tree_branches_rough_1k.png",
+      "source": "textures/jacaranda_tree_branches_rough_1k.png",
+      "sourceSha256": "c6db3c33f23654a8d31dcf5609d19d97ab1036b36b3d9a6bcd50ecc975f8fb3c",
+      "sha256": "203b197f52aff03cd55bde4986a694f4cf210864304e1bf3f5e3269a772a57b8",
+      "size": 33313,
+      "conversion": "Runtime 8-bit; diffuse wood JPEG quality90; normal maps512px and renormalized; roughness256px; leaf color/alpha1024px. No repainting."
+    },
+    {
+      "file": "jacaranda_tree_leaves_alpha_1k.png",
+      "source": "textures/jacaranda_tree_leaves_alpha_1k.png",
+      "sourceSha256": "c708a7e928a2e4d26981b021a22deeefc0ebb0e467f60b53cfa636a7e24d68f7",
+      "sha256": "8733dc25e0b4ce98eb6032756e8228bc24864a8d3a4986e61ee51121b25193ec",
+      "size": 356279,
+      "conversion": "Runtime 8-bit; diffuse wood JPEG quality90; normal maps512px and renormalized; roughness256px; leaf color/alpha1024px. No repainting."
+    },
+    {
+      "file": "jacaranda_tree_leaves_diff_1k.png",
+      "source": "textures/jacaranda_tree_leaves_diff_1k.png",
+      "sourceSha256": "5729978e92649ee6cc70bdc457aac1b28b16a10bde0a55004b659a1923c8861b",
+      "sha256": "cd998647768bf183c6d32975864ac1f59593ea4459e27a52572780b93fa409f4",
+      "size": 988866,
+      "conversion": "Runtime 8-bit; diffuse wood JPEG quality90; normal maps512px and renormalized; roughness256px; leaf color/alpha1024px. No repainting."
+    },
+    {
+      "file": "jacaranda_tree_leaves_nor_gl_1k.png",
+      "source": "textures/jacaranda_tree_leaves_nor_gl_1k.png",
+      "sourceSha256": "4dc58cca117cb193629bf6a2b909bd281451c60a5d85f1b1d438d296b90a1091",
+      "sha256": "a13440b4b3a7cc383fa218a33cc893b3f67c97795aa01d0b83a3ae75760bc669",
+      "size": 404005,
+      "conversion": "Runtime 8-bit; diffuse wood JPEG quality90; normal maps512px and renormalized; roughness256px; leaf color/alpha1024px. No repainting."
+    },
+    {
+      "file": "jacaranda_tree_leaves_rough_1k.png",
+      "source": "textures/jacaranda_tree_leaves_rough_1k.png",
+      "sourceSha256": "2f6b89e7a1983cfa6fc2050f993c2c91c9afc86ce285607fa5a5f8f6b1b4c879",
+      "sha256": "0935114f32133befebfe0c38840a6d3849cf065eeb5e1e36a221566b60e0bf35",
+      "size": 19646,
+      "conversion": "Runtime 8-bit; diffuse wood JPEG quality90; normal maps512px and renormalized; roughness256px; leaf color/alpha1024px. No repainting."
+    },
+    {
+      "file": "jacaranda_tree_trunk_diff_1k.jpg",
+      "source": "textures/jacaranda_tree_trunk_diff_1k.png",
+      "sourceSha256": "9ba4a3af9d38d54638df35a2bae4f30455f5fb25c080825f6e22af4e5d65c7f2",
+      "sha256": "3b81c484476c14a61efe8d7871a8345401669541876f31288b732997be3f25a7",
+      "size": 428144,
+      "conversion": "Runtime 8-bit; diffuse wood JPEG quality90; normal maps512px and renormalized; roughness256px; leaf color/alpha1024px. No repainting."
+    },
+    {
+      "file": "jacaranda_tree_trunk_nor_gl_1k.png",
+      "source": "textures/jacaranda_tree_trunk_nor_gl_1k.png",
+      "sourceSha256": "d2c1dd8a274983731e2418b4eb6b49bddcf375d170c70010b799d7417eafbfac",
+      "sha256": "c504dafb0dade168d0abe43f1b62ba39426737831dfb1105d4f2dc5776985933",
+      "size": 545507,
+      "conversion": "Runtime 8-bit; diffuse wood JPEG quality90; normal maps512px and renormalized; roughness256px; leaf color/alpha1024px. No repainting."
+    },
+    {
+      "file": "jacaranda_tree_trunk_rough_1k.png",
+      "source": "textures/jacaranda_tree_trunk_rough_1k.png",
+      "sourceSha256": "9262a1d4e8cc848a29bfc93333e8ad844c7e470e592787604b7e090e0ed149f2",
+      "sha256": "b686a89b0783a7962004bcbf3935078334c1b1226c0bea8a17a11e7c9b8fd251",
+      "size": 34806,
+      "conversion": "Runtime 8-bit; diffuse wood JPEG quality90; normal maps512px and renormalized; roughness256px; leaf color/alpha1024px. No repainting."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f3f0e8">
+  <title>Bursa Hayvanat Bahçesi · V2 Yol Ağı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="workspace" aria-label="Bursa Hayvanat Bahçesi V2 yol ağı">
+    <svg id="map" class="map" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gerçek kroki üzerinde rektifiye edilmiş yaya ve araç yolları" tabindex="0">
+      <image id="official-map" class="official-map" aria-label="Bursa Hayvanat Bahçesi resmi krokisi" preserveAspectRatio="none" />
+      <g id="road-surfaces"></g>
+    </svg>
+
+    <header class="heading">
+      <span class="version">V2 · Yerel çalışma</span>
+      <h1>Bursa Hayvanat Bahçesi <span>Yol ağı</span></h1>
+      <p id="road-status" role="status">Yollar yükleniyor…</p>
+    </header>
+
+    <div class="tools" role="group" aria-label="Harita denetimleri">
+      <button id="zoom-in" type="button" aria-label="Yakınlaştır" title="Yakınlaştır">+</button>
+      <button id="zoom-out" type="button" aria-label="Uzaklaştır" title="Uzaklaştır">−</button>
+      <button id="reset-view" class="reset" type="button" title="Tüm yolları göster">Tümünü göster</button>
+    </div>
+
+    <aside class="overlay-panel" aria-label="Resmi kroki katmanı">
+      <label class="overlay-switch" for="show-official-map">
+        <input id="show-official-map" type="checkbox" checked>
+        <span>Gerçek kroki</span>
+      </label>
+      <div class="overlay-opacity-row">
+        <label for="official-map-opacity">Saydamlık</label>
+        <output id="official-map-opacity-value" for="official-map-opacity">45%</output>
+      </div>
+      <input id="official-map-opacity" type="range" min="0" max="100" value="45" aria-label="Kroki saydamlığı, yüzde">
+      <p id="official-map-status">Güncel resmi kroki yükleniyor…</p>
+    </aside>
+
+    <aside class="legend" aria-label="Yol sınıfları">
+      <div class="legend-title">Yol yüzeyleri</div>
+      <div class="legend-row"><i class="swatch pedestrian" aria-hidden="true"></i><span>Yaya yolları</span><output id="pedestrian-count">—</output></div>
+      <div class="legend-row"><i class="swatch vehicle" aria-hidden="true"></i><span>Araç yolları</span><output id="vehicle-count">—</output></div>
+      <p>2026 resmi krokisiyle yaklaşık hizalanmış yol yüzeyleri. Krokiyi kapatarak yalnız yolları görebilirsiniz.</p>
+    </aside>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

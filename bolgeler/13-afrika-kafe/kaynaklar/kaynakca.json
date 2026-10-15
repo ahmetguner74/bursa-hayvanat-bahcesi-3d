@@ -1,0 +1,209 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 13,
+  "name": "Afrika Kafe",
+  "type": "tesis",
+  "searched": "afrika kafe",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [],
+  "documents": [
+    {
+      "title": "Bursa Hayvanat Bahçesi genişliyor",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesi-genisliyor/",
+      "type": "post"
+    },
+    {
+      "title": "HAYVANAT BAHÇESİNDE DOĞUM GÜNÜ SÜRPRİZİ",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvanat-bahcesinde-dogum-gunu-surprizi/",
+      "type": "post"
+    },
+    {
+      "title": "HAVYANAT BAHÇESİ GÖZ KAMAŞTIRIYOR",
+      "url": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "type": "post"
+    },
+    {
+      "title": "BURSA HAYVANAT BAHÇESİ YENİLENİYOR",
+      "url": "https://www.bursahayvanatbahcesi.com/491/",
+      "type": "post"
+    },
+    {
+      "title": "Tarihçe",
+      "url": "https://www.bursahayvanatbahcesi.com/kurumsal/tarihce/",
+      "type": "page"
+    },
+    {
+      "title": "Bursa Hayvanat Bahçesinde kış uygulaması Kaynak: Bursa Hayvanat Bahçesinde kış uygulaması",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesinde-kis-uygulamasi-kaynak-bursa-hayvanat-bahcesinde-kis-uygulamasi/",
+      "type": "post"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "7bc44e2d5796c8c21c102c5ff62d3fc999d2dbe977d2f760f91e37e675744628",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "b2b298ffa3c607f5c4d2ed16853fd912c99808a48a47a60e2f89cfc5f39f7fb9",
+    "nativeFeatureCount": 53,
+    "nativeTreeCount": 5,
+    "status": "illustrated-label-anchor"
+  },
+  "architecturalReferences": [
+    {
+      "file": "kaynaklar/fotograflar/6722_1_201105211423-150x150.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_1_201105211423-150x150.jpg",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "sourcePublished": "2011-05-21",
+      "captureDate": "Çekim tarihi ayrıca teyitsiz",
+      "sha256": "ca0bbfd81b7588360b48bb05f6225da6724669c5722ccfd33eb46d0b9c482198",
+      "role": "Afrika Kafe açılış töreni bağlamı; ahşap/eğimli çatı/bahçe ayrıntıları bazı karelerde görülür.150×150 küçük görsel; ölçü veya tam cephe kanıtı değildir",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/6722_3_201105211423-150x150.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_3_201105211423-150x150.jpg",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "sourcePublished": "2011-05-21",
+      "captureDate": "Çekim tarihi ayrıca teyitsiz",
+      "sha256": "cfb3897a9e7e048eb970800a396011faa3024c431112947e8bb6c680be61d821",
+      "role": "Afrika Kafe açılış töreni bağlamı; ahşap/eğimli çatı/bahçe ayrıntıları bazı karelerde görülür.150×150 küçük görsel; ölçü veya tam cephe kanıtı değildir",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/6722_5_201105211423-150x150.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_5_201105211423-150x150.jpg",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "sourcePublished": "2011-05-21",
+      "captureDate": "Çekim tarihi ayrıca teyitsiz",
+      "sha256": "c2f39c00a82dc20d2df5319ac4b002193a35490f0da678c5b82abd2303ff5056",
+      "role": "Afrika Kafe açılış töreni bağlamı; ahşap/eğimli çatı/bahçe ayrıntıları bazı karelerde görülür.150×150 küçük görsel; ölçü veya tam cephe kanıtı değildir",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/6722_4_201105211423-150x150.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_4_201105211423-150x150.jpg",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "sourcePublished": "2011-05-21",
+      "captureDate": "Çekim tarihi ayrıca teyitsiz",
+      "sha256": "35f89a011aa3805761223efdfc7d92ed5eb9fc22f7094ac0fda4ecf0abcbbc89",
+      "role": "Afrika Kafe açılış töreni bağlamı; ahşap/eğimli çatı/bahçe ayrıntıları bazı karelerde görülür.150×150 küçük görsel; ölçü veya tam cephe kanıtı değildir",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/6722_6_201105211423-150x150.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_6_201105211423-150x150.jpg",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "sourcePublished": "2011-05-21",
+      "captureDate": "Çekim tarihi ayrıca teyitsiz",
+      "sha256": "bf137c00a879df552e24dd8e5a5a2a57d779bb1be46d627eb45a96bd35239eb3",
+      "role": "Afrika Kafe açılış töreni bağlamı; ahşap/eğimli çatı/bahçe ayrıntıları bazı karelerde görülür.150×150 küçük görsel; ölçü veya tam cephe kanıtı değildir",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/6722_7_201105211423-150x150.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_7_201105211423-150x150.jpg",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "sourcePublished": "2011-05-21",
+      "captureDate": "Çekim tarihi ayrıca teyitsiz",
+      "sha256": "281d73501886987272c82b1878959fe0d211f2f6d023bad7d2ff18507266414e",
+      "role": "Afrika Kafe açılış töreni bağlamı; ahşap/eğimli çatı/bahçe ayrıntıları bazı karelerde görülür.150×150 küçük görsel; ölçü veya tam cephe kanıtı değildir",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/6722_9_201105211423-150x150.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_9_201105211423-150x150.jpg",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "sourcePublished": "2011-05-21",
+      "captureDate": "Çekim tarihi ayrıca teyitsiz",
+      "sha256": "b39392b26ed71e90eb9c7335224537d30a721dd8bb59b0dda118435b6737ee8b",
+      "role": "Afrika Kafe açılış töreni bağlamı; ahşap/eğimli çatı/bahçe ayrıntıları bazı karelerde görülür.150×150 küçük görsel; ölçü veya tam cephe kanıtı değildir",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/6722_10_201105211423-150x150.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_10_201105211423-150x150.jpg",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "sourcePublished": "2011-05-21",
+      "captureDate": "Çekim tarihi ayrıca teyitsiz",
+      "sha256": "f7bd01da952eef83ed794a0a329179f41479169664fef638bb0cf58977e79fc7",
+      "role": "Afrika Kafe açılış töreni bağlamı; ahşap/eğimli çatı/bahçe ayrıntıları bazı karelerde görülür.150×150 küçük görsel; ölçü veya tam cephe kanıtı değildir",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/6722_11_201105211423-150x150.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_11_201105211423-150x150.jpg",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "sourcePublished": "2011-05-21",
+      "captureDate": "Çekim tarihi ayrıca teyitsiz",
+      "sha256": "20886a9b524360de0aad6fcf0912e61c36fe45b8022b5a33726fe1e6f0503dd9",
+      "role": "Afrika Kafe açılış töreni bağlamı; ahşap/eğimli çatı/bahçe ayrıntıları bazı karelerde görülür.150×150 küçük görsel; ölçü veya tam cephe kanıtı değildir",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    }
+  ],
+  "architecturalDocuments": [
+    {
+      "file": "kaynaklar/belgeler/cafe-page-2011.html.txt",
+      "url": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/",
+      "sha256": "0a689552f2b17929c0635101ab52af18944e187d7f12bbc13c7a7f9f63429b38",
+      "sourcePublished": "2011-05-21",
+      "role": "Resmî açılış kaydı; yerel HTML metin arşivi, çalıştırılmaz"
+    },
+    {
+      "file": "kaynaklar/belgeler/cafe-municipal-2011.html.txt",
+      "url": "https://www.bursa.bel.tr/haber/hayvanat-bahcesi-goz-kamastiriyor-6722",
+      "sha256": "c52010b9946ea98fba1e5599f208e9b169f3e7394021e683f2aee03a5b6ed712",
+      "sourcePublished": "2011-05-21",
+      "role": "Resmî açılış kaydı; yerel HTML metin arşivi, çalıştırılmaz"
+    }
+  ],
+  "unavailableReferences": [
+    {
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_1_201105211423.jpg",
+      "checked": "2026-10-15",
+      "status": 404,
+      "note": "Galerinin bir özgün tam boy bağlantısı; diğer tam boy dosyaların durumu ayrıca doğrulanmadı"
+    },
+    {
+      "url": "https://www.bursa.bel.tr/dosyalar/haber_video/6722-havyanat-bahcesi-goz-kamastiriyor-4511.flv",
+      "checked": "2026-10-15",
+      "status": 404
+    }
+  ]
+}

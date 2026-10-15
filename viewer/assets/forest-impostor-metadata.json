@@ -1,0 +1,238 @@
+{
+  "schema": "bursa-zoo-tree-impostors/v1",
+  "source": "https://polyhaven.com/a/jacaranda_tree",
+  "license": "CC0",
+  "authors": [
+    "Rico Cilliers",
+    "Rob Tuytel"
+  ],
+  "sourceSha256": "e28e9ea0deb782a830420126b3c5536bde44d1b532cbfb4dccbcc0e46119a0ce",
+  "renderSourceGltfSha256": "23b7e31890926a4b9f2946524618f97e493ecf33bc10fc503f41bf96dc62235e",
+  "sourceModelLOD": 0,
+  "sourceTriangles": 122245,
+  "leafTintLinear": [
+    0.55,
+    0.72,
+    0.45,
+    1
+  ],
+  "artisticShape": {
+    "schema": "bursa-zoo-generic-tree-shape/v1",
+    "sourceCrownStartFraction": 0.28,
+    "targetCrownStartFraction": 0.55,
+    "reason": "Generic park visual: lift and compact the crown to match the selected woodland concept. This is an artistic proportion, not a measurement of a Bursa tree."
+  },
+  "renderEngine": "three-webgl/r186",
+  "renderSize": 1024,
+  "frameSize": 512,
+  "method": "Exact local GLB with atlas viewer lights. Linear lighting encoded into sRGB PNG; viewer applies ACES once. 2x supersampling; no AI repainting.",
+  "lighting": {
+    "hemisphere": [
+      "#fff9eb",
+      "#9f9a81",
+      1.9
+    ],
+    "sun": [
+      "#fff0d2",
+      3.15
+    ],
+    "direction": [
+      -230,
+      160,
+      350
+    ],
+    "shadowIntensity": 0.78,
+    "shadowRadius": 2.25,
+    "toneMapping": "none"
+  },
+  "sourceHeight": 10.035620746202767,
+  "sourceBaseZ": 0.01235479395836576,
+  "sourceRadialExtent": 6.748711721477452,
+  "center": [
+    0,
+    0,
+    5.030165167059749
+  ],
+  "orthoScale": 14.847165787250395,
+  "frames": [
+    {
+      "index": 0,
+      "azimuthDegrees": 0,
+      "elevationDegrees": 32,
+      "rgbaSha256": "1ee8b43da17e133d38f47defdf30bf4a132829e4dee5cfdfbbfc0c306f6ad91b",
+      "canvasRgbaSha256BeforeEncoding": "087c9de031037d3434f179b8f8664e5c2faf6c2477016e7f00edd65912f58c5d",
+      "file": "tree-00.png",
+      "sha256": "d9a8d0bcef93d93d3534e23a7b78413241187b178346094f3b831b8ff397fee6",
+      "size": 164013
+    },
+    {
+      "index": 1,
+      "azimuthDegrees": 45,
+      "elevationDegrees": 32,
+      "rgbaSha256": "799fb0e467ad08d18b71d694e4ef2a00e997bd4337e8196267da62283e9cdcc1",
+      "canvasRgbaSha256BeforeEncoding": "799fb0e467ad08d18b71d694e4ef2a00e997bd4337e8196267da62283e9cdcc1",
+      "file": "tree-01.png",
+      "sha256": "a462f8212d8ee7059bacad1df681a6cf602e4700063e3ccd14475df18e467a3e",
+      "size": 165777
+    },
+    {
+      "index": 2,
+      "azimuthDegrees": 90,
+      "elevationDegrees": 32,
+      "rgbaSha256": "ec94e3e6d14153041d370f3cc2f7fcda715bdcb700ecf05056bc28796b25be96",
+      "canvasRgbaSha256BeforeEncoding": "ec94e3e6d14153041d370f3cc2f7fcda715bdcb700ecf05056bc28796b25be96",
+      "file": "tree-02.png",
+      "sha256": "1ac19f512dff545ce43cc25603f084ddcb23d48da15ee27c99af433aaf4039c4",
+      "size": 174336
+    },
+    {
+      "index": 3,
+      "azimuthDegrees": 135,
+      "elevationDegrees": 32,
+      "rgbaSha256": "2b6e2f458146dc05389ab6fa022ae9276c9b5298fcb4a95d919aa07a09f1d07b",
+      "canvasRgbaSha256BeforeEncoding": "2b6e2f458146dc05389ab6fa022ae9276c9b5298fcb4a95d919aa07a09f1d07b",
+      "file": "tree-03.png",
+      "sha256": "9792d74d1cb033b01d3c33b15ae3faa0968a3add59a464d3d2c820e152a5e7ae",
+      "size": 164359
+    },
+    {
+      "index": 4,
+      "azimuthDegrees": 180,
+      "elevationDegrees": 32,
+      "rgbaSha256": "d7da7fef6fa7d48bf198942d3edadd249a73ed1b58287d9f3958684748395fe8",
+      "canvasRgbaSha256BeforeEncoding": "d7da7fef6fa7d48bf198942d3edadd249a73ed1b58287d9f3958684748395fe8",
+      "file": "tree-04.png",
+      "sha256": "fcaed1290a6cd50131b8e3af50cd3a5227f448e176e493a2ab2544c0a7768b5a",
+      "size": 148092
+    },
+    {
+      "index": 5,
+      "azimuthDegrees": 225,
+      "elevationDegrees": 32,
+      "rgbaSha256": "db09e8545c85ab0e53f98458d97c6404090df36233b55141e56b7ec5f572187c",
+      "canvasRgbaSha256BeforeEncoding": "db09e8545c85ab0e53f98458d97c6404090df36233b55141e56b7ec5f572187c",
+      "file": "tree-05.png",
+      "sha256": "db696b4f7edf8b775f451c6342a962bb2849b5d39fbd659d5d13b3f7ce2e1041",
+      "size": 158735
+    },
+    {
+      "index": 6,
+      "azimuthDegrees": 270,
+      "elevationDegrees": 32,
+      "rgbaSha256": "dc7e5a9486c449b5385dd8fc6f366c18490907f31ea0060a63f6a1b77556ce2f",
+      "canvasRgbaSha256BeforeEncoding": "dc7e5a9486c449b5385dd8fc6f366c18490907f31ea0060a63f6a1b77556ce2f",
+      "file": "tree-06.png",
+      "sha256": "2bb65f172b138ea3a236a0b7f68d51e9eedfd8af670f31c008e0c07faf5efa1d",
+      "size": 172784
+    },
+    {
+      "index": 7,
+      "azimuthDegrees": 315,
+      "elevationDegrees": 32,
+      "rgbaSha256": "0b8f9049953e51cdac2a65bf4a8e29752d548342441a6fee12201f36b80da71a",
+      "canvasRgbaSha256BeforeEncoding": "0b8f9049953e51cdac2a65bf4a8e29752d548342441a6fee12201f36b80da71a",
+      "file": "tree-07.png",
+      "sha256": "dcbcbdd298d9f99ab21a53aae2fe1982bab37cb070949781c54605efa156267d",
+      "size": 170716
+    },
+    {
+      "index": 8,
+      "azimuthDegrees": 0,
+      "elevationDegrees": 60,
+      "rgbaSha256": "990001aab468dda0821f78e28f5b342e8dc3adb9f676f58718af264e62aa2d8b",
+      "canvasRgbaSha256BeforeEncoding": "990001aab468dda0821f78e28f5b342e8dc3adb9f676f58718af264e62aa2d8b",
+      "file": "tree-08.png",
+      "sha256": "e0fc16d4556ca5e82d6d9f70befefafc921d67846ab88e3f371263c2aba9aa8e",
+      "size": 199947
+    },
+    {
+      "index": 9,
+      "azimuthDegrees": 45,
+      "elevationDegrees": 60,
+      "rgbaSha256": "8868c0b4ec369de60493927f72794e6e341c490810f0feb0730c3b425d0e1e16",
+      "canvasRgbaSha256BeforeEncoding": "8868c0b4ec369de60493927f72794e6e341c490810f0feb0730c3b425d0e1e16",
+      "file": "tree-09.png",
+      "sha256": "1f892077cc4501fde4355701bf354b9ac3c0b258c645b34fd5e0e4835f635f2a",
+      "size": 198533
+    },
+    {
+      "index": 10,
+      "azimuthDegrees": 90,
+      "elevationDegrees": 60,
+      "rgbaSha256": "1c048d960d46015a480389351369fdfbdd24b35aebc7e4ff650324a6e8a2f45f",
+      "canvasRgbaSha256BeforeEncoding": "1c048d960d46015a480389351369fdfbdd24b35aebc7e4ff650324a6e8a2f45f",
+      "file": "tree-10.png",
+      "sha256": "4745401ba02501b6db16514ad9da11f0ac8343175ace6d644e5e5e762e5a8459",
+      "size": 201128
+    },
+    {
+      "index": 11,
+      "azimuthDegrees": 135,
+      "elevationDegrees": 60,
+      "rgbaSha256": "6839e853902a457bdc6489ceda32a582f3e2321890b2f1d21ce39c6a62a7cb61",
+      "canvasRgbaSha256BeforeEncoding": "6839e853902a457bdc6489ceda32a582f3e2321890b2f1d21ce39c6a62a7cb61",
+      "file": "tree-11.png",
+      "sha256": "a8420ea19e06ef26d5746addb2da5a92eb939641468c855bdaa3f8f4439c1428",
+      "size": 193729
+    },
+    {
+      "index": 12,
+      "azimuthDegrees": 180,
+      "elevationDegrees": 60,
+      "rgbaSha256": "52a6951bf6d1ce8fdfe66748e6520a9405775533724c2d0684a86cfa04562c34",
+      "canvasRgbaSha256BeforeEncoding": "52a6951bf6d1ce8fdfe66748e6520a9405775533724c2d0684a86cfa04562c34",
+      "file": "tree-12.png",
+      "sha256": "ce7237570899b3716eb8d35baa132c72e86b71d34acadb318c9b6afb0c8d1ec7",
+      "size": 187469
+    },
+    {
+      "index": 13,
+      "azimuthDegrees": 225,
+      "elevationDegrees": 60,
+      "rgbaSha256": "ae6a50e6423410cb38f40f4d95b20b9eac959c9e00d9191b76722ae349e36610",
+      "canvasRgbaSha256BeforeEncoding": "ae6a50e6423410cb38f40f4d95b20b9eac959c9e00d9191b76722ae349e36610",
+      "file": "tree-13.png",
+      "sha256": "e86896ef8dce66f86cb640e0a5f0fba8f47fbb007120bbebe54f97a79165699b",
+      "size": 199730
+    },
+    {
+      "index": 14,
+      "azimuthDegrees": 270,
+      "elevationDegrees": 60,
+      "rgbaSha256": "f271aa39d898a028278cd81781848a4480252f6cbba5c4d97c3838a78eea253c",
+      "canvasRgbaSha256BeforeEncoding": "f271aa39d898a028278cd81781848a4480252f6cbba5c4d97c3838a78eea253c",
+      "file": "tree-14.png",
+      "sha256": "c43d2644ae3d70a2c1206123b8c57358b54c9bcc471ff098df01c324babeac83",
+      "size": 201686
+    },
+    {
+      "index": 15,
+      "azimuthDegrees": 315,
+      "elevationDegrees": 60,
+      "rgbaSha256": "b910be9964877f862013abd7a08fbc5945465459c489cf9a768f952e894572fd",
+      "canvasRgbaSha256BeforeEncoding": "b910be9964877f862013abd7a08fbc5945465459c489cf9a768f952e894572fd",
+      "file": "tree-15.png",
+      "sha256": "b1a87f366f1bc32eeefeb0adb27f6dedef6cd7db2bc109dd38e8a4b27f72474a",
+      "size": 202047
+    }
+  ],
+  "encodedPngSha256": "83d3fb282e8568fe29a5fa73f749c0adcd679776c81cfafd716fd115441db26c",
+  "canvasRgbaSha256BeforeEncoding": "0ca002241369f77cdaaa5d68bfcdc572c74f49a734debb498e89e4cdd41739f4",
+  "atlasRgbaSha256": "a0973590eba8d70a5f272cea6c16fe2ed115390eee718ef9f2c3b9608915b99c",
+  "atlas": {
+    "file": "forest-impostor-atlas.png",
+    "columns": 4,
+    "rows": 4,
+    "size": [
+      2048,
+      2048
+    ],
+    "sha256": "b37417116fe4f6f49e23d6a3725699efdecc47e07db8638a79b8b566770cebcc",
+    "bytes": 3302130
+  },
+  "limitations": [
+    "Generic visual vegetation, not a Bursa botanical survey.",
+    "View-dependent far proxy with limited parallax; fixed canonical lighting does not reproduce every rotated tree lighting state.",
+    "Near and far are exclusive."
+  ]
+}

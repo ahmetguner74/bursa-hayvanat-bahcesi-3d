@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-15",
+  "scope": "User-requested subagent read-only research; no purchase or implementation",
+  "recommendedSpecies": "Ceratotherium simum",
+  "region": 16,
+  "reason": "Large visible mass, realistic hide without dense fur, strong historical habitat references. Technical judgment; files not inspected.",
+  "officialSpecies": "https://www.bursahayvanatbahcesi.com/hayvan/beyaz-gergedan-white-rhinoceros/",
+  "official2026News": "https://www.bursahayvanatbahcesi.com/dunya-gergedan-gunu/",
+  "historicalHabitat": "https://www.bursahayvanatbahcesi.com/bursa-zoonun-yeni-konuklari-gergedanlar/",
+  "areaCaution": "1057m2 indoor and 3621m2 outdoor in 2018 describe the shared rhino-zebra complex, not region16 alone. Current boundary, gates, wall heights, mud pool and water point need verification.",
+  "candidates": [
+    {
+      "name": "Animalia White Rhinoceros - GiM",
+      "url": "https://cubebrush.co/gim/products/ttfng/animalia-white-rhinoceros-pack",
+      "observedUsd": 149,
+      "formats": [
+        "FBX",
+        "PNG"
+      ],
+      "sellerStatedAnimations": 180,
+      "qualityAccepted": false
+    },
+    {
+      "name": "White Rhinoceros - Ali3D",
+      "url": "https://www.cgtrader.com/3d-models/animal/mammal/fully-rigged-animated-wildlife-realistic-white-rhinoceros",
+      "observedUsd": 24,
+      "formats": [
+        "BLEND",
+        "FBX",
+        "GLB",
+        "glTF"
+      ],
+      "confirmedDescription": "Walking animation; other behavior clips not established",
+      "qualityAccepted": false
+    }
+  ],
+  "alternatives": [
+    {
+      "species": "Baringo giraffe",
+      "region": 12,
+      "reason": "Strongest distant silhouette; neck/leg movement and correct subspecies markings require more work."
+    },
+    {
+      "species": "Brown bear",
+      "region": 29,
+      "reason": "Pool component ready; full enclosure boundary uncertain; realistic near fur adds work."
+    },
+    {
+      "species": "Amur tiger",
+      "region": 35,
+      "reason": "Strong visual impact; fur, shoulder/paw deformation and unmodeled habitat increase effort."
+    }
+  ],
+  "firstScope": "One adult, walking, stopping, broad turns, feeding posture, ear/tail movement, resting; a verified section of the external habitat."
+}

@@ -1,0 +1,16 @@
+{
+  "roofCount": 6,
+  "closedMeshParts": 21,
+  "triangles": 6724,
+  "glbBytes": 899196,
+  "exportedRoofDeltaM2": 3.305764832790302e-05,
+  "exportedFloorDeltaM2": 3.2923405929037986e-05,
+  "otherGroundOverlapM2": {
+    "terrain": 0.0,
+    "path": 1.6656876415298874e-14,
+    "water": 0.0
+  },
+  "generic243BoxRemoved": true,
+  "sourceCoordinatesUnchanged": true,
+  "fieldDimensionsVerified": false
+}

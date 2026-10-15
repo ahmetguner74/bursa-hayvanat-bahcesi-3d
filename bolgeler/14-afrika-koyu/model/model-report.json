@@ -1,0 +1,178 @@
+{
+  "schema": "bursa-zoo-african-village/v1",
+  "unit": "metre",
+  "originM5LocalXY": [
+    100.71515985586787,
+    96.67671636694187
+  ],
+  "sourceIds": [
+    "H22D01C2B:3007",
+    "H22D01C2B:3008",
+    "H22D01C2B:3009",
+    "H22D01C2B:3010",
+    "H22D01C2B:3011",
+    "H22D01C2B:3012",
+    "H22D01C2B:3013"
+  ],
+  "sourceAssociation": "native circle row / historical photograph, approximate",
+  "sourcePhoto": "../kaynaklar/fotograflar/belediye-2012-afrika-koyu-xref1747.jpeg",
+  "dimensionsSurveyed": false,
+  "hutCount": 7,
+  "nativeEaveAreaM2": 546.244784,
+  "roofProjectionSymmetricDifferenceM2": 4.7474347490169205e-12,
+  "triangles": 52856,
+  "solidChecks": {
+    "H22D01C2B_3007_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 80.80758452035825
+    },
+    "H22D01C2B_3007_walls": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 12.613133696490308
+    },
+    "H22D01C2B_3007_floor": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 22.09952571735037
+    },
+    "H22D01C2B_3007_frame": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.02810470715742615
+    },
+    "H22D01C2B_3008_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 55.05290860426883
+    },
+    "H22D01C2B_3008_walls": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 10.279434285638265
+    },
+    "H22D01C2B_3008_floor": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 15.056038418201473
+    },
+    "H22D01C2B_3008_frame": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.028104956869727565
+    },
+    "H22D01C2B_3009_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 74.40845703781604
+    },
+    "H22D01C2B_3009_walls": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 12.072989053705328
+    },
+    "H22D01C2B_3009_floor": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 20.34944703630212
+    },
+    "H22D01C2B_3009_frame": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.02810516708606918
+    },
+    "H22D01C2B_3010_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 52.22848691606739
+    },
+    "H22D01C2B_3010_walls": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 9.992727477694046
+    },
+    "H22D01C2B_3010_floor": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 14.283607414688504
+    },
+    "H22D01C2B_3010_frame": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.028105048342592347
+    },
+    "H22D01C2B_3011_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 79.98365112256117
+    },
+    "H22D01C2B_3011_walls": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 12.54483186509111
+    },
+    "H22D01C2B_3011_floor": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 21.874191240127526
+    },
+    "H22D01C2B_3011_frame": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.028104928805999806
+    },
+    "H22D01C2B_3012_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 52.942110068955564
+    },
+    "H22D01C2B_3012_walls": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 10.065868432868987
+    },
+    "H22D01C2B_3012_floor": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 14.478749231106342
+    },
+    "H22D01C2B_3012_frame": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.028104968587681967
+    },
+    "H22D01C2B_3013_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 76.723768164068
+    },
+    "H22D01C2B_3013_walls": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 12.27100767792306
+    },
+    "H22D01C2B_3013_floor": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 20.982651499904296
+    },
+    "H22D01C2B_3013_frame": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.028105116879916996
+    }
+  },
+  "interpretedFloorAreaM2": 363.73017058501586,
+  "meshOwnership": "One closed stepped shell per roof. Wall doors are true cut openings; walls start at the sole floor top, with no shared volume. Interpreted wall footprints replace terrain/path through the shared partition.",
+  "interpretation": [
+    "Native M5 circular canopy eaves3007–3013 retain every original XY point; association with African Village14 follows their row and the illustrated plan, approximately.",
+    "The municipality2012 report page117 identifies the photographed row as African Village shelters; the embedded327x198 image is historical and does not prove2026 condition.",
+    "White faceted walls, dark open entrances, tiered conical roofs and pointed tops follow the photograph. Eight wall sides, wall radius0.86 of eave radius, all heights, roof courses and door locations are visual estimates.",
+    "M5 sourceH values are retained as metadata only; their meaning as roof/eave/survey level is unconfirmed. Model heights are not surveyed.",
+    "Generated wood shingles are presentation material, not a field scan. Roof material/species and exact course construction are not verified.",
+    "Interpreted floor footprints remove underlying pavement/terrain in the local render partition. Original QGIS road data and M5 coordinates are unchanged.",
+    "Interior rooms, animals, connecting rear structures and the photographed front fence are not yet documented/modelled in this first component.",
+    "One small interpreted paved connector preserves the courtyard connection after removing hut floors from QGIS paving; original manual road coordinates remain unchanged."
+  ]
+}

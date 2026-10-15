@@ -1,0 +1,54 @@
+{
+  "schema": "bursa-zoo-savanna-platform/v1",
+  "sourceId": "H22D01C2B:145",
+  "originM5LocalXY": [
+    203.580448933036,
+    44.67598741130142
+  ],
+  "unit": "metre",
+  "upAxis": "glTF Y-up",
+  "roofFootprintAreaM2": 33.448254999999996,
+  "nativeFootprintAreaM2": 33.448254999999996,
+  "roofFootprintSymmetricDifferenceM2": 8.744090521095593e-16,
+  "roofRidgeZMetres": 4.341399999999993,
+  "triangles": 7676,
+  "solidChecks": {
+    "timber": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 3.0514767646471497
+    },
+    "deck": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 3.292062582153672
+    },
+    "roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 3.177584224999997
+    },
+    "metal": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.041047787034790804
+    }
+  },
+  "sourceAssociation": "candidate, unconfirmed",
+  "interpretation": [
+    "Roof XY footprint retained from old M5 canopy145; source height meaning is unconfirmed",
+    "2017 photo8895 shows a raised timber structure, gable roof, X-braces, sloping approaches and wire baskets",
+    "The precise function as visitor platform, shelter or feeding structure has not been confirmed",
+    "2017 photo8948 shows visitors feeding giraffes by a stone boundary; it is not another view of this structure",
+    "Four posts, deck elevation, ramp length, pitch, member sections and basket positions are visual estimates",
+    "Native roof coordinates are retained; approximate map association may be wrong by10–25m and has not been verified in2026"
+  ],
+  "details": "Photo-visible timber frame, X-bracing, elevated deck, two ramps and wire baskets; dimensions and unseen side are interpretations.",
+  "meshOwnership": "Closed solids; intersecting same-material members united, roof/timber/decking joints clipped by material ownership. No terrain or generic canopy cap is added.",
+  "sourceMemberCounts": {
+    "timber": 25,
+    "deck": 40,
+    "roof": 1,
+    "metal": 162
+  }
+}

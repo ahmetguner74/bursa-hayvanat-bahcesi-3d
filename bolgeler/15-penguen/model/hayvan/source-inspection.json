@@ -1,0 +1,441 @@
+{
+  "objects": [
+    {
+      "name": "AfricanPenguin_MetricOrigin",
+      "type": "EMPTY",
+      "scale": [
+        1.5896109342575073,
+        1.5896109342575073,
+        1.5896109342575073
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -0.3179221749305725,
+        0.4773012101650238
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "Sketchfab_model",
+      "type": "EMPTY",
+      "scale": [
+        0.05499450862407684,
+        0.05499450862407684,
+        0.05499450862407684
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "42301cbc902b498c98796e81d522811f.fbx",
+      "type": "EMPTY",
+      "scale": [
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "Object_2",
+      "type": "EMPTY",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "RootNode",
+      "type": "EMPTY",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "Animal",
+      "type": "EMPTY",
+      "scale": [
+        100.0,
+        100.00004577636719,
+        100.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        173.11000061035156,
+        -308.989990234375
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "Armature",
+      "type": "EMPTY",
+      "scale": [
+        100.0,
+        100.0,
+        100.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        173.11000061035156,
+        -308.989990234375
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "Object_6",
+      "type": "ARMATURE",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.6494311690330505,
+        1.0110058784484863,
+        0.6828514337539673
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animation": "Bray",
+      "nla": [
+        {
+          "name": "Walk",
+          "strips": [
+            "Walk"
+          ]
+        },
+        {
+          "name": "Sleep",
+          "strips": [
+            "Sleep"
+          ]
+        },
+        {
+          "name": "Sit1",
+          "strips": [
+            "Sit1"
+          ]
+        },
+        {
+          "name": "Shake",
+          "strips": [
+            "Shake"
+          ]
+        },
+        {
+          "name": "Preen",
+          "strips": [
+            "Preen"
+          ]
+        },
+        {
+          "name": "Penguin swim",
+          "strips": [
+            "Penguin swim"
+          ]
+        },
+        {
+          "name": "Idle",
+          "strips": [
+            "Idle"
+          ]
+        },
+        {
+          "name": "Bray",
+          "strips": [
+            "Bray"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Object_8",
+      "type": "EMPTY",
+      "scale": [
+        100.0,
+        100.00004577636719,
+        100.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -1.173706010854092e-11,
+        173.11001586914062,
+        -308.989990234375
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "Object_73",
+      "type": "EMPTY",
+      "scale": [
+        100.0,
+        100.00004577636719,
+        100.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -1.173706010854092e-11,
+        173.11001586914062,
+        -308.989990234375
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "Object_9",
+      "type": "MESH",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.42237818241119385,
+        0.6402610540390015,
+        0.4107811748981476
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "Object_74",
+      "type": "MESH",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.16023114323616028,
+        0.6461703181266785,
+        0.4433368742465973
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "Transparent",
+      "type": "EMPTY",
+      "scale": [
+        100.0,
+        100.00004577636719,
+        100.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        173.11000061035156,
+        -308.989990234375
+      ],
+      "animation": null,
+      "nla": []
+    },
+    {
+      "name": "Icosphere",
+      "type": "MESH",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.9021157026290894,
+        1.9999998807907104,
+        2.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animation": null,
+      "nla": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bray",
+      "frames": [
+        0.0,
+        246.0
+      ],
+      "slots": [
+        "OBObject_6"
+      ]
+    },
+    {
+      "name": "Idle",
+      "frames": [
+        0.0,
+        299.0
+      ],
+      "slots": [
+        "OBObject_6"
+      ]
+    },
+    {
+      "name": "Penguin swim",
+      "frames": [
+        0.0,
+        20.0
+      ],
+      "slots": [
+        "OBObject_6"
+      ]
+    },
+    {
+      "name": "Preen",
+      "frames": [
+        0.0,
+        299.0
+      ],
+      "slots": [
+        "OBObject_6"
+      ]
+    },
+    {
+      "name": "Shake",
+      "frames": [
+        0.0,
+        43.0
+      ],
+      "slots": [
+        "OBObject_6"
+      ]
+    },
+    {
+      "name": "Sit1",
+      "frames": [
+        0.0,
+        60.0
+      ],
+      "slots": [
+        "OBObject_6"
+      ]
+    },
+    {
+      "name": "Sleep",
+      "frames": [
+        0.0,
+        200.0
+      ],
+      "slots": [
+        "OBObject_6"
+      ]
+    },
+    {
+      "name": "Walk",
+      "frames": [
+        0.0,
+        20.0
+      ],
+      "slots": [
+        "OBObject_6"
+      ]
+    }
+  ],
+  "idleBoundsXYZ": [
+    [
+      -0.13811221718788147,
+      -0.28076785802841187,
+      0.03338579088449478
+    ],
+    [
+      0.11222440749406815,
+      0.13538619875907898,
+      0.6518799662590027
+    ]
+  ]
+}

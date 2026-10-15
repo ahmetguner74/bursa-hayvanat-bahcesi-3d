@@ -1,0 +1,231 @@
+{
+  "animationCount": 8,
+  "categories": [
+    {
+      "uid": "ed9e048550b2478eb1ab2faaba192832",
+      "name": "Animals & Pets",
+      "slug": "animals-pets",
+      "uri": "https://api.sketchfab.com/v3/categories/ed9e048550b2478eb1ab2faaba192832",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/926733e187aa5a479aedd2581bffb3ea-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/ed9e048550b2478eb1ab2faaba192832/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/ed9e048550b2478eb1ab2faaba192832/800x450.png"
+        }
+      ]
+    },
+    {
+      "uid": "2d643ff5ed03405b9c34ecdffff9d8d8",
+      "name": "Characters & Creatures",
+      "slug": "characters-creatures",
+      "uri": "https://api.sketchfab.com/v3/categories/2d643ff5ed03405b9c34ecdffff9d8d8",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/f778c3dbe6efa00a06c257762c0e27ef-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/2d643ff5ed03405b9c34ecdffff9d8d8/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/2d643ff5ed03405b9c34ecdffff9d8d8/800x450.png"
+        }
+      ]
+    }
+  ],
+  "commentCount": 12,
+  "createdAt": "2024-11-24T23:56:49.220534",
+  "embedUrl": "https://sketchfab.com/models/9e59070815fe451d93398e2ebdb9bb92/embed",
+  "faceCount": 4124,
+  "isAgeRestricted": false,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "likeCount": 241,
+  "name": "African penguin (Spheniscus demersus) Low poly",
+  "publishedAt": "2024-11-25T03:40:26.528554",
+  "soundCount": 0,
+  "staffpickedAt": null,
+  "tags": [
+    {
+      "name": "marine",
+      "slug": "marine",
+      "uri": "https://api.sketchfab.com/v3/tags/marine"
+    },
+    {
+      "name": "bird",
+      "slug": "bird",
+      "uri": "https://api.sketchfab.com/v3/tags/bird"
+    },
+    {
+      "name": "birds",
+      "slug": "birds",
+      "uri": "https://api.sketchfab.com/v3/tags/birds"
+    },
+    {
+      "name": "africa",
+      "slug": "africa",
+      "uri": "https://api.sketchfab.com/v3/tags/africa"
+    },
+    {
+      "name": "penguin",
+      "slug": "penguin",
+      "uri": "https://api.sketchfab.com/v3/tags/penguin"
+    },
+    {
+      "name": "ocean",
+      "slug": "ocean",
+      "uri": "https://api.sketchfab.com/v3/tags/ocean"
+    },
+    {
+      "name": "african",
+      "slug": "african",
+      "uri": "https://api.sketchfab.com/v3/tags/african"
+    },
+    {
+      "name": "Ornithology",
+      "slug": "ornithology",
+      "uri": "https://api.sketchfab.com/v3/tags/ornithology"
+    },
+    {
+      "name": "aves",
+      "slug": "aves",
+      "uri": "https://api.sketchfab.com/v3/tags/aves"
+    },
+    {
+      "name": "namibia",
+      "slug": "namibia",
+      "uri": "https://api.sketchfab.com/v3/tags/namibia"
+    },
+    {
+      "name": "marine-biology",
+      "slug": "marine-biology",
+      "uri": "https://api.sketchfab.com/v3/tags/marine-biology"
+    },
+    {
+      "name": "flightless-bird",
+      "slug": "flightless-bird",
+      "uri": "https://api.sketchfab.com/v3/tags/flightless-bird"
+    },
+    {
+      "name": "southafrican",
+      "slug": "southafrican",
+      "uri": "https://api.sketchfab.com/v3/tags/southafrican"
+    },
+    {
+      "name": "african-penguin",
+      "slug": "african-penguin",
+      "uri": "https://api.sketchfab.com/v3/tags/african-penguin"
+    }
+  ],
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "dac08032738143d5b2563e33a1d71afb",
+        "width": 1920,
+        "height": 1080,
+        "size": 373928,
+        "url": "https://media.sketchfab.com/models/9e59070815fe451d93398e2ebdb9bb92/thumbnails/7ee3caca0b7344a4a64252eafb1db658/0f65b20da0a148f3be33556310ee3206.jpeg"
+      },
+      {
+        "uid": "e6b561e7feef4d249bfc4a8e37c05383",
+        "width": 1024,
+        "height": 576,
+        "size": 54257,
+        "url": "https://media.sketchfab.com/models/9e59070815fe451d93398e2ebdb9bb92/thumbnails/7ee3caca0b7344a4a64252eafb1db658/0a0ac4948e514145849a327eee9f3b6b.jpeg"
+      },
+      {
+        "uid": "09a275b2f0274257b5c7d99f977928b0",
+        "width": 720,
+        "height": 405,
+        "size": 29246,
+        "url": "https://media.sketchfab.com/models/9e59070815fe451d93398e2ebdb9bb92/thumbnails/7ee3caca0b7344a4a64252eafb1db658/f89218909f13414cb14558ad29fcd40a.jpeg"
+      },
+      {
+        "uid": "7dd59ecaa1b7458e877f62c9e31cb112",
+        "width": 256,
+        "height": 144,
+        "size": 5593,
+        "url": "https://media.sketchfab.com/models/9e59070815fe451d93398e2ebdb9bb92/thumbnails/7ee3caca0b7344a4a64252eafb1db658/b0857cde372b42e1acd2567b1fb9b6a3.jpeg"
+      },
+      {
+        "uid": "ed333c0d27f7482db3a9da621d484b3a",
+        "width": 64,
+        "height": 36,
+        "size": 1286,
+        "url": "https://media.sketchfab.com/models/9e59070815fe451d93398e2ebdb9bb92/thumbnails/7ee3caca0b7344a4a64252eafb1db658/bfd88e449ecb49c9841594f165c49bb9.jpeg"
+      }
+    ]
+  },
+  "uid": "9e59070815fe451d93398e2ebdb9bb92",
+  "uri": "https://api.sketchfab.com/v3/models/9e59070815fe451d93398e2ebdb9bb92",
+  "user": {
+    "uid": "111c51bc4bfd44e3867cad0a88964fc7",
+    "username": "majorgalah",
+    "displayName": "Major",
+    "account": "basic",
+    "profileUrl": "https://sketchfab.com/majorgalah",
+    "avatar": {
+      "uid": "8655c82ff60c48c885feebd0f3ae5629",
+      "uri": "https://api.sketchfab.com/v3/avatars/8655c82ff60c48c885feebd0f3ae5629",
+      "images": [
+        {
+          "width": 32,
+          "height": 32,
+          "size": 735,
+          "url": "https://media.sketchfab.com/avatars/8655c82ff60c48c885feebd0f3ae5629/52bbf51914354988aa0e77d4fd09dd93.png"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "size": 1210,
+          "url": "https://media.sketchfab.com/avatars/8655c82ff60c48c885feebd0f3ae5629/3396ad7181594ad6a1eb2902c8b9e893.png"
+        },
+        {
+          "width": 90,
+          "height": 90,
+          "size": 2435,
+          "url": "https://media.sketchfab.com/avatars/8655c82ff60c48c885feebd0f3ae5629/17c725852dfc456395dc22a090eef787.png"
+        },
+        {
+          "width": 100,
+          "height": 100,
+          "size": 2721,
+          "url": "https://media.sketchfab.com/avatars/8655c82ff60c48c885feebd0f3ae5629/ea128b3a76814908ac3d0d39980b395e.png"
+        }
+      ]
+    },
+    "uri": "https://api.sketchfab.com/v3/users/111c51bc4bfd44e3867cad0a88964fc7"
+  },
+  "vertexCount": 2172,
+  "viewCount": 16315,
+  "viewerUrl": "https://sketchfab.com/3d-models/african-penguin-spheniscus-demersus-low-poly-9e59070815fe451d93398e2ebdb9bb92",
+  "isDownloadable": true,
+  "isProtected": false,
+  "description": "African penguins (*Spheniscus demersus*) also known as jackpass penguins, cape penguins or black footed penguins, is a critically endangered species of banded penguin. They are found along the coast of South Africa and Namibia.",
+  "price": null,
+  "downloadCount": 4381,
+  "editorUrl": "https://sketchfab.com/models/9e59070815fe451d93398e2ebdb9bb92/edit",
+  "status": {
+    "warning": {},
+    "processing": "SUCCEEDED"
+  },
+  "source": "website",
+  "hasCommentsDisabled": false,
+  "updatedAt": "2026-08-02T06:55:17.435443",
+  "pbrType": "metalness",
+  "textureCount": 4,
+  "materialCount": 1
+}

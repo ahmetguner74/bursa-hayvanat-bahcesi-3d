@@ -1,1 +1,8 @@
 shapely==2.1.2
+trimesh==5.1.1
+numpy==2.2.6
+scipy==1.15.3
+Pillow==12.3.0
+requests==2.34.2
+py-straight-skeleton==0.1.0
+manifold3d==3.5.4

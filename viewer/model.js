@@ -1,12 +1,31 @@
 import * as T from 'three';
+import {Water} from './vendor/objects/Water.js';
+import {mergeGeometries} from './vendor/utils/BufferGeometryUtils.js';
+import {configureWoodlandGround} from './ground-material.js?v=20261015af';
+import {WOODLAND_LIGHT} from './lighting.js?v=20261015af';
+import {orientPlantCard} from './plant-cards.js?v=20261015af';
+
+const sceneTextureManager=new T.LoadingManager();
+let sceneTexturesLoading=false;
+const sceneTextureErrors=[],sceneTextureWaiters=[];
+sceneTextureManager.onStart=()=>{sceneTexturesLoading=true;};
+sceneTextureManager.onError=url=>{sceneTextureErrors.push(url);};
+sceneTextureManager.onLoad=()=>{sceneTexturesLoading=false;while(sceneTextureWaiters.length)sceneTextureWaiters.shift()();};
+export async function waitForSceneTextures(){
+  if(sceneTexturesLoading)await new Promise(resolve=>sceneTextureWaiters.push(resolve));
+  if(sceneTextureErrors.length)throw Error('Bahçe dokuları yüklenemedi: '+sceneTextureErrors.map(url=>url.split('/').pop()).join(', '));
+}
 
 // The official plan locates the dome area; the M5 fence and builder dimensions anchor this provisional shell.
 const CAGE = {x:-30,y:-64,angle:9*Math.PI/180,length:70,width:40,height:20};
 const mat=(color,roughness=1,metalness=0)=>new T.MeshStandardMaterial({color,roughness,metalness,side:T.DoubleSide});
-const grass=new T.MeshStandardMaterial({map:grassTexture(),roughness:1,side:T.DoubleSide}),waterMat=mat('#4d9da5',.32,.02);
-const buildingMat=mat('#a98770'),metalMat=mat('#e9eae2',.68,.14);
+const grass=new T.MeshStandardMaterial({map:sourceTexture('woodland-meadow-v1.png',.2),color:'#e8eddd',roughness:1,side:T.DoubleSide}),waterMat=mat('#387f7b',.48,.03);
+const buildingMat=mat('#a98770'),metalMat=mat('#aab9af',.68,.14);
 const stoneMat=mat('#c6c4ad'),hedgeMat=mat('#567c54'),reedMat=mat('#789462');
 const pavementSideMat=mat('#aa987a');
+const penguinGravel=new T.MeshStandardMaterial({map:sourceTexture('penguin-pale-gravel-v1.png',1/1.5),roughness:1});
+let bankStoneMaterial;
+let habesEarthMaterial;
 
 function grassTexture(){
   // A single mottled ground material gives woodland light variation without
@@ -65,7 +84,270 @@ function pavementTexture(){
   texture.generateMipmaps=true;texture.anisotropy=4;texture.needsUpdate=true;
   return texture;
 }
-const pavementMat=new T.MeshStandardMaterial({map:pavementTexture(),roughness:1,side:T.DoubleSide});
+const pavementMat=new T.MeshStandardMaterial({map:sourceTexture('woodland-stone-path-v1.png',.3),roughness:1,side:T.DoubleSide});
+// The generated stone image supplies a small illustrative relief signal. It
+// is not a measured height map; its UVs exactly follow the sole road surface.
+const pavementRelief=new T.TextureLoader(sceneTextureManager).load('./assets/woodland-stone-path-v1.png',()=>window.dispatchEvent(new Event('bursa-assets-ready')));
+pavementRelief.colorSpace=T.NoColorSpace;pavementRelief.wrapS=pavementRelief.wrapT=T.RepeatWrapping;
+pavementRelief.repeat.set(.3,.3);pavementRelief.anisotropy=4;
+pavementMat.bumpMap=pavementRelief;pavementMat.bumpScale=.035;
+
+function pondSurface(polygons,height){
+  // All current partitioned ponds lie at this one water level. One merged
+  // surface owns every pond and performs one shared reflection render.
+  const geometries=polygons.map(p=>{
+    const result=new T.ShapeGeometry(shape(p.outer,p.holes));
+    const tint=new T.Color(p.waterPresentationColor||'#358f86');
+    const colors=new Float32Array(result.getAttribute('position').count*3);
+    for(let i=0;i<colors.length;i+=3){colors[i]=tint.r;colors[i+1]=tint.g;colors[i+2]=tint.b;}
+    const attribute=new T.BufferAttribute(colors,3);
+    result.setAttribute('pondTint',attribute);result.setAttribute('color',attribute);
+    return result;
+  });
+  const geometry=mergeGeometries(geometries);
+  for(const source of geometries)source.dispose();
+  const area=ring=>ring.reduce((sum,p,i)=>{const q=ring[(i+1)%ring.length];return sum+p[0]*q[1]-q[0]*p[1];},0)/2;
+  const sourceArea=polygons.reduce((sum,p)=>sum+Math.abs(area(p.outer))-(p.holes||[]).reduce((s,h)=>s+Math.abs(area(h)),0),0);
+  const vertices=geometry.getAttribute('position'),indices=geometry.getIndex();let renderedArea=0;
+  for(let i=0;i<indices.count;i+=3){
+    const a=indices.getX(i),b=indices.getX(i+1),c=indices.getX(i+2);
+    renderedArea+=Math.abs((vertices.getX(b)-vertices.getX(a))*(vertices.getY(c)-vertices.getY(a))-(vertices.getY(b)-vertices.getY(a))*(vertices.getX(c)-vertices.getX(a)))/2;
+  }
+  if(Math.abs(renderedArea-sourceArea)>.02)throw Error('Su yüzeyinin alanı kaynak bölümüyle uyuşmuyor');
+  console.info('Water geometry audit',JSON.stringify({sourcePonds:polygons.length,renderMeshes:1,triangles:indices.count/3,sourceAreaM2:sourceArea,renderedAreaM2:renderedArea}));
+  const normal=new T.TextureLoader(sceneTextureManager).load('./assets/three-water-normals-r186.jpg',()=>window.dispatchEvent(new Event('bursa-assets-ready')));
+  normal.wrapS=normal.wrapT=T.RepeatWrapping;normal.colorSpace=T.NoColorSpace;
+  const surface=new Water(geometry,{textureWidth:512,textureHeight:512,waterNormals:normal,
+    sunDirection:new T.Vector3(...WOODLAND_LIGHT.direction).normalize(),sunColor:WOODLAND_LIGHT.sun,waterColor:'#358f86',
+    distortionScale:1.2,clipBias:.003,side:T.FrontSide});
+  const shader=surface.material;
+  shader.vertexShader='attribute vec3 pondTint;\nvarying vec3 waterColor;\n'+shader.vertexShader.replace('void main() {','void main() {\nwaterColor = pondTint;');
+  // The official addon shades XZ water; this atlas uses XY water with Z up.
+  shader.fragmentShader=shader.fragmentShader
+    .replace('uniform vec3 waterColor;','varying vec3 waterColor;')
+    .replace('worldPosition.xz * size','worldPosition.xy * size')
+    .replace('noise.xzy * vec3( 1.5, 1.0, 1.5 )','noise.xyz * vec3( 0.4, 0.4, 1.0 )')
+    .replace('surfaceNormal.xz *','surfaceNormal.xy *')
+    .replace('float rf0 = 0.3;','float rf0 = 0.025;')
+    .replace('( sunColor * diffuseLight * 0.3 + scatter )','( scatter * 1.4 + waterColor * diffuseLight * 0.18 )');
+  shader.uniforms.size.value=12;
+  surface.position.z=height;surface.receiveShadow=true;
+  surface.name='Tekil gölet yüzeyleri · ortak yansıma ve ince dalga normalleri';
+  surface.userData.sourceKey='surfacePartition';
+  const before=surface.onBeforeRender;
+  surface.onBeforeRender=function(renderer,scene,camera,...rest){
+    if(this.material===shader)before.call(this,renderer,scene,camera,...rest);
+  };
+  const reflections=new URLSearchParams(location.search).get('water')!=='0';
+  const planMaterial=waterMat.clone();planMaterial.color.set('#ffffff');planMaterial.vertexColors=true;
+  return {surface,prepare(camera){
+    // The stock oblique reflection camera is perspective-only. Flat plan
+    // inspection keeps the same sole geometry and uses its matte water material.
+    surface.material=reflections&&camera.isPerspectiveCamera?shader:planMaterial;
+  }};
+}
+
+function sourceTexture(name,repeat=1){
+  const texture=new T.TextureLoader(sceneTextureManager).load('./assets/'+name,()=>window.dispatchEvent(new Event('bursa-assets-ready')));
+  texture.colorSpace=T.SRGBColorSpace;texture.wrapS=texture.wrapT=T.RepeatWrapping;
+  texture.repeat.set(repeat,repeat);texture.anisotropy=4;
+  return texture;
+}
+const plantViewportHeight={value:innerHeight};
+addEventListener('resize',()=>{plantViewportHeight.value=innerHeight;});
+const lowPlantMaterials=new WeakMap();
+function stablePlantMaterial(material,fadeSmall=false){
+  // A small positive mip bias suppresses sub-pixel leaf sparkle without a new
+  // render pass, supersampling, alpha hashing, temporal history or animation.
+  material.onBeforeCompile=shader=>{
+    shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',
+      T.ShaderChunk.map_fragment.replace('texture2D( map, vMapUv )','texture2D( map, vMapUv, 0.65 )'));
+    if(fadeSmall){
+      shader.uniforms.plantViewportHeight=plantViewportHeight;
+      shader.vertexShader='uniform float plantViewportHeight;\nvarying float plantCoverage;\n'+shader.vertexShader;
+      shader.vertexShader=shader.vertexShader.replace('#include <project_vertex>',`#include <project_vertex>
+        float cardHeight=1.0;
+        #ifdef USE_INSTANCING
+          cardHeight=length(instanceMatrix[1].xyz);
+        #endif
+        float viewDepth=projectionMatrix[3][3]>.5?1.0:max(.1,-mvPosition.z);
+        float cardPixels=.5*plantViewportHeight*projectionMatrix[1][1]*cardHeight/viewDepth;
+        plantCoverage=smoothstep(4.0,11.0,cardPixels);
+      `);
+      shader.fragmentShader='varying float plantCoverage;\n'+shader.fragmentShader;
+      shader.fragmentShader=shader.fragmentShader.replace('#include <alphatest_fragment>',
+        'diffuseColor.a *= plantCoverage;\n#include <alphatest_fragment>');
+    }
+  };
+  material.customProgramCacheKey=()=> 'stable-plant-sampling/v2/'+Number(fadeSmall);
+  return material;
+}
+function lowPlantMaterial(base){
+  if(!lowPlantMaterials.has(base))lowPlantMaterials.set(base,stablePlantMaterial(base.clone(),true));
+  return lowPlantMaterials.get(base);
+}
+const foliageTexture=sourceTexture('foliage-cluster-web-v1.png');
+foliageTexture.wrapS=foliageTexture.wrapT=T.ClampToEdgeWrapping;
+// The photographed-style leaf spray already contains diffuse variation.
+// Leaf sprays contain their own small-scale shading. Bounded per-card light
+// keeps the underside readable; alpha depth casts crowns onto the ground.
+const foliageMaterial=stablePlantMaterial(new T.MeshBasicMaterial({map:foliageTexture,alphaTest:.35,
+  alphaToCoverage:true,side:T.DoubleSide}));
+const foliageDepth=stablePlantMaterial(new T.MeshDepthMaterial({map:foliageTexture,alphaTest:.35,
+  side:T.DoubleSide,depthPacking:T.RGBADepthPacking}));
+const fernTexture=sourceTexture('woodland-fern-clump-web-v1.png');
+fernTexture.wrapS=fernTexture.wrapT=T.ClampToEdgeWrapping;
+const fernMaterial=stablePlantMaterial(new T.MeshBasicMaterial({map:fernTexture,alphaTest:.35,alphaToCoverage:true,side:T.DoubleSide}));
+const fernDepth=stablePlantMaterial(new T.MeshDepthMaterial({map:fernTexture,alphaTest:.35,side:T.DoubleSide,depthPacking:T.RGBADepthPacking}));
+const darkFoliageTexture=sourceTexture('foliage-cluster-dark-web-v1.png');
+darkFoliageTexture.wrapS=darkFoliageTexture.wrapT=T.ClampToEdgeWrapping;
+const darkFoliageMaterial=stablePlantMaterial(new T.MeshBasicMaterial({map:darkFoliageTexture,alphaTest:.35,alphaToCoverage:true,side:T.DoubleSide}));
+const darkFoliageDepth=stablePlantMaterial(new T.MeshDepthMaterial({map:darkFoliageTexture,alphaTest:.35,side:T.DoubleSide,depthPacking:T.RGBADepthPacking}));
+const broadleafTexture=sourceTexture('woodland-broadleaf-clump-web-v1.png');
+broadleafTexture.wrapS=broadleafTexture.wrapT=T.ClampToEdgeWrapping;
+const broadleafMaterial=stablePlantMaterial(new T.MeshBasicMaterial({map:broadleafTexture,alphaTest:.35,alphaToCoverage:true,side:T.DoubleSide}));
+const broadleafDepth=stablePlantMaterial(new T.MeshDepthMaterial({map:broadleafTexture,alphaTest:.35,side:T.DoubleSide,depthPacking:T.RGBADepthPacking}));
+function botanicalCard(name,threshold=.5){
+  const texture=sourceTexture(name);texture.wrapS=texture.wrapT=T.ClampToEdgeWrapping;
+  return {material:stablePlantMaterial(new T.MeshBasicMaterial({map:texture,alphaTest:threshold,alphaToCoverage:true,side:T.DoubleSide})),
+    depth:stablePlantMaterial(new T.MeshDepthMaterial({map:texture,alphaTest:threshold,side:T.DoubleSide,depthPacking:T.RGBADepthPacking}))};
+}
+const palmCard=botanicalCard('woodland-palm-frond-v1.png');
+const grassCard=botanicalCard('woodland-grass-tussock-web-v1.png',.35);
+const shrubCard=botanicalCard('woodland-shrub-spray-web-v1.png',.35);
+const flowerCard=botanicalCard('woodland-wildflower-clump-web-v1.png',.55);
+const barkTexture=sourceTexture('woodland-tree-bark-v1.png');barkTexture.repeat.set(1,6);
+const barkMaterial=new T.MeshStandardMaterial({map:barkTexture,color:'#d5cfbd',roughness:1});
+function leafCanopies(specs,cardsPerTree=24,dark=false){
+  const mesh=new T.InstancedMesh(new T.PlaneGeometry(1,1),dark?darkFoliageMaterial:foliageMaterial,specs.length*cardsPerTree);
+  mesh.name=dark?'Koyu sivri yapraklı taç kümeleri — görsel yorum':'Meşe yapraklı taç kümeleri — görsel yorum';
+  mesh.customDepthMaterial=dark?darkFoliageDepth:foliageDepth;
+  const d=new T.Object3D(),normal=new T.Vector3(),up=new T.Vector3(0,0,1),spin=new T.Quaternion();
+  const colors=dark?['#ffffff','#e8eddf','#d3ddcf','#f2f0df']:['#d8e4d7','#e0ead6','#f1f2df','#c5d6c0','#d8e2ce'];
+  specs.forEach(({x,y,h,r,seed=0},i)=>{
+    for(let k=0;k<cardsPerTree;k++){
+      const az=seed*.31+k*2.399963,cos=1-2*(k+.5)/cardsPerTree,sin=Math.sqrt(1-cos*cos);
+      const dx=Math.cos(az)*sin,dy=Math.sin(az)*sin;
+      const lobes=1+.16*Math.sin(az*3+seed*.7);
+      d.position.set(x+dx*r*.85*lobes,y+dy*r*.85*lobes,-.24+h*.76+cos*r*.75);
+      normal.set(dx,dy,cos*.72+.3).normalize();
+      d.quaternion.setFromUnitVectors(up,normal);
+      spin.setFromAxisAngle(up,az*.63);d.quaternion.multiply(spin);
+      // The dark asset has larger empty alpha margins; preserve crown coverage.
+      const size=r*((dark?2.05:1.55)+.18*Math.sin(k*3.7+seed));
+      d.scale.set(size,size*.92,1);d.updateMatrix();mesh.setMatrixAt(i*cardsPerTree+k,d.matrix);
+      const light=.72+.28*Math.max(0,normal.dot(new T.Vector3(-.5,.35,.79)));
+      mesh.setColorAt(i*cardsPerTree+k,new T.Color(colors[(Math.abs(seed)+k)%colors.length]).multiplyScalar(light));
+    }
+  });
+  mesh.instanceMatrix.needsUpdate=true;if(mesh.instanceColor)mesh.instanceColor.needsUpdate=true;
+  mesh.computeBoundingSphere();mesh.castShadow=true;mesh.receiveShadow=false;
+  return mesh;
+}
+function variedCanopies(specs){
+  const group=new T.Group();
+  const light=specs.filter(p=>Math.abs(p.seed)%3===0),dark=specs.filter(p=>Math.abs(p.seed)%3!==0);
+  if(light.length)group.add(leafCanopies(light));
+  if(dark.length)group.add(leafCanopies(dark,24,true));
+  return group;
+}
+function treeBranches(specs,material){
+  const mesh=new T.InstancedMesh(new T.CylinderGeometry(.055,.13,1,5),material,specs.length*3);
+  mesh.name='Taç içindeki üç yönlü ana dallar — görsel yorum';
+  const d=new T.Object3D(),a=new T.Vector3(),b=new T.Vector3(),delta=new T.Vector3();
+  const axis=new T.Vector3(0,1,0);
+  specs.forEach(({x,y,h,r,seed=0},i)=>{
+    for(let k=0;k<3;k++){
+      const angle=seed*.37+k*2.0944;
+      a.set(x,y,-.24+h*.46);
+      b.set(x+Math.cos(angle)*r*.78,y+Math.sin(angle)*r*.78,-.24+h*.75+k*.12);
+      delta.subVectors(b,a);d.position.copy(a).addScaledVector(delta,.5);
+      d.quaternion.setFromUnitVectors(axis,delta.clone().normalize());d.scale.set(1,delta.length(),1);
+      d.updateMatrix();mesh.setMatrixAt(i*3+k,d.matrix);
+    }
+  });
+  mesh.instanceMatrix.needsUpdate=true;mesh.computeBoundingSphere();mesh.castShadow=true;
+  return mesh;
+}
+function legacyTreeGroup(specs,native=false){
+  const group=new T.Group();group.name='Önceki ağaç görünümü · tekil yedek';
+  if(!specs.length)return group;
+  const trunks=new T.InstancedMesh(new T.CylinderGeometry(native?.18:.14,native?.27:.25,1,native?5:6),barkMaterial,specs.length);
+  const d=new T.Object3D();
+  specs.forEach(({x,y,h,palm=false},i)=>{
+    const trunkHeight=h*(palm?.88:native?.66:.64);
+    d.position.set(x,y,-.24+trunkHeight*.5);d.rotation.set(Math.PI/2,0,0);
+    const width=palm?.82:native?1.12:1;
+    d.scale.set(width,trunkHeight,width);d.updateMatrix();trunks.setMatrixAt(i,d.matrix);
+  });
+  trunks.instanceMatrix.needsUpdate=true;trunks.castShadow=true;group.add(trunks);
+  const broad=specs.filter(s=>!s.palm),palms=specs.filter(s=>s.palm);
+  if(broad.length)group.add(treeBranches(broad,barkMaterial),variedCanopies(broad));
+  if(palms.length)group.add(palmCrowns(palms));
+  return group;
+}
+function replaceableTreeGroups(specs,parent,candidates,native=false){
+  const eligible=specs.filter(s=>!s.palm&&s.h>=5&&!insideCage(s.x,s.y,-1));
+  const eligibleSet=new Set(eligible),retained=specs.filter(s=>!eligibleSet.has(s));
+  const legacy=legacyTreeGroup(eligible,native);parent.add(legacy,legacyTreeGroup(retained,native));
+  candidates.push({specs:eligible,legacy,source:native?'M5 tree symbol':'visual landscape'});
+}
+function leafyShrubs(specs,kind='oak'){
+  const fern=kind==='fern',broad=kind==='broadleaf',tuft=kind==='grass',shrub=kind==='shrub',flower=kind==='flower';
+  const card=tuft?grassCard:shrub?shrubCard:flower?flowerCard:null;
+  const cardsPerPlant=2;
+  const material=lowPlantMaterial(card?card.material:broad?broadleafMaterial:fern?fernMaterial:foliageMaterial);
+  const mesh=new T.InstancedMesh(new T.PlaneGeometry(1,1),material,specs.length*cardsPerPlant);
+  mesh.name=flower?'Küçük sarı ve beyaz çiçekli alçak ot kümeleri':tuft?'İnce yapraklı alçak ot kümeleri':shrub?'Küçük oval yapraklı çalılar':broad?'Geniş yapraklı alçak rozetler':fern?'Alfa kesimli eğrelti kümeleri':'Yaprak dokulu alçak bitki kümeleri';
+  mesh.customDepthMaterial=card?card.depth:broad?broadleafDepth:fern?fernDepth:foliageDepth;
+  const d=new T.Object3D();
+  const colors=['#d0dfb0','#e4e5b8','#c3d0a1','#f0e9be','#d6e0ad','#b8c798'];
+  specs.forEach(([x,y,z,size,variant=0],i)=>{
+    for(let k=0;k<cardsPerPlant;k++){
+      // Alpha sprite bases are placed at ground level; no floating foliage cap.
+      const width=size*(flower?1.35:tuft?1.05:shrub?1.8:broad?2:2.4),height=size*(flower?.95:tuft?1.05:shrub?1.5:broad?1.2:1.8);
+      const baseV=flower?.859649:tuft?.949:shrub?.807:0;
+      d.position.set(x,y,card?-.24+height*(baseV-.5):broad?size*.35-.18:z);
+      orientPlantCard(d,variant*.72+k*Math.PI/2);
+      d.scale.set(width,height,1);d.updateMatrix();mesh.setMatrixAt(i*cardsPerPlant+k,d.matrix);
+      mesh.setColorAt(i*cardsPerPlant+k,new T.Color(flower?'#f6f0d8':colors[variant%colors.length]));
+    }
+  });
+  mesh.instanceMatrix.needsUpdate=true;if(mesh.instanceColor)mesh.instanceColor.needsUpdate=true;
+  // Contact depth is already included by the AO beauty pass. Avoid flickering
+  // sub-pixel cutout shadows and extra shadow-map draws for these low sprites.
+  mesh.computeBoundingSphere();mesh.castShadow=false;mesh.receiveShadow=false;return mesh;
+}
+
+function palmCrowns(specs){
+  // A curved strip uses the unchanged horizontal frond PNG. UV bounds omit
+  // empty padding; fourteen fronds are radial, with varied elevation/droop.
+  const positions=[],uvs=[],indices=[],steps=10;
+  for(let i=0;i<=steps;i++){
+    const t=i/steps;
+    for(const side of [-1,1]){
+      positions.push(t,side*.5,.17*Math.sin(Math.PI*t)-.16*t*t);
+      uvs.push(.12+.77*t,side<0?.34:.63);
+    }
+    if(i<steps){const a=i*2;indices.push(a,a+2,a+3,a,a+3,a+1);}
+  }
+  const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.Float32BufferAttribute(positions,3));
+  geometry.setAttribute('uv',new T.Float32BufferAttribute(uvs,2));geometry.setIndex(indices);geometry.computeVertexNormals();
+  const mesh=new T.InstancedMesh(geometry,palmCard.material,specs.length*14);
+  mesh.name='Kavisli tek yapraklı palmiye taçları — görsel yorum';mesh.customDepthMaterial=palmCard.depth;
+  const d=new T.Object3D();
+  specs.forEach(({x,y,h,r,seed},i)=>{
+    for(let k=0;k<14;k++){
+      const length=r*(1.0+.16*Math.sin(k*2.7+seed));
+      d.position.set(x,y,-.24+h*.88+(k%2)*.15);
+      d.rotation.set(0,k<7?-.12:.16,k*2.399963+seed*.3);
+      d.scale.set(length,length*.31,length);d.updateMatrix();mesh.setMatrixAt(i*14+k,d.matrix);
+      mesh.setColorAt(i*14+k,new T.Color(k%3===0?'#e7ebdb':'#ccd9bb').multiplyScalar(.82+(k%4)*.05));
+    }
+  });
+  mesh.instanceMatrix.needsUpdate=true;if(mesh.instanceColor)mesh.instanceColor.needsUpdate=true;
+  mesh.computeBoundingSphere();mesh.castShadow=true;return mesh;
+}
 
 function cageLocal(x,y){
   const dx=x-CAGE.x,dy=y-CAGE.y,c=Math.cos(CAGE.angle),s=Math.sin(CAGE.angle);
@@ -87,8 +369,8 @@ function ringArea(points){
   return Math.abs(sum)/2;
 }
 function riverStoneCurbs(rings){
-  // One instanced mesh traces the real buffered-road boundary. Rounded stones
-  // enter the existing pavement volume, so no second coplanar cap is drawn.
+  // Spatial batches trace the road boundary. Near stones have smooth normals;
+  // distant batches use fewer faces. Exactly one LOD is visible in each batch.
   const samples=[],occupied=new Map(),cell=.76,minDistanceSq=cell*cell;
   const key=(x,y)=>`${x},${y}`;
   const free=(x,y)=>{
@@ -111,23 +393,35 @@ function riverStoneCurbs(rings){
       walked+=length;
     }
   }
-  const geometry=new T.IcosahedronGeometry(1,0);
+  const closeGeometry=new T.IcosahedronGeometry(1,1),farGeometry=new T.IcosahedronGeometry(1,0);
   const material=new T.MeshStandardMaterial({color:'#ffffff',roughness:1});
-  const stones=new T.InstancedMesh(geometry,material,samples.length);
-  stones.name='Yol sınırındaki alçak dere taşları — M5 yaklaşık güzergâh';
+  const group=new T.Group();group.name='QGIS yol sınırı · mesafeye göre dere taşları';
   const palette=['#a79d88','#c0b398','#b2a68e','#d0bea0','#968f7e'];
-  const dummy=new T.Object3D();
-  for(let i=0;i<samples.length;i++){
-    const [x,y,angle]=samples[i],variation=((i*2654435761)>>>0)/4294967296;
-    dummy.position.set(x,y,-.125);
-    dummy.rotation.set(0,0,angle+(variation-.5)*.45);
-    dummy.scale.set(.27+variation*.065,.185+variation*.035,.12+variation*.025);
-    dummy.updateMatrix();stones.setMatrixAt(i,dummy.matrix);
-    stones.setColorAt(i,new T.Color(palette[i%palette.length]));
+  const dummy=new T.Object3D(),chunks=new Map(),cellSize=64;
+  samples.forEach((p,i)=>{
+    const gx=Math.floor(p[0]/cellSize),gy=Math.floor(p[1]/cellSize),key=gx+','+gy;
+    if(!chunks.has(key))chunks.set(key,{x:(gx+.5)*cellSize,y:(gy+.5)*cellSize,items:[]});
+    chunks.get(key).items.push({p,i});
+  });
+  for(const chunk of chunks.values()){
+    const near=new T.InstancedMesh(closeGeometry,material,chunk.items.length);
+    const far=new T.InstancedMesh(farGeometry,material,chunk.items.length);
+    chunk.items.forEach(({p:[x,y,angle],i},j)=>{
+      const variation=((i*2654435761)>>>0)/4294967296;
+      dummy.position.set(x-chunk.x,y-chunk.y,-.125);
+      dummy.rotation.set(0,0,angle+(variation-.5)*.45);
+      dummy.scale.set(.27+variation*.065,.185+variation*.035,.12+variation*.025);
+      dummy.updateMatrix();near.setMatrixAt(j,dummy.matrix);
+      near.setColorAt(j,new T.Color(palette[i%palette.length]));
+    });
+    near.instanceMatrix.needsUpdate=true;near.instanceColor.needsUpdate=true;
+    far.instanceMatrix=near.instanceMatrix;far.instanceColor=near.instanceColor;
+    for(const mesh of [near,far]){mesh.computeBoundingSphere();mesh.receiveShadow=true;}
+    const lod=new T.LOD();lod.position.set(chunk.x,chunk.y,0);
+    lod.addLevel(near,0);lod.addLevel(far,90,.12);group.add(lod);
   }
-  stones.instanceMatrix.needsUpdate=true;stones.instanceColor.needsUpdate=true;
-  stones.computeBoundingSphere();stones.receiveShadow=true;
-  return stones;
+  console.info('Curb LOD audit',JSON.stringify({stones:samples.length,batches:chunks.size,nearFacesPerStone:80,farFacesPerStone:20}));
+  return group;
 }
 function woodlandEdgePlanting(roadRings,pathSurfaces,data,currentPlan){
   // Roadside planting is a single set of instanced low models on terrain.
@@ -197,46 +491,45 @@ function woodlandEdgePlanting(roadRings,pathSurfaces,data,currentPlan){
       walked+=length;
     }
   }
-  const group=new T.Group();group.name='Yol kenarı alçak eğrelti, yer örtücü ve kır çiçekleri — görsel yorum';
+  const group=new T.Group();group.name='Yol kenarı ot, eğrelti ve oval yapraklı çalılar — görsel yorum';
   group.userData.sourceKey='landscape';
   if(!planted.length)return group;
-  const mound=new T.InstancedMesh(new T.IcosahedronGeometry(1,0),mat('#ffffff'),planted.length);
-  mound.name='alçak yer örtücü';
-  const frondVertices=[];
-  for(let i=0;i<7;i++){
-    const angle=2*Math.PI*i/7,radial=.25+(i%3)*.04,h=.44+(i%3)*.065;
-    const ux=Math.cos(angle),uy=Math.sin(angle),vx=-uy,vy=ux;
-    const base=[0,0,0],left=[ux*radial*.48+vx*.105,uy*radial*.48+vy*.105,h*.44];
-    const tip=[ux*radial,uy*radial,h],right=[ux*radial*.48-vx*.105,uy*radial*.48-vy*.105,h*.44];
-    frondVertices.push(...base,...left,...tip,...base,...tip,...right);
+  const patches=planted.map(([x,y,a,b])=>[x,y,.12+(.55+a*.35)*.55,.55+a*.35,Math.floor(b*6)]);
+  group.add(leafyShrubs(patches.filter((p,i)=>i%3===0),'grass'),
+    leafyShrubs(patches.filter((p,i)=>i%3===1),'fern'),leafyShrubs(patches.filter((p,i)=>i%3===2),'shrub'));
+  return group;
+}
+function woodlandInteriorPlanting(layout,forestCandidates){
+  if(layout?.schema!=='bursa-zoo-woodland-visual-layout/v1')throw Error('Orman görsel yerleşimi eksik');
+  const group=new T.Group();group.name='Model hedefi için orman alt dokusu — konumlar görsel yorum';
+  group.userData.sourceKey='visualLandscape';
+  const canopySpecs=[];
+  const d=new T.Object3D();
+  layout.trees.forEach(([x,y,h,r,variant],i)=>{
+    const seed=variant+i*7,palm=seed%13===0;
+    canopySpecs.push({x,y,h,r,seed,palm});
+  });
+  replaceableTreeGroups(canopySpecs,group,forestCandidates);
+  const understory=layout.plants.map(([x,y,size,variant])=>[x,y,.1+size*.55,size,variant]);
+  group.add(leafyShrubs(understory.filter(p=>p[4]===0)),leafyShrubs(understory.filter(p=>p[4]===1),'broadleaf'),
+    leafyShrubs(understory.filter(p=>p[4]===2),'fern'),leafyShrubs(understory.filter(p=>p[4]===3),'grass'),
+    leafyShrubs(understory.filter(p=>p[4]===4||p[4]===5),'shrub'),leafyShrubs(understory.filter(p=>p[4]===6),'flower'));
+  const banks=layout.shoreStones||[];
+  if(banks.length){
+    const stones=new T.InstancedMesh(new T.IcosahedronGeometry(1,1),mat('#ffffff'),banks.length);
+    stones.name='Gölet kıyısı doğal taşları — görsel yorum';
+    const palette=['#b9ac8e','#d4c7a8','#99967e','#c5bda5','#a6a38b'];
+    banks.forEach(([x,y,size,height,angle],i)=>{
+      d.position.set(x,y,-.2+height*.35);d.rotation.set(.12*(i%3),.09*(i%4),angle);
+      d.scale.set(size,size*.78,height);d.updateMatrix();stones.setMatrixAt(i,d.matrix);
+      stones.setColorAt(i,new T.Color(palette[i%palette.length]));
+    });
+    stones.instanceMatrix.needsUpdate=true;stones.instanceColor.needsUpdate=true;
+    stones.computeBoundingSphere();stones.receiveShadow=true;stones.castShadow=true;group.add(stones);
   }
-  const frondGeo=new T.BufferGeometry();frondGeo.setAttribute('position',new T.Float32BufferAttribute(frondVertices,3));frondGeo.computeVertexNormals();
-  const fronds=new T.InstancedMesh(frondGeo,new T.MeshStandardMaterial({color:'#ffffff',roughness:1,side:T.DoubleSide}),planted.length);
-  fronds.name='yedi yapraklı alçak eğrelti kümesi';
-  const flowerSites=planted.filter(([x,y])=>hash(x,y,6)<.27);
-  const flowers=new T.InstancedMesh(new T.IcosahedronGeometry(1,0),mat('#ffffff'),flowerSites.length);
-  flowers.name='seyrek kır çiçekleri';
-  const green=['#436d43','#547d49','#6d9052','#729658','#4b7846'];
-  const petals=['#f2e7bd','#fff3d0','#dfd8ac'];
-  const dummy=new T.Object3D();
-  for(let i=0;i<planted.length;i++){
-    const [x,y,a,b]=planted[i];
-    dummy.position.set(x,y,-.19);dummy.rotation.set(0,0,a*2*Math.PI);
-    dummy.scale.set(.34+b*.12,.26+b*.08,.13+b*.04);
-    dummy.updateMatrix();mound.setMatrixAt(i,dummy.matrix);mound.setColorAt(i,new T.Color(green[i%green.length]));
-    dummy.position.set(x,y,-.18);dummy.scale.setScalar(.7+a*.4);
-    dummy.updateMatrix();fronds.setMatrixAt(i,dummy.matrix);fronds.setColorAt(i,new T.Color(green[(i+2)%green.length]));
-  }
-  for(let i=0;i<flowerSites.length;i++){
-    const [x,y,a,b]=flowerSites[i];
-    dummy.position.set(x+(a-.5)*.28,y+(b-.5)*.28,.16+b*.12);
-    dummy.rotation.set(0,0,a*6.28);dummy.scale.setScalar(.055+a*.035);
-    dummy.updateMatrix();flowers.setMatrixAt(i,dummy.matrix);flowers.setColorAt(i,new T.Color(petals[i%petals.length]));
-  }
-  for(const mesh of [mound,fronds,flowers]){
-    mesh.instanceMatrix.needsUpdate=true;mesh.instanceColor.needsUpdate=true;
-    mesh.computeBoundingSphere();mesh.receiveShadow=true;group.add(mesh);
-  }
+  const waterside=(layout.shorePlants||[]).map(([x,y,size,variant])=>[x,y,.1+size*.55,size,variant]);
+  group.add(leafyShrubs(waterside.filter(p=>p[4]%3===0),'grass'),
+    leafyShrubs(waterside.filter(p=>p[4]%3===1),'shrub'),leafyShrubs(waterside.filter(p=>p[4]%3===2),'fern'));
   return group;
 }
 function cylinderBetween(a,b,r,material,parent){
@@ -301,7 +594,7 @@ function polygonOutsideBox(poly,box){
   return outside;
 }
 
-function makeCage(cageLocalSurfaces){
+function makeCage(cageLocalSurfaces,isTerrain){
   const root=new T.Group();root.name='Su Kuşları Kafesi — 70 × 40 × 20 m';root.position.set(CAGE.x,CAGE.y,-.09);root.rotation.z=CAGE.angle;
   const N=36,M=18,L=CAGE.length/2,R=CAGE.width/2,H=CAGE.height;
   // Leave the full walk-through volume clear at both portal ends, with a small
@@ -399,8 +692,24 @@ function makeCage(cageLocalSurfaces){
     dummy.scale.set(1,delta.length(),1);dummy.updateMatrix();farRods.setMatrixAt(i,dummy.matrix);
   }
   farRods.instanceMatrix.needsUpdate=true;farRods.computeBoundingSphere();farRods.castShadow=true;farSteel.add(farRods);
-  // The two alternatives are mutually exclusive: no second shell or net is
-  // drawn on top of the high-detail geometry.
+  // Tubes retain the sparse, thick silhouette requested for distance. The
+  // original triangulation is a one-pixel line proxy between them, rather
+  // than a second opaque/transparent shell surface. WebGL line width is
+  // deliberately one pixel (not a world-space or fabrication diameter).
+  const proxyPositions=[];
+  for(const [a,b] of bars){
+    let pieces=[[a,b]];
+    for(const portal of farPortalBoxes)pieces=pieces.flatMap(([start,end])=>barOutsideBox(start,end,portal));
+    for(const [start,end] of pieces)if(start.distanceTo(end)>.08)
+      proxyPositions.push(start.x,start.y,start.z,end.x,end.y,end.z);
+  }
+  const proxyGeometry=new T.BufferGeometry();
+  proxyGeometry.setAttribute('position',new T.Float32BufferAttribute(proxyPositions,3));
+  const proxyMaterial=new T.LineBasicMaterial({color:metalMat.color,transparent:true,opacity:.28,depthWrite:false});
+  const fineProxy=new T.LineSegments(proxyGeometry,proxyMaterial);
+  fineProxy.name='Uzak kafes ince örgü çizgileri — tek piksel sunum';fineProxy.raycast=()=>{};
+  farSteel.add(fineProxy);
+  // The near and far alternatives are mutually exclusive.
   const cageLod=new T.LOD();cageLod.name='kafes detay düzeyleri';
   cageLod.addLevel(nearSteel,0);cageLod.addLevel(farSteel,85);
   const eye=new T.Vector3(),center=new T.Vector3();let showingFar=false;
@@ -460,13 +769,13 @@ function makeCage(cageLocalSurfaces){
   const bench=new T.Group();bench.name='Giriş önündeki bank — fotoğraf eşleştirmesi';bench.position.set(48,-8.1,0);root.add(bench);
   box(bench,2.2,.48,.1,0,0,.53,benchWood);box(bench,2.2,.1,.75,0,-.23,.91,benchWood);
   for(const x of [-.85,.85])for(const y of [-.16,.16])box(bench,.07,.07,.48,x,y,.26,benchMetal);
-  decorateCage(root,cageLocalSurfaces);
+  decorateCage(root,cageLocalSurfaces,isTerrain);
   root.userData.sourceKey='shell';
   root.userData.landmark='cage';
   return root;
 }
 
-function decorateCage(root,cageLocalSurfaces){
+function decorateCage(root,cageLocalSurfaces,isTerrain){
   const wood=mat('#725341'),woodLight=mat('#977052'),tile=mat('#a75f46');
   // The plan confirms water inside the dome but does not delineate its shore.
   // Keep this lagoon an explicitly interpreted shape beneath the footbridge.
@@ -474,24 +783,52 @@ function decorateCage(root,cageLocalSurfaces){
   // The visible lagoon top is produced once by the partitioned site water layer.
   // Rounded individual stones mark the bank without adding another surface.
   const shorePoints=[];
+  const bankPlants=[];
+  const signedArea=lagoon.slice(1).reduce((sum,p,i)=>sum+lagoon[i][0]*p[1]-p[0]*lagoon[i][1],0);
+  const orientation=Math.sign(signedArea)||1;
   for(let i=0;i<lagoon.length-1;i++){
     const a=lagoon[i],b=lagoon[i+1],length=Math.hypot(b[0]-a[0],b[1]-a[1]);
     const count=Math.max(1,Math.round(length/.72));
     for(let j=0;j<count;j++){
       const t=(j+.5)/count;
-      shorePoints.push([a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t]);
+      const x=a[0]+(b[0]-a[0])*t,y=a[1]+(b[1]-a[1])*t;
+      const nx=(b[1]-a[1])/length*orientation,ny=-(b[0]-a[0])/length*orientation;
+      shorePoints.push([x,y,nx,ny]);
+      if((i*11+j)%3===0){
+        const size=.38+((i*7+j*3)%9)*.045,offset=.85+((i*3+j)%5)*.19;
+        const px=x+nx*offset,py=y+ny*offset,c=Math.cos(CAGE.angle),s=Math.sin(CAGE.angle);
+        const radius=size*1.05;
+        const dry=[[0,0],[radius,0],[-radius,0],[0,radius],[0,-radius]].every(([u,v])=>
+          isTerrain([CAGE.x+(px+u)*c-(py+v)*s,CAGE.y+(px+u)*s+(py+v)*c]));
+        if(dry)bankPlants.push([px,py,.1+size*.55,size,(i+j)%6]);
+      }
     }
   }
-  const stones=new T.InstancedMesh(new T.IcosahedronGeometry(.33,0),stoneMat,shorePoints.length);
+  const stoneGeometry=new T.IcosahedronGeometry(.33,2),rockPositions=stoneGeometry.getAttribute('position');
+  for(let i=0;i<rockPositions.count;i++){
+    const x=rockPositions.getX(i),y=rockPositions.getY(i),z=rockPositions.getZ(i);
+    const scale=1+.13*Math.sin(x*17+y*9)*Math.cos(z*13-y*5)+.06*Math.sin(x*29-z*19);
+    rockPositions.setXYZ(i,x*scale,y*scale,z*scale);
+  }
+  stoneGeometry.computeVertexNormals();stoneGeometry.computeBoundingSphere();
+  const stones=new T.InstancedMesh(stoneGeometry,bankStoneMaterial,shorePoints.length);
   stones.name='İç gölet kıyısı — tekil 3B taşlar';stones.castShadow=true;stones.receiveShadow=true;
   const stone=new T.Object3D();
   for(let i=0;i<shorePoints.length;i++){
-    const [x,y]=shorePoints[i];stone.position.set(x,y,-.025);
+    const [x,y,nx,ny]=shorePoints[i],variation=.5+.5*Math.sin(i*2.399963);
+    stone.position.set(x+nx*(variation-.35)*.18,y+ny*(variation-.35)*.18,-.07+variation*.05);
     stone.rotation.set((i%7)*.19,(i%5)*.23,(i%11)*.31);
-    stone.scale.set(.8+(i%4)*.13,.72+(i%3)*.18,.5+(i%5)*.07);
+    stone.scale.set(.85+variation*.58,.68+variation*.37,.48+variation*.28);
     stone.updateMatrix();stones.setMatrixAt(i,stone.matrix);
+    stones.setColorAt(i,new T.Color(['#bbb49a','#c7bfa5','#a6a18a','#d1c8ad'][i%4]));
   }
-  stones.instanceMatrix.needsUpdate=true;stones.computeBoundingSphere();root.add(stones);
+  stones.instanceMatrix.needsUpdate=true;stones.instanceColor.needsUpdate=true;stones.computeBoundingSphere();root.add(stones);
+  const bank=new T.Group();bank.name='İç gölet kuru kıyısında karma bitki kümeleri — görsel yorum';
+  bank.position.z=.09;bank.userData.sourceKey='landscape';
+  bank.add(leafyShrubs(bankPlants.filter((p,i)=>i%3===0),'grass'),
+    leafyShrubs(bankPlants.filter((p,i)=>i%3===1),'fern'),leafyShrubs(bankPlants.filter((p,i)=>i%3===2),'shrub'));
+  root.add(bank);
+  console.info('Cage bank planting audit',JSON.stringify({stones:shorePoints.length,plants:bankPlants.length,sampledDryGround:true,samplesPerPlant:5}));
   // The entrance, loop, exit and bridge leads are part of surface-layers.path.
   // Both ends of the crossing extend onto dry ground beyond the pond shore.
   const bridge=new T.Group();bridge.name='Gölet üzerindeki ahşap köprü — görsel yorum';root.add(bridge);
@@ -570,7 +907,7 @@ function decorateCage(root,cageLocalSurfaces){
   // A low planted rim keeps the dome grounded, leaving both entrance axes open.
   const shrubs=new T.Group();shrubs.name='Kafes çevresi ve içindeki çalı kütleleri — görsel yorum';root.add(shrubs);
   shrubs.userData.sourceKey='landscape';
-  const shrubGeo=new T.IcosahedronGeometry(1,1),bushes=[];
+  const bushes=[];
   for(let i=0;i<94;i++){
     const a=2*Math.PI*i/94,jitter=.72*Math.sin(i*2.33)+.42*Math.cos(i*.81),u=(36.1+jitter)*Math.cos(a),v=(21.1+jitter)*Math.sin(a);
     if(Math.abs(v)<3.4&&Math.abs(u)>31)continue;
@@ -581,22 +918,18 @@ function decorateCage(root,cageLocalSurfaces){
   for(const [x,y] of [[28,7],[29,-7],[43,7],[45,-8],[-29,6]])for(let k=0;k<4;k++){
     const r=1.05+.19*k;bushes.push([x+(k%2)*1.2,y+Math.floor(k/2)*1.2,r*.75,r]);
   }
-  const im=new T.InstancedMesh(shrubGeo,mat('#ffffff'),bushes.length),d=new T.Object3D();
-  const bushColors=['#486e4d','#5b8050','#779361','#6b8760','#668e59'];
-  bushes.forEach(([x,y,z,r],i)=>{d.position.set(x,y,z);d.scale.set(r,r*.82,r*.78);d.rotation.set(0,0,i*1.63);d.updateMatrix();im.setMatrixAt(i,d.matrix);im.setColorAt(i,new T.Color(bushColors[i%bushColors.length]));});
-  im.castShadow=true;shrubs.add(im);
-  const conifer=new T.Group();conifer.name='Kafes içi iğne yapraklı kümeler — görsel yorum';root.add(conifer);conifer.userData.sourceKey='landscape';
-  const needleMats=[mat('#42684f'),mat('#537456'),mat('#68835a')];
-  for(const [k,[x,y,h]] of [[-23,8,5.6],[-18,10,6.1],[-11,12,4.8],[17,-10,5.9],[21,7,6.6],[9,12,5.4]].entries()){
-    box(conifer,.17,.17,h*.55,x,y,h*.27,wood);
-    for(let t=0;t<3;t++){
-      const cone=new T.Mesh(new T.ConeGeometry(1.12*(1-t*.19),h*.5,6),needleMats[(k+t)%3]);
-      cone.rotation.x=Math.PI/2;cone.position.set(x,y,h*(.41+t*.19));cone.castShadow=true;conifer.add(cone);
-    }
-  }
+  const c=Math.cos(CAGE.angle),s=Math.sin(CAGE.angle);
+  const cagePlants=bushes.map(([x,y,z,r],i)=>[x,y,.1+r*.55,r,i%6]).filter(([u,v])=>isTerrain([CAGE.x+u*c-v*s,CAGE.y+u*s+v*c]));
+  const garden=cagePlants.filter((p,i)=>i%9!==0),flowers=cagePlants.filter((p,i)=>i%9===0);
+  shrubs.add(leafyShrubs(garden.filter((p,i)=>i%4===0),'shrub'),leafyShrubs(garden.filter((p,i)=>i%4===1),'grass'),
+    leafyShrubs(garden.filter((p,i)=>i%4===2),'fern'),leafyShrubs(garden.filter((p,i)=>i%4===3),'broadleaf'),leafyShrubs(flowers,'flower'));
+  const interiorTrees=legacyTreeGroup([[-23,8,5.6],[-18,10,6.1],[-11,12,4.8],[17,-10,5.9],[21,7,6.6],[9,12,5.4]]
+    .map(([x,y,h],i)=>({x,y,h,r:1.08+(i%3)*.13,seed:502+i*7})),true);
+  interiorTrees.name='Kafes içi yapraklı küçük ağaçlar — görsel yorum';interiorTrees.position.z=.09;
+  interiorTrees.userData.sourceKey='landscape';root.add(interiorTrees);
 }
 
-export function createSite(data,currentPlan,surfaceData,buildingShellData){
+export function createSite(data,currentPlan,surfaceData,buildingShellData,visualLandscape,groundMaterial){
   if(surfaceData?.schema!=='bursa-zoo-planar-surface-partition/v1')throw Error('Bölünmüş zemin verisi eksik veya uyumsuz');
   if(buildingShellData?.schema!=='bursa-zoo-building-shell/v1')throw Error('Birleşik bina kabuğu verisi eksik veya uyumsuz');
   const anchor=currentPlan?.features?.find(f=>f.id==='waterbird_aviary_dome_candidate')?.modelAnchor;
@@ -607,10 +940,15 @@ export function createSite(data,currentPlan,surfaceData,buildingShellData){
     CAGE.length=dimensions[0];CAGE.width=dimensions[1];
   }
   const site=new T.Group();site.name='Bursa Hayvanat Bahçesi — 2026 kroki ve M5 yerleşimi';
+  configureWoodlandGround(grass,groundMaterial,sceneTextureManager);
+  bankStoneMaterial=new T.MeshStandardMaterial({map:sourceTexture(groundMaterial.rockTexture.file.split('/').pop()+'?v='+groundMaterial.rockTexture.sha256.slice(0,16)),roughness:.95});
+  habesEarthMaterial=new T.MeshStandardMaterial({map:sourceTexture(groundMaterial.litterTexture.file.split('/').pop()+'?v='+groundMaterial.litterTexture.sha256.slice(0,16),1/3),color:new T.Color().setRGB(.96,.9,.72),roughness:1});
   const surfaceLayers=surfaceData.layers;
   for(const p of surfaceLayers.terrain){
-    const ground=flat(p.outer,grass,-.24,p.holes);
-    ground.name='OSM sınırı içi · çakışmasız çim yüzey';site.add(ground);
+    const gravel=p.surfaceStyle==='penguin-gravel';
+    const habes=p.surfaceStyle==='habes-earth';
+    const ground=flat(p.outer,gravel?penguinGravel:habes?habesEarthMaterial:grass,-.24,p.holes);
+    ground.name=gravel?'Penguen alanı · tekil çakıl yüzeyi':habes?'Habeş Maymunu adası · tekil toprak yüzeyi':'OSM sınırı içi · çakışmasız çim yüzey';site.add(ground);
   }
   const roadBoundaryRings=[];
   for(const p of surfaceLayers.path){
@@ -619,14 +957,11 @@ export function createSite(data,currentPlan,surfaceData,buildingShellData){
     const geometry=new T.ExtrudeGeometry(shape(p.outer,p.holes),{depth:.135,steps:1,bevelEnabled:false,curveSegments:1});
     const m=new T.Mesh(geometry,[pavementMat,pavementSideMat]);
     m.position.z=-.24;m.receiveShadow=true;
-    m.name='M5 yol çizgilerinden türetilmiş alçak kaplama · yaklaşık genişlik';site.add(m);
+    m.name='Manuel QGIS yollarından alçak kaplama · yaklaşık genişlik';site.add(m);
   }
   site.add(riverStoneCurbs(roadBoundaryRings));
-  for(const p of surfaceLayers.water){
-    const pond=flat(p.outer,waterMat,-.135,p.holes);
-    pond.name='M5 ve 2026 kroki · çakışmasız su yüzeyi';
-    pond.userData.sourceKey='surfacePartition';site.add(pond);
-  }
+  if(!(surfaceData.renderLevels.waterZ<surfaceData.renderLevels.terrainZ))throw Error('Sunum su kotu arazi altında olmalı');
+  const water=pondSurface(surfaceLayers.water,surfaceData.renderLevels.waterZ);site.add(water.surface);
   // DGN curb and other survey lines remain in site-data.json for later plan alignment.
   const footprints=new T.Group();footprints.name='M5 yapı izlerinden tekil dış kabuk · aşamalı modelleme';site.add(footprints);
   // Roof polygons partition the footprint by its highest source elevation.
@@ -656,6 +991,7 @@ export function createSite(data,currentPlan,surfaceData,buildingShellData){
     walls.castShadow=true;walls.receiveShadow=true;walls.name='M5 yapı dış duvarları · tekil kot geçişleri';footprints.add(walls);
   }
   const trees=new T.Group();trees.name='M5 ağaç sembollerinden temsili bitki örtüsü';site.add(trees);
+  const forestCandidates=[];
   const containsRing=(ring,x,y)=>{
     let inside=false;
     for(let i=0,j=ring.length-1;i<ring.length;j=i++){
@@ -665,38 +1001,25 @@ export function createSite(data,currentPlan,surfaceData,buildingShellData){
     return inside;
   };
   const onTerrain=([x,y])=>surfaceLayers.terrain.some(s=>
-    containsRing(s.outer,x,y)&&!(s.holes||[]).some(h=>containsRing(h,x,y)));
+    !['penguin-gravel','habes-earth'].includes(s.surfaceStyle)&&containsRing(s.outer,x,y)&&!(s.holes||[]).some(h=>containsRing(h,x,y)));
   // Old tree symbols are retained in site-data.json. The 2026-derived paving
   // and water own their regions, so their 59 conflicting tree models are culled.
   const positions=(data.treeClusters||[]).filter(c=>onTerrain(c.xy)).map(c=>({p:c.xy,id:c.sourceIds[0]}));
   trees.userData.culledSourceTreeCount=(data.treeClusters||[]).length-positions.length;
-  const trunkMat=mat('#796b4e'),leafMat=mat('#ffffff');
-  const trunks=new T.InstancedMesh(new T.CylinderGeometry(.18,.27,1,5),trunkMat,positions.length);
-  const crowns=new T.InstancedMesh(new T.IcosahedronGeometry(1,1),leafMat,positions.length*3);
-  const d=new T.Object3D();let i=0;
-  const leafColors=['#638d5b','#789d69','#86a673','#a0ae76','#6e9561'];
+  const canopySpecs=[];
   for(const {p,id} of positions){let seed=0;for(const c of id)seed=(seed*31+c.charCodeAt(0))>>>0;
     const within=insideCage(p[0],p[1],-1),[u,v]=cageLocal(p[0],p[1]);
     const dome=20*Math.sqrt(Math.max(0,1-(u/35)**2-(v/20)**2));
     const entranceClearing=u>38&&u<50&&Math.abs(v)<4;
-    const h=entranceClearing?1.8:within?Math.min(11.4,Math.max(2.6,dome-2.2),8.7+(seed%36)/10):4.6+(seed%43)/10;
-    const r=entranceClearing?.65:within?1.7+(seed%19)/12:1.4+(seed%19)/10;
-    // CylinderGeometry runs along local Y; stand it upright in this Z-up scene.
-    d.position.set(p[0],p[1],-.24+h*.33);d.rotation.set(Math.PI/2,0,0);d.scale.set(1.12,h*.66,1.12);d.updateMatrix();trunks.setMatrixAt(i,d.matrix);
-    for(let l=0;l<3;l++){
-      const a=((seed%360)*Math.PI/180)+l*2.09,offset=l===0?0:r*.42;
-      d.position.set(p[0]+Math.cos(a)*offset,p[1]+Math.sin(a)*offset,-.24+h*(l===0?.77:.84));
-      d.scale.set(r*(l===0?.9:.65),r*(l===0?.82:.7),r*(l===0?.83:.62));d.rotation.set(0,0,a*.22);d.updateMatrix();
-      crowns.setMatrixAt(i*3+l,d.matrix);
-      crowns.setColorAt(i*3+l,new T.Color(leafColors[(seed+l)%leafColors.length]));
-    }
-    i++;
+    const h=entranceClearing?1.8:within?Math.min(11.4,Math.max(2.6,dome-2.2),8.7+(seed%36)/10):6+(seed%63)/10;
+    const r=entranceClearing?.65:within?1.7+(seed%19)/12:2.1+(seed%23)/10;
+    canopySpecs.push({x:p[0],y:p[1],h,r,seed});
   }
-  trunks.instanceMatrix.needsUpdate=true;crowns.instanceMatrix.needsUpdate=true;crowns.instanceColor.needsUpdate=true;
-  trunks.castShadow=true;crowns.castShadow=true;trees.add(trunks,crowns);
+  replaceableTreeGroups(canopySpecs,trees,forestCandidates,true);
   trees.add(woodlandEdgePlanting(roadBoundaryRings,surfaceLayers.path,data,currentPlan));
-  const cage=makeCage(surfaceData.cageLocal);site.add(cage);
-  return {site,cage,trees,footprints};
+  trees.add(woodlandInteriorPlanting(visualLandscape,forestCandidates));
+  const cage=makeCage(surfaceData.cageLocal,onTerrain);site.add(cage);
+  return {site,cage,trees,footprints,forestCandidates,prepareWater:water.prepare};
 }
 
 export {CAGE};

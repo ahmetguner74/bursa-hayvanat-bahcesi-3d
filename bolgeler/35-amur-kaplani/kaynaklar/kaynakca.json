@@ -1,0 +1,153 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 35,
+  "name": "Amur Kaplanı",
+  "type": "yaşam alanı",
+  "searched": "amur kaplanı",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-1636.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/02/amur-kaplanı1.jpg",
+      "mediaId": 1636,
+      "uploaded": "2015-06-04T14:39:30",
+      "title": "amur kaplanı",
+      "sha256": "fdee114a23f75029b1d5e88207ff3d077bd9cff194153c6208710d4f9ab54fca",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-1634.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/02/amur-kaplanı-e1433417936570.jpg",
+      "mediaId": 1634,
+      "uploaded": "2015-06-04T14:38:44",
+      "title": "amur kaplanı",
+      "sha256": "4760e7f4ebeec41428447b62e9e9b974713015538d6127d37bb4484aed8c779c",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar/fotograflar/resmi-site-3536.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW472650_08-scaled.jpg",
+      "mediaId": 3536,
+      "uploaded": "2023-04-20T09:23:24",
+      "title": "ASLAN VE KAPLANLARA NEFES KESEN BESLENME TESTİ",
+      "sha256": "868364fa379ef10572769a085961828fae6e5b4d869da8c7ee055ba39d23db86",
+      "role": "İçerik gözlemiyle ayrılmış hayvan/çevre referansı; ölçekli yapı fotoğrafı değildir",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "contentReview": {
+        "date": "2026-10-15",
+        "observation": "Fotoğrafta kaplan görülüyor; aslan başlığına rağmen Amur Kaplanı için hayvan/çevre adayı.",
+        "originalSearchArea": 7,
+        "exactCameraPosition": "teyitsiz"
+      }
+    }
+  ],
+  "documents": [
+    {
+      "title": "Amur Kaplanlarının Kar Özlemi",
+      "url": "https://www.bursahayvanatbahcesi.com/bengal-kaplanlarinin-kar-ozlemi/",
+      "type": "post"
+    },
+    {
+      "title": "AMUR KAPLANI (AMUR TİGER)",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/amur-kaplani-amur-tiger/",
+      "type": "hayvan"
+    },
+    {
+      "title": "BURSA HAYVANAT BAHÇESİ&#8217;NDE YAVRU KAPLAN HEYECANI",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesinde-yavru-kaplan-heyecani/",
+      "type": "post"
+    },
+    {
+      "title": "BÜYÜKŞEHİR’DEN KARNE HEDİYESİ",
+      "url": "https://www.bursahayvanatbahcesi.com/buyuksehirden-karne-hediyesi/",
+      "type": "post"
+    },
+    {
+      "title": "SİBİRYA SOĞUKLARI EN ÇOK ONLARI MUTLU ETTİ",
+      "url": "https://www.bursahayvanatbahcesi.com/sibirya-soguklari-en-cok-onlari-mutlu-etti/",
+      "type": "post"
+    },
+    {
+      "title": "Tarihçe",
+      "url": "https://www.bursahayvanatbahcesi.com/kurumsal/tarihce/",
+      "type": "page"
+    },
+    {
+      "title": "Dünya Kaplan Günü Kutlu Olsun",
+      "url": "https://www.bursahayvanatbahcesi.com/du%cc%88nya-kaplan-gu%cc%88nu%cc%88-kutlu-olsun/",
+      "type": "post"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "80734dadfebe2d7da97a4d5da80df6d8b40bb5e0cea5ad2d8a887d7df4d76ba6",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "aee9e6d938e2634014415c78effd6ce03a8790917306c3aa09eb3645f94d9f6c",
+    "nativeFeatureCount": 27,
+    "nativeTreeCount": 13,
+    "status": "illustrated-label-anchor"
+  },
+  "architecturalReferences": [
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8781_201806301143.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8781_201806301143.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "7c47c451667b06e7246488d6275ae1bd9465b694e8e9b5532b7bade30cf177ff",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Amur kaplanı bağlamı: tırmanma direği, yüksek metal tel sınır ve yatay üst hat",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8795_201806301144.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8795_201806301144.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "3bfc55a5ad86e672f84fb98e85fd1241d34d677076d29c30d49546f79f89eeed",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Amur kaplanı alanının direk/tel/çim sınırı, önceki kareye yakın açı",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    }
+  ]
+}

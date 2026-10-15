@@ -1,0 +1,13 @@
+{
+  "file": "woodland-wildflower-clump-web-v1.png",
+  "sha256": "3b80a179f909e1c67b951774f22973e3e2f2ea5bc63969c635f87f441f8f6265",
+  "source": "woodland-wildflower-clump-v1.png",
+  "sourceSha256": "defaac73a4485ede9c7a022ed4aa661476881d28a4581db6b9aef23d6a46887a",
+  "size": [
+    512,
+    512
+  ],
+  "mode": "RGBA",
+  "baseV": 0.8596491228070176,
+  "derivation": "Lanczos max512px PNG; preserve RGBA. No painting, hue or alpha-mask editing."
+}

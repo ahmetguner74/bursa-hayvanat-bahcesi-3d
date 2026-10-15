@@ -1,0 +1,559 @@
+{
+  "schema": "bursa-zoo-public-release/v1",
+  "revision": "20261015ai",
+  "source": "Verified local dist build; explicit --publish command",
+  "officialMapSource": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+  "officialMapCredit": "Bursa Hayvanat Bahçesi; overlay alignment is approximate, not surveyed",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app.js",
+      "bytes": 29141,
+      "sha256": "a282d2d41c3b920436dedc7f1a4801a74738b015b5ef04836d89bc8c8e2bbeb9"
+    },
+    {
+      "path": "assets/afrika-koyu-roof-shingles-v1.png",
+      "bytes": 3276730,
+      "sha256": "670ecad82deed8e5317b179f2d7dd0d668ba3e06d485a8e5cdbf18e5354e11fb"
+    },
+    {
+      "path": "assets/asset-manifest.json",
+      "bytes": 24892,
+      "sha256": "7a2a263649cea8cd41f0b2c29c5c5cb171c29570ae71c613f8fe08ff09144d2a"
+    },
+    {
+      "path": "assets/foliage-cluster-dark-v1.png",
+      "bytes": 721398,
+      "sha256": "b6ea3d3db3a7b67897264089b27d5572a0749b0f8d612a09e64ee2171df5f6ec"
+    },
+    {
+      "path": "assets/foliage-cluster-dark-web-v1.png",
+      "bytes": 131857,
+      "sha256": "ef9fafccc3fb9adf31dfaa64ee881632483cc598bf7ad34b6aaffe1ca05e6ce5"
+    },
+    {
+      "path": "assets/foliage-cluster-v1.png",
+      "bytes": 1439051,
+      "sha256": "850edeccbef3b272cb8023f1d2ec50a504cf68f36afe758303fa8120aee339ba"
+    },
+    {
+      "path": "assets/foliage-cluster-web-v1.png",
+      "bytes": 264915,
+      "sha256": "830cace8e113b0edc7f1a8c71e44e245f40552dbe5ce74b4fb2c81ff7a12b311"
+    },
+    {
+      "path": "assets/forest-impostor-atlas.png",
+      "bytes": 3302130,
+      "sha256": "b37417116fe4f6f49e23d6a3725699efdecc47e07db8638a79b8b566770cebcc"
+    },
+    {
+      "path": "assets/forest-impostor-metadata.json",
+      "bytes": 9277,
+      "sha256": "07eb8ae8184ea975182ce19385588622094bf55faec0395cad03ddeef0e1fbb2"
+    },
+    {
+      "path": "assets/penguin-artificial-rock-v1.png",
+      "bytes": 4180575,
+      "sha256": "c03ce4d501bd5c0f9846cf494efe9ff6cb9a5e2b810546601789872e816ac837"
+    },
+    {
+      "path": "assets/penguin-pale-gravel-v1.png",
+      "bytes": 4091483,
+      "sha256": "2e07401434c95bd476c46b9a383907efdd10119efd67ac64d3e5571c3fce44b3"
+    },
+    {
+      "path": "assets/savanna-platform-wood-v1.png",
+      "bytes": 3305621,
+      "sha256": "b7d6f0c2708033a21a714b72528fbf7b1186dca2b2968dd44b14844fd4d23674"
+    },
+    {
+      "path": "assets/three-water-normals-r186.jpg",
+      "bytes": 248813,
+      "sha256": "add9912b158a4fe9c12421745babe68c44c8af75631ac4837236cb2a03bc373f"
+    },
+    {
+      "path": "assets/turk-koyu-roof-tiles-v1.png",
+      "bytes": 3182079,
+      "sha256": "a2a18fbaa29a78d89b2b7c6a00f7199e0ddf4293005f350ae811d85d72e43ebc"
+    },
+    {
+      "path": "assets/turk-koyu-stone-wall-v1.png",
+      "bytes": 4114027,
+      "sha256": "0c880be8e764df28c06d5ed72c31612b7062fc1fd1398cf5fef6276bc728c903"
+    },
+    {
+      "path": "assets/woodland-bank-rock-v1.jpg",
+      "bytes": 111481,
+      "sha256": "90aaa2db8cff3f50c38e3c7eefa7a7669c1f5937475249f950ea388541c4ef5f"
+    },
+    {
+      "path": "assets/woodland-broadleaf-clump-v1.png",
+      "bytes": 1163299,
+      "sha256": "374d36d826f4b253d019eac0b953b00c7ee84d48ab5248b27f43c97847d821c0"
+    },
+    {
+      "path": "assets/woodland-broadleaf-clump-web-v1.png",
+      "bytes": 201338,
+      "sha256": "dc2769a3c330e365cf99202a9ea2135f01ad5c3b6883e7e4e85db0eb90011d37"
+    },
+    {
+      "path": "assets/woodland-fern-clump-v1.png",
+      "bytes": 1443091,
+      "sha256": "34bd945a1219d2e5b711b2288b5fcc0b96f53ee914315dbb0538ecf6c4aec0bf"
+    },
+    {
+      "path": "assets/woodland-fern-clump-web-v1.png",
+      "bytes": 252405,
+      "sha256": "5e67476c9695ce765b22809cac33055fc5ed321a08fbe60867dcffaacd3872aa"
+    },
+    {
+      "path": "assets/woodland-foliage-derivatives.json",
+      "bytes": 2759,
+      "sha256": "7645de5371d4886ea60309cdb7549b58e3ce56c9f9b03305ee1b32482aeabac9"
+    },
+    {
+      "path": "assets/woodland-grass-tussock-v1.png",
+      "bytes": 1408953,
+      "sha256": "a17782c7c59bf798c04da432755e5cb4cd171f2c62d2b841d1ec0c45ce15a35c"
+    },
+    {
+      "path": "assets/woodland-grass-tussock-web-v1.png",
+      "bytes": 256200,
+      "sha256": "8102058fa98694bbc0412c09e8973ce0a8f05fd16851bd31ed74b0e84a29bb50"
+    },
+    {
+      "path": "assets/woodland-ground-weights-v1.png",
+      "bytes": 330033,
+      "sha256": "7cd6b7d3870280cf0f9b3cbdc597b25ea768a8330c846cd0eba113c702f3f7ed"
+    },
+    {
+      "path": "assets/woodland-leaf-litter-v1.jpg",
+      "bytes": 725656,
+      "sha256": "285be7c55975af518dcc9967f3e3eb4404e79f0982544386b6bbc46d98731f77"
+    },
+    {
+      "path": "assets/woodland-leaf-litter-v1.png",
+      "bytes": 4531240,
+      "sha256": "5a47d72702799f42b98d168f6507c62ece4f3a96933c4a068419eccc61ecd22d"
+    },
+    {
+      "path": "assets/woodland-meadow-v1.png",
+      "bytes": 4622237,
+      "sha256": "915e283abac23fc1d38889fbff080b0dcd67122e1dc7201b0d317682b339fce4"
+    },
+    {
+      "path": "assets/woodland-palm-frond-v1.png",
+      "bytes": 527197,
+      "sha256": "8b73d1091e81381ccb0785bce2f6eb6fe2b766b47671636255c440fc93962821"
+    },
+    {
+      "path": "assets/woodland-shrub-spray-v1.png",
+      "bytes": 1292289,
+      "sha256": "e5ff97afaec171383621319a85d511a5fe3fed02b64d0c1509493e4cec593be6"
+    },
+    {
+      "path": "assets/woodland-shrub-spray-web-v1.png",
+      "bytes": 248772,
+      "sha256": "6c69f5e7a2a972e9a2ae8f258fe9340e3b35a0b194c70805224614bf94771265"
+    },
+    {
+      "path": "assets/woodland-stone-path-v1.png",
+      "bytes": 3925846,
+      "sha256": "041fec0abd5eef3b0d0396234e21afb71b81506aafa895cb92299c18e71eb08c"
+    },
+    {
+      "path": "assets/woodland-tree-bark-v1.png",
+      "bytes": 4384721,
+      "sha256": "2e7083719718374c820e18338ddda7e1a92a647e063ccc40b95c43b466dc5203"
+    },
+    {
+      "path": "assets/woodland-wildflower-clump-v1.png",
+      "bytes": 1661903,
+      "sha256": "defaac73a4485ede9c7a022ed4aa661476881d28a4581db6b9aef23d6a46887a"
+    },
+    {
+      "path": "assets/woodland-wildflower-clump-v1.prompt.txt",
+      "bytes": 1633,
+      "sha256": "c607cc8213efb4f91de444f613a792310721b942672a4f0caf25f79cc825d20e"
+    },
+    {
+      "path": "assets/woodland-wildflower-clump-web-v1.png",
+      "bytes": 298654,
+      "sha256": "3b80a179f909e1c67b951774f22973e3e2f2ea5bc63969c635f87f441f8f6265"
+    },
+    {
+      "path": "assets/woodland-wildflower-derivative.json",
+      "bytes": 459,
+      "sha256": "74d302856273872ee593257c57043464ae290bfd4bd221b5fce27a007b114b3b"
+    },
+    {
+      "path": "atlas-orbit.js",
+      "bytes": 1226,
+      "sha256": "682fc36c01b7696e2d0d9ab7aaae7cf640a6f38c109c868a761666e632f78ca9"
+    },
+    {
+      "path": "building-shell.json",
+      "bytes": 62908,
+      "sha256": "7f65685bd73dfc4c3f528934679b9d8a69c02fddc9fa18d44474d1b7ab968d02"
+    },
+    {
+      "path": "current-plan-data.json",
+      "bytes": 15762,
+      "sha256": "b83a36f17f276f085fe6d957d211d32111eefa0068847414c3af0003813246d2"
+    },
+    {
+      "path": "design-reference/compare-local.html",
+      "bytes": 2795,
+      "sha256": "fd99fd218f1a4e6466cb343a9649d7eb298b9422841ebd3101daac41f853c392"
+    },
+    {
+      "path": "design-reference/woodland-aviary-concept.png",
+      "bytes": 3378830,
+      "sha256": "ef7a4c427f6493e88ebb6f7865b0baf5aebf84414c1eda3ebac5f5a352cc11fe"
+    },
+    {
+      "path": "forest-impostors.js",
+      "bytes": 4334,
+      "sha256": "21652a276d5b212a3b5d8c1c069943b0bc351437d014a234b595982d1a7a87ab"
+    },
+    {
+      "path": "forest.js",
+      "bytes": 6352,
+      "sha256": "c926e8201df0757a62c4e1bbaaad23036bb666ee81968707b5b17ee255d95c63"
+    },
+    {
+      "path": "ground-material-layout.json",
+      "bytes": 2488,
+      "sha256": "a487c764bd9af36a07c49733457f8b4a1e3c9156f480614ae1b5270bfccc535c"
+    },
+    {
+      "path": "ground-material.js",
+      "bytes": 2594,
+      "sha256": "3555b517a3693570e8809ace76fbe64bec90ee7ffe48dca3b7f7719aac16ba3a"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6489,
+      "sha256": "e0fcda7ccd4b934149d45d7241726ac586ec62984470019864b8d41491975d3a"
+    },
+    {
+      "path": "landscape-layout.json",
+      "bytes": 260314,
+      "sha256": "e50b78ae865d1c5f4943c076907768c124f8fe33577a0c82216aec73298964aa"
+    },
+    {
+      "path": "lighting.js",
+      "bytes": 356,
+      "sha256": "d0e75225a4f43aa67377321c50b25541a04472dbf570d17bb92e2fb055622850"
+    },
+    {
+      "path": "model-review/afrika-kafe.glb",
+      "bytes": 899196,
+      "sha256": "abfd1d97e696b67b505728491c311287e2f4099f2c0fce0dfa42e9b4cfa0ac20"
+    },
+    {
+      "path": "model-review/afrika-koyu.glb",
+      "bytes": 7895672,
+      "sha256": "ac86988b54a7e34880b91a9534c9a71f93f443c9db0b2dc13a79810f055761db"
+    },
+    {
+      "path": "model-review/boz-ayi-havuz-kiyisi.glb",
+      "bytes": 1513188,
+      "sha256": "d43631b0e122edae2d2748141be3c41565ec783bcf240e1ff3385296019bf512"
+    },
+    {
+      "path": "model-review/habes-maymunu-adasi.glb",
+      "bytes": 754020,
+      "sha256": "675e592423d81ef2280f7297edb9a388cf045e494b9d8c32b639695647d5262f"
+    },
+    {
+      "path": "model-review/index.html",
+      "bytes": 24255,
+      "sha256": "f7812a91c62dfa2b62ceeea538b7f706458aad5accab5b5c5f560e3dc7af3369"
+    },
+    {
+      "path": "model-review/lemur-adasi.glb",
+      "bytes": 11347704,
+      "sha256": "b8834f83ddd1f681f6d19f5f65dd3691fe9110302c07f3f665402b6368969f2b"
+    },
+    {
+      "path": "model-review/penguen-havuzu.glb",
+      "bytes": 8626260,
+      "sha256": "3464e98eb4f4a5abb5c7b99739cdd3fddf3d3a7df7114a0ed351dd4486312cd2"
+    },
+    {
+      "path": "model-review/savanna-ahsap-platform.glb",
+      "bytes": 3066116,
+      "sha256": "03b1948370396a19ed3ac64f40fa7b2be636dc9f56f8c3aa0ce01b625aae1c8e"
+    },
+    {
+      "path": "model-review/su-kuslari-kubbesi-uzak.glb",
+      "bytes": 286124,
+      "sha256": "05a7366f3195dde0415469bb4ba69e0564160021a4e74065db9c9c4001cdf873"
+    },
+    {
+      "path": "model-review/su-kuslari-kubbesi-yakin.glb",
+      "bytes": 2997324,
+      "sha256": "45092196458b5d7bbe2b2cd98aa44b5906f1af9cea1df1d17e2a767fddaa9332"
+    },
+    {
+      "path": "model-review/tree-atlas-baker.js",
+      "bytes": 7323,
+      "sha256": "a74922e0c10edea3d6189a18d9c495defea9a529889c2880f469c8ba0137ded0"
+    },
+    {
+      "path": "model-review/turk-koyu.glb",
+      "bytes": 6810924,
+      "sha256": "5f43896a39bff5d7f4f24328fb4989a92ca9b321b223346fae29f93fa60a922c"
+    },
+    {
+      "path": "model.js",
+      "bytes": 62077,
+      "sha256": "398922e2b310e8fb2af012e69fb0280ebd4039d11a98d28e791db4a5ce82c42e"
+    },
+    {
+      "path": "models/african-penguin.glb",
+      "bytes": 4980240,
+      "sha256": "a13268217ab09dcb582ae3b1adde6ee4ab4f68f9037ca6141eece2ada6fbee47"
+    },
+    {
+      "path": "models/afrika-kafe.glb",
+      "bytes": 899196,
+      "sha256": "abfd1d97e696b67b505728491c311287e2f4099f2c0fce0dfa42e9b4cfa0ac20"
+    },
+    {
+      "path": "models/afrika-koyu.glb",
+      "bytes": 7895672,
+      "sha256": "ac86988b54a7e34880b91a9534c9a71f93f443c9db0b2dc13a79810f055761db"
+    },
+    {
+      "path": "models/boz-ayi-havuz-kiyisi.glb",
+      "bytes": 1513188,
+      "sha256": "d43631b0e122edae2d2748141be3c41565ec783bcf240e1ff3385296019bf512"
+    },
+    {
+      "path": "models/generic-broadleaf-tree.glb",
+      "bytes": 12206208,
+      "sha256": "23b7e31890926a4b9f2946524618f97e493ecf33bc10fc503f41bf96dc62235e"
+    },
+    {
+      "path": "models/habes-maymunu-adasi.glb",
+      "bytes": 754020,
+      "sha256": "675e592423d81ef2280f7297edb9a388cf045e494b9d8c32b639695647d5262f"
+    },
+    {
+      "path": "models/lemur-adasi.glb",
+      "bytes": 11347704,
+      "sha256": "b8834f83ddd1f681f6d19f5f65dd3691fe9110302c07f3f665402b6368969f2b"
+    },
+    {
+      "path": "models/penguen-havuzu.glb",
+      "bytes": 8626260,
+      "sha256": "3464e98eb4f4a5abb5c7b99739cdd3fddf3d3a7df7114a0ed351dd4486312cd2"
+    },
+    {
+      "path": "models/penguin-ATTRIBUTION.txt",
+      "bytes": 601,
+      "sha256": "1137b1de739e3939976ec279ed0bc64219500536babe9a0db311d0ad0e38b005"
+    },
+    {
+      "path": "models/penguin-colony.json",
+      "bytes": 30634,
+      "sha256": "58d7c86d422e97b9343d98b12f90c30d626bff040cbe0a532c09fc019b9fddf4"
+    },
+    {
+      "path": "models/savanna-ahsap-platform.glb",
+      "bytes": 3066116,
+      "sha256": "03b1948370396a19ed3ac64f40fa7b2be636dc9f56f8c3aa0ce01b625aae1c8e"
+    },
+    {
+      "path": "models/tree-model-metadata.json",
+      "bytes": 3507,
+      "sha256": "4d255250a3d0e97691cc8d7f23a51261f701d5b77a6d3c529380ab67eb66ae2c"
+    },
+    {
+      "path": "models/turk-koyu.glb",
+      "bytes": 6810924,
+      "sha256": "5f43896a39bff5d7f4f24328fb4989a92ca9b321b223346fae29f93fa60a922c"
+    },
+    {
+      "path": "penguin-motion.js",
+      "bytes": 4715,
+      "sha256": "bd97ab487dce555d1d08ea9121acfb998cd8c889ed851525431904c4579ea962"
+    },
+    {
+      "path": "penguins.js",
+      "bytes": 6068,
+      "sha256": "99e96ef99b50408bb5fe6243bc1f7d4341535e4dd5b1a9cf58f7bd807d183f52"
+    },
+    {
+      "path": "plant-cards.js",
+      "bytes": 250,
+      "sha256": "805fb985b83eeea686a6132184c50191bc7bab5cacedb885bee92d6827d88205"
+    },
+    {
+      "path": "reference-maps/2026-09-resmi-kroki.jpg",
+      "bytes": 400217,
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d"
+    },
+    {
+      "path": "region-locations.json",
+      "bytes": 39196,
+      "sha256": "80b7aed766bf8c2667ac3cfdbcebd04fedae054edc64b476148ac67330c0a725"
+    },
+    {
+      "path": "region-models.js",
+      "bytes": 5034,
+      "sha256": "e832648865bd7b7d623f54ad11fb9708601b554b06fa729337e42306fad156d7"
+    },
+    {
+      "path": "scene-effects.js",
+      "bytes": 2764,
+      "sha256": "8dda84b6b42db73a9619cdeffe6c5fa4f434650d2563383c07f00340f050c157"
+    },
+    {
+      "path": "scene-model-catalog.json",
+      "bytes": 19162,
+      "sha256": "fea5b987a9a5a23166d083ed379f179a010e67a13a63b5d03612b829fa37376b"
+    },
+    {
+      "path": "site-data.json",
+      "bytes": 605528,
+      "sha256": "022a88053df75b9d755e082079ed31f6b922e79bb8bca03016890c52cc828358"
+    },
+    {
+      "path": "style.css",
+      "bytes": 9608,
+      "sha256": "19e07688f099ad50d591b2397f0dcf9d24680b403d3d720d446a47eae6e06aea"
+    },
+    {
+      "path": "surface-layers.json",
+      "bytes": 814465,
+      "sha256": "2c2b9d7c4e0cb6240b55d1e57dd5eccf61f0f5b157da283e64046d3b24ae01ac"
+    },
+    {
+      "path": "v2/app.js",
+      "bytes": 10196,
+      "sha256": "bc9ddbb652da6868061ffa41092c663c787ae2b072dba9ca3d7762e2bd0f234b"
+    },
+    {
+      "path": "v2/index.html",
+      "bytes": 2656,
+      "sha256": "4a7e6d582de47483e40eeeb1c5ffba68f77aaeca5df73942d3d59668e4bba60e"
+    },
+    {
+      "path": "v2/official-kroki-rectified.png",
+      "bytes": 2519661,
+      "sha256": "f2c7d77d4f62e4ed5eaa7479c936c147963aa38d593be6455c5b74fdec5ed79b"
+    },
+    {
+      "path": "v2/official-map.json",
+      "bytes": 296,
+      "sha256": "b7579871c6bde12144afd46b1c9d31aabace0e4628cdc0524bbd5217c1a16fd9"
+    },
+    {
+      "path": "v2/rectification.json",
+      "bytes": 2256,
+      "sha256": "434ff0ecca1ce910a9e4573fd13bc9ddf657c268dcc23ade320cba43f9146b2a"
+    },
+    {
+      "path": "v2/roads-metric.json",
+      "bytes": 386720,
+      "sha256": "d5038924b6356022b273fff88bc12ba6f3091c8df2294ca6fd64decf1a5fad56"
+    },
+    {
+      "path": "v2/style.css",
+      "bytes": 4883,
+      "sha256": "3b3ea8057c3db4b3f619edb36ca86274e13abaa43b89eb0c47a1cd8cbc96a15d"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "vendor/loaders/GLTFLoader.js",
+      "bytes": 117570,
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16"
+    },
+    {
+      "path": "vendor/math/SimplexNoise.js",
+      "bytes": 15148,
+      "sha256": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072"
+    },
+    {
+      "path": "vendor/objects/Water.js",
+      "bytes": 12894,
+      "sha256": "3386670ba86003a32f5efe449041bd108d4cf1e0661849caa814741a2aaf395b"
+    },
+    {
+      "path": "vendor/OrbitControls.js",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+    },
+    {
+      "path": "vendor/postprocessing/GTAOPass.js",
+      "bytes": 19910,
+      "sha256": "a277f848d1035c751c54d9706e579aeb74689126ced25723e53d52ac3f26f445"
+    },
+    {
+      "path": "vendor/postprocessing/OutputPass.js",
+      "bytes": 4184,
+      "sha256": "02e4a261af34de71338185e9e87f0cbe5cba9115608d984363e1269dec1d2272"
+    },
+    {
+      "path": "vendor/postprocessing/Pass.js",
+      "bytes": 4218,
+      "sha256": "444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5"
+    },
+    {
+      "path": "vendor/scene-effects-sources.json",
+      "bytes": 2921,
+      "sha256": "cfb0df794d67bb3333427846b73a924ff0d27fde7b7e38a41155c4b0e8ac2681"
+    },
+    {
+      "path": "vendor/shaders/CopyShader.js",
+      "bytes": 729,
+      "sha256": "a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718"
+    },
+    {
+      "path": "vendor/shaders/GTAOShader.js",
+      "bytes": 12166,
+      "sha256": "cdea7be60452f61105375d2c18e4da2e8ce7b39a89246b1bb8fbf79319d58cfd"
+    },
+    {
+      "path": "vendor/shaders/OutputShader.js",
+      "bytes": 1876,
+      "sha256": "353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2"
+    },
+    {
+      "path": "vendor/shaders/PoissonDenoiseShader.js",
+      "bytes": 7080,
+      "sha256": "61da074a9ad8b2139dd164c96b8b62c299f056ce06c216e1f707c5151d997602"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "path": "vendor/utils/BufferGeometryUtils.js",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797"
+    },
+    {
+      "path": "vendor/utils/SkeletonUtils.js",
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f"
+    }
+  ]
+}

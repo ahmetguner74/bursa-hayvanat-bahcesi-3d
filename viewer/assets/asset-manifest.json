@@ -1,0 +1,317 @@
+{
+  "schema": "bursa-zoo-generated-materials/v1",
+  "target": "design-reference/woodland-aviary-concept.png",
+  "assets": [
+    {
+      "file": "foliage-cluster-v1.png",
+      "name": "Transparan yaprak kümesi",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Sıcak zeytin ve sarı yeşil tonlarında doğal meşe yaprakları; seyrek saydam boşluklar, ortalanmış tek yaprak kümesi, temiz alfa kenarı.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Ağaç taçları ve çalılar; alfa kesimi .5",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "850edeccbef3b272cb8023f1d2ec50a504cf68f36afe758303fa8120aee339ba",
+      "interpretation": "AI ile üretilmiş sunum malzemesi; gerçek alanın fotoğrafı veya ölçülü malzeme taraması değildir"
+    },
+    {
+      "file": "woodland-meadow-v1.png",
+      "name": "Orman içi çayır",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Üstten ve eşit yayınık ışıkta ince zeytin yeşili çimen, yonca, kuru ot ve yer yer toprak; döşenebilir malzeme örneği.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Tekil arazi yüzeyi",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "915e283abac23fc1d38889fbff080b0dcd67122e1dc7201b0d317682b339fce4",
+      "interpretation": "AI ile üretilmiş sunum malzemesi; gerçek alanın fotoğrafı veya ölçülü malzeme taraması değildir"
+    },
+    {
+      "file": "woodland-stone-path-v1.png",
+      "name": "Sıcak taş yol",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Üstten görünen düzensiz açık kumtaşı plakalar ve dar çakıl derzleri; sıcak krem tonları, eşit yayınık ışık, döşenebilir yüzey.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Tekil yol yüzeyi",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "041fec0abd5eef3b0d0396234e21afb71b81506aafa895cb92299c18e71eb08c",
+      "interpretation": "AI ile üretilmiş sunum malzemesi; gerçek alanın fotoğrafı veya ölçülü malzeme taraması değildir"
+    },
+    {
+      "file": "turk-koyu-roof-tiles-v1.png",
+      "name": "Kiremit çatı",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Ortografik üstten, nötr yayınık ışıkta mat kırmızı kil oluklu kiremitler; 2 × 2 m malzeme alanında yaklaşık on kiremit genişliği.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Türk Köyü kırma çatı UV dokusu",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "a2a18fbaa29a78d89b2b7c6a00f7199e0ddf4293005f350ae811d85d72e43ebc",
+      "interpretation": "AI ile üretilmiş sunum malzemesi; gerçek alanın fotoğrafı veya ölçülü malzeme taraması değildir"
+    },
+    {
+      "file": "turk-koyu-stone-wall-v1.png",
+      "name": "Taş duvar",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Nötr yayınık ışıkta küçük sıcak gri, kahverengi ve bej taşlarla örülmüş duvar; açık derz; 3 × 3 m malzeme alanı.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Türk Köyü alt cephe UV dokusu",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "0c880be8e764df28c06d5ed72c31612b7062fc1fd1398cf5fef6276bc728c903",
+      "interpretation": "AI ile üretilmiş sunum malzemesi; gerçek alanın fotoğrafı veya ölçülü malzeme taraması değildir"
+    },
+    {
+      "file": "woodland-fern-clump-v1.png",
+      "name": "Düşük eğrelti kümesi",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Altı dışa yayılan frond, zeytin ve koyu yeşil; saydam aralıklar, mat yayınık ışık.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Alfa kesimli orman altı kartları",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "34bd945a1219d2e5b711b2288b5fcc0b96f53ee914315dbb0538ecf6c4aec0bf",
+      "interpretation": "AI sunum materyali; gerçek malzemenin taraması değildir",
+      "knownLimit": "Sağ saydam kenar yaklaşık%4.5; %10 çerçeve hedefi tamamen karşılanmadı, fakat yaprak uçları görüntü içinde."
+    },
+    {
+      "file": "penguin-artificial-rock-v1.png",
+      "name": "Gri yapay kaya",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Nötr orta/açık gri, ince taneli beton kaya yüzeyi ve kısa düzensiz çatlaklar; örme taş deseni yok.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Penguen kaya duvarı ve su içi taşlar; yaklaşık3m UV döşemesi",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "c03ce4d501bd5c0f9846cf494efe9ff6cb9a5e2b810546601789872e816ac837",
+      "interpretation": "AI sunum materyali; gerçek malzemenin taraması değildir",
+      "visualReference": "bolgeler/15-penguen/kaynaklar/fotograflar/24148_MST_8045_201706220833.jpg"
+    },
+    {
+      "file": "penguin-pale-gravel-v1.png",
+      "name": "Açık kıyı çakılı",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Üstten3–12cm açık gri/beyaz/bej küçük taşlar ve ince kum; mat nötr ışık.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Tekil penguen kıyı yüzeyi; yaklaşık1.5m UV döşemesi",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "2e07401434c95bd476c46b9a383907efdd10119efd67ac64d3e5571c3fce44b3",
+      "interpretation": "AI sunum materyali; gerçek malzemenin taraması değildir",
+      "visualReference": "bolgeler/15-penguen/kaynaklar/fotograflar/24148_MST_8045_201706220833.jpg"
+    },
+    {
+      "file": "foliage-cluster-dark-v1.png",
+      "name": "Koyu sivri yapraklı taç kümesi",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Mat koyu zeytin/orman yeşili sivri oval dişli yapraklar, ince kahverengi dallar, saydam iç boşluklar; yaprak ucu çevresinde en az %17 saydam kenar. Bir üretim ve yalnız kadraj revizyonu.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Ağaç taçlarının üçte ikisi; alfa kesimi .5",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "b6ea3d3db3a7b67897264089b27d5572a0749b0f8d612a09e64ee2171df5f6ec",
+      "interpretation": "AI ile üretilmiş sunum malzemesi; gerçek alanın fotoğrafı veya ölçülü malzeme taraması değildir"
+    },
+    {
+      "file": "woodland-tree-bark-v1.png",
+      "name": "İnce lifli ağaç kabuğu",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Sıcak nötr gri-kahverengi ince düşey lifler ve dar çatlaklar; nötr yayınık ışık, opak tekrar dokusu. Gerçek tekrarlanabilirlik henüz kesin doğrulanmadı.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Gövde ve dallar; yaklaşık 1 m malzeme ölçeği",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "2e7083719718374c820e18338ddda7e1a92a647e063ccc40b95c43b466dc5203",
+      "interpretation": "AI ile üretilmiş sunum malzemesi; gerçek alanın fotoğrafı veya ölçülü malzeme taraması değildir"
+    },
+    {
+      "file": "woodland-broadleaf-clump-v1.png",
+      "name": "Geniş yapraklı alçak yer örtüsü",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Yedi-dokuz doğal yeşil geniş yapraklı alçak rozet; gerçek alfa ve iç boşluklar. İlk üretim aynen seçildi; kenar revizyonu reddedildi. İnce sarı-yeşil kenar ve %3 yan boşluk var.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Alçak yer örtüsü; alfa kesimi .55",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "374d36d826f4b253d019eac0b953b00c7ee84d48ab5248b27f43c97847d821c0",
+      "interpretation": "AI ile üretilmiş sunum malzemesi; gerçek alanın fotoğrafı veya ölçülü malzeme taraması değildir"
+    },
+    {
+      "file": "savanna-platform-wood-v1.png",
+      "name": "Savanna ahşap yapı malzemesi",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "2017 fotoğrafındaki sıcak kahverengi ahşaba göre üretilmiş yaklaşık1m² alanlı beş dar uzun tahta, ince lifler ve derzler, nötr yayınık ışık; opak. U kenarı tekrarı kesin doğrulanmadı.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; tam araç promptu olarak sunulmaz",
+      "usage": "Savanna ahşap yapı UV albedo; renk varyantları ortak kaynak",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "b7d6f0c2708033a21a714b72528fbf7b1186dca2b2968dd44b14844fd4d23674",
+      "interpretation": "AI ile üretilmiş sunum malzemesi; gerçek fotoğraf veya ölçülü tarama değildir"
+    },
+    {
+      "file": "woodland-palm-frond-v1.png",
+      "name": "Kavisli palmiye yaprağı",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Tek yatay pinnate frond; sap solda, uç sağda, koyu zeytin/orman yeşili; nötr ışık ve gerçek alfa boşlukları. Radyal 3B taçta kullanılır.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; seçilen son araç promptu ayrıca kayıtlı",
+      "finalToolPrompt": "Edit only the framing of this single transparent palm-frond texture. Keep the exact same ONE horizontally oriented pinnate frond, petiole at LEFT, pointed tip at RIGHT, natural gentle curve, individual narrow leaflets, muted dark olive/forest green colors, botanical details and neutral matte lighting. Uniformly shrink the whole existing frond by 20 percent without changing its proportions, then center it on the same square fully transparent canvas, leaving at least 12 percent empty transparent margin on both LEFT and RIGHT and generous transparent margin above and below. Every leaflet tip stays fully inside the frame. Do not draw extra fronds, change the leaf pattern or lighten the colors. No neon green or yellow fringe, no colored halo, trunk, ground, cast shadow, backdrop, text, border, scenery, UI or watermark. Preserve genuine transparent alpha in the background and between all leaflets. Square 1024x1024 PNG, reusable 3D palm alpha card.",
+      "usage": "Alfa kesimli 3B bitki varlığı; değişmemiş PNG",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "8b73d1091e81381ccb0785bce2f6eb6fe2b766b47671636255c440fc93962821",
+      "interpretation": "AI sunum varlığı; gerçek bitki envanteri/tür kaydı/saha taraması değil",
+      "knownLimit": "Görünür oran yaklaşık 2,9:1; hedef 3,5:1. Kenar payları %12–13."
+    },
+    {
+      "file": "woodland-grass-tussock-v1.png",
+      "name": "İnce yapraklı alçak ot kümesi",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Tek sedge/grass benzeri ince kavisli yeşil/kahverengi yaprak kümesi, gerçek alfa boşlukları; saha türü/konumu iddiası yok.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; seçilen son araç promptu ayrıca kayıtlı",
+      "finalToolPrompt": "Edit target: the provided single grass tussock sprite.\nCorrect the alpha cutout and simplify the silhouette. Remove ALL bright neon green and yellow pixel artifacts around and between the leaves. Make the leaf surfaces natural subdued medium/dark neutral grass-green and muted brown, with clean realistically opaque leaf interiors, soft antialiased edges, and genuinely fully transparent holes between every leaf. There must be no chroma-key color fringe or tinted translucent background pixels anywhere.\nKeep ONE photorealistic woodland-edge grass/sedge tussock in a square image with true RGBA transparency. Reduce the plant to approximately 30 visibly distinct slender narrow arching leaves from one compact basal crown, airy with open transparent gaps, about 0.6m tall and 0.7m wide. Fine narrow leaves, a few dry brown blades; graceful natural asymmetry. Move all leaf tips well inside the frame with a clear 12 percent fully transparent margin on ALL four sides. Neutral soft diffuse lighting, front view from slightly above, orthographic.\nNo soil, no ground, no cast shadow, no pot, no roots, no surrounding scene, no leaves or tips touching the edges, no flowers, no seedheads, no objects, no text, no watermark. Do not add a flat background or checkerboard. Save the complete plant silhouette on actual transparent background. This is an artistic generic vegetation sprite, not a species or surveyed location record.",
+      "usage": "Alfa kesimli 3B bitki varlığı; değişmemiş PNG",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "a17782c7c59bf798c04da432755e5cb4cd171f2c62d2b841d1ec0c45ce15a35c",
+      "interpretation": "AI sunum varlığı; gerçek bitki envanteri/tür kaydı/saha taraması değil",
+      "knownLimit": "%10 boş kenar hedefi karşılanmadı; görünür kenarlar yaklaşık %5–7. Neon RGB yalnız alfa ≤3 düzeyinde; alfa kesimiyle atılır. 40’tan fazla yaprak."
+    },
+    {
+      "file": "woodland-shrub-spray-v1.png",
+      "name": "Küçük oval yapraklı çalı",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "artDirectionBrief": "Tek alçak geniş oval yaprak/dal spreyi; küçük tam yapraklar, ince kahverengi dallar, nötr mat orman yeşili ve gerçek alfa.",
+      "briefRecord": "Üretim yönlendirmesinin özeti; seçilen son araç promptu ayrıca kayıtlı",
+      "finalToolPrompt": "Use case: photorealistic-natural. Asset type: one genuine transparent PNG alpha-card foliage sprite for building rounded low 3D woodland shrubs. Subject: a single naturally branching broadleaf shrub spray, with many small whole oval smooth-edged leaves reminiscent of boxwood or laurel, distinctly different from oak lobed leaves and fern fronds. A dense but airy low broad-oval foliage mass, gently asymmetric, spreading more sideways than upward. A few fine natural brown twig branches visible through the foliage. Individually readable small leaves, matte medium forest green and deep green, restrained tonal variation, fine subtle veins, natural soft curl. Open empty gaps between leaf clusters. No flowers, no berries, no bright lime or yellow leaves. Camera: neutral orthographic view from the front and slightly above. Center the entire spray within the middle 75 percent of the square, leaving at least 10 percent genuinely transparent empty padding on every side; all twig and leaf tips fully visible inside the frame. Lighting: completely even neutral diffuse illumination with no strong directional highlight, no cast shadow. Full genuine alpha transparency in the background and all leaf gaps. Clean natural antialiased leaf edges with natural dark green edge color, no neon/lime/yellow halo, no green-screen color spill, no glowing fringe. No ground, no soil, no planter, no pot, no shadow, no scene, no backdrop, no text, no UI, no logo, no frame, no watermark. This is a generated material asset, not a documentary field photograph or species record. Single square transparent image, ideally 1024 by 1024 pixels.",
+      "usage": "Alfa kesimli 3B bitki varlığı; değişmemiş PNG",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "e5ff97afaec171383621319a85d511a5fe3fed02b64d0c1509493e4cec593be6",
+      "interpretation": "AI sunum varlığı; gerçek bitki envanteri/tür kaydı/saha taraması değil",
+      "knownLimit": "Yan pay %4,8 ile %10 hedefine ulaşmadı; düşük alfa kenarlarında zeytin/sarı benekler alfa kesimiyle atılır."
+    },
+    {
+      "file": "afrika-koyu-roof-shingles-v1.png",
+      "name": "Afrika Köyü koyu ahşap çatı şingılı",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "670ecad82deed8e5317b179f2d7dd0d668ba3e06d485a8e5cdbf18e5354e11fb",
+      "artDirectionBrief": "2012 belediye fotoğrafının yalnız malzeme karakterine göre koyu gri-kahverengi, dar ve yatay şaşırtmalı ahşap şingıl yüzeyi; nötr ışık, opak albedo.",
+      "visualReference": "bolgeler/14-afrika-koyu/kaynaklar/fotograflar/belediye-2012-afrika-koyu-xref1747.jpeg",
+      "usage": "Yedi kademeli konik çatıda, çevre boyunca U ve çatı eğimi boyunca V döşemesi",
+      "interpretation": "Üretilmiş sunum malzemesi; saha taraması veya güncel yapım tekniği kanıtı değil",
+      "knownLimit": "Sıra altlarında koyu gömülü gölgeler var; dört kenarda tam dikişsiz devamlılık doğrulanmadı.",
+      "finalToolPrompt": "Use case: photorealistic-natural. Asset type: one opaque seamless square PBR base-color/albedo bitmap for the seven tiered conical roofs of an editable African Village model at Bursa Zoo. Input image role: roof surface material character ONLY from the small 2012 municipal reference photograph; it is not a guide to present-day geometry. Generate a NEW isolated material swatch, not the photograph, building, roof silhouette or scene. Subject: dark weathered brown-grey narrow wooden roof shingles or flat split wooden laths, laid in regular horizontal staggered offset courses. Fine narrow individual wood strips with subdued dry fibres running along the grain, restrained tiny broken or worn edges, shallow fine joints, natural subtle irregularity. Muted dark earthy brown, dry charcoal-brown and subdued grey weathering, low saturation and restrained color variation. The pattern should be dense and readable at close range without oversized planks, large cracks, deep black gaps or dramatic damage. Straight orthographic material scan perpendicular to surface, flat and full bleed. Neutral completely even diffuse lighting for an albedo map, no baked directional cast shadows, no specular highlights, no vignette and no ambient occlusion. Aim for perfectly seamless edge continuation on all four sides: horizontal courses, shingle scale, color and grain must wrap smoothly horizontally and vertically. No terracotta tile forms, no curved barrel tiles, no thatch fringe or straw, no moss clumps, no vegetation, no perspective, no roof edges/ridges, no objects, no building, no landscape, no text, no UI, no logo, no frame or border. One opaque RGB square bitmap, ideally 1024 by 1024 pixels."
+    },
+    {
+      "file": "woodland-leaf-litter-v1.png",
+      "name": "Woodland leaf litter and granular soil",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "5a47d72702799f42b98d168f6507c62ece4f3a96933c4a068419eccc61ecd22d",
+      "artDirectionBrief": "Warm restrained woodland soil, small leaf pieces; neutral albedo for the selected park mockup direction.",
+      "visualReference": "design-reference/woodland-aviary-concept.png (art direction only; not supplied as a tool image input)",
+      "usage": "Existing terrain material, blended by numeric weights around retained tree positions; 3 metre repeat",
+      "interpretation": "Generated visual material, not a measured Bursa soil sample",
+      "knownLimit": "Fine grain contains darker crevices; exact four-edge seamless continuity is not proven. No normal or height map is inferred from it.",
+      "finalToolPrompt": "Create one production-ready seamless physically based ground ALBEDO texture for a real-time 3D woodland zoo diorama. Square flat orthographic top-down material sample, filling the full frame edge to edge. Show compact warm brown woodland soil with a restrained scattered layer of small dry oak-like leaves, tiny broken twigs, a few muted moss flecks, faint irregular humus grains. Natural earthy tan, umber, desaturated olive, subtle small-scale variation. Leaf pieces occupy about 15% of the area; the rest stays granular earth. The physical tile represents about 3 by 3 metres, so leaves must remain small. Match a detailed warm sunlit miniature park art direction, but the actual texture must be neutral evenly lit PBR base color: no directional lighting, no cast shadows, no baked ambient occlusion, no bright highlights, no camera perspective, no vignette, no border, no text, no large rocks, no grass clumps, no tree trunks. Seamless repeat on all four edges. Return only the single material texture image."
+    },
+    {
+      "file": "woodland-wildflower-clump-v1.png",
+      "name": "Alçak sarı ve beyaz çiçekli orman otu kümesi",
+      "generator": "OpenAI Image Gen built-in tool",
+      "generated": "2026-10-15",
+      "finalToolPrompt": "Use case: photorealistic-natural. Asset type: one transparent RGBA PNG alpha-card plant cluster to place in a real interactive 3D woodland zoo scene. Subject: one low, wide, naturally asymmetric clump of small meadow herbs, about 0.45 metres high and 0.65 metres wide, with many slender muted olive and neutral forest-green leaves and fine soft stems. Only a few tiny pale butter-yellow and ivory-white wildflowers scattered within the clump, no large blooms; flowers occupy less than 8 percent of the plant. Rich fine leaf detail and soft organic branching, gently irregular natural silhouette. Style: realistic miniature woodland garden, warm quiet storybook atmosphere, not cartoon. Camera: orthographic front view from slightly above, complete basal crown and every tip visible. Lighting: soft neutral diffuse studio illumination; natural subtle self-shading, no baked cast shadow, no strong directional highlights. Composition: one complete cluster centred in the square, entire plant within the central 78 percent of the image with at least 10 percent genuinely transparent empty padding on all four sides. True alpha transparency in the entire background and all gaps among leaves. Clean antialiased green/brown edges, no neon yellow or lime halo, no chroma-key spill, no translucent coloured backdrop. No soil, no ground patch, no pot, no planter, no roots, no surrounding environment, no horizon, no backdrop, no cast shadow, no visible checkerboard, no text, no UI, no logo, no watermark. This is a generated generic presentation asset, not a field photograph, species identification or botanical survey. One square image.",
+      "usage": "Kafes çevresinde alfa kesimli, yorumlanan alçak bitki kümeleri; teknik 512px türevi kullanılır",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "defaac73a4485ede9c7a022ed4aa661476881d28a4581db6b9aef23d6a46887a",
+      "interpretation": "AI sunum varlığı; gerçek tür, güncel bitki envanteri veya saha fotoğrafı değil",
+      "knownLimit": "%10 yan boşluk hedefi karşılanmadı: alfa128 ile görünür X33..1197,Y249..1078. Neon RGB2061 pikselin tamamı alfa≤4; alfa kesimiyle atılır."
+    }
+  ],
+  "limitations": "Döşenebilir görünüm görsel olarak değerlendirildi; matematiksel kenar sürekliliği kanıtlanmadı. PBR taban renk görüntüleri, ayrı ölçülü normal/roughness taraması değil.",
+  "materialInterpretations": [
+    {
+      "file": "woodland-stone-path-v1.png",
+      "role": "Base color reused as small illustrative bump signal, sampled as data in NoColorSpace",
+      "bumpScaleMetres": 0.035,
+      "repeatPerMetre": 0.3,
+      "surveyedHeight": false
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 29,
+  "name": "Boz Ayı",
+  "type": "yaşam alanı",
+  "searched": "boz ayı",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar/fotograflar/resmi-site-1671.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/07/1813929_8.jpg",
+      "mediaId": 1671,
+      "uploaded": "2015-07-09T09:07:56",
+      "title": "Sicaktan bunalan ayilar meyve dondurmasi ile serinliyor",
+      "sha256": "277e9aa5e6072c031671a3416213bc63e75661ffe72d7f7255383f6cc18336ba",
+      "role": "İçerik gözlemiyle ayrılmış hayvan/çevre referansı; ölçekli yapı fotoğrafı değildir",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "contentReview": {
+        "date": "2026-10-15",
+        "observation": "Fotoğrafta su içindeki ayı görülüyor; deve barınağı referansı değildir.",
+        "originalSearchArea": 18,
+        "exactCameraPosition": "teyitsiz"
+      }
+    }
+  ],
+  "documents": [
+    {
+      "title": "BOZ AYI",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/boz-ayi/",
+      "type": "hayvan"
+    },
+    {
+      "title": "Hayvanat Bahçesi’nde çarşamba günleri ‘Halk Günü’",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvanat-bahcesinde-carsamba-gunleri-halk-gunu/",
+      "type": "post"
+    },
+    {
+      "title": "Bursa Hayvanat Bahçesi&#8217;nin sakinlerine buzlu meyve desteği",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesinin-sakinlerine-buzlu-meyve-destegi/",
+      "type": "post"
+    },
+    {
+      "title": "ÖĞRENCİLER HAYVANLARI TANIYOR",
+      "url": "https://www.bursahayvanatbahcesi.com/ogrenciler-hayvanlari-taniyor/",
+      "type": "post"
+    },
+    {
+      "title": "NESLİ TEHLİKE ALTINDAKİ TÜRLER GÜNÜ",
+      "url": "https://www.bursahayvanatbahcesi.com/nesli-tehlike-altindaki-turler-gunu/",
+      "type": "post"
+    },
+    {
+      "title": "LONGOZLAR SUSARSA BURSA SUSAR",
+      "url": "https://www.bursahayvanatbahcesi.com/longozlar-susarsa-bursa-susar/",
+      "type": "post"
+    },
+    {
+      "title": "Aslan Ailesinde Yavru Sevinci",
+      "url": "https://www.bursahayvanatbahcesi.com/aslan-ailesinde-yavru-sevinci/",
+      "type": "post"
+    },
+    {
+      "title": "Penguen ailesinde yavru sevinci",
+      "url": "https://www.bursahayvanatbahcesi.com/penguen-ailesinde-yavru-sevinci/",
+      "type": "post"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "57fe85ebae8c7bd251b9e620a6611098132e5b1612c65913f145a841fbff777f",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "3c98ef403e7a47088a09afa6a97f5667fbe3168f1ff206c4b285a9fd830f26e5",
+    "nativeFeatureCount": 22,
+    "nativeTreeCount": 8,
+    "status": "illustrated-label-anchor"
+  },
+  "architecturalReferences": [
+    {
+      "file": "kaynaklar/fotograflar/resmi-site-2108-baglam.png",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2018/01/5a4c8f7fc03c0e1048129a47.png",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/karin-gec-gelmesi-ayilari-uykusuz-birakti/",
+      "uploaded": "2018-01-11T14:02:24",
+      "captureDate": "Teyitsiz; eski resmî haber fotoğrafı güncel saha ölçümü değil",
+      "sha256": "efd2de84f7a3c34ef8093443aa86808a69c84ca167c0ae31693704a4af877d45",
+      "sizePixels": [
+        770,
+        526
+      ],
+      "role": "Havuz kıyısında beton/taş kenar, büyük gri kaya kümeleri ve yeşil zemin geçişi. Bütün havuz çevresi görünmüyor.",
+      "reviewed": "2026-10-15",
+      "publication": "Yalnız yerel araştırma; fotoğraf GLB dokusuna veya dist içine eklenmez"
+    },
+    {
+      "file": "kaynaklar/fotograflar/resmi-site-1905-baglam.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2016/01/20160103AW621515_02.jpg",
+      "sourcePage": "https://www.bursahayvanatbahcesi.com/kar-uzerinde-ayilara-balik-ziyafeti/",
+      "uploaded": "2016-01-04T08:48:59",
+      "captureDate": "Teyitsiz; eski resmî haber fotoğrafı güncel saha ölçümü değil",
+      "sha256": "523298da19d713fe69feed6d341b564b6ba7e78835759dac771675232d79cc12",
+      "sizePixels": [
+        3456,
+        2304
+      ],
+      "role": "Karlı ayı alanında kaya karakteri; havuz veya bütün barınak sınırı için ölçü kanıtı değil.",
+      "reviewed": "2026-10-15",
+      "publication": "Yalnız yerel araştırma; fotoğraf GLB dokusuna veya dist içine eklenmez"
+    }
+  ],
+  "architecturalDocuments": [
+    {
+      "file": "kaynaklar/belgeler/resmi-site-2018-ayi-havuz-baglam.html.txt",
+      "url": "https://www.bursahayvanatbahcesi.com/karin-gec-gelmesi-ayilari-uykusuz-birakti/",
+      "sha256": "efcbeccc8a53ea45179fbf9812fa6438afc1335c9260cb56cc954484831d1a04",
+      "sourcePublished": "2018-01-11",
+      "role": "Resmî ayı haberi ve havuz/kaya fotoğrafının sayfa arşivi; HTML çalıştırılmaz."
+    }
+  ]
+}

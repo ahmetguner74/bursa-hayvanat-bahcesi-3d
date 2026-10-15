@@ -15,7 +15,7 @@ from pathlib import Path
 
 from shapely import make_valid, set_precision
 from shapely.affinity import rotate, translate
-from shapely.geometry import GeometryCollection, LineString, MultiPolygon, Polygon, box
+from shapely.geometry import GeometryCollection, LineString, MultiPolygon, Polygon, box, shape
 from shapely.geometry.polygon import orient
 from shapely.ops import unary_union
 
@@ -30,7 +30,7 @@ ISLAND_IDS = {
     "H22D01C2B:58": "H22D01C2B:57",
     "H22D01C2B:61": "H22D01C2B:60",
 }
-SKIPPED_BUILDING_IDS = {"H22D01C2B:301"}  # Interior dome candidate is not rendered.
+SKIPPED_BUILDING_IDS = {"H22D01C2B:301", "H22D01C2B:243"}  # Dome interior; cafe floor owns243 below.
 
 
 def polygon_parts(geometry):
@@ -162,9 +162,13 @@ def main():
     site_path = HERE / "site-data.json"
     plan_path = HERE / "current-plan-data.json"
     cage_path = HERE / "cage-local-surfaces.json"
+    manual_roads_path = HERE / "v2/manual-roads-metric.json"
     site = json.loads(site_path.read_text(encoding="utf-8"))
     plan = json.loads(plan_path.read_text(encoding="utf-8"))
     cage = json.loads(cage_path.read_text(encoding="utf-8"))
+    manual_roads = json.loads(manual_roads_path.read_text(encoding="utf-8"))
+    if manual_roads.get("schema") != "bursa-zoo-v2-manual-roads/v2":
+        raise ValueError("Unknown QGIS manual road source schema")
     if cage.get("schema") != "bursa-zoo-interpreted-cage-local-surfaces/v1":
         raise ValueError("Unknown cage-local surface source schema")
     boundary = clean(Polygon(site["outline"]))
@@ -226,16 +230,49 @@ def main():
     building_mask_adjustment = source_m5_building.symmetric_difference(m5_building).area
     if building_mask_adjustment > 0.01:
         raise ValueError(f"M5 building mask moved too far: {building_mask_adjustment:.6f} m2")
-    building = difference(clean(unary_union([m5_building, mill_building]).intersection(boundary)), water)
+    village_input_path=HERE/'bolgeler/14-afrika-koyu/model/model-inputs.json'
+    village_floors=GeometryCollection()
+    village={}
+    if village_input_path.is_file():
+        village=json.loads(village_input_path.read_text(encoding='utf-8'))
+        if village['siteDataSha256']!=source_hash(site_path):
+            raise ValueError('African Village source changed; review interpreted floors')
+        village_floors=clean(unary_union([Polygon(h['wallOutlineM5XY']) for h in village['huts']]))
+        building_source_ids.extend([h['sourceId']+':interpreted-wall-footprint' for h in village['huts']])
+    cafe_input_path=HERE/'bolgeler/13-afrika-kafe/model/model-inputs.json'
+    cafe=json.loads(cafe_input_path.read_text(encoding='utf-8'))
+    if cafe['siteDataSha256']!=source_hash(site_path):
+        raise ValueError('Cafe source changed; review native floor outlines')
+    cafe_floors=clean(unary_union([Polygon(r['outlineM5XY']) for r in cafe['roofs']]))
+    building_source_ids.extend([r['sourceId']+':cafe-floor' for r in cafe['roofs']])
+    habes_input_path=HERE/'bolgeler/09-habes-maymunu/model/model-inputs.json'
+    habes=json.loads(habes_input_path.read_text(encoding='utf-8'))
+    if habes['siteDataSha256']!=source_hash(site_path):
+        raise ValueError('Habes island source changed; review interpreted coping')
+    habes_island=Polygon(habes['islandOutlineM5XY'])
+    habes_coping=clean(habes_island.difference(habes_island.buffer(-habes['interpretedDimensions']['bankWidth'],join_style='round')))
+    building_source_ids.append(habes['islandSourceId']+':interpreted-coping')
+    bear_input_path=HERE/'bolgeler/29-boz-ayi/model/model-inputs.json'
+    bear=json.loads(bear_input_path.read_text(encoding='utf-8'))
+    if bear['siteDataSha256']!=source_hash(site_path):
+        raise ValueError('Bear pool source changed; review interpreted bank')
+    bear_pool=Polygon(bear['poolOutlineM5XY'])
+    bear_bank=clean(unary_union([Polygon(p['outer'],p['holes']) for p in bear['interpretedBankMaskM5XY']]))
+    building_source_ids.append(bear['poolSourceId']+':interpreted-bank')
+    building = difference(clean(unary_union([m5_building, mill_building, village_floors, cafe_floors, habes_coping, bear_bank]).intersection(boundary)), water)
 
-    path_sources = []
-    for surface in site["walkSurfaces"]:
-        holes = [
-            hole for hole in surface["holes"]
-            if len(hole) >= 4 and abs(Polygon(hole).area) > MIN_HOLE_AREA_M2
-        ]
-        path_sources.append(clean(Polygon(surface["outer"], holes)))
+    # The manually drawn QGIS surfaces replace the old M5 buffer preview.
+    # Both are already in the same local metre grid; surface priority removes
+    # any parts under water or buildings without stacking coplanar meshes.
+    road_features = {feature["id"]: feature for feature in manual_roads["features"]}
+    if set(road_features) != {"pedestrian_surface", "vehicle_surface"}:
+        raise ValueError("QGIS roads must contain pedestrian and vehicle surfaces")
+    path_sources = [clean(shape(road_features[key]["geometry"]))
+                    for key in ("pedestrian_surface", "vehicle_surface")]
     local_path_ids = []
+    for spec in village.get('interpretedPathConnectors',[]):
+        path_sources.append(clean(LineString(spec['pointsM5XY']).buffer(spec['widthMetres']/2)))
+        local_path_ids.append(spec['id'])
     for spec in cage["walkingPaths"]:
         path_sources.append(clean(cage_to_site(cage_path_polygon(spec), anchor)))
         local_path_ids.append(spec["id"])
@@ -252,6 +289,8 @@ def main():
         "outsideBoundaryAreaM2": round(union.difference(boundary).area, 9),
         "pairwiseOverlapAreaM2": {},
         "m5BuildingMaskAdjustmentAreaM2": round(building_mask_adjustment, 6),
+        "africanVillageInterpretedFloorAreaM2":round(village_floors.area,6),
+        "africanCafeFloorAreaM2":round(cafe_floors.area,6),
     }
     names = list(layers)
     for i, first in enumerate(names):
@@ -265,6 +304,33 @@ def main():
         raise ValueError(f"Surface partition does not cover boundary: {partition_delta:.9f} m2")
 
     output_layers = {name: serialized_polygons(geom) for name, geom in layers.items()}
+    for part in output_layers['water']:
+        if Polygon(part['outer'],part['holes']).intersection(bear_pool).area>.1:
+            part['waterPresentationColor']=bear['waterPresentationColor']
+    # Material regions split the terrain; no second gravel cap is stacked
+    # above grass. The original water/building/path ownership stays intact.
+    penguin_input_path = HERE / "bolgeler/15-penguen/model/model-inputs.json"
+    if penguin_input_path.is_file():
+        penguin = json.loads(penguin_input_path.read_text(encoding="utf-8"))
+        mask = penguin["gravelContextMask"]
+        gravel = clean(terrain.intersection(Polygon(mask["outer"],mask["holes"])))
+        grass = difference(terrain,gravel)
+        output_layers["terrain"] = serialized_polygons(grass) + [
+            part | {"surfaceStyle":"penguin-gravel"} for part in serialized_polygons(gravel)]
+        checks["penguinGravelAreaM2"] = round(gravel.area,6)
+        checks["terrainStyleOverlapM2"] = round(grass.intersection(gravel).area,9)
+        if grass.intersection(gravel).area > 0.000001:
+            raise ValueError("Terrain material regions overlap")
+    habes_earth=clean(terrain.intersection(habes_island))
+    styled=[]
+    for part in output_layers['terrain']:
+        remaining=difference(Polygon(part['outer'],part['holes']),habes_earth)
+        styled.extend(p|({'surfaceStyle':part['surfaceStyle']} if 'surfaceStyle' in part else {})
+                      for p in serialized_polygons(remaining))
+    output_layers['terrain']=styled+[p|{'surfaceStyle':'habes-earth'} for p in serialized_polygons(habes_earth)]
+    checks['habesEarthAreaM2']=round(habes_earth.area,6)
+    checks['habesCopingAreaM2']=round(habes_coping.area,6)
+    checks['bearBankInterpretedAreaM2']=round(bear_bank.area,6)
     # A triangle generator consumes JSON, so validate the serialized rings too.
     for name, parts in output_layers.items():
         for part in parts:
@@ -290,19 +356,27 @@ def main():
         "unit": "metre",
         "sourceCoordinateQuantumMetres": SOURCE_QUANTUM_METRES,
         "priority": ["water", "building", "path", "terrain"],
+        "renderLevels": {"terrainZ": -.24, "pathBottomZ": -.24, "pathTopZ": -.105, "waterZ": -.32},
+        "renderLevelsAreSurveyed": False,
         "source": {
             "siteDataSha256": source_hash(site_path),
             "currentPlanDataSha256": source_hash(plan_path),
             "cageLocalSurfacesSha256": source_hash(cage_path),
+            "manualQgisRoadsSha256": source_hash(manual_roads_path),
+            "penguinMaterialInputsSha256": source_hash(penguin_input_path) if penguin_input_path.is_file() else None,
+            "africanVillageInputsSha256":source_hash(village_input_path) if village_input_path.is_file() else None,
+            "africanCafeInputsSha256":source_hash(cafe_input_path),
+            "habesInputsSha256":source_hash(habes_input_path),
+            "bearInputsSha256":source_hash(bear_input_path),
             "waterSourceIds": water_source_ids,
             "buildingSourceIds": building_source_ids,
-            "pathSource": "site-data.json:walkSurfaces plus interpreted cage-local-surfaces.json:walkingPaths; holes <= 1 m2 filled as before",
+            "pathSource": "v2/manual-roads-metric.json:pedestrian_surface+vehicle_surface (Dot QGIS delivery), interpreted cage walks and African Village local connector",
             "cageLocalPathIds": local_path_ids,
         },
         "usage": {
             "building": "Footprint exclusion mask for existing solids; do not draw as another floor mesh.",
             "water": "Includes the interpreted cage lagoon; draw each water region once.",
-            "path": "Provisional M5 3 m survey-line buffer and interpreted cage walks; clipped away from water and buildings.",
+            "path": "Provisional manually redrawn QGIS surfaces and interpreted cage walks; clipped away from water and buildings.",
             "terrain": "Remainder of the OSM-clipped boundary after higher-priority surfaces.",
         },
         "cageLocal": {

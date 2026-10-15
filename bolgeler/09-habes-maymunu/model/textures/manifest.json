@@ -1,0 +1,50 @@
+[
+  {
+    "file": "earth.jpg",
+    "sha256": "0ec6f13b1669f67f967240506b300bf9b638b1c573d17ec297270467acbf7f00",
+    "bytes": 184654,
+    "size": [
+      512,
+      512
+    ],
+    "source": "../../../../viewer/assets/woodland-leaf-litter-v1.png",
+    "sourceSha256": "5a47d72702799f42b98d168f6507c62ece4f3a96933c4a068419eccc61ecd22d",
+    "method": "RGB, max 512 px Lanczos, JPEG quality 90 4:4:4. No painting; generated albedo, not site photography."
+  },
+  {
+    "file": "rocks.jpg",
+    "sha256": "90aaa2db8cff3f50c38e3c7eefa7a7669c1f5937475249f950ea388541c4ef5f",
+    "bytes": 111481,
+    "size": [
+      512,
+      512
+    ],
+    "source": "../../../../viewer/assets/penguin-artificial-rock-v1.png",
+    "sourceSha256": "c03ce4d501bd5c0f9846cf494efe9ff6cb9a5e2b810546601789872e816ac837",
+    "method": "RGB, max 512 px Lanczos, JPEG quality 90 4:4:4. No painting; generated albedo, not site photography."
+  },
+  {
+    "file": "bark.jpg",
+    "sha256": "d9c6ba70be5ffc84d376c10d571a9c72fea8d17e3068d305f89d342416bf48b1",
+    "bytes": 147160,
+    "size": [
+      512,
+      512
+    ],
+    "source": "../../../../viewer/assets/woodland-tree-bark-v1.png",
+    "sourceSha256": "2e7083719718374c820e18338ddda7e1a92a647e063ccc40b95c43b466dc5203",
+    "method": "RGB, max 512 px Lanczos, JPEG quality 90 4:4:4. No painting; generated albedo, not site photography."
+  },
+  {
+    "file": "boards.jpg",
+    "sha256": "3dfcfa8c47a152412dc49cb8be31193b7f4f835d44cafa3b0b029d43a2aa644b",
+    "bytes": 103114,
+    "size": [
+      512,
+      512
+    ],
+    "source": "../../../../viewer/assets/savanna-platform-wood-v1.png",
+    "sourceSha256": "b7d6f0c2708033a21a714b72528fbf7b1186dca2b2968dd44b14844fd4d23674",
+    "method": "RGB, max 512 px Lanczos, JPEG quality 90 4:4:4. No painting; generated albedo, not site photography."
+  }
+]

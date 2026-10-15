@@ -1,0 +1,80 @@
+[
+  {
+    "file": "foliage-cluster-web-v1.png",
+    "sha256": "830cace8e113b0edc7f1a8c71e44e245f40552dbe5ce74b4fb2c81ff7a12b311",
+    "source": "foliage-cluster-v1.png",
+    "sourceSha256": "850edeccbef3b272cb8023f1d2ec50a504cf68f36afe758303fa8120aee339ba",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bytes": 264915,
+    "derivation": "Lanczos max512px PNG; preserve RGBA, no painting or alpha-mask editing."
+  },
+  {
+    "file": "foliage-cluster-dark-web-v1.png",
+    "sha256": "ef9fafccc3fb9adf31dfaa64ee881632483cc598bf7ad34b6aaffe1ca05e6ce5",
+    "source": "foliage-cluster-dark-v1.png",
+    "sourceSha256": "b6ea3d3db3a7b67897264089b27d5572a0749b0f8d612a09e64ee2171df5f6ec",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bytes": 131857,
+    "derivation": "Lanczos max512px PNG; preserve RGBA, no painting or alpha-mask editing."
+  },
+  {
+    "file": "woodland-fern-clump-web-v1.png",
+    "sha256": "5e67476c9695ce765b22809cac33055fc5ed321a08fbe60867dcffaacd3872aa",
+    "source": "woodland-fern-clump-v1.png",
+    "sourceSha256": "34bd945a1219d2e5b711b2288b5fcc0b96f53ee914315dbb0538ecf6c4aec0bf",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bytes": 252405,
+    "derivation": "Lanczos max512px PNG; preserve RGBA, no painting or alpha-mask editing."
+  },
+  {
+    "file": "woodland-broadleaf-clump-web-v1.png",
+    "sha256": "dc2769a3c330e365cf99202a9ea2135f01ad5c3b6883e7e4e85db0eb90011d37",
+    "source": "woodland-broadleaf-clump-v1.png",
+    "sourceSha256": "374d36d826f4b253d019eac0b953b00c7ee84d48ab5248b27f43c97847d821c0",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bytes": 201338,
+    "derivation": "Lanczos max512px PNG; preserve RGBA, no painting or alpha-mask editing."
+  },
+  {
+    "file": "woodland-grass-tussock-web-v1.png",
+    "sha256": "8102058fa98694bbc0412c09e8973ce0a8f05fd16851bd31ed74b0e84a29bb50",
+    "source": "woodland-grass-tussock-v1.png",
+    "sourceSha256": "a17782c7c59bf798c04da432755e5cb4cd171f2c62d2b841d1ec0c45ce15a35c",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bytes": 256200,
+    "derivation": "Lanczos max512px PNG; preserve RGBA, no painting or alpha-mask editing."
+  },
+  {
+    "file": "woodland-shrub-spray-web-v1.png",
+    "sha256": "6c69f5e7a2a972e9a2ae8f258fe9340e3b35a0b194c70805224614bf94771265",
+    "source": "woodland-shrub-spray-v1.png",
+    "sourceSha256": "e5ff97afaec171383621319a85d511a5fe3fed02b64d0c1509493e4cec593be6",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bytes": 248772,
+    "derivation": "Lanczos max512px PNG; preserve RGBA, no painting or alpha-mask editing."
+  }
+]

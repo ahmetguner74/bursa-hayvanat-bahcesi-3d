@@ -1,0 +1,231 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 11,
+  "name": "Lemur",
+  "type": "yaşam alanı",
+  "searched": "lemur",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3561.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW681196_13-scaled.jpg",
+      "mediaId": 3561,
+      "uploaded": "2023-04-20T09:25:20",
+      "title": "(ÖZEL) LEMUR AİLESİNE 8 YENİ ÜYE BURSA HAYVANAT BAHÇESİ&#8217;NDE 8 LEMUR DÜNYAYA GELDİ",
+      "sha256": "edaf76680c0fd8345a59cbbddb60d65bf2c919db64a2dbb2bd4af986774d5b26",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3560.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW681196_12-scaled.jpg",
+      "mediaId": 3560,
+      "uploaded": "2023-04-20T09:25:14",
+      "title": "(ÖZEL) LEMUR AİLESİNE 8 YENİ ÜYE BURSA HAYVANAT BAHÇESİ&#8217;NDE 8 LEMUR DÜNYAYA GELDİ",
+      "sha256": "bda2da277465f1aee729932f760814f4c729bb3e0997c0381f52a7147657aa62",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3559.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW681196_09-scaled.jpg",
+      "mediaId": 3559,
+      "uploaded": "2023-04-20T09:25:09",
+      "title": "(ÖZEL) LEMUR AİLESİNE 8 YENİ ÜYE BURSA HAYVANAT BAHÇESİ&#8217;NDE 8 LEMUR DÜNYAYA GELDİ",
+      "sha256": "66d7de0402631d489559551ba60b46f16d0dad3b4a7d0a2389c6627e5f79988c",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3558.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW681196_01-scaled.jpg",
+      "mediaId": 3558,
+      "uploaded": "2023-04-20T09:25:04",
+      "title": "(ÖZEL) LEMUR AİLESİNE 8 YENİ ÜYE BURSA HAYVANAT BAHÇESİ&#8217;NDE 8 LEMUR DÜNYAYA GELDİ",
+      "sha256": "bed51e60927f9b5014dd8a85da7ac327430e3fbb5760911e1c1ced61c5676f87",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    }
+  ],
+  "documents": [
+    {
+      "title": "Dünya Lemur Günü Kutlu Olsun",
+      "url": "https://www.bursahayvanatbahcesi.com/dunya-lemur-gunu-kutlu-olsun/",
+      "type": "post"
+    },
+    {
+      "title": "KIRMIZI YAKALI LEMUR",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/kirmizi-yakali-lemur-red-ruffed-lemur/",
+      "type": "hayvan"
+    },
+    {
+      "title": "Lemurların yavru sevinci",
+      "url": "https://www.bursahayvanatbahcesi.com/lemurlarin-yavru-sevinci/",
+      "type": "post"
+    },
+    {
+      "title": "LEMURLARIN ÜÇÜZ SEVİNCİ",
+      "url": "https://www.bursahayvanatbahcesi.com/lemurlarin-ucuz-sevinci/",
+      "type": "post"
+    },
+    {
+      "title": "HALKA KUYRUKLU LEMUR",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/halka-kuyruklu-lemur/",
+      "type": "hayvan"
+    },
+    {
+      "title": "BAŞKAN VEKİLİ BİBA&#8217;DAN HAYVANAT BAHÇESİ&#8217;NE ZİYARET",
+      "url": "https://www.bursahayvanatbahcesi.com/baskan-vekili-bibadan-hayvanat-bahcesine-ziyaret/",
+      "type": "post"
+    },
+    {
+      "title": "Bayram neşesi, Hayvanat Bahçesi’nde yaşanacak",
+      "url": "https://www.bursahayvanatbahcesi.com/bayram-nesesi-hayvanat-bahcesinde-yasanacak/",
+      "type": "post"
+    },
+    {
+      "title": "Hayvanat Bahçesi 24 yaşında",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvanat-bahcesi-24-yasinda/",
+      "type": "post"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "M5 ada60/hendek61 izleri korunmuş ilk model; Lemur alanına eşleme yaklaşık, kaya/dal/halat yerleşimi kamera yorumu ve ölçüsüz",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "bd160f0256e90ac08c4d6c1872a097807a176a4daf9238280ec28ce5f9d6e758",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "d5ba705ad0b95d9ef2fcebd5e9182ad3f89c01318ed650cf717495f47c981938",
+    "nativeFeatureCount": 16,
+    "nativeTreeCount": 7,
+    "status": "illustrated-label-anchor"
+  },
+  "architecturalReferences": [
+    {
+      "file": "kaynaklar/fotograflar/belediye-kamera-20261015T005923Z.png",
+      "url": "https://www.bursa.bel.tr/sehir-kameralari/lemurlar-23322",
+      "sourcePage": "https://www.bursa.bel.tr/sehir-kameralari/lemurlar-23322",
+      "sha256": "ce9dfe2fc2481f0cc7dbc792a6bbf16a8df241ced03ef0ebd43e9a8a169738e3",
+      "fetchedAtUTC": "2026-10-15T00:59:23.668246+00:00",
+      "captureDate": "Çekim tarihi teyitsiz; edinim zamanı canlılık/güncel saha durumu kanıtı değildir",
+      "method": "Latest publicly listed HLS fragment, first decoded frame",
+      "sizePixels": [
+        1920,
+        1080
+      ],
+      "role": "Lemur kamera bağlamı: suyla çevrili ada, kaya çıkıntıları, yatık dal/ahşap tırmanma elemanları, komşu kırma çatılı yeşil yapı. Komşu yapının işlevi/aidiyeti teyitsiz;1920×1080 kare karanlık ve gürültülü",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; tekrar yayımlama izni varsayılmadı"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8941_201806301152.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8941_201806301152.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "150a0102902f48f6e780b6fa8db7040b6663161f0a122088264672065ad6d048",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Lemur ada zemini, iri kaya, olgun ağaçlar ve ahşap küçük öğe; kişi ön planda",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8952_201806301154.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8952_201806301154.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "ac48ced2a615f0905bd92f8c3da176f9ef7d55255cd6b0511435909b62d385ca",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Lemur adasında iri kaya üstü ve ağaç gövdesi; yapı görünümü sınırlı",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8956_201806301156.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8956_201806301156.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "b3ffbfb7ab9ea0e8b7e3401f1e83bdd6ad4fb6f124ffaecb2bef63627c49a23c",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Lemur ada içi olgun ağaçlar, kaya ve ahşap yatık dal bağlamı",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8971_201806301157.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8971_201806301157.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "3f9fa6577a7a745803a3962219ca5fe5ff311d495c741c49f28dc6ada522bc61",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Lemur bağlamındaki komşu kırma çatılı yapı; aidiyet/işlev teyitsiz, Lemur yapısı diye atanmaz",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8993_201806301159.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8993_201806301159.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "b756c6b50eb3d93a982625c01727a7efc79004a3341ddd80e339680c2b05f57c",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Lemur kayalarının yakın görünümü, çim kıyı ve su bandı",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    }
+  ],
+  "architecturalDocuments": [
+    {
+      "file": "kaynaklar/belgeler/belediye-kamera-20261015T005923Z.html.txt",
+      "url": "https://www.bursa.bel.tr/sehir-kameralari/lemurlar-23322",
+      "sha256": "fe54c2fb5220af4f743485ee4552fdd3c543068853410de4eb98435ff9f91e5e",
+      "role": "Belediyenin herkese açık kamera sayfası arşivi; kaynak bağlantısı ve kamera adı, HTML çalıştırılmaz"
+    }
+  ]
+}

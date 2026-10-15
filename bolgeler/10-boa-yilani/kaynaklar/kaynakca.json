@@ -1,0 +1,88 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 10,
+  "name": "Boa Yılanı",
+  "type": "yaşam alanı",
+  "searched": "boa",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-1703.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/02/boa-yılanı2-1600x1200-e1438255797354.jpg",
+      "mediaId": 1703,
+      "uploaded": "2015-07-30T14:29:41",
+      "title": "boa yılanı2 [1600&#215;1200]",
+      "sha256": "4299145570934d6df1d1b0f11f0f32d2ef46707bd34d330133416e4cf8706778",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    }
+  ],
+  "documents": [
+    {
+      "title": "BOA YILANI (DUMERİL’S BOA)",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/boa-yilani-dumerils-boa/",
+      "type": "hayvan"
+    },
+    {
+      "title": "Yaban Domuzu",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/yaban-domuzu/",
+      "type": "hayvan"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "8fca80da56ac14ec0952e2d17bb3edfb58e4568a96cf49ccebdf06865ce5e252",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "f8ee51b969af17c8841fccd96a3a48c4fc9c39ab6654221b0a4eaad414787d3d",
+    "nativeFeatureCount": 30,
+    "nativeTreeCount": 9,
+    "status": "illustrated-label-anchor"
+  },
+  "architecturalReferences": [
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_9004_201806301201.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_9004_201806301201.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "157309e1d2a610f1746034a80e2540c069a3368d3303d4e8cc26822c425b0021",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Sürüngen ziyaret bağlamı: ahşap camlı yüzey ve ışıklı pencere. Yılan türü ve bu iç mekânın10 numaralı alana aidiyeti teyitsiz; yalnız araştırma adayı.",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı",
+      "association": "candidate, unconfirmed"
+    }
+  ]
+}

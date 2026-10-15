@@ -1,0 +1,80 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 23,
+  "name": "Gülen Kuş",
+  "type": "yaşam alanı",
+  "searched": "gülen kuş",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-2911.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2020/10/gülenkuş.jpg",
+      "mediaId": 2911,
+      "uploaded": "2020-10-13T12:55:18",
+      "title": "gülenkuş",
+      "sha256": "8f90f39b7b1c262ddfa0c0fc12421425192d9aea5eb28e42fb66be1e62cd3410",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    }
+  ],
+  "documents": [
+    {
+      "title": "MAVİ KANATLI GÜLEN KUŞ",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/mavi-kanatli-gulen-kus/",
+      "type": "hayvan"
+    },
+    {
+      "title": "KANGURU VE GÜLEN KUŞLAR ZİYARETÇİLERİNİ BEKLİYOR",
+      "url": "https://www.bursahayvanatbahcesi.com/kanguru-ve-gulen-kuslar-ziyaretcilerini-bekliyor/",
+      "type": "post"
+    },
+    {
+      "title": "14 YILLIK RÜYA GERÇEK OLDU",
+      "url": "https://www.bursahayvanatbahcesi.com/14-yillik-ruya-gercek-oldu/",
+      "type": "post"
+    },
+    {
+      "title": "Tarihçe",
+      "url": "https://www.bursahayvanatbahcesi.com/kurumsal/tarihce/",
+      "type": "page"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "fae681b8730a463dc4c60d92729691525d64b4ef08eea9f57d9a768f49c2f122",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "5b6329ed2fb4c4a912604fc500db499555a9ee06940a4a980a62d8886fc40d00",
+    "nativeFeatureCount": 41,
+    "nativeTreeCount": 8,
+    "status": "illustrated-label-anchor"
+  }
+}

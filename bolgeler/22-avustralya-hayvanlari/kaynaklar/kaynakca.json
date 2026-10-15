@@ -1,0 +1,59 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 22,
+  "name": "Avustralya Hayvanları",
+  "type": "yaşam alanı",
+  "searched": "avustralya hayvanları",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [],
+  "documents": [
+    {
+      "title": "SUNUM KONULARI",
+      "url": "https://www.bursahayvanatbahcesi.com/egitim/sunum-konulari/",
+      "type": "page"
+    },
+    {
+      "title": "Bahar mevsiminin yaklaşmasıyla dünyaya gelen sakallı maymun, zebra ve kanguru, hayvanat bahçesinde sevinç yaşatırken, ziyaretçilerden de ilgi gördü",
+      "url": "https://www.bursahayvanatbahcesi.com/bahar-mevsiminin-yaklasmasiyla-dunyaya-gelen-sakalli-maymun-zebra-ve-kanguru-hayvanat-bahcesinde-sevinc-yasatirken-ziyaretcilerden-de-ilgi-gordu/",
+      "type": "post"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "cf8adea3fc712aadd98d07d5d6425f07e974ff878e6c7027c5dcc9c0deba382c",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "9c9fbe95bc1f2a820c6cf4b7736182445634fadb3979d1bd81d725fbd290f5b7",
+    "nativeFeatureCount": 55,
+    "nativeTreeCount": 13,
+    "status": "illustrated-label-anchor"
+  }
+}

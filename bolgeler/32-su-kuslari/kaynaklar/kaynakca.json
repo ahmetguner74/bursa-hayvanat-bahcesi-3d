@@ -1,0 +1,203 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 32,
+  "name": "Su Kuşları",
+  "type": "yaşam alanı",
+  "searched": "su kuşları",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3889.png",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/04/su-kuslari.png",
+      "mediaId": 3889,
+      "uploaded": "2026-04-03T14:23:35",
+      "title": "su kuşları",
+      "sha256": "7be63be07075e0ab813c56964b8536f5fe2bcd9b66effa3bb427d7c3f6e99932",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    }
+  ],
+  "documents": [
+    {
+      "title": "SULARI TEMİZ TUT, EKOSİSTEMİ YAŞAT!",
+      "url": "https://www.bursahayvanatbahcesi.com/sulari-temiz-tut-ekosistemi-yasat/",
+      "type": "post"
+    },
+    {
+      "title": "14 Şubatta Kelaynakların Birecik’e göçtüğünü biliyor muydunuz?",
+      "url": "https://www.bursahayvanatbahcesi.com/14-subatta-kelaynaklarin-birecike-goctugunu-biliyor-muydunuz/",
+      "type": "post"
+    },
+    {
+      "title": "DÜNYA GÖÇMEN KUŞLAR GÜNÜ KUTLU OLSUN",
+      "url": "https://www.bursahayvanatbahcesi.com/3267-2/",
+      "type": "post"
+    },
+    {
+      "title": "AFRİKA DEVE KUŞU",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/afrika-deve-kusu/",
+      "type": "hayvan"
+    },
+    {
+      "title": "AMERİKA ALLİGATÖRÜ / AMERİCAN ALLİGATÖR",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/amerika-alligatoru-american-alligator/",
+      "type": "hayvan"
+    },
+    {
+      "title": "Hayvanat Bahçesini evden ziyaret",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvanat-bahcesini-evden-ziyaret/",
+      "type": "post"
+    },
+    {
+      "title": "SİYAH KUĞU (BLACK SWAN)",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/siyah-kugu-black-swan/",
+      "type": "hayvan"
+    },
+    {
+      "title": "YEŞİLBAŞ ÖRDEK",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/yesilbas-ordek/",
+      "type": "hayvan"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "architecturalReferences": [
+    {
+      "file": "kaynaklar\\fotograflar\\gezi-bilen-2024.webp",
+      "url": "https://gezibilen.com/_next/image?q=75&url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fgezbi-e89bc.appspot.com%2Fo%2FtravelPoints%252Frj1DGqT5s2Ky8Gj2Pqx2%252Fbursa_hayvanat_bahcesi_7Bz7bJ4q2i9.webp%3Falt%3Dmedia%26token%3Da3482fbc-d08f-41f5-9802-6d333c29c129&w=3840",
+      "sha256": "c5d9dfab63a955fdcda6cd22b95f393b8e96bb9aab828abe6a082f1ce7b3f967",
+      "role": "Yapı biçimi/plan/fotoğrafı; tarihî kaynak, mevcut iç peyzajı tek başına doğrulamaz",
+      "captureDate": "bilinmiyor",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\trend-insaat-2013.jpg",
+      "url": "https://www.trendinsaat.com.tr/images/fotogaleri/bg_nuhoglu_insaat_bursa_hayvanat_bah%C3%A7esi_16012013104650.jpg",
+      "sha256": "63362435658918fe39c1cffac8b611189f3097ca2b8caa575a87dd14e6263402",
+      "role": "Yapı biçimi/plan/fotoğrafı; tarihî kaynak, mevcut iç peyzajı tek başına doğrulamaz",
+      "captureDate": "bilinmiyor",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\uskon-elevation-front.jpg",
+      "url": "https://uskon.com/wp-content/uploads/2021/07/SEKIL9.jpg",
+      "sha256": "b825a20e4dd4429baba9118779d3bba5c96ca126c811d03e0179fc77defc279b",
+      "role": "Yapı biçimi/plan/fotoğrafı; tarihî kaynak, mevcut iç peyzajı tek başına doğrulamaz",
+      "captureDate": "bilinmiyor",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\uskon-elevation-side.jpg",
+      "url": "https://uskon.com/wp-content/uploads/2021/07/SEKIL10.jpg",
+      "sha256": "7e869bcb449e47184b4c65ff532d9558691aa662e0254552ca36048509f5b074",
+      "role": "Yapı biçimi/plan/fotoğrafı; tarihî kaynak, mevcut iç peyzajı tek başına doğrulamaz",
+      "captureDate": "bilinmiyor",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\uskon-entrance-1.jpg",
+      "url": "https://uskon.com/wp-content/uploads/2021/07/bursa-hayvanat-bahcesi-turkiye.jpg",
+      "sha256": "5463a1c4f01756f95d25425dbce8c7f3fe135811b068d59a3f17e21be1c05ab4",
+      "role": "Yapı biçimi/plan/fotoğrafı; tarihî kaynak, mevcut iç peyzajı tek başına doğrulamaz",
+      "captureDate": "bilinmiyor",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\uskon-exterior-1998.jpg",
+      "url": "https://uskon.com/wp-content/uploads/2021/07/SEKIL13.jpg",
+      "sha256": "a16bf4114c46b10ff86e34074f2aa4a8d6ad00e812031646ab28ff4bdcda64a3",
+      "role": "Yapı biçimi/plan/fotoğrafı; tarihî kaynak, mevcut iç peyzajı tek başına doğrulamaz",
+      "captureDate": "bilinmiyor",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\uskon-interior-1.jpg",
+      "url": "https://uskon.com/wp-content/uploads/2021/07/SEKIL11.jpg",
+      "sha256": "92bee4c99afea479ab68da3814038b2a0898825e5893b174b40038ce60bf6165",
+      "role": "Yapı biçimi/plan/fotoğrafı; tarihî kaynak, mevcut iç peyzajı tek başına doğrulamaz",
+      "captureDate": "bilinmiyor",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\uskon-interior-2.jpg",
+      "url": "https://uskon.com/wp-content/uploads/2021/07/SEKIL12.jpg",
+      "sha256": "9bc32824c94fe44e7683d675a57bbf65dff8f55f9c9dc674aeeadbb492d75d75",
+      "role": "Yapı biçimi/plan/fotoğrafı; tarihî kaynak, mevcut iç peyzajı tek başına doğrulamaz",
+      "captureDate": "bilinmiyor",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\uskon-plan.jpg",
+      "url": "https://uskon.com/wp-content/uploads/2021/07/SEKIL5.jpg",
+      "sha256": "6d91b780f9254c2df83d1d4e6402fa48b81270f1036049d44665b9e825c50d66",
+      "role": "Yapı biçimi/plan/fotoğrafı; tarihî kaynak, mevcut iç peyzajı tek başına doğrulamaz",
+      "captureDate": "bilinmiyor",
+      "publication": "yalnız yerel araştırma"
+    }
+  ],
+  "architecturalDocument": {
+    "title": "USKON Bursa Zoo Waterbird Cage — imalatçı teknik açıklaması",
+    "url": "https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/",
+    "facts": {
+      "lengthM": 70,
+      "widthM": 40,
+      "heightM": 20,
+      "pipeCount": 2029,
+      "nodeCount": 700,
+      "nylonNetApertureCm": 5
+    },
+    "scopeNote": "Resmî krokide kubbe #31 işaretinin üzerinde; #32 güneyinde. Etiket-yapı eşleşmesi kesinleşmedi."
+  },
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "b41b898cce054d83e61f32cdd4ff032b7cd626d79e0052a1943315546f20e18e",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "4f05afb878c84b8b111198965319df9bd887d0044ac31f217a0e2caf5b7b5b6e",
+    "nativeFeatureCount": 15,
+    "nativeTreeCount": 5,
+    "status": "illustrated-label-anchor"
+  },
+  "unavailableReferences": [
+    {
+      "url": "https://www.bursa.bel.tr/sehir-kameralari/su-kuslari-23328",
+      "checked": "2026-10-15",
+      "status": "HTTPError during public stream retrieval",
+      "note": "Bu denemede video karesi edinilemedi; güncel alan görünümü doğrulanmadı"
+    }
+  ],
+  "architecturalDocuments": [
+    {
+      "file": "kaynaklar/belgeler/belediye-kamera-20261015T005926Z.html.txt",
+      "url": "https://www.bursa.bel.tr/sehir-kameralari/su-kuslari-23328",
+      "sha256": "a975dbb6bbf34efc2e47d2ca55c4f4fe307b0e06e4ccf326edd0f0424a8ada4f",
+      "role": "Kamera sayfası arşivi; akış karesi bu denemede edinilemedi. HTML çalıştırılmaz"
+    }
+  ]
+}

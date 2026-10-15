@@ -1,0 +1,21 @@
+{
+  "triangles": 14129,
+  "glbBytes": 754020,
+  "closedMeshParts": 9,
+  "nativeIslandAreaM2": 1331.5979434999995,
+  "exportProjectionDeltaM2": {
+    "soil": 3.352746580591673e-05,
+    "coping": 7.930751431307843e-05,
+    "water": 0.00010749607514593968,
+    "H22D01C2B:149": 2.5500626204102696e-06,
+    "H22D01C2B:150": 3.7064755261123364e-06
+  },
+  "copingOtherSurfaceOverlapM2": {
+    "water": 0.0,
+    "path": 0.0,
+    "terrain": 0.0
+  },
+  "sourceCoordinatesUnchanged": true,
+  "openWaterLinesNotInventedAsPools": true,
+  "fieldDimensionsVerified": false
+}

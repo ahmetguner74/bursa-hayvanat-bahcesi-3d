@@ -1,0 +1,59 @@
+{
+  "schema": "bursa-zoo-dome-model/v1",
+  "variants": [
+    {
+      "variant": "near",
+      "lengthM": 70.0,
+      "widthM": 40.0,
+      "heightM": 20.0,
+      "steelBars": 1962,
+      "renderRadiusM": 0.052,
+      "measuredRadius": false,
+      "radiusInterpretation": "Representative radius within the published diameter range; individual pipes were not measured",
+      "portalClearOpeningM": [
+        3.5,
+        2.8
+      ],
+      "originM5LocalXY": [
+        -30,
+        -64
+      ],
+      "rotationOnM5Degrees": 9,
+      "triangles": 119224,
+      "fineStructureProxySegments": 0,
+      "fineStructureProxyWidth": null,
+      "steelSrgbColor": "#aab9af",
+      "coordinateConvention": "glTF Y-up; X=longitudinal, Z=transverse",
+      "source": "https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/",
+      "limitation": "Triangulation, portal details and location approximate; not as-built",
+      "file": "su-kuslari-kubbesi-yakin.glb"
+    },
+    {
+      "variant": "far",
+      "lengthM": 70.0,
+      "widthM": 40.0,
+      "heightM": 20.0,
+      "steelBars": 186,
+      "renderRadiusM": 0.09,
+      "measuredRadius": false,
+      "radiusInterpretation": "Display radius for distance",
+      "portalClearOpeningM": [
+        3.5,
+        2.8
+      ],
+      "originM5LocalXY": [
+        -30,
+        -64
+      ],
+      "rotationOnM5Degrees": 9,
+      "triangles": 9192,
+      "fineStructureProxySegments": 1962,
+      "fineStructureProxyWidth": "one render pixel, presentation only",
+      "steelSrgbColor": "#aab9af",
+      "coordinateConvention": "glTF Y-up; X=longitudinal, Z=transverse",
+      "source": "https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/",
+      "limitation": "Triangulation, portal details and location approximate; not as-built",
+      "file": "su-kuslari-kubbesi-uzak.glb"
+    }
+  ]
+}

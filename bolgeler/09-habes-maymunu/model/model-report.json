@@ -1,0 +1,89 @@
+{
+  "schema": "bursa-zoo-habes-island/v1",
+  "unit": "metre",
+  "originM5LocalXY": [
+    195.02630276517107,
+    -8.041950969880599
+  ],
+  "sourceIds": [
+    "H22D01C2B:57",
+    "H22D01C2B:58",
+    "H22D01C2B:149",
+    "H22D01C2B:150"
+  ],
+  "sourceAssociation": "Historical M5 plus official 2021 photo/camera context; approximate",
+  "propDimensionsSurveyed": false,
+  "islandAreaM2": 1331.5979434999995,
+  "outerMoatAreaM2": 2506.9042445000005,
+  "waterAreaM2": 1175.306301000001,
+  "internalWaterAreaM2": 0.0,
+  "copingAreaM2": 37.42550689794189,
+  "soilAreaM2": 1294.1724366020576,
+  "platformAreaM2": 11.486592999999983,
+  "triangles": 14129,
+  "glbBytes": 754020,
+  "solidChecks": {
+    "island_ground": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 854.1538081573581
+    },
+    "moat_bed": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 352.59189030000016
+    },
+    "concrete_coping": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 25.075089621621373
+    },
+    "rocks": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 48.70234374709352
+    },
+    "climbing_timber": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 9.718764060348208
+    },
+    "platform_149": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 1.3421377697783115
+    },
+    "platform_150": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.6946175455785473
+    },
+    "southern_stair": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.38185371429838305
+    },
+    "climbing_ropes": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.44750599444305567
+    }
+  },
+  "interpretedPostCount": 6,
+  "interpretedRopeCount": 12,
+  "interpretedRockCount": 8,
+  "candidatePlatformCount": 2,
+  "atlasHiddenNodes": [
+    "island_ground",
+    "moat_bed",
+    "moat_water"
+  ],
+  "interpretation": [
+    "Island/moat and two small canopy XY outlines are copied unchanged from old M5 data.",
+    "Canopy outlines are candidate raised wooden platform locations; their function/height is not verified. Source H is retained as metadata only.",
+    "Six poles, twelve ropes, eight rocks, cross logs, hollow log, stair and material are editable visual estimates based on the 2021 photo/camera context. Exact quantities and positions are not measured.",
+    "The photograph shows the character of the enclosure, not its whole perimeter. Neighbouring red-roofed buildings and visitor pergola are not assigned to this asset.",
+    "No animals or people are modelled from these photographs. Historical upload/event dates are not a current site survey.",
+    "Open M5 water-layer line fragments 641/642 are archived but never closed into invented internal pools."
+  ]
+}

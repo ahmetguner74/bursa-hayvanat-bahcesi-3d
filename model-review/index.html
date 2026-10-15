@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Bursa Hayvanat Bahçesi · 3B Model İncelemesi</title>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;font:15px/1.4 system-ui,sans-serif;color:#214136;background:#dfe9d9}
+    #scene{position:absolute;inset:0}#scene canvas{display:block;width:100%;height:100%}
+    header{position:absolute;left:16px;top:16px;max-width:min(430px,calc(100vw - 32px));padding:13px 17px;background:#f9fbf3ec;border-radius:18px;box-shadow:0 7px 25px #193b2929}
+    h1{margin:0;font-size:17px}p{margin:.25rem 0 0;font-size:12px;line-height:1.45}
+    select{margin-top:9px;width:100%;padding:8px 10px;border:1px solid #c6d5c5;border-radius:9px;color:#214136;background:#fff;font:inherit}
+    button:disabled{opacity:.4;cursor:default}button:focus-visible,select:focus-visible{outline:3px solid #bf884d;outline-offset:2px}
+    .controls{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:5px;padding:5px;border-radius:100px;background:#f9fbf3ec;box-shadow:0 7px 25px #193b2929}
+    button{border:0;border-radius:100px;padding:11px 17px;color:#214136;background:transparent;font:600 13px system-ui;white-space:nowrap;cursor:pointer}
+    button[aria-pressed="true"]{color:#fff;background:#205746}
+    .controls.animal-controls{width:min(600px,calc(100vw - 20px));flex-wrap:wrap;justify-content:center;border-radius:20px}.animal-controls #penguin-animation{width:145px;margin:0;font-size:12px}.animal-review aside{bottom:125px;top:auto}
+    aside{position:absolute;right:16px;top:16px;padding:11px 14px;border-radius:14px;background:#f9fbf3ec;font-size:11px;max-width:205px}
+    a{color:#205746}#status{font-weight:700}
+    @media(max-width:700px){aside{top:auto;right:12px;bottom:84px;max-width:165px}header{left:10px;top:10px;padding:10px 12px}.controls{bottom:10px}button{padding:10px 12px;font-size:12px}}
+  </style>
+  <script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+</head>
+<body>
+  <div id="scene" aria-label="Seçilen yapının etkileşimli 3B önizlemesi"></div>
+  <header><h1 id="title">3B model incelemesi</h1><p id="description">Parmağınızla döndürün, iki parmakla yakınlaştırın.</p><select id="asset" aria-label="İncelenecek model"><option value="dome">31 · Su Kuşları Kubbesi</option><option value="turk-koyu">30 · Türk Köyü</option><option value="penguin">15 · Penguen havuzu</option><option value="savanna-platform">12 · Savanna ahşap yapı</option><option value="lemur">11 · Lemur Adası</option><option value="african-village">14 · Afrika Köyü</option><option value="african-cafe">13 · Afrika Kafe</option><option value="habes">09 · Habeş Maymunu Adası</option><option value="bear-pool">29 · Boz Ayı havuzu</option><option value="forest">Peyzaj · ağaç denemesi</option></select><div id="bake-controls" hidden><button id="bake-tree" type="button">Uzak ağaç atlasını üret</button><p id="bake-status" role="status"></p><a id="bake-download" download="forest-tree-atlas-webgl.png" hidden>Atlas PNG’yi indir</a></div></header>
+  <aside><span id="status" role="status">Model yükleniyor…</span><br><span id="details"></span><br><a id="source" target="_blank" rel="noopener">Yapı kaynağı</a></aside>
+  <nav class="controls" aria-label="Model görünümü"><button id="near" aria-pressed="true">Yakın detay</button><button id="far" aria-pressed="false">Uzak görünüm</button><button id="top" aria-pressed="false">Üstten</button><select id="penguin-animation" aria-label="Penguen davranışı" hidden></select><button id="pause-penguin" aria-pressed="false" hidden>Duraklat</button></nav>
+  <script type="module">
+    import * as T from 'three';
+    import {OrbitControls} from '../vendor/OrbitControls.js';
+    import {GLTFLoader} from '../vendor/loaders/GLTFLoader.js';
+    import {groundOffset} from '../penguin-motion.js?v=20261015ai';
+    const host=document.getElementById('scene'),status=document.getElementById('status');
+    const scene=new T.Scene();scene.background=new T.Color('#dce8d7');
+    const renderer=new T.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));
+    renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.2;
+    renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFShadowMap;host.append(renderer.domElement);
+    const camera=new T.PerspectiveCamera(37,1,.3,1200);camera.position.set(100,68,88);
+    const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,8,0);controls.enableDamping=true;
+    controls.minDistance=8;controls.maxDistance=460;controls.update();
+    scene.add(new T.HemisphereLight('#ffffff','#95a887',2.1));
+    const sun=new T.DirectionalLight('#fff5df',3.5);sun.position.set(-55,95,75);sun.castShadow=true;
+    sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-65;sun.shadow.camera.right=65;
+    sun.shadow.camera.top=65;sun.shadow.camera.bottom=-65;scene.add(sun);
+    sun.shadow.bias=-.00015;sun.shadow.normalBias=.045;
+    const ground=new T.Mesh(new T.PlaneGeometry(240,240),new T.MeshStandardMaterial({color:'#bed0a5',roughness:1}));
+    ground.rotation.x=-Math.PI/2;ground.position.y=-.12;ground.receiveShadow=true;scene.add(ground);
+    const previewWater=new T.Mesh(new T.PlaneGeometry(6,6),new T.MeshStandardMaterial({color:'#468b88',roughness:.25,transparent:true,opacity:.55,side:T.DoubleSide}));previewWater.rotation.x=-Math.PI/2;previewWater.visible=false;scene.add(previewWater);
+    const grid=new T.GridHelper(100,10,'#97ad8d','#b3c8a5');grid.position.y=-.108;scene.add(grid);
+    const catalog={
+      dome:{title:'Su Kuşları Kubbesi · model 01',description:'70 × 40 × 20 m. Yapımcı ölçülerine dayanan kabuk; çelik modül konumları yaklaşık yorumdur.',details:'Yakın: 1.962 çubuk · uzak: 186 kiriş ve ince örgü çizgileri',url:'https://uskon.com/en/bursa-zoo-waterbird-cage-single-wall-elliptical-dome/',source:'USKON yapımcı kaynağı'},
+      'turk-koyu':{title:'Türk Köyü · model 02',description:'M5 üzerindeki 9 yapı izi korundu. Kırma çatılar ve cepheler tarihî havadan fotoğrafa göre yorumlandı; pencere yerleri yaklaşık.',details:'9 çatı bölgesi · 3.857 üçgen · metre',url:'https://www.trendinsaat.com.tr/tr/projeler/kent-parklari',source:'Yapımcı fotoğraf arşivi'},
+      penguin:{title:'Penguen havuzu · model 03',description:'Eski M5 havuz izi korundu. Kaya duvarlar, kıyı ve seyir platformu 2017 belediye fotoğraflarına göre yorumlandı.',details:'M5 su izi: yaklaşık 205 m²; tarihî duyurudaki 300 m² ile fark teyitsiz.',url:'https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148',source:'Belediye fotoğraf ve yapım kaydı'},
+      'savanna-platform':{title:'Savanna ahşap yapı · model 04',description:'2017 fotoğrafındaki yükseltilmiş ahşap yapı yorumlandı. Aday M5 sundurma izi korundu; fotoğrafla konum eşleşmesi ve yapının kesin işlevi teyitsiz.',details:'Aday çatı izi: 33,45 m². Taşıyıcı, döşeme ve sepet ayrıntıları fotoğraftan yaklaşık.',url:'https://www.bursa.bel.tr/haber/fok-baligi-ve-penguenler-icin-geri-sayim-23247',source:'Belediye 2017 fotoğraf arşivi'}
+    };
+    catalog.lemur={title:'Lemur Adası · model 05',description:'M5 ada ve su hendeği izleri korundu. Kaya ve tırmanma elemanları belediye kamera görüntüsünden yaklaşık yorumlandı; çekim tarihi ve ölçüler teyitsiz.',details:'Ada: 759,90 m² · su hendeği: 877,24 m². Komşu yeşil yapı bu modele dahil değil.',url:'https://www.bursa.bel.tr/sehir-kameralari/lemurlar-23322',source:'Belediye Lemur kamerası'};
+    catalog['african-village']={title:'Afrika Köyü · model 06',description:'Yedi M5 dairesel çatı izi korundu. Beyaz duvarlar, kademeli konik çatılar ve kapılar 2012 belediye fotoğrafından yaklaşık yorumlandı; güncel durum ve yükseklikler teyitsiz.',details:'7 çatı · 546,24 m² özgün saçak izi · 52.856 üçgen. İç mekân ve ön çit bu ilk bileşende yok.',url:'https://www.bursa.bel.tr/dosyalar/yayinlar/faaliyet_2012.pdf#page=117',source:'Belediye 2012 raporu · sayfa 117'};
+    catalog['african-cafe']={title:'Afrika Kafe · model 07',description:'Altı aday M5 yapı/sundurma izi korundu. Ahşap cephe ve açık kırma çatılı kameriyeler 2011 açılış fotoğraflarına göre yorumlandı. Kesin aidiyet, güncel durum, yükseklik ve açıklık yerleri teyitsiz.',details:'6 çatı · 40 ahşap dikme · 6.724 üçgen · yaklaşık 899 KB. Konumlar M5; diğer ölçüler görsel tahmin.',url:'https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/',source:'Resmî 2011 Afrika Kafe açılış kaydı'};
+    catalog.habes={title:'Habeş Maymunu Adası · model 08',description:'M5 ada, su bandı ve iki küçük sundurma izi korundu. Direk, halat, kaya, oyuk gövde ve merdiven 2021 fotoğrafından yaklaşık yorumlandı. Platform işlevi, yükseklik ve güncel durum teyitsiz.',details:'Ada: 1.331,60 m² · su bandı: 1.175,31 m² · 14.129 üçgen · 754 KB. Komşu binalar bu modele atanmadı.',url:'https://www.bursahayvanatbahcesi.com/cocuklar-hayvanlara-pasta-hzirladi/',source:'Resmî 2021 etkinlik fotoğrafı'};
+    catalog['bear-pool']={title:'Boz Ayı havuzu ve kaya kıyısı · model 09',description:'M5 gölet izi korundu. Beton kıyı, gri kayalar ve bitki kümeleri resmî 2018 fotoğrafından yaklaşık yorumlandı. 28/29 alanlarının kesin sınırı ve güncel durum teyitsiz.',details:'Su izi: 488,40 m² · 17 kaya · 9 bitki kümesi · 10.278 üçgen · 1,51 MB. Bu ilk bileşen bütün ayı barınağını kapsamıyor.',url:'https://www.bursahayvanatbahcesi.com/karin-gec-gelmesi-ayilari-uykusuz-birakti/',source:'Resmî ayı havuzu ve kaya fotoğrafı'};
+    catalog.forest={title:'Peyzaj · dallanan ağaç denemesi',description:'CC0 ağaç kaynağından hafifletilmiş genel peyzaj modeli. Bursa’daki türlerin veya gerçek ağaç ölçülerinin kaydı değildir.',details:'Yakın: 122.245 · uzak: 6.942 üçgen. Aynı yaprak ve kabuk dokuları; geçişte tek ayrıntı düzeyi görünür.',url:'https://polyhaven.com/a/jacaranda_tree',source:'Poly Haven · Rico Cilliers / Rob Tuytel · CC0'};
+    catalog['penguin-animal']={title:'Afrika pengueni · hareketli 3B model',description:'Gerçek iskelet animasyonları; yürüyüş, yüzme, tüy temizleme ve dinlenme. Bu görünüm tek hayvanı inceler; koloniyi atlasın 15 numaralı alanında izleyebilirsiniz.',details:'0,62 m yorum boyu · 4.124 üçgen · 64 eklem. Major · CC BY 4.0; ölçek, malzeme ve dosya yapısı düzenlendi.',url:'https://sketchfab.com/3d-models/african-penguin-spheniscus-demersus-low-poly-9e59070815fe451d93398e2ebdb9bb92',source:'Major · kaynak model · CC BY 4.0'};
+    const animalOption=document.createElement('option');animalOption.value='penguin-animal';animalOption.textContent='15 · Afrika pengueni · hareketli';document.getElementById('asset').append(animalOption);
+    let animalMixer=null,animalActions=null,animalAction=null,animalMeta=null,animalPaused=false,animalRoot=null,lastFrame=null;
+    const models={};const loader=new GLTFLoader();let asset='dome',bounds=null,fitPoints=[],request=0,dirty=true;
+    controls.addEventListener('change',()=>{dirty=true;});
+    async function load(which){
+      if(models[which])return models[which];
+      const file=which==='penguin-animal'?'../models/african-penguin.glb':which==='bear-pool'?'boz-ayi-havuz-kiyisi.glb':which==='habes'?'habes-maymunu-adasi.glb':which==='forest'?'../models/generic-broadleaf-tree.glb':which==='african-cafe'?'afrika-kafe.glb':which==='african-village'?'afrika-koyu.glb':which==='lemur'?'lemur-adasi.glb':which==='savanna-platform'?'savanna-ahsap-platform.glb':which==='penguin'?'penguen-havuzu.glb':which==='turk-koyu'?'turk-koyu.glb':which==='near'?'su-kuslari-kubbesi-yakin.glb':'su-kuslari-kubbesi-uzak.glb';
+      const version=which==='penguin-animal'?await fetch('../models/penguin-colony.json',{cache:'no-store'}).then(r=>r.json()).then(meta=>{animalMeta=meta;return meta.assetSha256;}):which==='forest'?await fetch('../models/tree-model-metadata.json',{cache:'no-store'}).then(r=>r.json()).then(meta=>meta.files.find(item=>item.name.endsWith('.glb')).sha256):'20261015af';
+      const gltf=await loader.loadAsync('./'+file+'?v='+version);models[which]=gltf.scene;
+      gltf.scene.visible=false;
+      gltf.scene.traverse(o=>{if(o.isMesh){const mats=Array.isArray(o.material)?o.material:[o.material];o.castShadow=mats.every(mat=>!mat.transparent);o.receiveShadow=true;for(const mat of mats)if(mat.map)mat.map.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());}});
+      if(which==='forest')gltf.scene.traverse(node=>{if(node.isMesh&&node.material.alphaTest>0)node.material.alphaToCoverage=true;});
+      if(which==='penguin-animal'){
+        animalRoot=gltf.scene;animalMixer=new T.AnimationMixer(animalRoot);animalActions=Object.fromEntries(gltf.animations.map(clip=>[clip.name,animalMixer.clipAction(clip)]));animalAction=animalActions.Idle;animalAction.play();animalMixer.update(0);
+        const names={Idle:'Bekleme',Walk:'Yürüyüş','Penguin swim':'Yüzme',Preen:'Tüy temizleme',Shake:'Silkelenme',Sit1:'Oturma',Sleep:'Uyuma',Bray:'Çağrı'};
+        for(const clip of gltf.animations){const option=document.createElement('option');option.value=clip.name;option.textContent=names[clip.name]||clip.name;document.getElementById('penguin-animation').append(option);}document.getElementById('penguin-animation').value='Idle';
+      }
+      scene.add(gltf.scene);return gltf.scene;
+    }
+    function frame(top=false){
+      if(!bounds)return;
+      const sphere=bounds.getBoundingSphere(new T.Sphere());
+      const vertical=camera.fov*Math.PI/180,horizontal=2*Math.atan(Math.tan(vertical/2)*camera.aspect);
+      const direction=(top?new T.Vector3(0,1,.001):['habes','bear-pool'].includes(asset)&&camera.aspect<.8?new T.Vector3(1,1.15,1):asset==='african-village'?new T.Vector3(-.5,.65,.87):new T.Vector3(1,.7,1)).normalize();
+      const right=new T.Vector3().crossVectors(camera.up,direction).normalize();
+      const up=new T.Vector3().crossVectors(direction,right).normalize();
+      const flat=['habes','bear-pool','penguin-animal'].includes(asset);
+      let safeTop=0,safeBottom=innerHeight;
+      if(flat){
+        const header=document.querySelector('header').getBoundingClientRect();
+        const aside=document.querySelector('aside').getBoundingClientRect();
+        const controlsRect=document.querySelector('.controls').getBoundingClientRect();
+        safeTop=Math.max(header.bottom,aside.top<innerHeight/2?aside.bottom:0)+16;
+        safeBottom=Math.min(controlsRect.top,aside.top>=innerHeight/2?aside.top:innerHeight)-12;
+      }
+      const safeHeight=Math.max(innerHeight*.35,safeBottom-safeTop);
+      // Fit the projected eight corners instead of an oversized sphere. This
+      // keeps flat island models readable on a phone and leaves vertical UI room.
+      let distance=asset==='penguin-animal'?.8:8;
+      const corners=[];for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z])corners.push(new T.Vector3(x,y,z));
+      for(const point of ['habes','bear-pool'].includes(asset)&&fitPoints.length?fitPoints:corners){
+        const p=point.clone().sub(sphere.center),depth=p.dot(direction);
+        distance=Math.max(distance,depth+1.12*Math.abs(p.dot(right))/Math.tan(horizontal/2),depth+(flat?1.08*innerHeight/safeHeight:1.85)*Math.abs(p.dot(up))/Math.tan(vertical/2));
+      }
+      controls.target.copy(sphere.center);
+      if(flat)controls.target.addScaledVector(up,2*distance*Math.tan(vertical/2)*((safeTop+safeBottom)/2/innerHeight-.5));
+      camera.position.copy(controls.target).addScaledVector(direction,distance);
+      controls.update();
+    }
+    async function show(which,refit=false,level=0){
+      const current=++request;
+      status.textContent='Model yükleniyor…';
+      try{const model=await load(which);if(current!==request)return;for(const [key,item] of Object.entries(models))item.visible=key===which;
+        if(which==='forest')model.traverse(o=>{if(o.isMesh)o.visible=o.userData.lod===level;});
+        if(which==='forest'&&new URLSearchParams(location.search).get('debug')==='1'){
+          const evidence=[];model.traverse(o=>{if(o.isMesh)evidence.push({name:o.name,lod:o.userData.lod,visible:o.visible,triangles:(o.geometry.index?.count||o.geometry.attributes.position.count)/3,alpha:o.material.alphaTest,opacity:o.material.opacity,side:o.material.side,mapSize:o.material.map?[o.material.map.image.width,o.material.map.image.height]:null});});
+          console.info('Tree asset browser evidence',JSON.stringify(evidence));
+        }
+        bounds=new T.Box3().setFromObject(model);fitPoints=[];
+        if(which==='penguin-animal'){
+          model.updateMatrixWorld(true);bounds.makeEmpty();const p=new T.Vector3();model.traverse(node=>{if(!node.isSkinnedMesh)return;node.skeleton.update();for(let i=0;i<node.geometry.attributes.position.count;i++)bounds.expandByPoint(node.getVertexPosition(i,p).applyMatrix4(node.matrixWorld));});
+        }
+        if(['habes','bear-pool'].includes(which)){model.updateMatrixWorld(true);model.traverse(node=>{if(!node.isMesh||!node.visible)return;const vertices=node.geometry.getAttribute('position');for(let i=0;i<vertices.count;i++)fitPoints.push(new T.Vector3().fromBufferAttribute(vertices,i).applyMatrix4(node.matrixWorld));});}if(refit){document.getElementById('top').setAttribute('aria-pressed','false');frame();}
+        dirty=true;status.textContent=which==='penguin-animal'?'Hareketli Afrika pengueni hazır':which==='bear-pool'?'Boz Ayı havuzu hazır':which==='habes'?'Habeş Maymunu Adası hazır':which==='forest'?(level===0?'Yakın ağaç hazır':'Uzak ağaç hazır'):which==='african-cafe'?'Afrika Kafe hazır':which==='african-village'?'Afrika Köyü hazır':which==='lemur'?'Lemur Adası hazır':which==='savanna-platform'?'Savanna ahşap yapı hazır':which==='penguin'?'Penguen havuzu hazır':which==='turk-koyu'?'Türk Köyü hazır':which==='near'?'Yakın model hazır':'Uzak model hazır';
+        for(const key of ['near','far'])document.getElementById(key).setAttribute('aria-pressed',String(which==='forest'?(key==='near'?level===0:level===1):key===which||(key==='near'&&which!=='far')));
+      }catch(error){console.error(error);status.textContent='Model açılamadı';}
+    }
+    function choose(value){
+      asset=catalog[value]?value:'dome';document.getElementById('asset').value=asset;
+      const animal=asset==='penguin-animal';lastFrame=null;document.getElementById('penguin-animation').hidden=!animal;document.getElementById('pause-penguin').hidden=!animal;controls.minDistance=animal?.65:8;controls.maxDistance=animal?12:460;camera.near=animal?.02:.3;camera.updateProjectionMatrix();grid.visible=!animal;
+      ground.visible=true;previewWater.visible=false;
+      document.querySelector('.controls').classList.toggle('animal-controls',animal);document.body.classList.toggle('animal-review',animal);document.getElementById('far').hidden=animal;
+      for(const side of ['left','bottom'])sun.shadow.camera[side]=animal?-1.3:-65;
+      for(const side of ['right','top'])sun.shadow.camera[side]=animal?1.3:65;
+      sun.shadow.camera.updateProjectionMatrix();sun.shadow.normalBias=animal?.002:.045;
+      document.getElementById('bake-controls').hidden=asset!=='forest'||new URLSearchParams(location.search).get('bake')!=='1';
+      const entry=catalog[asset];document.getElementById('title').textContent=entry.title;
+      ground.position.y=animal?-.003:asset==='bear-pool'?-1.7:asset==='penguin'?-1.85:['lemur','habes'].includes(asset)?-1.35:['african-village','african-cafe'].includes(asset)?-.26:-.12;grid.position.y=ground.position.y+.012;
+      document.getElementById('description').textContent=entry.description+' Parmağınızla döndürün, iki parmakla yakınlaştırın.';
+      document.getElementById('details').textContent=entry.details;
+      document.getElementById('source').href=entry.url;document.getElementById('source').textContent=entry.source;
+      document.getElementById('far').disabled=!['dome','forest'].includes(asset);document.getElementById('near').textContent=['dome','forest'].includes(asset)?'Yakın detay':'Eğik görünüm';
+      document.getElementById('top').setAttribute('aria-pressed','false');
+      show(asset==='dome'?'near':asset,true);
+    }
+    let treeAtlasUrl=null;
+    document.getElementById('bake-tree').onclick=async()=>{
+      const button=document.getElementById('bake-tree'),message=document.getElementById('bake-status'),download=document.getElementById('bake-download');
+      button.disabled=true;download.hidden=true;message.textContent='Ağaç kaynağı hazırlanıyor…';
+      try{
+        const {bakeTreeAtlas}=await import('./tree-atlas-baker.js?v=20261015af');
+        const blob=await bakeTreeAtlas((done,total)=>{message.textContent=done+' / '+total+' açı hazır';});
+        if(treeAtlasUrl)URL.revokeObjectURL(treeAtlasUrl);treeAtlasUrl=URL.createObjectURL(blob);download.href=treeAtlasUrl;download.hidden=false;
+        message.textContent='16 açı hazır. Kaynak kaydı PNG dosyasının içinde.';
+      }catch(error){console.error(error);message.textContent='Atlas oluşturulamadı: '+error.message;}
+      finally{button.disabled=false;}
+    };
+    document.getElementById('asset').addEventListener('change',event=>choose(event.target.value));
+    document.getElementById('near').addEventListener('click',()=>show(asset==='dome'?'near':asset,true));
+    document.getElementById('far').addEventListener('click',()=>asset==='forest'?show('forest',false,1):show('far'));
+    document.getElementById('top').addEventListener('click',()=>{frame(true);document.getElementById('top').setAttribute('aria-pressed','true');if(asset!=='dome')document.getElementById('near').setAttribute('aria-pressed','false');});
+    controls.addEventListener('start',()=>{document.getElementById('top').setAttribute('aria-pressed','false');if(asset!=='dome')document.getElementById('near').setAttribute('aria-pressed','true');});
+    function resize(){
+      const w=host.clientWidth,h=host.clientHeight,aspect=w/h;
+      camera.aspect=aspect;camera.updateProjectionMatrix();renderer.setSize(w,h,false);
+      frame(document.getElementById('top').getAttribute('aria-pressed')==='true');
+    }
+    addEventListener('resize',resize);resize();choose(new URLSearchParams(location.search).get('model'));
+    document.getElementById('penguin-animation').onchange=e=>{if(!animalActions)return;const next=animalActions[e.target.value];next.reset().setEffectiveWeight(1).play();animalAction.crossFadeTo(next,.55,false);animalAction=next;dirty=true;};
+    document.getElementById('pause-penguin').onclick=e=>{animalPaused=!animalPaused;e.target.setAttribute('aria-pressed',String(animalPaused));e.target.textContent=animalPaused?'Devam et':'Duraklat';lastFrame=null;dirty=true;};
+    renderer.setAnimationLoop(now=>{
+      controls.update();
+      if(asset==='penguin-animal'&&animalMixer&&!animalPaused&&!document.hidden){
+        const dt=lastFrame===null?0:Math.min((now-lastFrame)/1000,.08);lastFrame=now;animalMixer.update(dt);
+        let lift=0,weight=0;for(const [name,action] of Object.entries(animalActions)){const w=action.getEffectiveWeight();if(action.isRunning()&&w>0){lift+=groundOffset(animalMeta.clips,name,action.time)*w;weight+=w;}}
+        const swimming=animalAction.getClip().name==='Penguin swim';ground.visible=!swimming;previewWater.visible=swimming;animalRoot.position.y=swimming?animalMeta.swimAnchorOffsetMetres:weight?lift/weight:0;dirty=true;
+      }
+      if(dirty){renderer.render(scene,camera);dirty=false;}
+    });
+  </script>
+</body>
+</html>
+

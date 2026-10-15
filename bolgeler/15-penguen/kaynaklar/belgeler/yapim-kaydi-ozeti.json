@@ -1,0 +1,26 @@
+{
+  "schema": "bursa-zoo-penguin-source-facts/v1",
+  "reviewed": "2026-10-15",
+  "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148",
+  "sourcePublished": "2017-06-24",
+  "historicalDocumentAreasM2": {
+    "penguinPool": 300,
+    "penguinLand": 300,
+    "sealPool": 400,
+    "sealLand": 200
+  },
+  "constructionAreaM2": 3000,
+  "underwaterViewing": "2017 duyurusu su altı seyir bölümlerini bildiriyor",
+  "photoObservations": [
+    "Küçük havuz çevresinde koyu mavi bordür ve gri drenaj bandı",
+    "Açık gri-beyaz-bej çakıl kıyı",
+    "Gri yapay kaya duvar ve alçak iç kayalar",
+    "Ahşap seyir platformu; yeşil alt paneller"
+  ],
+  "limits": [
+    "2017 kaydı güncel 2026 durumunun tam doğrulaması değildir",
+    "Komşu fok havuzu ile penguen havuzu ayrımı fotoğraf rolünde korunur",
+    "M5 küçük su izi yaklaşık205m²; duyurudaki300m² farkı çözümlenmedi",
+    "Duvar yüksekliği, platform boyutu ve küçük ayrıntı konumları fotoğraftan yorumdur"
+  ]
+}

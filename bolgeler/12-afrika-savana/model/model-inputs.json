@@ -1,0 +1,52 @@
+{
+  "schema": "bursa-zoo-savanna-platform-inputs/v1",
+  "sourceId": "H22D01C2B:145",
+  "siteDataSha256": "022a88053df75b9d755e082079ed31f6b922e79bb8bca03016890c52cc828358",
+  "originM5LocalXY": [
+    203.580448933036,
+    44.67598741130142
+  ],
+  "roofOutlineM5XY": [
+    [
+      207.212,
+      46.787
+    ],
+    [
+      204.322,
+      40.495
+    ],
+    [
+      200.022,
+      42.495
+    ],
+    [
+      202.722,
+      48.844
+    ],
+    [
+      207.212,
+      46.787
+    ]
+  ],
+  "localXAxisDegrees": -24.6,
+  "nativeSourceH": 97.8414,
+  "datumZ": 93.5,
+  "interpretedDimensionsMetres": {
+    "groundZ": -0.24,
+    "deckZ": 1.45,
+    "eaveZ": 3.3,
+    "ridgeZ": 4.341399999999993
+  },
+  "sourcePhoto": "../kaynaklar/fotograflar/23247_YHG_8895_201702021252.jpg",
+  "sourcePage": "https://www.bursa.bel.tr/haber/fok-baligi-ve-penguenler-icin-geri-sayim-23247",
+  "sourcePublished": "2017-02-02",
+  "sourceAssociation": "M5 canopy145 and the photographed structure are a candidate association, not confirmed",
+  "interpretation": [
+    "Roof XY footprint retained from old M5 canopy145; source height meaning is unconfirmed",
+    "2017 photo8895 shows a raised timber structure, gable roof, X-braces, sloping approaches and wire baskets",
+    "The precise function as visitor platform, shelter or feeding structure has not been confirmed",
+    "2017 photo8948 shows visitors feeding giraffes by a stone boundary; it is not another view of this structure",
+    "Four posts, deck elevation, ramp length, pitch, member sections and basket positions are visual estimates",
+    "Native roof coordinates are retained; approximate map association may be wrong by10–25m and has not been verified in2026"
+  ]
+}

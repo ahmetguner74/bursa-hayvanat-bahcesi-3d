@@ -1,0 +1,137 @@
+{
+  "schema": "bursa-zoo-generic-tree-lods/v1",
+  "blender": "5.2.1 LTS",
+  "source": {
+    "asset": "jacaranda_tree",
+    "url": "https://polyhaven.com/a/jacaranda_tree",
+    "authors": [
+      "Rico Cilliers",
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "licenseUrl": "https://polyhaven.com/license",
+    "sha256": "e28e9ea0deb782a830420126b3c5536bde44d1b532cbfb4dccbcc0e46119a0ce"
+  },
+  "limitations": [
+    "Generic visual vegetation; species, height and placement are not a current botanical survey.",
+    "Leaf cards are alpha-tested surfaces. Bark is a decimated source mesh, not certified manifold CAD.",
+    "The leaf masks and branch structure are from the licensed source; all M5 positions are kept by the viewer."
+  ],
+  "leafPrototypeOptimization": [
+    {
+      "source": "a",
+      "sourcePolygons": 144,
+      "outputTriangles": 60
+    },
+    {
+      "source": "b",
+      "sourcePolygons": 121,
+      "outputTriangles": 48
+    },
+    {
+      "source": "c",
+      "sourcePolygons": 17,
+      "outputTriangles": 7
+    },
+    {
+      "source": "d",
+      "sourcePolygons": 16,
+      "outputTriangles": 8
+    },
+    {
+      "source": "e",
+      "sourcePolygons": 21,
+      "outputTriangles": 10
+    }
+  ],
+  "artisticShape": {
+    "schema": "bursa-zoo-generic-tree-shape/v1",
+    "sourceCrownStartFraction": 0.28,
+    "targetCrownStartFraction": 0.55,
+    "reason": "Generic park visual: lift and compact the crown to match the selected woodland concept. This is an artistic proportion, not a measurement of a Bursa tree."
+  },
+  "leafTintLinear": [
+    0.55,
+    0.72,
+    0.45,
+    1
+  ],
+  "trunkCopies": 1,
+  "lods": [
+    {
+      "level": 0,
+      "densityMultiplier": 14.0,
+      "leafScaleMultiplier": 1.3,
+      "tipDensityMultiplier": 35.0,
+      "tipLeafScaleMultiplier": 1.75,
+      "meshes": [
+        {
+          "name": "tree_lod0_branches",
+          "triangles": 7285,
+          "vertices": 3993
+        },
+        {
+          "name": "tree_lod0_trunk",
+          "triangles": 2586,
+          "vertices": 1322
+        },
+        {
+          "name": "tree_lod0_leaves",
+          "triangles": 112374,
+          "vertices": 136036
+        }
+      ],
+      "triangles": 122245
+    },
+    {
+      "level": 1,
+      "densityMultiplier": 1.5,
+      "leafScaleMultiplier": 3.9,
+      "tipDensityMultiplier": 0,
+      "tipLeafScaleMultiplier": 0,
+      "meshes": [
+        {
+          "name": "tree_lod1_branches",
+          "triangles": 1176,
+          "vertices": 735
+        },
+        {
+          "name": "tree_lod1_trunk",
+          "triangles": 718,
+          "vertices": 373
+        },
+        {
+          "name": "tree_lod1_leaves",
+          "triangles": 5048,
+          "vertices": 6110
+        }
+      ],
+      "triangles": 6942
+    }
+  ],
+  "degenerateUvPoleTangentFallbacks": 1,
+  "files": [
+    {
+      "name": "generic-broadleaf-tree.blend",
+      "size": 8028923,
+      "sha256": "0ad49ca745cdc833bf2018b840eda84ed235797b882a3ca0c86bbb1e6da0f588"
+    },
+    {
+      "name": "generic-broadleaf-tree.glb",
+      "size": 12206208,
+      "sha256": "23b7e31890926a4b9f2946524618f97e493ecf33bc10fc503f41bf96dc62235e"
+    }
+  ],
+  "boundsZUp": [
+    [
+      -6.748197078704834,
+      -4.579263210296631,
+      -0.003525588195770979
+    ],
+    [
+      5.981024265289307,
+      5.205855846405029,
+      10.216971397399902
+    ]
+  ]
+}

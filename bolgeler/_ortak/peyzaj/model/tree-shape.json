@@ -1,0 +1,6 @@
+{
+  "schema": "bursa-zoo-generic-tree-shape/v1",
+  "sourceCrownStartFraction": 0.28,
+  "targetCrownStartFraction": 0.55,
+  "reason": "Generic park visual: lift and compact the crown to match the selected woodland concept. This is an artistic proportion, not a measurement of a Bursa tree."
+}

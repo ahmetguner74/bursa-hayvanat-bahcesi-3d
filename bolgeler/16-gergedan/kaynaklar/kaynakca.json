@@ -1,0 +1,208 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 16,
+  "name": "Gergedan",
+  "type": "yaşam alanı",
+  "searched": "gergedan",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-4061.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/gergedan-gunu.jpg",
+      "mediaId": 4061,
+      "uploaded": "2026-09-22T13:37:17",
+      "title": "gergedan günü",
+      "sha256": "0255d4b1276f7d1b1463b9985f00b00b0ba6f6781ebff047d02776ebe451eafa",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3374.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2022/09/gergedan-gunu.jpg",
+      "mediaId": 3374,
+      "uploaded": "2022-09-22T11:47:56",
+      "title": "gergedan günü",
+      "sha256": "27e7267c763879e33427ef2f8233477eb67f551fd395e4213407a836839fa97e",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3370.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2022/09/kolaj-gergedan.jpg",
+      "mediaId": 3370,
+      "uploaded": "2022-09-20T15:08:15",
+      "title": "kolaj gergedan",
+      "sha256": "2f6886085e789060e1cc80b88838f7c70674f7985c487757f93a73fb81c8c50e",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-2826.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2020/09/gergedan2.jpg",
+      "mediaId": 2826,
+      "uploaded": "2020-09-29T14:02:46",
+      "title": "gergedan2",
+      "sha256": "4de39fcd56efaed842b71d32b0b4ee2b943d24180b96f168496b6e14cf7e04c1",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    }
+  ],
+  "documents": [
+    {
+      "title": "DÜNYA GERGEDAN GÜNÜ",
+      "url": "https://www.bursahayvanatbahcesi.com/dunya-gergedan-gunu/",
+      "type": "post"
+    },
+    {
+      "title": "Bugün Dünya Gergedan Günü",
+      "url": "https://www.bursahayvanatbahcesi.com/bugun-dunya-gergedan-gunu/",
+      "type": "post"
+    },
+    {
+      "title": "Gergedanlar çamuru neden sever?",
+      "url": "https://www.bursahayvanatbahcesi.com/gergedanlar-camuru-neden-sever/",
+      "type": "post"
+    },
+    {
+      "title": "BEYAZ GERGEDAN (White rhinoceros)",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/beyaz-gergedan-white-rhinoceros/",
+      "type": "hayvan"
+    },
+    {
+      "title": "Bursa Zoo’nun Yeni Konukları Gergedanlar",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-zoonun-yeni-konuklari-gergedanlar/",
+      "type": "post"
+    },
+    {
+      "title": "BASINDA BURSA HAYVANAT BAHÇESİ",
+      "url": "https://www.bursahayvanatbahcesi.com/basinda-bursa-hayvanat-bahcesi/",
+      "type": "post"
+    },
+    {
+      "title": "HAYVANAT BAHÇESİ 20 YAŞINDA",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvanat-bahcesi-20-yasinda/",
+      "type": "post"
+    },
+    {
+      "title": "Bursa ZOO ailesinin yeni sakinleri",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-zoo-ailesinin-yeni-sakinleri/",
+      "type": "post"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "d1d8edc7d9dee48203155920b239c7431c043b5cef5c75e62b466c136087e2bf",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "654e92133acebed269509190fc37cf2e024f890b9fa8208ca9c1dcb80972b56a",
+    "nativeFeatureCount": 29,
+    "nativeTreeCount": 3,
+    "status": "illustrated-label-anchor"
+  },
+  "architecturalReferences": [
+    {
+      "file": "kaynaklar/fotograflar/belediye-kamera-20261015T005926Z.png",
+      "url": "https://www.bursa.bel.tr/sehir-kameralari/gergedanlar-23324",
+      "sourcePage": "https://www.bursa.bel.tr/sehir-kameralari/gergedanlar-23324",
+      "sha256": "185bfd4b6d08449e28e069c1bef89428803ee50bc707b2ed807b885e5fe45aae",
+      "fetchedAtUTC": "2026-10-15T00:59:26.000737+00:00",
+      "captureDate": "Çekim tarihi teyitsiz; edinim zamanı canlılık/güncel saha durumu kanıtı değildir",
+      "method": "Latest publicly listed HLS fragment, first decoded frame",
+      "sizePixels": [
+        640,
+        360
+      ],
+      "role": "Gergedan kamera bağlamı: geniş açık zemin, öndeki beton sınır ve arkadaki kapılı servis cephesi.640×360 karanlık kare; çekim tarihi teyitsiz",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; tekrar yayımlama izni varsayılmadı"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8844_201806301144.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8844_201806301144.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "256ff1fd897cc41f1047be52b684f762e813187a17468187b11046aa19a3b517",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Gergedan barınağı iç mekânı: yüksek çatı, beton ayırıcı ve metal kapılar; insan ön planda",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8854_201806301145.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8854_201806301145.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "51f8e99771bfdc4b97a7df22aebfc49bb4d882cc55040da9dc7f45b8a9d75770",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Gergedan iç avlusu: beton/dolgulu zemin, duvar ve metal bölme kapıları",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8865_201806301146.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8865_201806301146.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "799919739db61e3f0626673a76d4295cb4ae16530f1c36cd1f632962fe129170",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Gergedan barınağı iç mekânı, geniş metal kapı ve yan camlı bölüm",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    }
+  ],
+  "architecturalDocuments": [
+    {
+      "file": "kaynaklar/belgeler/belediye-kamera-20261015T005926Z.html.txt",
+      "url": "https://www.bursa.bel.tr/sehir-kameralari/gergedanlar-23324",
+      "sha256": "185116f5823f2561db1816c48038cfd819a5078c6ed429190dcecbe8f70a8c39",
+      "role": "Belediyenin herkese açık kamera sayfası arşivi; kaynak bağlantısı ve kamera adı, HTML çalıştırılmaz"
+    },
+    {
+      "file": "kaynaklar/belgeler/belediye-gergedan-2018.html.txt",
+      "url": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sha256": "a0fe0ad9777bb004b61a865802248f0a53108d25594cd60bbccd908650965c3d",
+      "sourcePublished": "2018-06-30",
+      "role": "Gergedan-zebra barınağı2017–2018 yapım kaydı; organik form/yeşil çatı,1.057m² kapalı ve3.621m² açık alan bildirir. Eski M5 iziyle eşleştirme henüz doğrulanmadı."
+    }
+  ]
+}

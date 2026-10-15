@@ -1,0 +1,36 @@
+{
+  "schema": "bursa-zoo-tree-pipeline/v1",
+  "status": "experimental-opt-in-not-visual-acceptance",
+  "sourceManifest": "source-manifest.json",
+  "blender": "5.2.1 LTS",
+  "disableSourceAutoExecution": true,
+  "sourcePath": "bolgeler/_qa/tree-assets/jacaranda-source/jacaranda_tree_1k.blend",
+  "steps": [
+    "python bolgeler/_ortak/peyzaj/model/prepare_tree_textures.py",
+    "Blender --background --factory-startup --disable-autoexec SOURCE.blend --python-exit-code 1 --python build_forest_tree.py",
+    "Publish the exact derived GLB and build-report.json locally; open http://127.0.0.1:8768/model-review/?model=forest&bake=1 and render/download the16-angle PNG.",
+    "python bolgeler/_ortak/peyzaj/model/import_tree_webgl_atlas.py DOWNLOADED.png",
+    "python bolgeler/_ortak/peyzaj/model/verify_tree_assets.py",
+    "node bolgeler/validate_models.cjs",
+    "python publish_local.py --local-only"
+  ],
+  "references": [
+    "https://polyhaven.com/a/jacaranda_tree",
+    "https://polyhaven.com/license",
+    "https://polyhaven.com/our-api",
+    "https://threejs.org/docs/pages/LOD.html"
+  ],
+  "runtimeVariants": {
+    "default": "previous canopy model",
+    "forest=1": "exclusive near and far 3D meshes",
+    "forest=2": "exclusive near3D and sixteen-angle far proxy"
+  },
+  "limitations": [
+    "Generic visual asset, not a Bursa botanical survey.",
+    "Tree XY and old layout parameters retained; canopy radius interpreted at1.6 times the lobe-placement parameter to preserve the old visual span.",
+    "Far proxy uses baked self-lighting and limited parallax; near/far appearance and warm light require further visual review.",
+    "No live API request, publication or docs output in the viewer."
+  ],
+  "localBuildScript": "build_local_tree.ps1",
+  "alternateRender": "Cycles source renderer retained behind build_local_tree.ps1 -UseCyclesFallback; same geometry, different renderer/colour response."
+}

@@ -1,0 +1,62 @@
+{
+  "version": "three0.186.0",
+  "license": "Three.js MIT, see vendor/LICENSE; example texture retained only for local review",
+  "files": [
+    {
+      "file": "postprocessing/GTAOPass.js",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/postprocessing/GTAOPass.js",
+      "sha256": "a277f848d1035c751c54d9706e579aeb74689126ced25723e53d52ac3f26f445"
+    },
+    {
+      "file": "postprocessing/OutputPass.js",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/postprocessing/OutputPass.js",
+      "sha256": "02e4a261af34de71338185e9e87f0cbe5cba9115608d984363e1269dec1d2272"
+    },
+    {
+      "file": "objects/Water.js",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/objects/Water.js",
+      "sha256": "3386670ba86003a32f5efe449041bd108d4cf1e0661849caa814741a2aaf395b"
+    },
+    {
+      "file": "utils/BufferGeometryUtils.js",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/utils/BufferGeometryUtils.js",
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797"
+    },
+    {
+      "file": "postprocessing/Pass.js",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/postprocessing/Pass.js",
+      "sha256": "444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5"
+    },
+    {
+      "file": "shaders/GTAOShader.js",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/shaders/GTAOShader.js",
+      "sha256": "cdea7be60452f61105375d2c18e4da2e8ce7b39a89246b1bb8fbf79319d58cfd"
+    },
+    {
+      "file": "shaders/PoissonDenoiseShader.js",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/shaders/PoissonDenoiseShader.js",
+      "sha256": "61da074a9ad8b2139dd164c96b8b62c299f056ce06c216e1f707c5151d997602"
+    },
+    {
+      "file": "shaders/CopyShader.js",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/shaders/CopyShader.js",
+      "sha256": "a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718"
+    },
+    {
+      "file": "math/SimplexNoise.js",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/math/SimplexNoise.js",
+      "sha256": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072"
+    },
+    {
+      "file": "shaders/OutputShader.js",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/shaders/OutputShader.js",
+      "sha256": "353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2"
+    },
+    {
+      "file": "../viewer/assets/three-water-normals-r186.jpg",
+      "url": "https://raw.githubusercontent.com/mrdoob/three.js/r186/examples/textures/waternormals.jpg",
+      "sha256": "add9912b158a4fe9c12421745babe68c44c8af75631ac4837236cb2a03bc373f",
+      "purpose": "Technical normal map from the official example; local use only, not a site photograph"
+    }
+  ]
+}

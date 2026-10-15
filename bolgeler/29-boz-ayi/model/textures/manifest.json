@@ -1,0 +1,41 @@
+[
+  {
+    "file": "meadow.jpg",
+    "sha256": "2447832697fcc582a3117e67b78853ecebc7b63a32322d42a5da51262cff00b3",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGB",
+    "bytes": 200884,
+    "source": "../../../../viewer/assets/woodland-meadow-v1.png",
+    "sourceSha256": "915e283abac23fc1d38889fbff080b0dcd67122e1dc7201b0d317682b339fce4",
+    "method": "Max512px Lanczos, preserve alpha in PNG or RGB JPEG90 4:4:4; no painting or source-photo texture."
+  },
+  {
+    "file": "rocks.jpg",
+    "sha256": "90aaa2db8cff3f50c38e3c7eefa7a7669c1f5937475249f950ea388541c4ef5f",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGB",
+    "bytes": 111481,
+    "source": "../../../../viewer/assets/penguin-artificial-rock-v1.png",
+    "sourceSha256": "c03ce4d501bd5c0f9846cf494efe9ff6cb9a5e2b810546601789872e816ac837",
+    "method": "Max512px Lanczos, preserve alpha in PNG or RGB JPEG90 4:4:4; no painting or source-photo texture."
+  },
+  {
+    "file": "plants.png",
+    "sha256": "8102058fa98694bbc0412c09e8973ce0a8f05fd16851bd31ed74b0e84a29bb50",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bytes": 256200,
+    "source": "../../../../viewer/assets/woodland-grass-tussock-v1.png",
+    "sourceSha256": "a17782c7c59bf798c04da432755e5cb4cd171f2c62d2b841d1ec0c45ce15a35c",
+    "method": "Max512px Lanczos, preserve alpha in PNG or RGB JPEG90 4:4:4; no painting or source-photo texture."
+  }
+]

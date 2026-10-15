@@ -1,0 +1,1541 @@
+{
+  "schema": "bursa-zoo-region-locations/v1",
+  "sourceMapUrl": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+  "sourceMapSha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+  "registrationSha256": "6ea309817c845f5a4b1d50c94aa6461fa54a6e9ddf86cfb4ecf7e96e994edb16",
+  "unit": "M5 local metres",
+  "surveyed": false,
+  "areas": [
+    {
+      "number": 1,
+      "name": "İdari Bina ve Gösteri Merkezi",
+      "folder": "01-idari-bina-ve-gosteri-merkezi",
+      "type": "tesis",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            660,
+            579
+          ],
+          "localXYMetres": [
+            132.09249545900002,
+            -105.18349550300002
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        612,
+        531,
+        708,
+        627
+      ],
+      "contextBoundsXYMetres": [
+        95.94799611499997,
+        -140.805778943,
+        168.23699480299996,
+        -69.56121206299997
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 2,
+      "name": "Hediyelik Eşya Marketi",
+      "folder": "02-hediyelik-esya-marketi",
+      "type": "tesis",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            664,
+            531
+          ],
+          "localXYMetres": [
+            135.63846998699995,
+            -71.350223599
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        616,
+        483,
+        712,
+        579
+      ],
+      "contextBoundsXYMetres": [
+        99.49397064300001,
+        -106.97250703899999,
+        171.78296933099995,
+        -35.72794015900001
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 3,
+      "name": "Safari Kafe",
+      "folder": "03-safari-kafe",
+      "type": "tesis",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            586,
+            533
+          ],
+          "localXYMetres": [
+            77.82590631699998,
+            -70.08215996900003
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        538,
+        485,
+        634,
+        581
+      ],
+      "contextBoundsXYMetres": [
+        41.68140697299998,
+        -105.70444340900002,
+        113.97040566099997,
+        -34.45987652900004
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 4,
+      "name": "Mescid",
+      "folder": "04-mescid",
+      "type": "tesis",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            549,
+            577
+          ],
+          "localXYMetres": [
+            49.879577532999974,
+            -99.94919028100003
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        501,
+        529,
+        597,
+        625
+      ],
+      "contextBoundsXYMetres": [
+        13.735078188999978,
+        -135.57147372100002,
+        86.02407687699997,
+        -64.32690684099998
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 5,
+      "name": "Giriş Göleti",
+      "folder": "05-giris-goleti",
+      "type": "su",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            654,
+            493
+          ],
+          "localXYMetres": [
+            128.690838229,
+            -44.11256311300002
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        606,
+        445,
+        702,
+        541
+      ],
+      "contextBoundsXYMetres": [
+        92.54633888499995,
+        -79.73484655300001,
+        164.835337573,
+        -8.490279673000032
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 6,
+      "name": "Pers Leoparı",
+      "folder": "06-pers-leopari",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            774,
+            518
+          ],
+          "localXYMetres": [
+            217.292534934,
+            -65.93422219799999
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        726,
+        470,
+        822,
+        566
+      ],
+      "contextBoundsXYMetres": [
+        181.14803559,
+        -101.55650563800003,
+        253.437034278,
+        -30.311938758000053
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 7,
+      "name": "Afrika Aslanı",
+      "folder": "07-afrika-aslani",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            828,
+            519
+          ],
+          "localXYMetres": [
+            257.28768055099994,
+            -68.49976870700004
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        780,
+        471,
+        876,
+        567
+      ],
+      "contextBoundsXYMetres": [
+        221.14318120700005,
+        -104.12205214700003,
+        293.43217989499993,
+        -32.877485267000054
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 8,
+      "name": "Benekli Sırtlan",
+      "folder": "08-benekli-sirtlan",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            888,
+            527
+          ],
+          "localXYMetres": [
+            301.64313567899995,
+            -76.22582748299999
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        840,
+        479,
+        936,
+        575
+      ],
+      "contextBoundsXYMetres": [
+        265.49863633499996,
+        -111.84811092300004,
+        337.78763502299995,
+        -40.603544043
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 9,
+      "name": "Habeş Maymunu",
+      "folder": "09-habes-maymunu",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            756,
+            439
+          ],
+          "localXYMetres": [
+            204.91542706299998,
+            -9.40452885100001
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        708,
+        391,
+        804,
+        487
+      ],
+      "contextBoundsXYMetres": [
+        168.77092771899999,
+        -45.026812291,
+        241.05992640699998,
+        26.21775458899998
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "Habeş Maymunu Adası v1 · M5 izi; 2021 fotoğrafından yaklaşık tırmanma elemanları",
+      "isModelStarted": true,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 10,
+      "name": "Boa Yılanı",
+      "folder": "10-boa-yilani",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            824,
+            443
+          ],
+          "localXYMetres": [
+            255.24642605900004,
+            -14.574912823000034
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        776,
+        395,
+        872,
+        491
+      ],
+      "contextBoundsXYMetres": [
+        219.10192671500005,
+        -50.19719626299997,
+        291.39092540300004,
+        21.047370616999956
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 11,
+      "name": "Lemur",
+      "folder": "11-lemur",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            869,
+            439
+          ],
+          "localXYMetres": [
+            288.63436579499995,
+            -13.29218853499998
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        821,
+        391,
+        917,
+        487
+      ],
+      "contextBoundsXYMetres": [
+        252.48986645099995,
+        -48.914471975000026,
+        324.77886513900006,
+        22.330094904999953
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "Lemur Adası v1 · M5 izi; kaya/dal yerleşimi kamera yorumu",
+      "isModelStarted": true,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 12,
+      "name": "Afrika Savana",
+      "folder": "12-afrika-savana",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            588,
+            376
+          ],
+          "localXYMetres": [
+            81.21282716799999,
+            40.96214530399999
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        450,
+        262,
+        845,
+        476
+      ],
+      "contextBoundsXYMetres": [
+        -22.241484564000018,
+        -38.65238387200003,
+        273.00121876199995,
+        126.390766106
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "ahşap yapı bileşeni v1; aday konum teyitsiz",
+      "isModelStarted": true,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 13,
+      "name": "Afrika Kafe",
+      "folder": "13-afrika-kafe",
+      "type": "tesis",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            650,
+            323
+          ],
+          "localXYMetres": [
+            127.79025860299998,
+            76.338615449
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        602,
+        275,
+        698,
+        371
+      ],
+      "contextBoundsXYMetres": [
+        91.64575925899999,
+        40.716332008999984,
+        163.93475794700004,
+        111.96089888899999
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "Afrika Kafe v1 · 6 aday M5 izi; tarihî fotoğraf yorumu",
+      "isModelStarted": true,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 14,
+      "name": "Afrika Köyü",
+      "folder": "14-afrika-koyu",
+      "type": "tesis",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            640,
+            285
+          ],
+          "localXYMetres": [
+            120.84262684499998,
+            103.57627593499998
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        592,
+        237,
+        688,
+        333
+      ],
+      "contextBoundsXYMetres": [
+        84.69812750099999,
+        67.95399249500002,
+        156.98712618899998,
+        139.198559375
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "Afrika Köyü v1 ·7 M5 çatı izi; tarihî fotoğraf yorumu",
+      "isModelStarted": true,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 15,
+      "name": "Penguen",
+      "folder": "15-penguen",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            440,
+            264
+          ],
+          "localXYMetres": [
+            -27.077654336000023,
+            125.31935311200002
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        413,
+        210,
+        547,
+        289
+      ],
+      "contextBoundsXYMetres": [
+        -47.384665539000025,
+        103.94494691099999,
+        52.851312318,
+        164.46551214599998
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "Penguen havuzu v1 · M5 izi ve tarihî fotoğraf yorumu · glTF",
+      "isModelStarted": true,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 16,
+      "name": "Gergedan",
+      "folder": "16-gergedan",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            431,
+            311
+          ],
+          "localXYMetres": [
+            -34.315871845000004,
+            92.36582838499999
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        345,
+        255,
+        462,
+        360
+      ],
+      "contextBoundsXYMetres": [
+        -98.62577746,
+        56.620687264000026,
+        -10.669178377000037,
+        134.957281105
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 17,
+      "name": "Yaban Eşeği",
+      "folder": "17-yaban-esegi",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            313,
+            309
+          ],
+          "localXYMetres": [
+            -121.71491871900002,
+            97.840962083
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        265,
+        261,
+        361,
+        357
+      ],
+      "contextBoundsXYMetres": [
+        -157.85941806300002,
+        62.218678642999976,
+        -85.57041937500003,
+        133.46324552299998
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 18,
+      "name": "Deve",
+      "folder": "18-deve",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            324,
+            339
+          ],
+          "localXYMetres": [
+            -113.92933268500002,
+            76.23071222499999
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        276,
+        291,
+        372,
+        387
+      ],
+      "contextBoundsXYMetres": [
+        -150.07383202900002,
+        40.608428785,
+        -77.78483334100002,
+        111.85299566500001
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 19,
+      "name": "Yaban Domuzu",
+      "folder": "19-yaban-domuzu",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            255,
+            356
+          ],
+          "localXYMetres": [
+            -165.256038864,
+            66.57323668800001
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        207,
+        308,
+        303,
+        404
+      ],
+      "contextBoundsXYMetres": [
+        -201.400538208,
+        30.950953247999962,
+        -129.11153952000004,
+        102.195520128
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 20,
+      "name": "Ala Geyik",
+      "folder": "20-ala-geyik",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            338,
+            383
+          ],
+          "localXYMetres": [
+            -104.09100770500001,
+            44.609074444999976
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        290,
+        335,
+        386,
+        431
+      ],
+      "contextBoundsXYMetres": [
+        -140.235507049,
+        8.986791004999986,
+        -67.94650836100004,
+        80.231357885
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 21,
+      "name": "Kızıl Geyik",
+      "folder": "21-kizil-geyik",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            330,
+            426
+          ],
+          "localXYMetres": [
+            -110.539810294,
+            14.452052998
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        282,
+        378,
+        378,
+        474
+      ],
+      "contextBoundsXYMetres": [
+        -146.684309638,
+        -21.17023044199999,
+        -74.39531095000001,
+        50.07433643799999
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 22,
+      "name": "Avustralya Hayvanları",
+      "folder": "22-avustralya-hayvanlari",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            206,
+            415
+          ],
+          "localXYMetres": [
+            -202.274897001,
+            26.503152637000028
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        158,
+        367,
+        254,
+        463
+      ],
+      "contextBoundsXYMetres": [
+        -238.419396345,
+        -9.119130803000019,
+        -166.13039765700003,
+        62.12543607699996
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 23,
+      "name": "Gülen Kuş",
+      "folder": "23-gulen-kus",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            238,
+            438
+          ],
+          "localXYMetres": [
+            -178.84598025000003,
+            9.124505209999995
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        190,
+        390,
+        286,
+        486
+      ],
+      "contextBoundsXYMetres": [
+        -214.99047959400002,
+        -26.497778229999994,
+        -142.701480906,
+        44.74678865000004
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 24,
+      "name": "Saman Boyunlu İbis",
+      "folder": "24-saman-boyunlu-ibis",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            196,
+            482
+          ],
+          "localXYMetres": [
+            -210.49668685400002,
+            -20.57050476200004
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        148,
+        434,
+        244,
+        530
+      ],
+      "contextBoundsXYMetres": [
+        -246.641186198,
+        -56.192788201999974,
+        -174.35218751,
+        15.051778678000005
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 25,
+      "name": "Yırtıcı Kuşlar",
+      "folder": "25-yirtici-kuslar",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            258,
+            504
+          ],
+          "localXYMetres": [
+            -164.829368344,
+            -38.27354739200001
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        210,
+        456,
+        306,
+        552
+      ],
+      "contextBoundsXYMetres": [
+        -200.973867688,
+        -73.895830832,
+        -128.68486900000002,
+        -2.651263952000022
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 26,
+      "name": "Güney Amerika Hayvanları",
+      "folder": "26-guney-amerika-hayvanlari",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            206,
+            596
+          ],
+          "localXYMetres": [
+            -204.47130286,
+            -101.59540486000003
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        158,
+        548,
+        254,
+        644
+      ],
+      "contextBoundsXYMetres": [
+        -240.615802204,
+        -137.21768830000002,
+        -168.326803516,
+        -65.97312142000004
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 27,
+      "name": "Alligatör",
+      "folder": "27-alligator",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            239,
+            625
+          ],
+          "localXYMetres": [
+            -180.37431957900003,
+            -123.25481737700005
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        191,
+        577,
+        287,
+        673
+      ],
+      "contextBoundsXYMetres": [
+        -216.518818923,
+        -158.87710081700004,
+        -144.229820235,
+        -87.632533937
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 28,
+      "name": "Boz Kurt",
+      "folder": "28-boz-kurt",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            303,
+            569
+          ],
+          "localXYMetres": [
+            -132.27873249900003,
+            -85.823974857
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        255,
+        521,
+        351,
+        617
+      ],
+      "contextBoundsXYMetres": [
+        -168.423231843,
+        -121.44625829699999,
+        -96.134233155,
+        -50.201691417000006
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 29,
+      "name": "Boz Ayı",
+      "folder": "29-boz-ayi",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            314,
+            530
+          ],
+          "localXYMetres": [
+            -123.65584257400002,
+            -58.60107296199999
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        266,
+        482,
+        362,
+        578
+      ],
+      "contextBoundsXYMetres": [
+        -159.800341918,
+        -94.22335640200004,
+        -87.51134323000002,
+        -22.978789522000056
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "Boz Ayı havuz bileşeni v1 · M5 izi; kaya kıyısı fotoğraf yorumu, 28/29 kapsamı teyitsiz",
+      "isModelStarted": true,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 30,
+      "name": "Türk Köyü",
+      "folder": "30-turk-koyu",
+      "type": "tesis",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            393,
+            416
+          ],
+          "localXYMetres": [
+            -63.74330137200002,
+            19.361865084000044
+          ]
+        },
+        {
+          "sourcePixelUV": [
+            501,
+            432
+          ],
+          "localXYMetres": [
+            16.077102115999992,
+            4.3225963479999905
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        345,
+        385,
+        548,
+        479
+      ],
+      "contextBoundsXYMetres": [
+        -100.06982330100001,
+        -30.55755618699999,
+        51.468591057000026,
+        42.952792294999995
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "Türk Köyü v1 · 9 M5 çatı bölgesi · glTF",
+      "isModelStarted": true,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 31,
+      "name": "Pelikan Göleti",
+      "folder": "31-pelikan-goleti",
+      "type": "su ve kafes",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            466,
+            498
+          ],
+          "localXYMetres": [
+            -10.654441997999982,
+            -41.183232514
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        382,
+        463,
+        522,
+        556
+      ],
+      "contextBoundsXYMetres": [
+        -73.59181003599997,
+        -84.158016868,
+        31.25930895099998,
+        -13.522851506999984
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "kubbe kabuğu v1 · kaynak kodu ve iki glTF LOD",
+      "isModelStarted": true,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 32,
+      "name": "Su Kuşları",
+      "folder": "32-su-kuslari",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            433,
+            566
+          ],
+          "localXYMetres": [
+            -35.92850466200002,
+            -88.173323186
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        381,
+        531,
+        475,
+        591
+      ],
+      "contextBoundsXYMetres": [
+        -74.75740496500003,
+        -107.311464967,
+        -4.387011609000012,
+        -61.61387235500001
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 33,
+      "name": "Kırmızı Panda",
+      "folder": "33-kirmizi-panda",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            371,
+            599
+          ],
+          "localXYMetres": [
+            -82.263239317,
+            -109.39525659100002
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        323,
+        551,
+        419,
+        647
+      ],
+      "contextBoundsXYMetres": [
+        -118.407738661,
+        -145.01754003100007,
+        -46.118739973000004,
+        -73.77297315100003
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 34,
+      "name": "Vaşak",
+      "folder": "34-vasak",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            462,
+            603
+          ],
+          "localXYMetres": [
+            -14.892102349000027,
+            -115.35693412699999
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        414,
+        555,
+        510,
+        651
+      ],
+      "contextBoundsXYMetres": [
+        -51.03660169300002,
+        -150.97921756700003,
+        21.252396995000026,
+        -79.734650687
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 35,
+      "name": "Amur Kaplanı",
+      "folder": "35-amur-kaplani",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            503,
+            568
+          ],
+          "localXYMetres": [
+            15.908515139999963,
+            -91.99706162000001
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        455,
+        520,
+        551,
+        616
+      ],
+      "contextBoundsXYMetres": [
+        -20.235984204000033,
+        -127.61934506,
+        52.053014484000016,
+        -56.37477818000002
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 36,
+      "name": "Sülün Kuşları",
+      "folder": "36-sulun-kuslari",
+      "type": "yaşam alanı",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            264,
+            202
+          ],
+          "localXYMetres": [
+            -156.719393582,
+            175.253532974
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        216,
+        154,
+        312,
+        250
+      ],
+      "contextBoundsXYMetres": [
+        -192.863892926,
+        139.631249534,
+        -120.57489423800001,
+        210.87581641399998
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 37,
+      "name": "Servis Binaları",
+      "folder": "37-servis-binalari",
+      "type": "tesis",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            308,
+            194
+          ],
+          "localXYMetres": [
+            -124.02379005400002,
+            179.40156867800002
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        260,
+        146,
+        356,
+        242
+      ],
+      "contextBoundsXYMetres": [
+        -160.168289398,
+        143.779285238,
+        -87.87929071000002,
+        215.02385211799998
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 38,
+      "name": "Karantina ve Kurtarma Merkezi",
+      "folder": "38-karantina-ve-kurtarma-merkezi",
+      "type": "tesis",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            382,
+            210
+          ],
+          "localXYMetres": [
+            -69.39315574199998,
+            165.53203825399999
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        334,
+        162,
+        430,
+        258
+      ],
+      "contextBoundsXYMetres": [
+        -105.537655086,
+        129.909754814,
+        -33.24865639800004,
+        201.154321694
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 39,
+      "name": "Isı Merkezi",
+      "folder": "39-isi-merkezi",
+      "type": "tesis",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            433,
+            368
+          ],
+          "localXYMetres": [
+            -33.52580654000002,
+            51.95659053999998
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        385,
+        320,
+        481,
+        416
+      ],
+      "contextBoundsXYMetres": [
+        -69.67030588400002,
+        16.33430709999999,
+        2.618692803999977,
+        87.57887398
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 40,
+      "name": "Çocuk Oyun Alanı",
+      "folder": "40-cocuk-oyun-alani",
+      "type": "tesis",
+      "anchors": [],
+      "cropWindowPixels": [
+        80,
+        110,
+        1000,
+        740
+      ],
+      "contextBoundsXYMetres": [
+        -299.56904074,
+        -230.8248993800001,
+        389.6814267099999,
+        246.69475049
+      ],
+      "status": "unresolved",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Eylül lejantında40 Çocuk Oyun Alanı var; haritada40 etiketi seçilemiyor. Mart haritasındaki40 otoparkta ve aynı yer olarak kabul edilmedi."
+    },
+    {
+      "number": 41,
+      "name": "Otopark",
+      "folder": "41-otopark",
+      "type": "ulaşım",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            492,
+            635
+          ],
+          "localXYMetres": [
+            6.945849722999981,
+            -139.03631495100007
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        80,
+        585,
+        1000,
+        740
+      ],
+      "contextBoundsXYMetres": [
+        -299.56904074,
+        -230.8248993800001,
+        383.9173781849999,
+        -89.47549708500003
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 42,
+      "name": "Acil Toplanma Merkezleri",
+      "folder": "42-acil-toplanma-merkezleri",
+      "type": "güvenlik",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            243,
+            155
+          ],
+          "localXYMetres": [
+            -171.707442993,
+            209.23917974100002
+          ]
+        },
+        {
+          "sourcePixelUV": [
+            243,
+            280
+          ],
+          "localXYMetres": [
+            -173.224297868,
+            120.773325116
+          ]
+        },
+        {
+          "sourcePixelUV": [
+            446,
+            384
+          ],
+          "localXYMetres": [
+            -24.088581632,
+            40.18570826399997
+          ]
+        },
+        {
+          "sourcePixelUV": [
+            622,
+            534
+          ],
+          "localXYMetres": [
+            104.48529178199999,
+            -72.02843325400005
+          ]
+        },
+        {
+          "sourcePixelUV": [
+            279,
+            628
+          ],
+          "localXYMetres": [
+            -150.775701536,
+            -126.754160608
+          ]
+        },
+        {
+          "sourcePixelUV": [
+            932,
+            497
+          ],
+          "localXYMetres": [
+            334.605705665,
+            -56.507801365000034
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        195,
+        110,
+        980,
+        676
+      ],
+      "contextBoundsXYMetres": [
+        -213.591721184,
+        -184.84230045200007,
+        374.86391542999996,
+        242.73828267000002
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    },
+    {
+      "number": 43,
+      "name": "Acil Çıkış Noktaları",
+      "folder": "43-acil-cikis-noktalari",
+      "type": "güvenlik",
+      "anchors": [
+        {
+          "sourcePixelUV": [
+            205,
+            197
+          ],
+          "localXYMetres": [
+            -200.37037766300003,
+            180.822007171
+          ]
+        },
+        {
+          "sourcePixelUV": [
+            609,
+            559
+          ],
+          "localXYMetres": [
+            94.55053847499994,
+            -89.27435129500003
+          ]
+        },
+        {
+          "sourcePixelUV": [
+            950,
+            516
+          ],
+          "localXYMetres": [
+            347.71090387600003,
+            -70.57388449199999
+          ]
+        }
+      ],
+      "cropWindowPixels": [
+        157,
+        149,
+        998,
+        607
+      ],
+      "contextBoundsXYMetres": [
+        -240.907688725,
+        -136.62842192300002,
+        387.726416861,
+        216.44429061099999
+      ],
+      "status": "illustrated-label-anchor",
+      "modelStatus": "bekliyor",
+      "isModelStarted": false,
+      "note": "Kroki etiketi; ölçülmüş bölge merkezi veya sınırı değil. Yaklaşık10–25m eşleme belirsizliği."
+    }
+  ]
+}

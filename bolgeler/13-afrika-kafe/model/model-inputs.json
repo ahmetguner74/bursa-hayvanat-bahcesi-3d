@@ -1,0 +1,466 @@
+{
+  "schema": "bursa-zoo-african-cafe-inputs/v1",
+  "siteDataSha256": "022a88053df75b9d755e082079ed31f6b922e79bb8bca03016890c52cc828358",
+  "originM5LocalXY": [
+    118.88810581283582,
+    70.94749513923502
+  ],
+  "roofs": [
+    {
+      "sourceId": "H22D01C2B:152",
+      "type": "canopy",
+      "sourceH": 97.4975,
+      "outlineM5XY": [
+        [
+          128.733,
+          73.825
+        ],
+        [
+          128.974,
+          68.856
+        ],
+        [
+          128.163,
+          68.86
+        ],
+        [
+          128.145,
+          66.96
+        ],
+        [
+          128.891,
+          66.957
+        ],
+        [
+          128.985,
+          61.686
+        ],
+        [
+          123.583,
+          61.6
+        ],
+        [
+          123.555,
+          62.123
+        ],
+        [
+          121.976,
+          62.092
+        ],
+        [
+          121.963,
+          61.711
+        ],
+        [
+          116.761,
+          61.834
+        ],
+        [
+          116.666,
+          65.858
+        ],
+        [
+          114.783,
+          65.882
+        ],
+        [
+          114.847,
+          61.624
+        ],
+        [
+          109.539,
+          61.623
+        ],
+        [
+          109.513,
+          67.024
+        ],
+        [
+          113.841,
+          67.059
+        ],
+        [
+          113.809,
+          68.605
+        ],
+        [
+          109.619,
+          68.666
+        ],
+        [
+          109.461,
+          74.009
+        ],
+        [
+          110.283,
+          74.043
+        ],
+        [
+          110.279,
+          75.611
+        ],
+        [
+          109.534,
+          75.635
+        ],
+        [
+          109.495,
+          80.982
+        ],
+        [
+          114.879,
+          80.954
+        ],
+        [
+          114.914,
+          80.196
+        ],
+        [
+          116.4,
+          80.207
+        ],
+        [
+          116.373,
+          82.325
+        ],
+        [
+          122.44,
+          82.29
+        ],
+        [
+          122.376,
+          79.232
+        ],
+        [
+          121.401,
+          79.25
+        ],
+        [
+          121.426,
+          76.403
+        ],
+        [
+          122.237,
+          76.421
+        ],
+        [
+          124.447,
+          74.328
+        ],
+        [
+          124.492,
+          73.821
+        ],
+        [
+          127.148,
+          73.805
+        ],
+        [
+          128.733,
+          73.825
+        ]
+      ],
+      "interpretedRoofSeedsM5XY": [
+        [
+          112.2,
+          64.3
+        ],
+        [
+          119.3,
+          64.4
+        ],
+        [
+          126.3,
+          64.3
+        ],
+        [
+          112.2,
+          71.3
+        ],
+        [
+          119.2,
+          71.2
+        ],
+        [
+          126.2,
+          71.2
+        ],
+        [
+          112.2,
+          78.3
+        ],
+        [
+          119.2,
+          79.5
+        ]
+      ]
+    },
+    {
+      "sourceId": "H22D01C2B:153",
+      "type": "canopy",
+      "sourceH": 97.2725,
+      "outlineM5XY": [
+        [
+          114.783,
+          65.882
+        ],
+        [
+          116.666,
+          65.858
+        ],
+        [
+          116.761,
+          61.834
+        ],
+        [
+          121.131,
+          61.731
+        ],
+        [
+          121.138,
+          60.05
+        ],
+        [
+          121.916,
+          60.014
+        ],
+        [
+          121.879,
+          54.679
+        ],
+        [
+          116.742,
+          54.784
+        ],
+        [
+          116.501,
+          60.064
+        ],
+        [
+          114.895,
+          60.093
+        ],
+        [
+          114.847,
+          61.624
+        ],
+        [
+          114.783,
+          65.882
+        ]
+      ]
+    },
+    {
+      "sourceId": "H22D01C2B:154",
+      "type": "canopy",
+      "sourceH": 97.5725,
+      "outlineM5XY": [
+        [
+          114.977,
+          54.719
+        ],
+        [
+          109.678,
+          54.897
+        ],
+        [
+          109.526,
+          60.017
+        ],
+        [
+          114.895,
+          60.093
+        ],
+        [
+          114.977,
+          54.719
+        ]
+      ]
+    },
+    {
+      "sourceId": "H22D01C2B:155",
+      "type": "canopy",
+      "sourceH": 97.5725,
+      "outlineM5XY": [
+        [
+          107.956,
+          61.679
+        ],
+        [
+          102.563,
+          61.756
+        ],
+        [
+          102.517,
+          66.999
+        ],
+        [
+          107.896,
+          67.026
+        ],
+        [
+          107.956,
+          61.679
+        ]
+      ]
+    },
+    {
+      "sourceId": "H22D01C2B:156",
+      "type": "canopy",
+      "sourceH": 97.7225,
+      "outlineM5XY": [
+        [
+          102.655,
+          68.587
+        ],
+        [
+          102.502,
+          73.924
+        ],
+        [
+          107.902,
+          73.934
+        ],
+        [
+          107.88,
+          68.529
+        ],
+        [
+          102.655,
+          68.587
+        ]
+      ]
+    },
+    {
+      "sourceId": "H22D01C2B:243",
+      "type": "building",
+      "sourceH": 97.4975,
+      "outlineM5XY": [
+        [
+          125.641,
+          85.185
+        ],
+        [
+          125.67,
+          84.379
+        ],
+        [
+          127.368,
+          84.367
+        ],
+        [
+          127.38,
+          86.049
+        ],
+        [
+          132.054,
+          86.067
+        ],
+        [
+          133.838,
+          84.191
+        ],
+        [
+          133.861,
+          79.526
+        ],
+        [
+          132.662,
+          79.553
+        ],
+        [
+          132.71,
+          77.56
+        ],
+        [
+          132.966,
+          77.569
+        ],
+        [
+          133.036,
+          74.568
+        ],
+        [
+          127.13,
+          74.578
+        ],
+        [
+          127.148,
+          73.805
+        ],
+        [
+          124.492,
+          73.821
+        ],
+        [
+          124.447,
+          74.328
+        ],
+        [
+          122.237,
+          76.421
+        ],
+        [
+          121.426,
+          76.403
+        ],
+        [
+          121.401,
+          79.25
+        ],
+        [
+          122.376,
+          79.232
+        ],
+        [
+          122.499,
+          85.099
+        ],
+        [
+          125.641,
+          85.185
+        ]
+      ]
+    }
+  ],
+  "references": [
+    {
+      "file": "../kaynaklar/fotograflar/6722_6_201105211423-150x150.jpg",
+      "sha256": "bf137c00a879df552e24dd8e5a5a2a57d779bb1be46d627eb45a96bd35239eb3",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_6_201105211423-150x150.jpg"
+    },
+    {
+      "file": "../kaynaklar/fotograflar/6722_10_201105211423-150x150.jpg",
+      "sha256": "f7bd01da952eef83ed794a0a329179f41479169664fef638bb0cf58977e79fc7",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2011/05/6722_10_201105211423-150x150.jpg"
+    },
+    {
+      "file": "../kaynaklar/belgeler/cafe-page-2011.html.txt",
+      "sha256": "0a689552f2b17929c0635101ab52af18944e187d7f12bbc13c7a7f9f63429b38",
+      "url": "https://www.bursahayvanatbahcesi.com/havyanat-bahcesi-goz-kamastiriyor/"
+    }
+  ],
+  "interpretedDimensionsMetres": {
+    "floorZ": -0.105,
+    "floorBottomZ": -0.46,
+    "mainEaveZ": 3.15,
+    "canopyEaveZ": 2.9,
+    "roofEdgeDepth": 0.13,
+    "roofSlope": 0.6,
+    "maximumRoofRise": 2.2,
+    "wallInset": 0.35,
+    "wallThickness": 0.18,
+    "postInset": 0.3,
+    "postWidth": 0.16,
+    "beamDepth": 0.18
+  },
+  "interpretation": [
+    "Six native M5 outlines152–156 and243 are candidates near the September cafe label. Their association follows the illustrated plan and is not a surveyed/current site verification.",
+    "The 2011 official opening photographs show dark timber, open-sided square hipped gazebos and warm brown roofs. They do not determine the exact position or present condition of every pavilion.",
+    "All heights, roof slopes/ridges, timber sections, post placement, wall inset and two wall openings are editable visual estimates. No interior furniture or operational layout is asserted.",
+    "A 0.000716m2 overlap of native roof152/153 is clipped only in the derived render geometry; all original source coordinates remain in inputs and the native context file.",
+    "One continuous floor replaces terrain/path in the shared surface partition; the generic box for source243 is removed from the scene shell. Original QGIS road polygons are unchanged.",
+    "Existing generated wood/roof/paving presentation materials are reused; no source photograph is republished or used as a licensed texture.",
+    "The largest connected canopy is partitioned into eight estimated hipped roof bays. Seeds/ridges are an editable roof interpretation; the outer M5 outline is unchanged. Internal roof seams are welded, with one continuous solid."
+  ]
+}

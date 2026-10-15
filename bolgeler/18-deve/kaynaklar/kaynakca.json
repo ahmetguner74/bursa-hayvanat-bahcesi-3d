@@ -1,0 +1,136 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 18,
+  "name": "Deve",
+  "type": "yaşam alanı",
+  "searched": "deve",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-2004.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2016/06/1693054.jpg",
+      "mediaId": 2004,
+      "uploaded": "2016-06-28T09:10:34",
+      "title": "40 DERECEDE DEVELER HORTUMLA SERİNLEDİ, AYILAR İSE BUZLU BALIK KEYFİ YAPTI",
+      "sha256": "1646dca539a6aa28560f257f0b230ab8a4a31ab8d3e73554330e04e008f2048f",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-1669.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/07/1813929_3.jpg",
+      "mediaId": 1669,
+      "uploaded": "2015-07-09T09:07:24",
+      "title": "Sicaktan bunalan ayilar meyve dondurmasi ile serinliyor",
+      "sha256": "ecf54bb562d5045437db6270df042dc82fe2436fe352cc1030896f3883d2df8a",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    }
+  ],
+  "documents": [
+    {
+      "title": "40 derecede develer hortumla serinledi, ayılar ise buzlu balık keyfi yaptı",
+      "url": "https://www.bursahayvanatbahcesi.com/40-derecede-develer-hortumla-serinledi-ayilar-ise-buzlu-balik-keyfi-yapti/",
+      "type": "post"
+    },
+    {
+      "title": "TEK HÖRGÜÇLÜ DEVE",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/deve/",
+      "type": "hayvan"
+    },
+    {
+      "title": "AFRİKA DEVE KUŞU",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/afrika-deve-kusu/",
+      "type": "hayvan"
+    },
+    {
+      "title": "BASINDA BURSA HAYVANAT BAHÇESİ",
+      "url": "https://www.bursahayvanatbahcesi.com/basinda-bursa-hayvanat-bahcesi/",
+      "type": "post"
+    },
+    {
+      "title": "5 HAZİRAN DÜNYA ÇEVRE GÜNÜ KUTLU OLSUN",
+      "url": "https://www.bursahayvanatbahcesi.com/5-haziran-dunya-cevre-gunu-kutlu-olsun/",
+      "type": "post"
+    },
+    {
+      "title": "ALPAKA",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/alpaka/",
+      "type": "hayvan"
+    },
+    {
+      "title": "Aslan Ailesinde Yavru Sevinci",
+      "url": "https://www.bursahayvanatbahcesi.com/aslan-ailesinde-yavru-sevinci/",
+      "type": "post"
+    },
+    {
+      "title": "Hayvanat Bahçesi yeni üyelerle büyüyor",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvanat-bahcesi-yeni-uyelerle-buyuyor/",
+      "type": "post"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "rejectedPhotos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-1671.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/07/1813929_8.jpg",
+      "mediaId": 1671,
+      "uploaded": "2015-07-09T09:07:56",
+      "title": "Sicaktan bunalan ayilar meyve dondurmasi ile serinliyor",
+      "sha256": "277e9aa5e6072c031671a3416213bc63e75661ffe72d7f7255383f6cc18336ba",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "reason": "Fotoğrafta su içindeki ayı görülüyor; deve barınağı referansı değildir.",
+      "reassignedArea": 29
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-1620.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2010/09/devekusu.jpg",
+      "mediaId": 1620,
+      "uploaded": "2015-06-03T16:17:46",
+      "title": "devekusu",
+      "sha256": "ae385d80ea182c07ce89bdf5e309542d116f8a2f3290d174c0798582bffd7489",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "reason": "Fotoğrafta devekuşu görülüyor. Savana için tür/çevre adayı; tam çekim konumu teyitsiz.",
+      "reassignedArea": 12
+    }
+  ],
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "4b397061ff5e2d52d0b250d3fc10fe73c7fc6f318ca6dccbe12f0091e601b322",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "ccfe7eed9921e59c3d933f0b75a54664eaa9da72053d17977cb27fbb409be47f",
+    "nativeFeatureCount": 18,
+    "nativeTreeCount": 11,
+    "status": "illustrated-label-anchor"
+  }
+}

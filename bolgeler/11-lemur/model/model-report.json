@@ -1,0 +1,72 @@
+{
+  "schema": "bursa-zoo-lemur-island/v1",
+  "unit": "metre",
+  "originM5LocalXY": [
+    271.59204047156146,
+    -14.260351774594822
+  ],
+  "sourceIds": [
+    "H22D01C2B:60",
+    "H22D01C2B:61"
+  ],
+  "sourceAssociation": "illustration/camera-context association, approximate",
+  "sourcePhoto": "../kaynaklar/fotograflar/belediye-kamera-20261015T005923Z.png",
+  "propDimensionsSurveyed": false,
+  "islandAreaM2": 759.8995694999999,
+  "moatOuterAreaM2": 1637.1421424999999,
+  "moatWaterAreaM2": 877.242573,
+  "renderGroundZMetres": -0.24,
+  "renderWaterZMetres": -0.32,
+  "renderLevelsAreSurveyed": false,
+  "triangles": 7170,
+  "solidChecks": {
+    "island_ground": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 425.54375892000024
+    },
+    "moat_bed": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 263.1727719
+    },
+    "concrete_coping": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 29.424386123001494
+    },
+    "rocks": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 45.79234816344695
+    },
+    "climbing_timber": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 5.615333120222213
+    },
+    "climbing_ropes": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.042278994795551826
+    }
+  },
+  "interpretedRockCount": 8,
+  "interpretedTimberCount": 13,
+  "interpretedRopeCount": 2,
+  "meshOwnership": "Native island/moat planes are self-contained preview context, hidden in atlas where the surface partition owns them. Same-material props united, timber/rock and rope/timber hidden joints clipped.",
+  "atlasHiddenNodes": [
+    "island_ground",
+    "moat_bed",
+    "moat_water"
+  ],
+  "interpretation": [
+    "Old M5 native island60 and moat61 XY retained; association with Lemur11 is approximate illustration/camera context, not verified 2026 survey.",
+    "Camera frame shows a grass island, concrete bank, clustered boulders, upright and fallen branch climbing elements.",
+    "Rock positions, quantities and heights, branch paths and diameters, rope existence/paths and bank width are visual interpretations; the unseen side is not documented.",
+    "Acquisition date does not prove the camera frame shooting date or current field condition.",
+    "Neighbouring green hip-roof building is not assigned to the Lemur enclosure and is not modelled here.",
+    "Ground/water heights are common atlas rendering choices, not surveyed elevations.",
+    "Generated grass, rock and bark materials are presentation assets, not field scans."
+  ]
+}

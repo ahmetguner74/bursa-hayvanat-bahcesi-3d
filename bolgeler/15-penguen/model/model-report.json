@@ -1,0 +1,51 @@
+{
+  "schema": "bursa-zoo-penguin-model/v1",
+  "originM5LocalXY": [
+    -14.0,
+    134.0
+  ],
+  "unit": "metre",
+  "upAxis": "glTF Y-up",
+  "waterMaskAreaM2": 204.74293900000015,
+  "gravelTerrainAreaM2": 212.1520299581243,
+  "renderWaterZMetres": -0.32,
+  "renderWaterHeightSurveyed": false,
+  "cliffFootprintAreaM2": 31.183185203531313,
+  "triangles": 15425,
+  "atlasHiddenNodes": [
+    "pool_water",
+    "gravel_ground"
+  ],
+  "solidChecks": {
+    "blue_coping": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 19.95688277061932
+    },
+    "artificial_cliff": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 94.91155070519432
+    },
+    "gravel_ground": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 267.3115577472366
+    },
+    "drain_band": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 8.054766899278869
+    }
+  },
+  "surfaceOwnership": "Atlas planar partition supplies water and gravel once; only physical coping, rock and deck solids are added.",
+  "historicalAreasM2": {
+    "penguinPool": 300,
+    "penguinLand": 300,
+    "sealPool": 400,
+    "sealLand": 200
+  },
+  "areaDiscrepancy": "M5 water mask is approximately 205 m²; the 2017 announcement states 300 m². Difference unresolved; neither dataset is forced to match.",
+  "interpretation": "Pool outline retained from M5; gravel extent, cliffs, rocks and viewing deck interpreted from 2017 municipal photos; not a current measured survey.",
+  "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148"
+}

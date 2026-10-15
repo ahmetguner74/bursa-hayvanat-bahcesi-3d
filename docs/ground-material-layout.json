@@ -1,0 +1,70 @@
+{
+  "schema": "bursa-zoo-ground-material-weights/v1",
+  "coordinateFrame": "M5 local XY metres",
+  "boundsXYMetres": [
+    -275.3594367066414,
+    -183.91200537476564,
+    385.503,
+    238.523
+  ],
+  "image": "assets/woodland-ground-weights-v1.png",
+  "size": [
+    1024,
+    1024
+  ],
+  "pixelSizeMetres": [
+    0.6453734733463294,
+    0.41253418493629457
+  ],
+  "sha256": "7cd6b7d3870280cf0f9b3cbdc597b25ea768a8330c846cd0eba113c702f3f7ed",
+  "litterTexture": {
+    "file": "assets/woodland-leaf-litter-v1.jpg",
+    "sha256": "285be7c55975af518dcc9967f3e3eb4404e79f0982544386b6bbc46d98731f77",
+    "bytes": 725656,
+    "size": [
+      1024,
+      1024
+    ],
+    "source": "viewer/assets/woodland-leaf-litter-v1.png",
+    "sourceSha256": "5a47d72702799f42b98d168f6507c62ece4f3a96933c4a068419eccc61ecd22d",
+    "derivation": "RGB conversion, max 1024 px Lanczos, JPEG quality 90 4:4:4; no painting or geometry change"
+  },
+  "rockTexture": {
+    "file": "assets/woodland-bank-rock-v1.jpg",
+    "sha256": "90aaa2db8cff3f50c38e3c7eefa7a7669c1f5937475249f950ea388541c4ef5f",
+    "bytes": 111481,
+    "size": [
+      512,
+      512
+    ],
+    "source": "viewer/assets/penguin-artificial-rock-v1.png",
+    "sourceSha256": "c03ce4d501bd5c0f9846cf494efe9ff6cb9a5e2b810546601789872e816ac837",
+    "derivation": "RGB conversion, max 512 px Lanczos, JPEG quality 90 4:4:4; existing generated artificial-rock albedo reused illustratively, not a natural rock scan"
+  },
+  "channels": {
+    "r": "Illustrative leaf-fall weight around existing trees",
+    "g": "Illustrative dampness falloff from existing water boundaries",
+    "b": "Illustrative verge falloff from existing path boundaries"
+  },
+  "treePatches": 701,
+  "sources": {
+    "site-data.json": "022a88053df75b9d755e082079ed31f6b922e79bb8bca03016890c52cc828358",
+    "surface-layers.json": "2c2b9d7c4e0cb6240b55d1e57dd5eccf61f0f5b157da283e64046d3b24ae01ac",
+    "landscape-layout.json": "e50b78ae865d1c5f4943c076907768c124f8fe33577a0c82216aec73298964aa",
+    "v2/manual-roads-metric.json": "d5038924b6356022b273fff88bc12ba6f3091c8df2294ca6fd64decf1a5fad56"
+  },
+  "interpretation": "Material presentation only. No surface, road, water or tree coordinates are changed; not a current soil survey.",
+  "checks": {
+    "finite": true,
+    "channelMaxima": [
+      186,
+      217,
+      166
+    ],
+    "channelMeans": [
+      11.4257,
+      6.3659,
+      16.7735
+    ]
+  }
+}

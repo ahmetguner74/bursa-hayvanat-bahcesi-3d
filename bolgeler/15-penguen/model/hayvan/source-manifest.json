@@ -1,0 +1,56 @@
+{
+  "author": "Major",
+  "sourceUrl": "https://sketchfab.com/3d-models/african-penguin-spheniscus-demersus-low-poly-9e59070815fe451d93398e2ebdb9bb92",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "retrievedAt": "2026-10-15",
+  "downloadMethod": "Sketchfab logged-in official Download buttons; original FBX ZIP and converted GLB",
+  "originals": [
+    {
+      "file": "source/major-african-penguin-original.glb",
+      "sha256": "ecee6a9f7293e058061898e6726b7f83ba42c6e4b4c50e7becaf0ddc447437b7",
+      "bytes": 4979772
+    },
+    {
+      "file": "source/major-african-penguin-original.zip",
+      "sha256": "fc1e84d37e7433e20a466c1f3aa570265e014fafa75558aff1306530054536d2",
+      "bytes": 8521659
+    },
+    {
+      "file": "source/sketchfab-metadata.json",
+      "sha256": "32a30443dbf776b8ae5846773875edb0c0189c5624c18e8398717ed913ce1275",
+      "bytes": 8098
+    },
+    {
+      "file": "source/source/African penguin low poly.fbx",
+      "sha256": "f10ee74a449585f0ff60f3f314da3c9165dbcfa8e503dd6f671a669744babcdf",
+      "bytes": 2522108
+    },
+    {
+      "file": "source/textures/African_penguin_-_the_reef_ColorMap.png",
+      "sha256": "46f360e712bc08527068693b044c5808c58626095ce3ec989de12c4871fddcd6",
+      "bytes": 1244939
+    },
+    {
+      "file": "source/textures/African_penguin_-_the_reef_MetalnessMap.png",
+      "sha256": "465ab155da0cafd671b1670fb54cef811c1a85f76f47d93fc97dea1a31a3d2a4",
+      "bytes": 470572
+    },
+    {
+      "file": "source/textures/African_penguin_-_the_reef_NormalMap.png",
+      "sha256": "288db2bcbcec79a03e71369d090b8386a9cbb297435ad7f3b683812f0b70bc8c",
+      "bytes": 3878470
+    },
+    {
+      "file": "source/textures/African_penguin_-_the_reef_RoughnessMap.png",
+      "sha256": "d56628138ae77455b378e5817126a72cc3cb2614e8a8e60ad156f07a8723eccd",
+      "bytes": 404696
+    }
+  ],
+  "delivery": {
+    "file": "african-penguin.glb",
+    "sha256": "a13268217ab09dcb582ae3b1adde6ee4ab4f68f9037ca6141eece2ada6fbee47",
+    "bytes": 4980240,
+    "modifications": "Metric 0.62m standing height, ground origin, nonmetallic feather material and 0.55 normal-map intensity. Removed redundant tightly-packed animation byteStride and unused duplicate UV references; cleared zero-weight joint indices; skinned nodes moved to scene root per glTF. Shape, active skin weights, keyframes and PNG bytes preserved."
+  }
+}

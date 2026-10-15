@@ -1,0 +1,142 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 26,
+  "name": "Güney Amerika Hayvanları",
+  "type": "yaşam alanı",
+  "searched": "güney amerika",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3506.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW048573_08-scaled.jpg",
+      "mediaId": 3506,
+      "uploaded": "2023-04-20T09:21:15",
+      "title": "(ÖZEL HABER) MASAJ SALONU DEĞİL HAYVANAT BAHÇESİ TAPİRLERİN MASAJ KEYFİ",
+      "sha256": "f93f8ffffde82fb793eaf437df0688a1bdadd79ac6bdaf9378f4a05ada0e59c1",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-2848.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2020/10/AW048573_08.jpg",
+      "mediaId": 2848,
+      "uploaded": "2020-10-13T11:26:09",
+      "title": "(ÖZEL HABER) MASAJ SALONU DEĞİL HAYVANAT BAHÇESİ TAPİRLERİN MASAJ KEYFİ",
+      "sha256": "97bcb697297497efef3f17428bd2e9d8208aa542d7f0bfa1900096938e1258cf",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar/fotograflar/resmi-site-1678.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/07/1816487_3-1.jpg",
+      "mediaId": 1678,
+      "uploaded": "2015-07-13T14:22:30",
+      "title": "Lama ve yavrusu",
+      "sha256": "1b472ea7a43000dc603bb678f4e8ce9deb5d6b120f95ec165c7f8f0a575f3693",
+      "role": "İçerik gözlemiyle ayrılmış hayvan/çevre referansı; ölçekli yapı fotoğrafı değildir",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "contentReview": {
+        "date": "2026-10-15",
+        "observation": "Fotoğrafta lama ve yavrusu görülüyor; alageyik barınağı kanıtı değildir.",
+        "originalSearchArea": 20,
+        "exactCameraPosition": "teyitsiz"
+      }
+    },
+    {
+      "file": "kaynaklar/fotograflar/resmi-site-1677.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/07/1816487_3.jpg",
+      "mediaId": 1677,
+      "uploaded": "2015-07-13T14:22:03",
+      "title": "Lama ve yavrusu",
+      "sha256": "1b472ea7a43000dc603bb678f4e8ce9deb5d6b120f95ec165c7f8f0a575f3693",
+      "role": "İçerik gözlemiyle ayrılmış hayvan/çevre referansı; ölçekli yapı fotoğrafı değildir",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "contentReview": {
+        "date": "2026-10-15",
+        "observation": "Fotoğrafta lama ve yavrusu görülüyor; Güney Amerika tür/çevre adayı.",
+        "originalSearchArea": 20,
+        "exactCameraPosition": "teyitsiz"
+      }
+    }
+  ],
+  "documents": [
+    {
+      "title": "BURSA HAYVANAT BAHÇESİ’NE GÜNEY AMERİKA BARINAĞI",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesine-guney-amerika-barinagi/",
+      "type": "post"
+    },
+    {
+      "title": "AMERİKA ALLİGATÖRÜ / AMERİCAN ALLİGATÖR",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/amerika-alligatoru-american-alligator/",
+      "type": "hayvan"
+    },
+    {
+      "title": "AMERİKAN ÖRDEĞİ (MUSCOVY DUCK)",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/amerikan-ordegi-muscovy-duck/",
+      "type": "hayvan"
+    },
+    {
+      "title": "Dünya Pembe Flamingo Günü Kutlu Olsun",
+      "url": "https://www.bursahayvanatbahcesi.com/dunya-pembe-flamingo-gunu-kutlu-olsun/",
+      "type": "post"
+    },
+    {
+      "title": "ALPAKA",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/alpaka/",
+      "type": "hayvan"
+    },
+    {
+      "title": "İMPARATOR TAMARİN (Emperor tamarin)",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/imparator-tamarin-emperor-tamarin/",
+      "type": "hayvan"
+    },
+    {
+      "title": "OVA TAPİRİ (Lowland tapir)",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/ova-tapiri-lowland-tapir/",
+      "type": "hayvan"
+    },
+    {
+      "title": "MACELLAN KAZI (Magellan goose)",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/macellan-kazi-magellan-goose/",
+      "type": "hayvan"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "0cd20840e1dc349119acf1ea95414765f0bb8e2e678f21a4e793844b9d2d08a0",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "ac58edab3dc73cf44bbdf7d355bd4d998f4397b57ce46faeaf69c510006b05a1",
+    "nativeFeatureCount": 55,
+    "nativeTreeCount": 15,
+    "status": "illustrated-label-anchor"
+  }
+}

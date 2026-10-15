@@ -1,0 +1,93 @@
+{
+  "revision": "20261015ai",
+  "simulationSeconds": 600,
+  "samples": 90000,
+  "states": [
+    "Idle",
+    "Preen",
+    "Penguin swim",
+    "Shake",
+    "Walk"
+  ],
+  "maximumMovementPer30HzStepMetres": 0.017090161965863535,
+  "minimumSameDomainSeparationMetres": 0.6400225483852198,
+  "grounding": {
+    "minimumGround": -0.0008344581680702623,
+    "maximumGround": 0.0024736321713870195,
+    "clipProof": [
+      {
+        "clip": "Bray",
+        "minFootMetres": 8.890429394518912e-10,
+        "maxFootMetres": 8.890429394518912e-10
+      },
+      {
+        "clip": "Idle",
+        "minFootMetres": 8.890428940001248e-10,
+        "maxFootMetres": 8.890428940001248e-10
+      },
+      {
+        "clip": "Preen",
+        "minFootMetres": 0,
+        "maxFootMetres": 0
+      },
+      {
+        "clip": "Shake",
+        "minFootMetres": -0.00005730490016281342,
+        "maxFootMetres": 0.00005941584525054333
+      },
+      {
+        "clip": "Sit1",
+        "minFootMetres": 1.4721676856732646e-8,
+        "maxFootMetres": 1.4721676856732646e-8
+      },
+      {
+        "clip": "Sleep",
+        "minFootMetres": -7.480539835902356e-7,
+        "maxFootMetres": 3.782205850663689e-7
+      },
+      {
+        "clip": "Walk",
+        "minFootMetres": -0.0008344581680702623,
+        "maxFootMetres": 0.0024736321713870195
+      }
+    ]
+  },
+  "maximumAnimatedHeightMetres": 0.7296417193485042,
+  "independentSkeletons": true,
+  "sharedGeometryAndMaterials": true,
+  "trianglesPerBird": 4124,
+  "colonyTriangles": 20620,
+  "gltfIssues": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 4,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/4"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/8"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/73"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/75"
+      }
+    ],
+    "truncated": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "geometryMeshes": 6,
+  "nearTriangles": 122245,
+  "farMeshTriangles": 6942,
+  "farImpostorTrianglesPerTree": 2,
+  "renderFrames": 16,
+  "atlasBytes": 3302130,
+  "renderEngine": "three-webgl/r186",
+  "alphaCutoff": 0.1,
+  "atlasFramesPixelIdentical": true,
+  "nearAndFarShareGeometrySource": true,
+  "leafColorFactorExported": true,
+  "m5AndQgisSourceUnchanged": true
+}

@@ -1,0 +1,21 @@
+{
+  "triangles": 10278,
+  "glbBytes": 1513188,
+  "closedSolidParts": 6,
+  "nativePoolAreaM2": 488.39911949999987,
+  "exportProjectionDeltaM2": {
+    "nativePoolWater": 1.971975733857299e-05,
+    "nativePoolBed": 1.971975733857299e-05,
+    "interpretedBank": 3.37439016072076e-05,
+    "previewGround": 7.079060671910453e-05
+  },
+  "bankOtherSurfaceOverlapM2": {
+    "water": 0.0,
+    "path": 0.0,
+    "terrain": 0.0
+  },
+  "sourceCoordinatesUnchanged": true,
+  "bankRemovedFromMainTerrain": true,
+  "photographicDimensionsSurveyed": false,
+  "preciseRegion28_29BoundaryVerified": false
+}

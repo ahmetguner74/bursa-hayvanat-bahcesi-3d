@@ -1,0 +1,72 @@
+{
+  "schema": "bursa-zoo-v2-rectified-visitor-map/v1",
+  "source": {
+    "imageUrl": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+    "privateLocalImage": "reference-maps-private/2026-09-kroki.jpg",
+    "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+    "sizePixels": [
+      1600,
+      864
+    ],
+    "registrationPath": "current-plan-registration.json",
+    "registrationSha256": "6ea309817c845f5a4b1d50c94aa6461fa54a6e9ddf86cfb4ecf7e96e994edb16"
+  },
+  "privateOutput": {
+    "path": "v2/private/rectified-september.png",
+    "sha256": "f2c7d77d4f62e4ed5eaa7479c936c147963aa38d593be6455c5b74fdec5ed79b",
+    "sizePixels": [
+      1480,
+      1080
+    ]
+  },
+  "grid": {
+    "unit": "metre",
+    "xMin": -320.0,
+    "xMax": 420.0,
+    "yMin": -270.0,
+    "yMax": 270.0,
+    "pixelsPerMetre": 2.0,
+    "pixelCenterToLocalXY": [
+      "x = xMin + (column + 0.5) / pixelsPerMetre",
+      "y = yMax - (row + 0.5) / pixelsPerMetre"
+    ],
+    "localXYToPixelCorner": [
+      "column = (x - xMin) * pixelsPerMetre",
+      "row = (yMax - y) * pixelsPerMetre"
+    ]
+  },
+  "registration": {
+    "method": "Unweighted least-squares 2D affine fit to 12 manually matched controls",
+    "controlPointCount": 12,
+    "rmsMetres": 10.7,
+    "maxControlResidualMetres": 22.64,
+    "practicalUncertainty": "Approximately 10-25 m depending on location; verify each detailed object against a current orthophoto or site photos.",
+    "imagePixelsToLocalMetres": {
+      "x": [
+        0.740875564,
+        -0.012134839,
+        -349.859305
+      ],
+      "y": [
+        -0.034404068,
+        -0.707726837,
+        327.297028
+      ],
+      "formula": "x = x[0]*u + x[1]*v + x[2]; y = y[0]*u + y[1]*v + y[2]"
+    },
+    "localMetresToImagePixels": {
+      "u": [
+        1.348680483,
+        -0.023124771,
+        479.417086
+      ],
+      "v": [
+        -0.065562153,
+        -1.411850395,
+        439.156908
+      ],
+      "formula": "u = u[0]*x + u[1]*y + u[2]; v = v[0]*x + v[1]*y + v[2]"
+    }
+  },
+  "usage": "Private rectified reference; copied only into ignored dist/v2 for the user-controlled local overlay, never into docs/."
+}

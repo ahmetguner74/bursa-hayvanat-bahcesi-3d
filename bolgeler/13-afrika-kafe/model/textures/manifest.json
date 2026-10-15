@@ -1,0 +1,41 @@
+{
+  "schema": "bursa-zoo-cafe-textures/v1",
+  "files": [
+    {
+      "file": "afrika-koyu-roof-shingles-v1.jpg",
+      "sha256": "6c5d43b1ed0cd8b529196c764b5e3383e786807b602f1f33077586eda23c33f6",
+      "bytes": 106072,
+      "source": "../../../../viewer/assets/afrika-koyu-roof-shingles-v1.png",
+      "sourceSha256": "670ecad82deed8e5317b179f2d7dd0d668ba3e06d485a8e5cdbf18e5354e11fb",
+      "size": [
+        512,
+        512
+      ],
+      "process": "Opaque RGB JPEG90, maximum512px; technical glTF encoding. Original generated image unchanged."
+    },
+    {
+      "file": "savanna-platform-wood-v1.jpg",
+      "sha256": "3dfcfa8c47a152412dc49cb8be31193b7f4f835d44cafa3b0b029d43a2aa644b",
+      "bytes": 103114,
+      "source": "../../../../viewer/assets/savanna-platform-wood-v1.png",
+      "sourceSha256": "b7d6f0c2708033a21a714b72528fbf7b1186dca2b2968dd44b14844fd4d23674",
+      "size": [
+        512,
+        512
+      ],
+      "process": "Opaque RGB JPEG90, maximum512px; technical glTF encoding. Original generated image unchanged."
+    },
+    {
+      "file": "woodland-stone-path-v1.jpg",
+      "sha256": "9d7e7d71ac63ebfee45584d7ca1c66c55571c27cc9a067a5b85a95a3d5d9ff17",
+      "bytes": 133086,
+      "source": "../../../../viewer/assets/woodland-stone-path-v1.png",
+      "sourceSha256": "041fec0abd5eef3b0d0396234e21afb71b81506aafa895cb92299c18e71eb08c",
+      "size": [
+        512,
+        512
+      ],
+      "process": "Opaque RGB JPEG90, maximum512px; technical glTF encoding. Original generated image unchanged."
+    }
+  ]
+}

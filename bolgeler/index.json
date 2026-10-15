@@ -1,0 +1,436 @@
+{
+  "schema": "bursa-zoo-area-index/v1",
+  "officialLegend": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+  "areas": [
+    {
+      "number": 1,
+      "name": "İdari Bina ve Gösteri Merkezi",
+      "type": "tesis",
+      "folder": "01-idari-bina-ve-gosteri-merkezi",
+      "officialPhotos": 0,
+      "officialDocuments": 5,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 2,
+      "name": "Hediyelik Eşya Marketi",
+      "type": "tesis",
+      "folder": "02-hediyelik-esya-marketi",
+      "officialPhotos": 0,
+      "officialDocuments": 2,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 3,
+      "name": "Safari Kafe",
+      "type": "tesis",
+      "folder": "03-safari-kafe",
+      "officialPhotos": 0,
+      "officialDocuments": 0,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 4,
+      "name": "Mescid",
+      "type": "tesis",
+      "folder": "04-mescid",
+      "officialPhotos": 0,
+      "officialDocuments": 0,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 5,
+      "name": "Giriş Göleti",
+      "type": "su",
+      "folder": "05-giris-goleti",
+      "officialPhotos": 0,
+      "officialDocuments": 0,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 6,
+      "name": "Pers Leoparı",
+      "type": "yaşam alanı",
+      "folder": "06-pers-leopari",
+      "officialPhotos": 0,
+      "officialDocuments": 3,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 7,
+      "name": "Afrika Aslanı",
+      "type": "yaşam alanı",
+      "folder": "07-afrika-aslani",
+      "officialPhotos": 1,
+      "officialDocuments": 8,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 8,
+      "name": "Benekli Sırtlan",
+      "type": "yaşam alanı",
+      "folder": "08-benekli-sirtlan",
+      "officialPhotos": 0,
+      "officialDocuments": 3,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 9,
+      "name": "Habeş Maymunu",
+      "type": "yaşam alanı",
+      "folder": "09-habes-maymunu",
+      "officialPhotos": 4,
+      "officialDocuments": 2,
+      "modelStatus": "Habeş Maymunu Adası v1 · M5 izi; 2021 fotoğrafından yaklaşık tırmanma elemanları",
+      "architecturalReferences": 2
+    },
+    {
+      "number": 10,
+      "name": "Boa Yılanı",
+      "type": "yaşam alanı",
+      "folder": "10-boa-yilani",
+      "officialPhotos": 1,
+      "officialDocuments": 2,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 1
+    },
+    {
+      "number": 11,
+      "name": "Lemur",
+      "type": "yaşam alanı",
+      "folder": "11-lemur",
+      "officialPhotos": 4,
+      "officialDocuments": 8,
+      "modelStatus": "Lemur Adası v1 · M5 izi; kaya/dal yerleşimi kamera yorumu",
+      "architecturalReferences": 6
+    },
+    {
+      "number": 12,
+      "name": "Afrika Savana",
+      "type": "yaşam alanı",
+      "folder": "12-afrika-savana",
+      "officialPhotos": 3,
+      "officialDocuments": 8,
+      "modelStatus": "ahşap yapı bileşeni v1; aday konum teyitsiz",
+      "architecturalReferences": 6
+    },
+    {
+      "number": 13,
+      "name": "Afrika Kafe",
+      "type": "tesis",
+      "folder": "13-afrika-kafe",
+      "officialPhotos": 0,
+      "officialDocuments": 6,
+      "modelStatus": "Afrika Kafe v1 · 6 aday M5 izi; tarihî fotoğraf yorumu",
+      "architecturalReferences": 9
+    },
+    {
+      "number": 14,
+      "name": "Afrika Köyü",
+      "type": "tesis",
+      "folder": "14-afrika-koyu",
+      "officialPhotos": 0,
+      "officialDocuments": 6,
+      "modelStatus": "Afrika Köyü v1 ·7 M5 çatı izi; tarihî fotoğraf yorumu",
+      "architecturalReferences": 1
+    },
+    {
+      "number": 15,
+      "name": "Penguen",
+      "type": "yaşam alanı",
+      "folder": "15-penguen",
+      "officialPhotos": 4,
+      "officialDocuments": 8,
+      "modelStatus": "Penguen havuzu v1 · M5 izi ve tarihî fotoğraf yorumu · glTF",
+      "architecturalReferences": 12
+    },
+    {
+      "number": 16,
+      "name": "Gergedan",
+      "type": "yaşam alanı",
+      "folder": "16-gergedan",
+      "officialPhotos": 4,
+      "officialDocuments": 8,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 4
+    },
+    {
+      "number": 17,
+      "name": "Yaban Eşeği",
+      "type": "yaşam alanı",
+      "folder": "17-yaban-esegi",
+      "officialPhotos": 0,
+      "officialDocuments": 3,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 18,
+      "name": "Deve",
+      "type": "yaşam alanı",
+      "folder": "18-deve",
+      "officialPhotos": 2,
+      "officialDocuments": 8,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 19,
+      "name": "Yaban Domuzu",
+      "type": "yaşam alanı",
+      "folder": "19-yaban-domuzu",
+      "officialPhotos": 0,
+      "officialDocuments": 2,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 20,
+      "name": "Ala Geyik",
+      "type": "yaşam alanı",
+      "folder": "20-ala-geyik",
+      "officialPhotos": 2,
+      "officialDocuments": 5,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 21,
+      "name": "Kızıl Geyik",
+      "type": "yaşam alanı",
+      "folder": "21-kizil-geyik",
+      "officialPhotos": 0,
+      "officialDocuments": 2,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 22,
+      "name": "Avustralya Hayvanları",
+      "type": "yaşam alanı",
+      "folder": "22-avustralya-hayvanlari",
+      "officialPhotos": 0,
+      "officialDocuments": 2,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 23,
+      "name": "Gülen Kuş",
+      "type": "yaşam alanı",
+      "folder": "23-gulen-kus",
+      "officialPhotos": 1,
+      "officialDocuments": 4,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 24,
+      "name": "Saman Boyunlu İbis",
+      "type": "yaşam alanı",
+      "folder": "24-saman-boyunlu-ibis",
+      "officialPhotos": 3,
+      "officialDocuments": 2,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 25,
+      "name": "Yırtıcı Kuşlar",
+      "type": "yaşam alanı",
+      "folder": "25-yirtici-kuslar",
+      "officialPhotos": 0,
+      "officialDocuments": 4,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 26,
+      "name": "Güney Amerika Hayvanları",
+      "type": "yaşam alanı",
+      "folder": "26-guney-amerika-hayvanlari",
+      "officialPhotos": 4,
+      "officialDocuments": 8,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 27,
+      "name": "Alligatör",
+      "type": "yaşam alanı",
+      "folder": "27-alligator",
+      "officialPhotos": 1,
+      "officialDocuments": 1,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 28,
+      "name": "Boz Kurt",
+      "type": "yaşam alanı",
+      "folder": "28-boz-kurt",
+      "officialPhotos": 1,
+      "officialDocuments": 6,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 29,
+      "name": "Boz Ayı",
+      "type": "yaşam alanı",
+      "folder": "29-boz-ayi",
+      "officialPhotos": 1,
+      "officialDocuments": 8,
+      "modelStatus": "Boz Ayı havuz bileşeni v1 · M5 izi; kaya kıyısı fotoğraf yorumu, 28/29 kapsamı teyitsiz",
+      "architecturalReferences": 2
+    },
+    {
+      "number": 30,
+      "name": "Türk Köyü",
+      "type": "tesis",
+      "folder": "30-turk-koyu",
+      "officialPhotos": 5,
+      "officialDocuments": 8,
+      "modelStatus": "Türk Köyü v1 · 9 M5 çatı bölgesi · glTF",
+      "architecturalReferences": 1
+    },
+    {
+      "number": 31,
+      "name": "Pelikan Göleti",
+      "type": "su ve kafes",
+      "folder": "31-pelikan-goleti",
+      "officialPhotos": 1,
+      "officialDocuments": 0,
+      "modelStatus": "kubbe kabuğu v1 · kaynak kodu ve iki glTF LOD",
+      "architecturalReferences": 9
+    },
+    {
+      "number": 32,
+      "name": "Su Kuşları",
+      "type": "yaşam alanı",
+      "folder": "32-su-kuslari",
+      "officialPhotos": 1,
+      "officialDocuments": 8,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 9
+    },
+    {
+      "number": 33,
+      "name": "Kırmızı Panda",
+      "type": "yaşam alanı",
+      "folder": "33-kirmizi-panda",
+      "officialPhotos": 1,
+      "officialDocuments": 5,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 34,
+      "name": "Vaşak",
+      "type": "yaşam alanı",
+      "folder": "34-vasak",
+      "officialPhotos": 2,
+      "officialDocuments": 1,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 35,
+      "name": "Amur Kaplanı",
+      "type": "yaşam alanı",
+      "folder": "35-amur-kaplani",
+      "officialPhotos": 3,
+      "officialDocuments": 7,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 2
+    },
+    {
+      "number": 36,
+      "name": "Sülün Kuşları",
+      "type": "yaşam alanı",
+      "folder": "36-sulun-kuslari",
+      "officialPhotos": 2,
+      "officialDocuments": 6,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 37,
+      "name": "Servis Binaları",
+      "type": "tesis",
+      "folder": "37-servis-binalari",
+      "officialPhotos": 0,
+      "officialDocuments": 0,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 38,
+      "name": "Karantina ve Kurtarma Merkezi",
+      "type": "tesis",
+      "folder": "38-karantina-ve-kurtarma-merkezi",
+      "officialPhotos": 0,
+      "officialDocuments": 1,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 39,
+      "name": "Isı Merkezi",
+      "type": "tesis",
+      "folder": "39-isi-merkezi",
+      "officialPhotos": 0,
+      "officialDocuments": 7,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 40,
+      "name": "Çocuk Oyun Alanı",
+      "type": "tesis",
+      "folder": "40-cocuk-oyun-alani",
+      "officialPhotos": 0,
+      "officialDocuments": 2,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 41,
+      "name": "Otopark",
+      "type": "ulaşım",
+      "folder": "41-otopark",
+      "officialPhotos": 0,
+      "officialDocuments": 1,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 42,
+      "name": "Acil Toplanma Merkezleri",
+      "type": "güvenlik",
+      "folder": "42-acil-toplanma-merkezleri",
+      "officialPhotos": 0,
+      "officialDocuments": 0,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    },
+    {
+      "number": 43,
+      "name": "Acil Çıkış Noktaları",
+      "type": "güvenlik",
+      "folder": "43-acil-cikis-noktalari",
+      "officialPhotos": 0,
+      "officialDocuments": 0,
+      "modelStatus": "bekliyor",
+      "architecturalReferences": 0
+    }
+  ]
+}

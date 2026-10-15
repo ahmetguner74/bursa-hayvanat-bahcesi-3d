@@ -1,0 +1,20 @@
+{
+  "file": "african-penguin-editable.blend",
+  "sha256": "f0fdc14660413d1ff4007ef8d65588f867f25199eb08e3f71d755e22dc8570db",
+  "armatures": 1,
+  "bones": 64,
+  "bodyMeshes": 2,
+  "actions": [
+    "Bray",
+    "Idle",
+    "Penguin swim",
+    "Preen",
+    "Shake",
+    "Sit1",
+    "Sleep",
+    "Walk"
+  ],
+  "packedImages": 3,
+  "unit": "metre",
+  "previewObjectsSeparate": true
+}

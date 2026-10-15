@@ -1,0 +1,4 @@
+African penguin (Spheniscus demersus) Low poly by Major
+https://sketchfab.com/3d-models/african-penguin-spheniscus-demersus-low-poly-9e59070815fe451d93398e2ebdb9bb92
+Licensed under Creative Commons Attribution 4.0: https://creativecommons.org/licenses/by/4.0/
+Metric 0.62m standing height, ground origin, nonmetallic feather material and 0.55 normal-map intensity. Removed redundant tightly-packed animation byteStride and unused duplicate UV references; cleared zero-weight joint indices; skinned nodes moved to scene root per glTF. Shape, active skin weights, keyframes and PNG bytes preserved.

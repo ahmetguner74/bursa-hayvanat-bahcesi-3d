@@ -1,0 +1,9 @@
+{
+  "actualRuntimeModule": true,
+  "birds": 5,
+  "offscreenFrozen": true,
+  "hiddenDocumentFrozen": true,
+  "toggleWorks": true,
+  "resumeDistanceMetres": 0.008545080982925352,
+  "physicalGpuOrPhoneTest": false
+}

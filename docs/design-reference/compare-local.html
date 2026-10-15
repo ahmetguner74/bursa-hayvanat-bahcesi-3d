@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="tr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mockup / çalışan 3B atlas · yerel karşılaştırma</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e9ede3;color:#243f31;font:15px/1.4 system-ui,sans-serif}header{padding:18px 22px}h1{font-size:19px;margin:0 0 4px}p{margin:0;font-size:12px}.panels{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:0 20px 20px}section{min-width:0}h2{font-size:14px;margin:0 0 8px}.frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#dce7d8}img,iframe{display:block;border:0;position:absolute;top:0;left:0;width:1280px;height:720px;transform-origin:0 0}img{object-fit:contain}footer{padding:0 22px;font-size:12px}@media(max-width:850px){.panels{grid-template-columns:1fr}}
+</style>
+<header><h1>Beğenilen mockup / çalışan 3B atlas</h1><p>İki içerik de 1280 × 720 çerçevede, aynı oranda küçültülerek gösterilir. Gerçek 3B sahne etkileşimlidir.</p><button id="crop" type="button" aria-pressed="false" style="margin-top:10px;padding:7px 12px;color:#205746;background:#fff;border:1px solid #c7d4c3;border-radius:8px;cursor:pointer">Kafes ayrıntısını karşılaştır</button></header>
+<div class="panels">
+<section><h2>Görsel hedef · AI mockup</h2><div class="frame"><img src="woodland-aviary-concept.png" alt="Kullanıcının beğendiği orman içindeki kuş kafesi mockup'ı"></div></section>
+<section><h2>Yerel atlas · dış görünüm · perspektif %65</h2><div class="frame" id="atlas-comparison-frame"></div></section>
+</div>
+<footer>Bu sayfa iç görsel karşılaştırma içindir. Sonuç henüz mockup hedefiyle eşdeğer kabul edilmedi.</footer>
+<script>
+const forest=new URLSearchParams(location.search).get('forest');
+const atlas=document.createElement('iframe');atlas.title='Çalışan 3B atlas — kafes dışı';
+atlas.src='../?focus=cage&perspective=65'+(['1','2'].includes(forest)?'&forest='+forest:'');
+document.querySelector('#atlas-comparison-frame').append(atlas);
+let cropped=false;
+const size=()=>document.querySelectorAll('.frame').forEach(frame=>{
+  const width=cropped?650:1280,height=cropped?380:720,scale=frame.clientWidth/width;
+  frame.style.aspectRatio=width+'/'+height;
+  frame.firstElementChild.style.transform=`translate(${cropped?-330*scale:0}px,${cropped?-220*scale:0}px) scale(${scale})`;
+});
+document.querySelector('#crop').onclick=()=>{cropped=!cropped;document.querySelector('#crop').setAttribute('aria-pressed',String(cropped));document.querySelector('#crop').textContent=cropped?'Tam sahneyi karşılaştır':'Kafes ayrıntısını karşılaştır';size();};
+new ResizeObserver(size).observe(document.body);size();
+</script>
+</html>

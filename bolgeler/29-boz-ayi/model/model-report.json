@@ -1,0 +1,68 @@
+{
+  "schema": "bursa-zoo-bear-pool/v1",
+  "unit": "metre",
+  "originM5LocalXY": [
+    -125.75360413783568,
+    -71.13040925566855
+  ],
+  "sourceIds": [
+    "H22D01C2B:278"
+  ],
+  "sourceAssociation": "Candidate region29 pond; precise28/29 physical scope unverified",
+  "propDimensionsSurveyed": false,
+  "nativePoolAreaM2": 488.39911949999987,
+  "interpretedBankAreaM2": 41.897032986042724,
+  "previewGroundAreaM2": 699.8594216381064,
+  "previewGroundNormalisationGridM": 1e-06,
+  "previewGroundNormalisationDeltaM2": 5.746408934813348e-05,
+  "previewGroundCollapsedSliverExtentM": 0.40000104168341644,
+  "interpretedRockCount": 17,
+  "interpretedPlantCount": 9,
+  "triangles": 10278,
+  "glbBytes": 1513188,
+  "solidChecks": {
+    "pool_bed": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 190.47565660499993
+    },
+    "concrete_bank_00": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 53.13676906979413
+    },
+    "concrete_bank_01": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 5.93804744052614
+    },
+    "preview_ground_00": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 54.43081142483899
+    },
+    "preview_ground_01": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 295.4989027222551
+    },
+    "rock_bank": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 29.76358763961336
+    }
+  },
+  "atlasHiddenNodes": [
+    "pool_bed",
+    "pool_water",
+    "preview_ground_00",
+    "preview_ground_01"
+  ],
+  "interpretation": [
+    "Native pool278 XY is retained. Its association with region29 is approximate; the precise28/29 enclosure boundary is unresolved.",
+    "The photograph shows one bank. Concrete width/height, pool depth, rock quantity/positions and vegetation are editable visual estimates, not surveyed construction data.",
+    "The 40 cm illustrative bank is clipped to previously available dry terrain; QGIS road and existing building footprints are not moved.",
+    "The native source H is metadata only. Photographic upload/publication dates do not confirm present-day condition.",
+    "Only the pond and photographed-style rocky bank component is modelled. Enclosure perimeter, service building, animal and unseen banks are not invented."
+  ]
+}

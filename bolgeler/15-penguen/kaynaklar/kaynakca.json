@@ -1,0 +1,320 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 15,
+  "name": "Penguen",
+  "type": "yaşam alanı",
+  "searched": "penguen",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3513.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW208727_08-scaled.jpg",
+      "mediaId": 3513,
+      "uploaded": "2023-04-20T09:21:50",
+      "title": "(ÖZEL HABER) HAYVANAT BAHÇESİNİN GÖZDESİ PENGUEN VE FOKLAR",
+      "sha256": "a831d414fb1cadf698353a9d32657b96eab51075f98ba23d1ef40cc1fd9f1299",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3512.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW208727_05-scaled.jpg",
+      "mediaId": 3512,
+      "uploaded": "2023-04-20T09:21:46",
+      "title": "(ÖZEL HABER) HAYVANAT BAHÇESİNİN GÖZDESİ PENGUEN VE FOKLAR",
+      "sha256": "eab4d7c191b5159b094d854ef3ac51fcd5d684bf596d00d11754e27f3cfcca30",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar/fotograflar/resmi-site-3538.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW472650_11-scaled.jpg",
+      "mediaId": 3538,
+      "uploaded": "2023-04-20T09:23:33",
+      "title": "ASLAN VE KAPLANLARA NEFES KESEN BESLENME TESTİ",
+      "sha256": "bda16c20a197d926c45b2c874b40bf39aab74d6c60f142bc7f85617f75c76038",
+      "role": "İçerik gözlemiyle ayrılmış hayvan/çevre referansı; ölçekli yapı fotoğrafı değildir",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "contentReview": {
+        "date": "2026-10-15",
+        "observation": "Fotoğrafta penguenler ve havuz kıyısı görülüyor; haber başlığı aslan/kaplan olarak hatalı eşleşmiş.",
+        "originalSearchArea": 7,
+        "exactCameraPosition": "teyitsiz"
+      }
+    },
+    {
+      "file": "kaynaklar/fotograflar/resmi-site-3537.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW472650_10-scaled.jpg",
+      "mediaId": 3537,
+      "uploaded": "2023-04-20T09:23:29",
+      "title": "ASLAN VE KAPLANLARA NEFES KESEN BESLENME TESTİ",
+      "sha256": "3b2620387995c1dfd9f70c46997d9cb92408fbe6dc67551c471d4149cc89754a",
+      "role": "İçerik gözlemiyle ayrılmış hayvan/çevre referansı; ölçekli yapı fotoğrafı değildir",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "contentReview": {
+        "date": "2026-10-15",
+        "observation": "Fotoğrafta penguenler görülüyor; aslan alanına mimari kanıt değildir.",
+        "originalSearchArea": 7,
+        "exactCameraPosition": "teyitsiz"
+      }
+    }
+  ],
+  "documents": [
+    {
+      "title": "AFRİKA PENGUENLERİ",
+      "url": "https://www.bursahayvanatbahcesi.com/3180-2/",
+      "type": "post"
+    },
+    {
+      "title": "Penguen ailesinde yavru sevinci",
+      "url": "https://www.bursahayvanatbahcesi.com/penguen-ailesinde-yavru-sevinci/",
+      "type": "post"
+    },
+    {
+      "title": "AFRİKA PENGUENİ /African Penguin)",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/afrika-pengueni-african-penguin/",
+      "type": "hayvan"
+    },
+    {
+      "title": "Bursa Hayvanat Bahçesi&#8217;nin Yeni Konukları Fok Ve Penguenler",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesinin-yeni-konuklari-fok-ve-penguenler/",
+      "type": "post"
+    },
+    {
+      "title": "BAŞKAN VEKİLİ BİBA&#8217;DAN HAYVANAT BAHÇESİ&#8217;NE ZİYARET",
+      "url": "https://www.bursahayvanatbahcesi.com/baskan-vekili-bibadan-hayvanat-bahcesine-ziyaret/",
+      "type": "post"
+    },
+    {
+      "title": "SULARI TEMİZ TUT, EKOSİSTEMİ YAŞAT!",
+      "url": "https://www.bursahayvanatbahcesi.com/sulari-temiz-tut-ekosistemi-yasat/",
+      "type": "post"
+    },
+    {
+      "title": "Bayram neşesi, Hayvanat Bahçesi’nde yaşanacak",
+      "url": "https://www.bursahayvanatbahcesi.com/bayram-nesesi-hayvanat-bahcesinde-yasanacak/",
+      "type": "post"
+    },
+    {
+      "title": "Bursa Hayvanat Bahçesi&#8217;nin Ailesi Büyüyor",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesinin-ailesi-buyuyor/",
+      "type": "post"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "architecturalReferences": [
+    {
+      "file": "kaynaklar/fotograflar/24148_MST_8045_201706220833.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/24148_MST_8045_201706220833.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148",
+      "sourcePublished": "2017-06-24",
+      "captureDate": "Yayın tarihiyle aynı olduğu teyitsiz",
+      "sha256": "ea172f31c0b3cc34ddd97bcaa83a1a7dbddab84a201eb5292ba0ab44875959b7",
+      "role": "Penguen havuzunun genel görünümü; koyu mavi bordür, açık çakıl, gri yapay kaya, su içi alçak taş ve ahşap seyir platformu",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/24148_MST_8002_201706220833.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/24148_MST_8002_201706220833.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148",
+      "sourcePublished": "2017-06-24",
+      "captureDate": "Yayın tarihiyle aynı olduğu teyitsiz",
+      "sha256": "241bca6358cdb45f1d4189d10232ba80212740960dd57cb8cf7e20214c39c6bb",
+      "role": "Penguen kıyısındaki açık çakıl, alçak kayalar ve arka yapay kaya duvarı",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/24148_MST_8011_201706220833.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/24148_MST_8011_201706220833.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148",
+      "sourcePublished": "2017-06-24",
+      "captureDate": "Yayın tarihiyle aynı olduğu teyitsiz",
+      "sha256": "134532c8154267e56af96bf6c2e3659f918a5b1be763813307155c9c9f33c859",
+      "role": "Penguen havuzundaki taş, kıyı ve ahşap seyir platformu",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/24148_MST_7985_201706220833.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/24148_MST_7985_201706220833.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148",
+      "sourcePublished": "2017-06-24",
+      "captureDate": "Yayın tarihiyle aynı olduğu teyitsiz",
+      "sha256": "66825be6cb1201f54e09d6dd6f197d73e18df124afac9e051cb7e1b9e9daf2fe",
+      "role": "Penguen havuzu su ve kıyı bağlamı",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/24148_MST_7927_201706220833.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/24148_MST_7927_201706220833.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148",
+      "sourcePublished": "2017-06-24",
+      "captureDate": "Yayın tarihiyle aynı olduğu teyitsiz",
+      "sha256": "32c1ca5c6ba161912c1762804dbbabd0cb24eb6b78aee797fd18f965b61b739f",
+      "role": "Komşu fok havuzunun yapay kaya duvarı; penguen havuzunun birebir planı değildir",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/24148_MST_8097_201706220834.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/24148_MST_8097_201706220834.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148",
+      "sourcePublished": "2017-06-24",
+      "captureDate": "Yayın tarihiyle aynı olduğu teyitsiz",
+      "sha256": "35166f32ce9e212ca9a00aecf94765ae6ca65481b50a03b78fc80fd52d75912c",
+      "role": "Kompleksin su altı seyir penceresi; fotoğrafta fok görülüyor, penguen penceresinin konumunu tek başına doğrulamaz",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/23247_YHG_9117_201702021252.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/23247_YHG_9117_201702021252.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/fok-baligi-ve-penguenler-icin-geri-sayim-23247",
+      "sourcePublished": "2017-02-02",
+      "captureDate": "Yayın tarihiyle aynı olduğu teyitsiz",
+      "sha256": "e4edbdf3e86e6db7ab81c2d1c71617a05da290ea513def2fe47aa6c552bac07c",
+      "role": "Yapım döneminde iki havuzun ve kıyıların genel geometrisi",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/23247_YHG_9119_201702021252.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/23247_YHG_9119_201702021252.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/fok-baligi-ve-penguenler-icin-geri-sayim-23247",
+      "sourcePublished": "2017-02-02",
+      "captureDate": "Yayın tarihiyle aynı olduğu teyitsiz",
+      "sha256": "46d4b34d0df4ba32f677218b28628a6c027e80c2f409166f79a937b824520f95",
+      "role": "Yapım döneminde fok/penguen kompleksi ve yapay kaya duvarları",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/23247_YHG_9138_201702021252.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/23247_YHG_9138_201702021252.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/fok-baligi-ve-penguenler-icin-geri-sayim-23247",
+      "sourcePublished": "2017-02-02",
+      "captureDate": "Yayın tarihiyle aynı olduğu teyitsiz",
+      "sha256": "cabd73233a4b2325354f869b6da2b2b1fdf86ea34bc2403cc2c7e7546bf1f864",
+      "role": "Yapım dönemindeki küçük havuzun kıvrımlı çeperi, alçak iç kayaları ve arka duvarı",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/23247_YHG_9144_201702021252.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/23247_YHG_9144_201702021252.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/fok-baligi-ve-penguenler-icin-geri-sayim-23247",
+      "sourcePublished": "2017-02-02",
+      "captureDate": "Yayın tarihiyle aynı olduğu teyitsiz",
+      "sha256": "ce04e912bf74a79fdb3e071eb48de04c813500b12394d2d4235c21bacaa0bc3d",
+      "role": "Küçük havuz yapımı, su hattı ve arka yapay kaya duvarı",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8863_201806301146.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8863_201806301146.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "804eccb7f286f32bbabb3cc4f7affca663f2d67b6a7ad7d653cb84553060e1da",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Penguen havuzu: mavi su, kaya duvar, ahşap seyir platformu ve yeşil cam/metal korkuluk",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    },
+    {
+      "file": "kaynaklar/fotograflar/26077_IMG_8866_201806301147.jpg",
+      "url": "https://www.bursa.bel.tr/dosyalar/resimler/haberler/26077_IMG_8866_201806301147.jpg",
+      "sourcePage": "https://www.bursa.bel.tr/haber/bursa-zoonun-yeni-konuklari-gergedanlar-26077",
+      "sourcePublished": "2018-06-30",
+      "captureDate": "Çekim tarihi teyitsiz;2018 haber/galeri bağlamı",
+      "sha256": "96da8322caba970cd4be090f967b10738679347d7d01b14a2c24506599eb05cd",
+      "sizePixels": [
+        1620,
+        1080
+      ],
+      "role": "Penguen havuzunun seyir döşemesi, ahşap çapraz payandalar ve alçak yeşil korkuluk",
+      "reviewed": "2026-10-15",
+      "publication": "yalnız yerel araştırma; yeniden yayımlama/doku izni varsayılmadı"
+    }
+  ],
+  "architecturalDocuments": [
+    {
+      "file": "kaynaklar/belgeler/belediye-24148-2017.html.txt",
+      "url": "https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148",
+      "sourcePublished": "2017-06-24",
+      "sha256": "a3ebdae2fa0ff9d61670ebd65d116024c2cfd9a50e353b3ee7e7f6913039c507",
+      "role": "Resmî yapım/hizmete açılma duyurusu; HTML metin arşivi, çalıştırılmaz"
+    },
+    {
+      "file": "kaynaklar/belgeler/belediye-23247-2017.html.txt",
+      "url": "https://www.bursa.bel.tr/haber/fok-baligi-ve-penguenler-icin-geri-sayim-23247",
+      "sourcePublished": "2017-02-02",
+      "sha256": "3b401e56be1c6776cebcb052ba42eff043a9fc2e1fc0ba369291a9834fccf492",
+      "role": "Resmî yapım/hizmete açılma duyurusu; HTML metin arşivi, çalıştırılmaz"
+    },
+    {
+      "file": "kaynaklar/belgeler/yapim-kaydi-ozeti.json",
+      "url": "https://www.bursa.bel.tr/haber/bursa-zoo-nun-yeni-misafirleri-fok-ve-penguen-24148",
+      "sha256": "553792f40af94b8776c6a88778014bcc11d82587b82a4bda385b367a73cc458c",
+      "role": "Kaynak bilgisi ve fotoğraf gözlemleri; özet, ölçülü rölöve değil"
+    },
+    {
+      "file": "kaynaklar/belgeler/belediye-kamera-20261015T005924Z.html.txt",
+      "url": "https://www.bursa.bel.tr/sehir-kameralari/penguenler-2-23325",
+      "sha256": "1d01369e8b2879ef0c0490073ce59225941c35b3214a03b3d5e51ccc9e6d18aa",
+      "role": "Kamera sayfası arşivi; akış karesi bu denemede edinilemedi. HTML çalıştırılmaz"
+    }
+  ],
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "a8876e54dbfda82a3d8521c03745e11a69fe88a64c0f65c91fa1fe3a699bdae7",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "0ad08311d628c349e048a5c17335dd7aad22ec5c050043b4a1ec74b6205dd4b1",
+    "nativeFeatureCount": 76,
+    "nativeTreeCount": 0,
+    "status": "illustrated-label-anchor"
+  },
+  "unavailableReferences": [
+    {
+      "url": "https://www.bursa.bel.tr/sehir-kameralari/penguenler-2-23325",
+      "checked": "2026-10-15",
+      "status": "HTTPError during public stream retrieval",
+      "note": "Bu denemede video karesi edinilemedi; güncel alan görünümü doğrulanmadı"
+    }
+  ]
+}

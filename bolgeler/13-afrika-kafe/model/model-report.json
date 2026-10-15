@@ -1,0 +1,143 @@
+{
+  "schema": "bursa-zoo-african-cafe/v1",
+  "unit": "metre",
+  "originM5LocalXY": [
+    118.88810581283582,
+    70.94749513923502
+  ],
+  "sourceIds": [
+    "H22D01C2B:152",
+    "H22D01C2B:153",
+    "H22D01C2B:154",
+    "H22D01C2B:155",
+    "H22D01C2B:156",
+    "H22D01C2B:243"
+  ],
+  "dimensionsSurveyed": false,
+  "sourceAssociation": "Cafe anchor and historical opening photos; approximate",
+  "roofCount": 6,
+  "postCount": 40,
+  "nativeRoofAreaM2": 570.1022000000002,
+  "exclusiveFloorAreaM2": 570.1014842673659,
+  "nativeRoofOverlapRemovedM2": 0.0007157326342621673,
+  "roofProjectionSymmetricDifferenceM2": 1.7404697474909803e-15,
+  "triangles": 6724,
+  "glbBytes": 899196,
+  "solidChecks": {
+    "cafe_floor_00": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 9.933443505000016
+    },
+    "cafe_floor_01": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 172.20004268241493
+    },
+    "cafe_floor_02": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 10.123728474999993
+    },
+    "cafe_floor_03": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 10.128812252500007
+    },
+    "H22D01C2B_152_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 235.4846311571315
+    },
+    "H22D01C2B_152_posts": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 1.3798400000000042
+    },
+    "H22D01C2B_152_eave_beams": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 2.8957262783344597
+    },
+    "H22D01C2B_153_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 30.537900978241115
+    },
+    "H22D01C2B_153_posts": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.5519360000000002
+    },
+    "H22D01C2B_153_eave_beams": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.9647521090618879
+    },
+    "H22D01C2B_154_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 18.43156646955998
+    },
+    "H22D01C2B_154_posts": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.27596800000000127
+    },
+    "H22D01C2B_154_eave_beams": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.5404735666633099
+    },
+    "H22D01C2B_155_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 18.93314522347062
+    },
+    "H22D01C2B_155_posts": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.2759679999999977
+    },
+    "H22D01C2B_155_eave_beams": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.5461282002806307
+    },
+    "H22D01C2B_156_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 18.946309528669136
+    },
+    "H22D01C2B_156_posts": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.2759679999999977
+    },
+    "H22D01C2B_156_eave_beams": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 0.5463032141563259
+    },
+    "H22D01C2B_243_roof": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 141.41812077941321
+    },
+    "H22D01C2B_243_walls_with_openings": {
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeM3": 24.453719424679775
+    }
+  },
+  "interpretation": [
+    "Six native M5 outlines152–156 and243 are candidates near the September cafe label. Their association follows the illustrated plan and is not a surveyed/current site verification.",
+    "The 2011 official opening photographs show dark timber, open-sided square hipped gazebos and warm brown roofs. They do not determine the exact position or present condition of every pavilion.",
+    "All heights, roof slopes/ridges, timber sections, post placement, wall inset and two wall openings are editable visual estimates. No interior furniture or operational layout is asserted.",
+    "A 0.000716m2 overlap of native roof152/153 is clipped only in the derived render geometry; all original source coordinates remain in inputs and the native context file.",
+    "One continuous floor replaces terrain/path in the shared surface partition; the generic box for source243 is removed from the scene shell. Original QGIS road polygons are unchanged.",
+    "Existing generated wood/roof/paving presentation materials are reused; no source photograph is republished or used as a licensed texture.",
+    "The largest connected canopy is partitioned into eight estimated hipped roof bays. Seeds/ridges are an editable roof interpretation; the outer M5 outline is unchanged. Internal roof seams are welded, with one continuous solid."
+  ],
+  "meshOwnership": "One unioned floor replaces underlying terrain/path. Six exclusive roof solids, open timber gazebos, real wall openings. Structural contacts are intentional; native M5/QGIS data remain untouched."
+}

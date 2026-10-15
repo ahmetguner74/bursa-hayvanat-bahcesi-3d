@@ -1,0 +1,156 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 30,
+  "name": "Türk Köyü",
+  "type": "tesis",
+  "searched": "türk köyü",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3508.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW053627_07-scaled.jpg",
+      "mediaId": 3508,
+      "uploaded": "2023-04-20T09:21:25",
+      "title": "(ÖZEL HABER) TÜRK KÖYÜNDEKİ NADİR KOYUN VE KEÇİLER BAHARA HAZIRLANDI",
+      "sha256": "b86040358d9f47cac607959935861f4ad9121b41cc02ecd6164fd8ea06055dc5",
+      "role": "Türk Köyü koyun/keçi yakın planı; cephe veya çatı ölçüsü doğrulanamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3507.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW053627_01-scaled.jpg",
+      "mediaId": 3507,
+      "uploaded": "2023-04-20T09:21:21",
+      "title": "(ÖZEL HABER) TÜRK KÖYÜNDEKİ NADİR KOYUN VE KEÇİLER BAHARA HAZIRLANDI",
+      "sha256": "a10fadee183a5c796fb62258307d82e473207e18f9af9b0a2ed797640be0bfcf",
+      "role": "Türk Köyü koyun/keçi yakın planı; cephe veya çatı ölçüsü doğrulanamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-2850.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2020/10/AW053627_07.jpg",
+      "mediaId": 2850,
+      "uploaded": "2020-10-13T11:26:13",
+      "title": "(ÖZEL HABER) TÜRK KÖYÜNDEKİ NADİR KOYUN VE KEÇİLER BAHARA HAZIRLANDI",
+      "sha256": "cca7113454072e571dcef1d98d863a156c6af1a1943f7581b710f13655dbe423",
+      "role": "Türk Köyü koyun/keçi yakın planı; cephe veya çatı ölçüsü doğrulanamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "sameViewAsMediaId": 3508
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-2849.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2020/10/AW053627_01.jpg",
+      "mediaId": 2849,
+      "uploaded": "2020-10-13T11:26:12",
+      "title": "(ÖZEL HABER) TÜRK KÖYÜNDEKİ NADİR KOYUN VE KEÇİLER BAHARA HAZIRLANDI",
+      "sha256": "89af51ab4852aba7da01e583687e48c7200b592f4d50025f0d31e8dcd022f330",
+      "role": "Türk Köyü koyun/keçi yakın planı; cephe veya çatı ölçüsü doğrulanamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "sameViewAsMediaId": 3507
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-1561.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2010/09/4-turkkoyu-ab.jpg",
+      "mediaId": 1561,
+      "uploaded": "2015-06-03T15:21:49",
+      "title": "4 turkkoyu ab",
+      "sha256": "c9d9234454b933494877ba9d4693b5ace862779cafd69b8ed10e58cc0f2226ee",
+      "role": "Tavus kuşu yakın planı; Türk Köyü cephe veya çatı referansı değildir",
+      "publication": "yalnız yerel araştırma",
+      "contentReview": {
+        "date": "2026-10-15",
+        "observation": "230 × 153 piksel tavus kuşu; dosya adındaki Türk Köyü etiketi mimari içerik anlamına gelmiyor."
+      }
+    }
+  ],
+  "documents": [
+    {
+      "title": "Hayvanat Bahçesi&#8217;nde 23 Nisan Coşkusu",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvanat-bahcesinde-23-nisan-coskusu-2/",
+      "type": "post"
+    },
+    {
+      "title": "Bursa Zoo’nun Yeni Konukları Gergedanlar",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-zoonun-yeni-konuklari-gergedanlar/",
+      "type": "post"
+    },
+    {
+      "title": "SUNUM KONULARI",
+      "url": "https://www.bursahayvanatbahcesi.com/egitim/sunum-konulari/",
+      "type": "page"
+    },
+    {
+      "title": "EĞİTİM PROGRAMI",
+      "url": "https://www.bursahayvanatbahcesi.com/egitim/egitim-programi/",
+      "type": "page"
+    },
+    {
+      "title": "Amerikalı öğrenciler Bursa Zoo&#8217;da gezdi",
+      "url": "https://www.bursahayvanatbahcesi.com/amerikali-ogrenciler-bursa-zooda-gezdi/",
+      "type": "post"
+    },
+    {
+      "title": "BURSA HAYVANAT BAHÇESİ’NE GÜNEY AMERİKA BARINAĞI",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesine-guney-amerika-barinagi/",
+      "type": "post"
+    },
+    {
+      "title": "Tarihçe",
+      "url": "https://www.bursahayvanatbahcesi.com/kurumsal/tarihce/",
+      "type": "page"
+    },
+    {
+      "title": "40 derecede develer hortumla serinledi, ayılar ise buzlu balık keyfi yaptı",
+      "url": "https://www.bursahayvanatbahcesi.com/40-derecede-develer-hortumla-serinledi-ayilar-ise-buzlu-balik-keyfi-yapti/",
+      "type": "post"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "architecturalReferences": [
+    {
+      "file": "kaynaklar\\fotograflar\\trend-insaat-2013-turk-koyu.jpg",
+      "url": "https://www.trendinsaat.com.tr/images/fotogaleri/bg_nuhoglu_insaat_bursa_hayvanat_bah%C3%A7esi_16012013104650.jpg",
+      "sha256": "63362435658918fe39c1cffac8b611189f3097ca2b8caa575a87dd14e6263402",
+      "role": "Havadan genel yapı görünümü; Türk Köyü taş duvar, kiremit çatı ve ahşap ayrıntı referansı",
+      "captureDate": "bilinmiyor; URL 2013 arşivi",
+      "publication": "yalnız yerel araştırma"
+    }
+  ],
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "0fce2a80864d152bb970c36d22487b437dabb05b9d1c9c67c302433751ec2d3e",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "ff684be7a95d9ef176ce1f264b13c7d6550f88905d3ecefacc34d9043876a683",
+    "nativeFeatureCount": 77,
+    "nativeTreeCount": 18,
+    "status": "illustrated-label-anchor"
+  }
+}

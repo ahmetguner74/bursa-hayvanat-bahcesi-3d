@@ -1,0 +1,138 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 7,
+  "name": "Afrika Aslanı",
+  "type": "yaşam alanı",
+  "searched": "aslan",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3991.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/08/aslan-gunu.jpg",
+      "mediaId": 3991,
+      "uploaded": "2026-08-10T13:27:13",
+      "title": "aslan günü",
+      "sha256": "29f6c2c00d79b18831170113a74ae00166a7d0f527a2217279b2fdd92e5605d5",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    }
+  ],
+  "documents": [
+    {
+      "title": "DÜNYA ASLAN GÜNÜ",
+      "url": "https://www.bursahayvanatbahcesi.com/dunya-aslan-gunu/",
+      "type": "post"
+    },
+    {
+      "title": "ASLAN AİLEMİZ BÜYÜYOR",
+      "url": "https://www.bursahayvanatbahcesi.com/aslan-ailemiz-buyuyor/",
+      "type": "post"
+    },
+    {
+      "title": "Aslan Ailesinde Yavru Sevinci",
+      "url": "https://www.bursahayvanatbahcesi.com/aslan-ailesinde-yavru-sevinci/",
+      "type": "post"
+    },
+    {
+      "title": "Bursa Hayvanat Bahçesi’nde aslanlar açlık testini böyle geçti",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesinde-aslanlar-aclik-testini-boyle-gecti/",
+      "type": "post"
+    },
+    {
+      "title": "Aslanların etleri kapma görüntüleri vahşi doğayı aratmıyor",
+      "url": "https://www.bursahayvanatbahcesi.com/aslanlarin-etleri-kapma-goruntuleri-vahsi-dogayi-aratmiyor/",
+      "type": "post"
+    },
+    {
+      "title": "‘ASLAN’ GİBİ BESLENDİLER",
+      "url": "https://www.bursahayvanatbahcesi.com/aslan-gibi-beslendiler/",
+      "type": "post"
+    },
+    {
+      "title": "AFRİKA ASLANI",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/afrika-aslani/",
+      "type": "hayvan"
+    },
+    {
+      "title": "HAYVANAT BAHÇESİ 20 YAŞINDA",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvanat-bahcesi-20-yasinda/",
+      "type": "post"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "rejectedPhotos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3538.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW472650_11-scaled.jpg",
+      "mediaId": 3538,
+      "uploaded": "2023-04-20T09:23:33",
+      "title": "ASLAN VE KAPLANLARA NEFES KESEN BESLENME TESTİ",
+      "sha256": "bda16c20a197d926c45b2c874b40bf39aab74d6c60f142bc7f85617f75c76038",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "reason": "Fotoğrafta penguenler ve havuz kıyısı görülüyor; haber başlığı aslan/kaplan olarak hatalı eşleşmiş.",
+      "reassignedArea": 15
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3537.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW472650_10-scaled.jpg",
+      "mediaId": 3537,
+      "uploaded": "2023-04-20T09:23:29",
+      "title": "ASLAN VE KAPLANLARA NEFES KESEN BESLENME TESTİ",
+      "sha256": "3b2620387995c1dfd9f70c46997d9cb92408fbe6dc67551c471d4149cc89754a",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "reason": "Fotoğrafta penguenler görülüyor; aslan alanına mimari kanıt değildir.",
+      "reassignedArea": 15
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-3536.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2023/04/AW472650_08-scaled.jpg",
+      "mediaId": 3536,
+      "uploaded": "2023-04-20T09:23:24",
+      "title": "ASLAN VE KAPLANLARA NEFES KESEN BESLENME TESTİ",
+      "sha256": "868364fa379ef10572769a085961828fae6e5b4d869da8c7ee055ba39d23db86",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "reason": "Fotoğrafta kaplan görülüyor; aslan başlığına rağmen Amur Kaplanı için hayvan/çevre adayı.",
+      "reassignedArea": 35
+    }
+  ],
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "c8b1104b06d64e73bb32191dd39577e790f042be960aa1b4627196710608aa71",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "467a96c460e3236d6acdee91f3ce1eae98171e586d3fd634df35826cc994b8bd",
+    "nativeFeatureCount": 35,
+    "nativeTreeCount": 12,
+    "status": "illustrated-label-anchor"
+  }
+}

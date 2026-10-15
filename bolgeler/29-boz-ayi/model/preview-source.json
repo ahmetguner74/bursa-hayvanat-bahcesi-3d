@@ -1,0 +1,13 @@
+{
+  "renderSourceGlbSha256": "d43631b0e122edae2d2748141be3c41565ec783bcf240e1ff3385296019bf512",
+  "blendSha256": "49c13f10170ac3c3f53463952ce0615648511b7ce4ea66c9f50d19da69df4fc9",
+  "imageSha256": "42765571e476318ece4b9a0f8bcc02ff93f7d452d9b8237aeef0c4282cbc91f9",
+  "blenderVersion": "5.2.1 LTS",
+  "renderEngine": "Cycles",
+  "samples": 32,
+  "sizePixels": [
+    1200,
+    800
+  ],
+  "note": "Offline render of the actual GLB; not a browser screenshot or new concept image."
+}

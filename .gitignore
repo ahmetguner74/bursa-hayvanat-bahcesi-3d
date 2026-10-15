@@ -4,14 +4,23 @@
 # Private source material and research images are never published.
 /reference-photos-private/
 /reference-maps-private/
+/v2/private/
 /source-dgn/
 /source-ascii/
 /audit-2026-10-14/
 /cage-source-qa.png
 /site-source-qa.png
 /fetch_reference_photos.py
+/bolgeler/*/kaynaklar/fotograflar/
+/bolgeler/*/kaynaklar/krokiler/
+/bolgeler/_qa/
+/bolgeler/*/kaynaklar/belgeler/*.html.txt
+/bolgeler/*/kaynaklar/belgeler/*.pdf
+/bolgeler/*/kaynaklar/harita-verisi/
 
 # Local environment and temporary files.
 /.env*
 /__pycache__/
 *.pyc
+*.blend1
+*.blend2

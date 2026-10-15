@@ -1,0 +1,53 @@
+{
+  "revision": "20261015ai",
+  "date": "2026-10-15",
+  "measurement": "Codex in-app browser on the same desktop; viewport overrides only; GPU timer and physical phone not measured",
+  "desktop": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "updates": 180,
+    "targetHz": 60,
+    "observedUpdateHz": 59.04667656275771,
+    "p95UpdateIntervalMs": 16.8,
+    "meanAnimationCpuMs": 0.197222222139438,
+    "maxAnimationCpuMs": 1.6000000014901161,
+    "colonyBirds": 5,
+    "visibleSkeletonsAtReport": 5,
+    "renderSamples": 48,
+    "p95WholeSceneCpuSubmissionMs": 3.6,
+    "meanAllPassDrawCalls": 160,
+    "meanAllPassTriangles": 908663
+  },
+  "mobileViewport": {
+    "viewport": [
+      390,
+      844
+    ],
+    "updates": 180,
+    "targetHz": 30,
+    "observedUpdateHz": 29.933610929948667,
+    "p95UpdateIntervalMs": 33.5,
+    "meanAnimationCpuMs": 0.1327777778522836,
+    "maxAnimationCpuMs": 1.300000000745058,
+    "colonyBirds": 5,
+    "visibleSkeletonsAtReport": 4,
+    "renderSamples": 48,
+    "p95WholeSceneCpuSubmissionMs": 3.4,
+    "meanAllPassDrawCalls": 136,
+    "meanAllPassTriangles": 821813
+  },
+  "constraints": [
+    "These are observed animation update intervals, not a GPU FPS guarantee.",
+    "Five illustrative birds, not the zoo census.",
+    "All-pass scene triangles include terrain, trees, shadow and reflection work.",
+    "Main atlas console had no errors or warnings in these checks."
+  ],
+  "assetSha256": "a13268217ab09dcb582ae3b1adde6ee4ab4f68f9037ca6141eece2ada6fbee47",
+  "modules": {
+    "app.js": "a282d2d41c3b920436dedc7f1a4801a74738b015b5ef04836d89bc8c8e2bbeb9",
+    "penguins.js": "99e96ef99b50408bb5fe6243bc1f7d4341535e4dd5b1a9cf58f7bd807d183f52",
+    "penguin-motion.js": "bd97ab487dce555d1d08ea9121acfb998cd8c889ed851525431904c4579ea962"
+  }
+}

@@ -32,7 +32,9 @@ HERE = Path(__file__).resolve().parent
 BASE_Z = -0.24
 PATH_TOP_Z = -0.105  # viewer/model.js: path extrusion from -0.24 with 0.135 depth.
 ROOF_OFFSET = 0.02
-SKIPPED_IDS = {"H22D01C2B:301"}  # Separate cage interpretation owns this area.
+SKIPPED_IDS = {"H22D01C2B:301", "H22D01C2B:243"} | {
+    f"H22D01C2B:{number}" for number in list(range(229, 237)) + [244]
+}  # Separate cage, cafe and Turkish-village models own these footprints.
 AREA_TOLERANCE = 0.000001
 WALL_SNAP_METRES = BUILDING_GRID_METRES
 NEAR_WALL_TOLERANCE = 1e-4  # 0.1 mm is below the 1 mm M5 source quantum.

@@ -1,0 +1,121 @@
+{
+  "schema": "bursa-zoo-area-sources/v1",
+  "number": 20,
+  "name": "Ala Geyik",
+  "type": "yaşam alanı",
+  "searched": "alageyik",
+  "mapSources": [
+    {
+      "file": "kaynaklar\\krokiler\\2026-09-resmi-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/09/kroki.jpg",
+      "date": "2026-09-15",
+      "sha256": "36dd1229b58ed4a64199a9e7ced5874a09b5c1cf1650713c69e36b592927836d",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    },
+    {
+      "file": "kaynaklar\\krokiler\\2026-03-yuksek-cozunurluk-kroki.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2026/03/kroki-1920x1080-1.jpg",
+      "date": "2026-03-31",
+      "sha256": "585cf1f9afd428a054709d883ed11cf430476b7beba6c27ee037146e2bf41140",
+      "role": "Resmî ziyaretçi krokisi; ölçekli aplikasyon değil"
+    }
+  ],
+  "photos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-2843.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2020/10/alageyik.jpg",
+      "mediaId": 2843,
+      "uploaded": "2020-10-08T13:53:43",
+      "title": "alageyik",
+      "sha256": "81f33d26cf9a030a0390bbeba25e815c3efbc1d5b7a8a0db8b5daa60e16c8afc",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-1679.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/07/1816487_6.jpg",
+      "mediaId": 1679,
+      "uploaded": "2015-07-13T14:22:30",
+      "title": "Alageyik ve yavrusu",
+      "sha256": "0488a9b6de99747da3208f1050fd5303d769f8685d002f12e70bbf4130b99fa2",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir"
+    }
+  ],
+  "documents": [
+    {
+      "title": "BURSA HAYVANAT BAHÇESİ&#8217;NDE YAVRU ALAGEYİK HEYECANI",
+      "url": "https://www.bursahayvanatbahcesi.com/bursa-hayvanat-bahcesinde-yavru-alageyik-heyecani/",
+      "type": "post"
+    },
+    {
+      "title": "Bursa&#8217;da yavru alageyik Benekli ilgi odağı oldu",
+      "url": "https://www.bursahayvanatbahcesi.com/bursada-yavru-alageyik-benekli-ilgi-odagi-oldu/",
+      "type": "post"
+    },
+    {
+      "title": "Hayvanat bahçesinin minik üyeleri alageyik ve lama parkın maskotu oldu",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvanat-bahcesinin-minik-uyeleri-alageyik-ve-lama-parkin-maskotu-oldu/",
+      "type": "post"
+    },
+    {
+      "title": "Penguen ailesinde yavru sevinci",
+      "url": "https://www.bursahayvanatbahcesi.com/penguen-ailesinde-yavru-sevinci/",
+      "type": "post"
+    },
+    {
+      "title": "ALA GEYİK/Fallow deer",
+      "url": "https://www.bursahayvanatbahcesi.com/hayvan/ala-geyik/",
+      "type": "hayvan"
+    }
+  ],
+  "sharedMetricSources": [
+    "../../source-dgn/ — 2016/2018 M5 paftaları, geçmiş durum",
+    "../../current-plan-registration.json — kroki→M5 yaklaşık eşleme, 10,7 m RMS",
+    "../../v2/manual-roads-metric.json — geçici manuel QGIS yolları",
+    "../../../Bursa-Hayvanat-Bahcesi-QGIS-Delivery-2026-10-14/Bursa-Zoo-V2-Manual-QGIS/v2/qgis/Bursa-Zoo-V2.qgz — özgün manuel QGIS projesi"
+  ],
+  "geometryStatus": "Alan sınırı ve yapı izi henüz tek tek doğrulanmadı",
+  "licensing": "Fotoğraf ve kroki dosyaları sadece yerel araştırma; yayıma veya dokuya izin varsayılmadı",
+  "rejectedPhotos": [
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-1678.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/07/1816487_3-1.jpg",
+      "mediaId": 1678,
+      "uploaded": "2015-07-13T14:22:30",
+      "title": "Lama ve yavrusu",
+      "sha256": "1b472ea7a43000dc603bb678f4e8ce9deb5d6b120f95ec165c7f8f0a575f3693",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "reason": "Fotoğrafta lama ve yavrusu görülüyor; alageyik barınağı kanıtı değildir.",
+      "reassignedArea": 26
+    },
+    {
+      "file": "kaynaklar\\fotograflar\\resmi-site-1677.jpg",
+      "url": "https://www.bursahayvanatbahcesi.com/wp-content/uploads/2015/07/1816487_3.jpg",
+      "mediaId": 1677,
+      "uploaded": "2015-07-13T14:22:03",
+      "title": "Lama ve yavrusu",
+      "sha256": "1b472ea7a43000dc603bb678f4e8ce9deb5d6b120f95ec165c7f8f0a575f3693",
+      "role": "Görsel araştırma; yapının güncel ölçüsünü tek başına doğrulamaz",
+      "publication": "yerel kaynak; model dokusu veya canlı yayın için izin teyidi gerekir",
+      "reason": "Fotoğrafta lama ve yavrusu görülüyor; Güney Amerika tür/çevre adayı.",
+      "reassignedArea": 26
+    }
+  ],
+  "contentReview": {
+    "date": "2026-10-15",
+    "status": "kısmi",
+    "method": "Yerel fotoğraf temas sayfası; yanlış tür eşleşmeleri ayrı kaydedildi",
+    "limitation": "İçerik gözlemi çekim yerini, tarihini veya mevcut yapı ölçülerini doğrulamaz. Belge bağlantıları hâlâ arama adayıdır."
+  },
+  "areaContext": {
+    "locationFile": "kaynaklar/krokiler/bolge-konumu.json",
+    "locationSha256": "b961b2aa832434d3a4e7b2c37a56bb0e8cb21c6ba394e6a3164570562db8c4de",
+    "metricFile": "kaynaklar/harita-verisi/m5-baglam.json",
+    "metricSha256": "b528131bcf9843ada659bda2a6748db8732cec3b195a1420cafc11adfee971a8",
+    "nativeFeatureCount": 23,
+    "nativeTreeCount": 10,
+    "status": "illustrated-label-anchor"
+  }
+}
